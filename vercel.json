@@ -1,0 +1,7 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "cd capit-web && npm install && npm run build",
+  "outputDirectory": "capit-web/.next",
+  "installCommand": "cd capit-web && npm install",
+  "framework": "nextjs"
+}
