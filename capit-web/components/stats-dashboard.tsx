@@ -12,48 +12,58 @@ export function StatsDashboard({ content }: StatsDashboardProps) {
   return (
     <section id="dashboard" className="w-full py-12 px-6 lg:px-12 bg-muted/30">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* Left column - Plugging Trend */}
-          <div className="md:col-span-1">
-            <PluggingTrendCard content={content.pluggingTrend} />
+        {/* Top Row - Stats Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+          {/* Plugging Trend Header Card */}
+          <div className="bg-card rounded-xl p-5 shadow-sm border border-border">
+            <p className="text-xs uppercase tracking-wide font-semibold text-muted-foreground">
+              Real-Time Well
+            </p>
+            <p className="text-xs uppercase tracking-wide font-semibold text-muted-foreground">
+              Plugging Data
+            </p>
           </div>
 
           {/* Stats Cards */}
-          <div className="md:col-span-1 space-y-6">
-            {content.statsCards.map((card, index) => (
-              <StatsCard key={index} {...card} />
-            ))}
-          </div>
+          {content.statsCards.map((card, index) => (
+            <StatsCard key={index} {...card} />
+          ))}
 
           {/* CAPIT Tokens Card */}
-          <div className="md:col-span-1">
-            <div className="bg-card rounded-xl p-6 shadow-sm border border-border h-full">
-              <p className="text-sm font-medium text-muted-foreground mb-2">
-                {content.tokensCard.title}
-              </p>
-              <p className="text-3xl md:text-4xl font-bold text-primary">
-                {content.tokensCard.value}
-              </p>
-              <div className="flex items-center gap-2 mt-2">
-                <div className="w-6 h-6 bg-secondary rounded-full flex items-center justify-center">
-                  <span className="text-xs font-bold text-primary">C</span>
-                </div>
-                <p className="text-sm text-muted-foreground">
-                  {content.tokensCard.subtitle}
-                </p>
+          <div className="bg-card rounded-xl p-5 shadow-sm border border-border">
+            <p className="text-sm font-medium text-muted-foreground mb-1">
+              {content.tokensCard.title}
+            </p>
+            <p className="text-3xl lg:text-4xl font-bold text-primary">
+              {content.tokensCard.value}
+            </p>
+            <div className="flex items-center gap-2 mt-2">
+              <div className="w-5 h-5 bg-secondary rounded-full flex items-center justify-center">
+                <span className="text-[10px] font-bold text-primary">C</span>
               </div>
+              <p className="text-xs text-muted-foreground">
+                {content.tokensCard.subtitle}
+              </p>
             </div>
-          </div>
-
-          {/* Daily Mint Log */}
-          <div className="md:col-span-1">
-            <DailyMintLog content={content.dailyMintLog} />
           </div>
         </div>
 
-        {/* State Leaderboard - Full Width */}
-        <div className="mt-6">
-          <StateLeaderboard content={content.stateLeaderboard} />
+        {/* Bottom Row - Charts and Leaderboard */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
+          {/* Left Column - Plugging Trend */}
+          <div className="lg:col-span-3">
+            <PluggingTrendCard content={content.pluggingTrend} />
+          </div>
+
+          {/* Middle Column - Daily Mint Log */}
+          <div className="lg:col-span-5">
+            <DailyMintLog content={content.dailyMintLog} />
+          </div>
+
+          {/* Right Column - State Leaderboard */}
+          <div className="lg:col-span-4">
+            <StateLeaderboard content={content.stateLeaderboard} />
+          </div>
         </div>
       </div>
     </section>

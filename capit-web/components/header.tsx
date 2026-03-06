@@ -7,7 +7,7 @@ interface HeaderProps {
 
 export function Header({ content }: HeaderProps) {
   return (
-    <header className="w-full py-4 px-6 lg:px-12">
+    <header className="w-full py-4 px-6 lg:px-12 bg-background">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center">
@@ -26,7 +26,7 @@ export function Header({ content }: HeaderProps) {
           <span className="text-2xl font-bold text-primary">{content.name}</span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-10">
           {content.navigation.map((item) => (
             <Link
               key={item.href}
@@ -40,7 +40,7 @@ export function Header({ content }: HeaderProps) {
 
         <Link
           href={content.ctaButton.href}
-          className="px-6 py-2 border-2 border-secondary text-primary font-semibold rounded-full hover:bg-secondary hover:text-primary-foreground transition-colors"
+          className="px-6 py-2.5 bg-secondary text-secondary-foreground font-semibold rounded-full hover:opacity-90 transition-opacity"
         >
           {content.ctaButton.label}
         </Link>
