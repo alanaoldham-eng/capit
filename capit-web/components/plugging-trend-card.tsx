@@ -8,29 +8,29 @@ export function PluggingTrendCard({ content }: PluggingTrendCardProps) {
   const maxValue = Math.max(...content.trendData.map((d) => d.value))
 
   return (
-    <div className="bg-card rounded-xl p-5 shadow-sm border border-border h-full">
-      <p className="text-sm font-medium text-foreground mb-4">
+    <div className="bg-card rounded-xl p-5 shadow-sm border border-border h-full flex flex-col">
+      <p className="text-sm font-semibold text-foreground mb-4">
         {content.chartTitle}
       </p>
 
       {/* Bar chart */}
-      <div className="flex items-end gap-1.5 h-28 mb-2" role="img" aria-label={content.chartTitle}>
+      <div className="flex items-end gap-1 h-24 mb-2" role="img" aria-label={content.chartTitle}>
         {content.trendData.map((item, index) => (
           <div
             key={index}
-            className="flex-1 bg-secondary/60 rounded-t transition-all hover:bg-secondary"
+            className="flex-1 bg-secondary/70 rounded-t transition-all hover:bg-secondary"
             style={{ height: `${(item.value / maxValue) * 100}%` }}
           />
         ))}
       </div>
-      <p className="text-xs text-muted-foreground text-center mb-5">
+      <p className="text-xs text-muted-foreground text-center mb-4">
         {content.chartSubtitle}
       </p>
 
-      {/* Daily Mint Log Section */}
-      <div className="border-t border-border pt-4">
+      {/* Daily Mint Log Mini Section */}
+      <div className="border-t border-border pt-4 flex-grow">
         <div className="flex items-center justify-between mb-3">
-          <p className="text-sm font-medium text-foreground">
+          <p className="text-sm font-semibold text-foreground">
             {content.mintLogTitle}
           </p>
           <button
@@ -54,14 +54,14 @@ export function PluggingTrendCard({ content }: PluggingTrendCardProps) {
             </svg>
           </button>
         </div>
-        <div className="space-y-2">
+        <div className="space-y-1.5">
           {content.mintLogEntries.map((item, index) => (
             <div
               key={index}
-              className="flex items-center justify-between text-sm"
+              className="flex items-center justify-between text-xs"
             >
-              <span className="text-muted-foreground text-xs">{item.date}</span>
-              <span className="font-medium text-foreground flex items-center gap-1 text-xs">
+              <span className="text-muted-foreground">{item.date}</span>
+              <span className="font-medium text-foreground flex items-center gap-1">
                 {item.wells}
                 <svg
                   className="w-3 h-3 text-primary"

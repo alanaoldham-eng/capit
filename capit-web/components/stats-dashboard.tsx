@@ -10,16 +10,16 @@ interface StatsDashboardProps {
 
 export function StatsDashboard({ content }: StatsDashboardProps) {
   return (
-    <section id="dashboard" className="w-full py-12 px-6 lg:px-12 bg-muted/30">
+    <section id="dashboard" className="w-full py-10 px-6 lg:px-16 bg-muted/40">
       <div className="max-w-7xl mx-auto">
-        {/* Top Row - Stats Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-          {/* Plugging Trend Header Card */}
-          <div className="bg-card rounded-xl p-5 shadow-sm border border-border">
-            <p className="text-xs uppercase tracking-wide font-semibold text-muted-foreground">
+        {/* Top Row - 4 Column Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+          {/* Real-Time Well Plugging Data Header */}
+          <div className="bg-card rounded-xl p-5 shadow-sm border border-border flex flex-col justify-center">
+            <p className="text-xs uppercase tracking-wider font-bold text-muted-foreground leading-tight">
               Real-Time Well
             </p>
-            <p className="text-xs uppercase tracking-wide font-semibold text-muted-foreground">
+            <p className="text-xs uppercase tracking-wider font-bold text-muted-foreground leading-tight">
               Plugging Data
             </p>
           </div>
@@ -34,7 +34,7 @@ export function StatsDashboard({ content }: StatsDashboardProps) {
             <p className="text-sm font-medium text-muted-foreground mb-1">
               {content.tokensCard.title}
             </p>
-            <p className="text-3xl lg:text-4xl font-bold text-primary">
+            <p className="text-3xl lg:text-4xl font-bold text-primary tracking-tight">
               {content.tokensCard.value}
             </p>
             <div className="flex items-center gap-2 mt-2">
@@ -48,19 +48,19 @@ export function StatsDashboard({ content }: StatsDashboardProps) {
           </div>
         </div>
 
-        {/* Bottom Row - Charts and Leaderboard */}
+        {/* Bottom Row - 3 Column Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
-          {/* Left Column - Plugging Trend */}
+          {/* Left - Plugging Trend */}
           <div className="lg:col-span-3">
             <PluggingTrendCard content={content.pluggingTrend} />
           </div>
 
-          {/* Middle Column - Daily Mint Log */}
+          {/* Middle - Daily Mint Log */}
           <div className="lg:col-span-5">
             <DailyMintLog content={content.dailyMintLog} />
           </div>
 
-          {/* Right Column - State Leaderboard */}
+          {/* Right - State Leaderboard */}
           <div className="lg:col-span-4">
             <StateLeaderboard content={content.stateLeaderboard} />
           </div>
