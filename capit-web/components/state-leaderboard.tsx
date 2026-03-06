@@ -1,22 +1,20 @@
-"use client"
-
+import Link from "next/link"
 import { BarChart3, ArrowRight } from "lucide-react"
+import type { StateLeaderboardContent } from "@/lib/types"
 
-const leaderboardData = [
-  { rank: 1, state: "Texas", flag: "TX", wells: 1342 },
-  { rank: 2, state: "Pennsylvania", flag: "PA", wells: 987 },
-  { rank: 3, state: "Oklahoma", flag: "OK", wells: 742 },
-]
+interface StateLeaderboardProps {
+  content: StateLeaderboardContent
+}
 
-export function StateLeaderboard() {
+export function StateLeaderboard({ content }: StateLeaderboardProps) {
   return (
     <div className="bg-card rounded-xl p-6 shadow-sm border border-border">
       <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-4">
-        State Leaderboard
+        {content.title}
       </h3>
 
       <div className="space-y-4">
-        {leaderboardData.map((item) => (
+        {content.entries.map((item) => (
           <div
             key={item.rank}
             className="flex items-center justify-between py-2"
@@ -39,14 +37,17 @@ export function StateLeaderboard() {
         ))}
       </div>
 
-      <button className="w-full mt-6 flex items-center justify-center gap-2 bg-primary text-primary-foreground py-3 rounded-lg font-medium hover:opacity-90 transition-opacity">
-        <BarChart3 className="w-4 h-4" />
-        View All States
-        <ArrowRight className="w-4 h-4" />
-      </button>
+      <Link
+        href={content.viewAllButton.href}
+        className="w-full mt-6 flex items-center justify-center gap-2 bg-primary text-primary-foreground py-3 rounded-lg font-medium hover:opacity-90 transition-opacity"
+      >
+        <BarChart3 className="w-4 h-4" aria-hidden="true" />
+        {content.viewAllButton.label}
+        <ArrowRight className="w-4 h-4" aria-hidden="true" />
+      </Link>
 
       <p className="text-xs text-muted-foreground mt-4 text-center">
-        Data updates - daily - from data.gov
+        {content.dataSourceNote}
       </p>
     </div>
   )

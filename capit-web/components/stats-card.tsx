@@ -1,7 +1,6 @@
-interface StatsCardProps {
-  title: string
-  value: string
-  subtitle: string
+import type { StatsCardContent } from "@/lib/types"
+
+interface StatsCardProps extends StatsCardContent {
   icon?: React.ReactNode
 }
 

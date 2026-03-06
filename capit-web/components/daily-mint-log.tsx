@@ -1,27 +1,32 @@
 "use client"
 
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import type { DailyMintLogContent } from "@/lib/types"
 
-const mintLogEntries = [
-  { date: "April 23, 2024", wells: 24, status: "success" },
-  { date: "April 22, 2024", wells: 19, status: "success" },
-  { date: "April 21, 2024", wells: 27, status: "success" },
-  { date: "April 20, 2024", wells: 30, status: "success" },
-  { date: "April 19, 2024", wells: 31, status: "success" },
-]
+interface DailyMintLogProps {
+  content: DailyMintLogContent
+}
 
-export function DailyMintLog() {
+export function DailyMintLog({ content }: DailyMintLogProps) {
   return (
     <div className="bg-card rounded-xl p-6 shadow-sm border border-border">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="font-semibold text-foreground">Daily Mint Log</h3>
+        <h3 className="font-semibold text-foreground">{content.title}</h3>
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
-          <span>April 23, 2024</span>
+          <span>{content.currentDate}</span>
           <div className="flex items-center gap-1">
-            <button className="p-1 hover:bg-muted rounded">
+            <button
+              type="button"
+              className="p-1 hover:bg-muted rounded"
+              aria-label="Previous date"
+            >
               <ChevronLeft className="w-4 h-4" />
             </button>
-            <button className="p-1 hover:bg-muted rounded">
+            <button
+              type="button"
+              className="p-1 hover:bg-muted rounded"
+              aria-label="Next date"
+            >
               <ChevronRight className="w-4 h-4" />
             </button>
           </div>
@@ -29,13 +34,13 @@ export function DailyMintLog() {
       </div>
 
       <div className="space-y-3">
-        {mintLogEntries.map((entry, index) => (
+        {content.entries.map((entry, index) => (
           <div
             key={index}
             className="flex items-center justify-between py-2 border-b border-border last:border-0"
           >
             <div className="flex items-center gap-3">
-              <div className="w-2 h-2 rounded-full bg-primary" />
+              <div className="w-2 h-2 rounded-full bg-primary" aria-hidden="true" />
               <span className="text-sm text-muted-foreground">{entry.date}</span>
             </div>
             <span className="text-sm font-medium text-foreground">
@@ -51,9 +56,9 @@ export function DailyMintLog() {
             <span className="w-4 h-4 bg-primary/20 rounded flex items-center justify-center text-primary font-bold text-xs">
               C
             </span>
-            <span>CAPIT</span>
+            <span>{content.footer.brandLabel}</span>
           </div>
-          <span>https://capit.io/records</span>
+          <span>{content.footer.recordsUrl}</span>
         </div>
       </div>
     </div>

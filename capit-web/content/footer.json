@@ -1,0 +1,22 @@
+{
+  "quote": "The first meme token whose supply grows only when real U.S. wells are plugged.",
+  "navigation": [
+    { "label": "Dashboard", "href": "#dashboard" },
+    { "label": "About", "href": "#about" },
+    { "label": "FAQs", "href": "#faqs" }
+  ],
+  "socialLinks": [
+    { "platform": "twitter", "href": "#twitter", "ariaLabel": "Twitter" },
+    { "platform": "facebook", "href": "#facebook", "ariaLabel": "Facebook" },
+    { "platform": "discord", "href": "#discord", "ariaLabel": "Discord" },
+    { "platform": "email", "href": "mailto:info@capit.io", "ariaLabel": "Email" }
+  ],
+  "walletButton": {
+    "label": "Connect Wallet"
+  },
+  "copyright": "© 2024 CAPIT. All rights reserved.",
+  "legalLinks": [
+    { "label": "Privacy Policy", "href": "#privacy" },
+    { "label": "Terms of Service", "href": "#terms" }
+  ]
+}

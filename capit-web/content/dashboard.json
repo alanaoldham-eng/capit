@@ -1,0 +1,69 @@
+{
+  "statsCards": [
+    {
+      "title": "Wells Plugged",
+      "value": "1,327",
+      "subtitle": "Total Historically plugged"
+    },
+    {
+      "title": "Wells Plugged",
+      "value": "674",
+      "subtitle": "Wells plugged this month"
+    }
+  ],
+  "tokensCard": {
+    "title": "CAPIT Tokens Minted",
+    "value": "1,327,843",
+    "subtitle": "Total CAPIT minted"
+  },
+  "pluggingTrend": {
+    "sectionTitle": ["Real-Time Well", "Plugging Data"],
+    "chartTitle": "Historical Plugging Trend",
+    "chartSubtitle": "Last 30 Days",
+    "dataSource": "Source: U.S. Department of the Interior",
+    "trendData": [
+      { "day": 1, "value": 15 },
+      { "day": 5, "value": 22 },
+      { "day": 10, "value": 28 },
+      { "day": 15, "value": 35 },
+      { "day": 20, "value": 42 },
+      { "day": 25, "value": 38 },
+      { "day": 30, "value": 45 }
+    ],
+    "mintLogTitle": "Daily Mint Log",
+    "mintLogEntries": [
+      { "date": "April 23, 2024", "wells": 24, "status": "success" },
+      { "date": "April 22, 2024", "wells": 19, "status": "success" },
+      { "date": "April 21, 2024", "wells": 27, "status": "success" },
+      { "date": "April 19, 2024", "wells": 30, "status": "success" }
+    ]
+  },
+  "dailyMintLog": {
+    "title": "Daily Mint Log",
+    "currentDate": "April 23, 2024",
+    "entries": [
+      { "date": "April 23, 2024", "wells": 24, "status": "success" },
+      { "date": "April 22, 2024", "wells": 19, "status": "success" },
+      { "date": "April 21, 2024", "wells": 27, "status": "success" },
+      { "date": "April 20, 2024", "wells": 30, "status": "success" },
+      { "date": "April 19, 2024", "wells": 31, "status": "success" }
+    ],
+    "footer": {
+      "brandLabel": "CAPIT",
+      "recordsUrl": "https://capit.io/records"
+    }
+  },
+  "stateLeaderboard": {
+    "title": "State Leaderboard",
+    "entries": [
+      { "rank": 1, "state": "Texas", "flag": "TX", "wells": 1342 },
+      { "rank": 2, "state": "Pennsylvania", "flag": "PA", "wells": 987 },
+      { "rank": 3, "state": "Oklahoma", "flag": "OK", "wells": 742 }
+    ],
+    "viewAllButton": {
+      "label": "View All States",
+      "href": "#all-states"
+    },
+    "dataSourceNote": "Data updates - daily - from data.gov"
+  }
+}
