@@ -23,7 +23,7 @@ export function EducationalCard({
       {/* Image */}
       <div className="px-5">
         <div className="relative h-40 w-full rounded-lg overflow-hidden">
-          <Image src={imageSrc} alt={imageAlt} fill className="object-cover" />
+          <Image src={imageSrc} alt={imageAlt} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px" className="object-cover" />
         </div>
       </div>
       
