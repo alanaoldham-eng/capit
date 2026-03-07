@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "headline": "Plug Wells. Mint Tokens.",
+    "headlineHighlight": "Track Progress.",
+    "description": "Where onshore well plugging meets cryptocurrency. For every US onshore well plugged, one new CAPIT token is minted. Follow the real-time progress of well plugging efforts nationwide.",
+    "ctaButton": {
+      "label": "VIEW DASHBOARD",
+      "href": "#dashboard"
+    },
+    "image": {
+      "src": "/images/hero-illustration.jpg",
+      "alt": "Oil well worker illustration"
+    }
+  },
+  "educationalCards": [
+    {
+      "title": "What is a Plugged Well?",
+      "description": "Our CAPIT tokens represent plugged, abandoned, capped wells, building a set of verifiable environmental data.",
+      "imageSrc": "/images/plugged-well.jpg",
+      "imageAlt": "Illustration of a plugged well",
+      "linkHref": "#learn-plugged-wells",
+      "linkLabel": "LEARN MORE"
+    },
+    {
+      "title": "Why Does Plugging Wells Matter?",
+      "description": "Plugging reduces methane and protects groundwater, contributing to environmental protection and public health.",
+      "imageSrc": "/images/why-plugging.jpg",
+      "imageAlt": "Illustration showing environmental benefits",
+      "linkHref": "#learn-why-plugging",
+      "linkLabel": "LEARN MORE"
+    },
+    {
+      "title": "How Many Inactive Wells Remain?",
+      "description": "Estimated 12,000 inactive wells at risk across the US. Approximately 97,000+ wells need to be plugged.",
+      "imageSrc": "/images/inactive-wells.jpg",
+      "imageAlt": "Map showing inactive wells across US",
+      "linkHref": "#learn-inactive-wells",
+      "linkLabel": "LEARN MORE"
+    }
+  ]
+}

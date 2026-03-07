@@ -1,0 +1,15 @@
+{
+  "name": "CAPIT",
+  "logo": {
+    "alt": "CAPIT Logo"
+  },
+  "navigation": [
+    { "label": "Dashboard", "href": "#dashboard" },
+    { "label": "About", "href": "#about" },
+    { "label": "FAQs", "href": "#faqs" }
+  ],
+  "ctaButton": {
+    "label": "Buy CAPIT",
+    "href": "#buy"
+  }
+}
