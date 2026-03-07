@@ -8,29 +8,29 @@ interface StateLeaderboardProps {
 
 export function StateLeaderboard({ content }: StateLeaderboardProps) {
   return (
-    <div className="bg-card rounded-xl p-5 shadow-sm border border-border h-full flex flex-col">
+    <div className="bg-card rounded-xl p-5 lg:p-6 shadow-sm border border-border h-full flex flex-col">
       <h3 className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-5">
         {content.title}
       </h3>
 
-      <div className="space-y-4 flex-grow">
+      <div className="space-y-5 flex-grow">
         {content.entries.map((item) => (
           <div
             key={item.rank}
             className="flex items-center justify-between"
           >
             <div className="flex items-center gap-3">
-              <span className="text-lg font-bold text-primary w-5">
+              <span className="text-base font-bold text-primary w-4">
                 {item.rank}
               </span>
-              <span className="font-semibold text-foreground text-lg">
+              <span className="font-bold text-foreground text-lg">
                 {item.state}
               </span>
-              <span className="text-sm text-muted-foreground">
+              <span className="text-base">
                 {item.flag}
               </span>
             </div>
-            <span className="text-xl font-bold text-foreground">
+            <span className="text-xl font-bold text-foreground tabular-nums">
               {item.wells.toLocaleString()}
             </span>
           </div>
@@ -39,7 +39,7 @@ export function StateLeaderboard({ content }: StateLeaderboardProps) {
 
       <Link
         href={content.viewAllButton.href}
-        className="w-full mt-5 flex items-center justify-center gap-2 bg-primary text-primary-foreground py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors text-sm"
+        className="w-full mt-6 flex items-center justify-center gap-2 bg-primary text-primary-foreground py-3.5 rounded-lg font-semibold hover:bg-primary/90 transition-colors text-sm"
       >
         <BarChart3 className="w-4 h-4" aria-hidden="true" />
         {content.viewAllButton.label}
