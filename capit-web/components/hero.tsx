@@ -38,6 +38,7 @@ export function Hero({ content }: HeroProps) {
               src={content.image.src}
               alt={content.image.alt}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
               className="object-contain object-right"
               priority
             />
