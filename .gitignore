@@ -1,5 +1,6 @@
 node_modules
-capit-web/node_modules
 .next
+capit-web/node_modules
+capit-web/.next
 .env
 .env.local
