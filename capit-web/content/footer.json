@@ -1,22 +1,53 @@
 {
-  "quote": "The first meme token whose supply grows only when real U.S. wells are plugged.",
+  "quote": "Not just the first meme token whose supply grows only when real U.S. wells are plugged. CAPIT Supply equals the number of oil and gas wells in the United States that have been plugged. We agregate plugged well data from all 50 States, and after a 30 day verification period to assure accuracy we mint one CAPIT token with the API unique identifier for the well that was capped. Each CAPIT token represents a single capped U.S. oil or gas well. ",
   "navigation": [
-    { "label": "Dashboard", "href": "#dashboard" },
-    { "label": "About", "href": "#about" },
-    { "label": "FAQs", "href": "#faqs" }
+    {
+      "label": "Dashboard",
+      "href": "#dashboard"
+    },
+    {
+      "label": "About",
+      "href": "#about"
+    },
+    {
+      "label": "FAQs",
+      "href": "#faqs"
+    }
   ],
   "socialLinks": [
-    { "platform": "twitter", "href": "#twitter", "ariaLabel": "Twitter" },
-    { "platform": "facebook", "href": "#facebook", "ariaLabel": "Facebook" },
-    { "platform": "discord", "href": "#discord", "ariaLabel": "Discord" },
-    { "platform": "email", "href": "mailto:info@capit.io", "ariaLabel": "Email" }
+    {
+      "platform": "twitter",
+      "href": "#twitter",
+      "ariaLabel": "Twitter"
+    },
+    {
+      "platform": "facebook",
+      "href": "#facebook",
+      "ariaLabel": "Facebook"
+    },
+    {
+      "platform": "discord",
+      "href": "#discord",
+      "ariaLabel": "Discord"
+    },
+    {
+      "platform": "email",
+      "href": "mailto:info@capit.io",
+      "ariaLabel": "Email"
+    }
   ],
   "walletButton": {
     "label": "Connect Wallet"
   },
-  "copyright": "© 2024 CAPIT. All rights reserved.",
+  "copyright": "© 2026 CAPIT. All rights reserved.",
   "legalLinks": [
-    { "label": "Privacy Policy", "href": "#privacy" },
-    { "label": "Terms of Service", "href": "#terms" }
+    {
+      "label": "Privacy Policy",
+      "href": "#privacy"
+    },
+    {
+      "label": "Terms of Service",
+      "href": "#terms"
+    }
   ]
 }

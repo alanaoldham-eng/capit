@@ -1,10 +1,10 @@
 {
   "hero": {
-    "headline": "Plug Wells. Mint Tokens.",
-    "headlineHighlight": "Track Progress.",
-    "description": "Where onshore well plugging meets cryptocurrency. For every US onshore well plugged, one new CAPIT token is minted. Follow the real-time progress of well plugging efforts nationwide.",
+    "headline": "Plug Wells. Mint Tokens. Test-Alana Headline",
+    "headlineHighlight": "Track Progress. Test-Alana Highlight",
+    "description": "Where onshore well plugging meets cryptocurrency. For every US onshore well plugged, one new CAPIT token is minted. Follow the real-time progress of well plugging efforts nationwide. Test-Alana Hero description edited in Tina CMS localhost:3000/admin/index.html ",
     "ctaButton": {
-      "label": "VIEW DASHBOARD",
+      "label": "VIEW CMS DASHBOARD",
       "href": "#dashboard"
     },
     "image": {

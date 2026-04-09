@@ -1,12 +1,21 @@
 {
-  "name": "CAPIT",
+  "name": "CAPIT Token",
   "logo": {
     "alt": "CAPIT Logo"
   },
   "navigation": [
-    { "label": "Dashboard", "href": "#dashboard" },
-    { "label": "About", "href": "#about" },
-    { "label": "FAQs", "href": "#faqs" }
+    {
+      "label": "Dashboard",
+      "href": "#dashboard"
+    },
+    {
+      "label": "About",
+      "href": "#about"
+    },
+    {
+      "label": "FAQs",
+      "href": "#faqs"
+    }
   ],
   "ctaButton": {
     "label": "Buy CAPIT",
