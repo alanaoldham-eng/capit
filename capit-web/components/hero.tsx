@@ -8,15 +8,15 @@ interface HeroProps {
 
 export function Hero({ content }: HeroProps) {
   return (
-    <section className="relative w-full py-16 lg:py-24 xl:py-28 px-6 lg:px-12 xl:px-20 overflow-hidden bg-gradient-to-br from-background via-background to-[hsl(152,30%,92%)]">
-      {/* Subtle background decoration */}
-      <div className="absolute inset-0 opacity-30 bg-gradient-to-b from-transparent via-transparent to-[hsl(152,25%,85%)]" aria-hidden="true" />
+    <section className="relative w-full py-16 lg:py-24 xl:py-32 px-6 lg:px-12 xl:px-20 overflow-hidden bg-gradient-to-br from-background via-background to-muted/40">
+      {/* Refined gradient overlay */}
+      <div className="absolute inset-0 opacity-40 bg-gradient-to-b from-transparent via-transparent to-muted/30" aria-hidden="true" />
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-6 items-center">
           {/* Left Content */}
-          <div className="space-y-6 lg:space-y-7">
-            <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] xl:text-6xl font-bold text-primary leading-[1.08] tracking-tight">
+          <div className="space-y-6 lg:space-y-8">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary leading-[1.05] tracking-tight">
               {content.headline}
               <br />
               <span className="text-primary">{content.headlineHighlight}</span>
@@ -26,7 +26,7 @@ export function Hero({ content }: HeroProps) {
             </p>
             <Link
               href={content.ctaButton.href}
-              className="inline-flex items-center px-7 py-3.5 bg-secondary text-primary font-bold rounded-full hover:bg-secondary/90 transition-colors text-sm uppercase tracking-wide shadow-md hover:shadow-lg"
+              className="inline-flex items-center px-8 py-4 bg-secondary text-primary font-bold rounded-full hover:bg-secondary/90 transition-all duration-200 text-sm uppercase tracking-wide shadow-lg hover:shadow-xl hover:scale-105"
             >
               {content.ctaButton.label}
             </Link>

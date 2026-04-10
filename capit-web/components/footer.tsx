@@ -17,15 +17,15 @@ const socialIcons: Record<SocialLink["platform"], React.ComponentType<{ classNam
 export function Footer({ content, site }: FooterProps) {
   return (
     <footer className="w-full">
-      {/* Quote Banner - Light cream/beige background */}
-      <div className="py-10 lg:py-12 px-6 lg:px-12 xl:px-20 bg-muted/70">
-        <p className="text-center text-lg md:text-xl lg:text-2xl italic max-w-4xl mx-auto text-foreground font-medium leading-relaxed">
+      {/* Quote section - refined */}
+      <div className="py-12 lg:py-16 px-6 lg:px-12 xl:px-20 bg-gradient-to-br from-muted/50 to-muted/30">
+        <p className="text-center text-lg md:text-xl lg:text-2xl font-semibold max-w-4xl mx-auto text-foreground leading-relaxed">
           {`"${content.quote}"`}
         </p>
       </div>
 
-      {/* Main Footer - Dark green gradient */}
-      <div className="py-8 lg:py-10 px-6 lg:px-12 xl:px-20 bg-gradient-to-b from-primary to-[hsl(152,40%,18%)]">
+      {/* Footer - better contrast and spacing */}
+      <div className="py-10 lg:py-12 px-6 lg:px-12 xl:px-20 bg-gradient-to-br from-primary via-primary to-[hsl(152,38%,20%)]">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             {/* Logo */}
@@ -80,7 +80,7 @@ export function Footer({ content, site }: FooterProps) {
             {/* Connect Wallet Button */}
             <button
               type="button"
-              className="px-5 py-2.5 bg-secondary text-primary font-semibold rounded-full hover:bg-secondary/90 transition-colors flex items-center gap-2 text-sm"
+              className="px-6 py-2.5 bg-secondary text-primary font-semibold rounded-full hover:bg-secondary/90 transition-all duration-200 flex items-center gap-2 text-sm hover:shadow-lg"
             >
               {content.walletButton.label}
               <svg

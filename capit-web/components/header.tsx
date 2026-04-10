@@ -7,7 +7,7 @@ interface HeaderProps {
 
 export function Header({ content }: HeaderProps) {
   return (
-    <header className="w-full py-4 px-6 lg:px-12 xl:px-20 bg-white">
+    <header className="w-full py-4 px-6 lg:px-12 xl:px-20 bg-white border-b border-border/50">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
@@ -31,9 +31,10 @@ export function Header({ content }: HeaderProps) {
             <Link
               key={item.href}
               href={item.href}
-              className="text-foreground hover:text-primary transition-colors font-medium text-sm"
+              className="text-foreground hover:text-primary transition-colors font-medium text-sm group relative"
             >
               {item.label}
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full" aria-hidden="true" />
             </Link>
           ))}
         </nav>
@@ -41,7 +42,7 @@ export function Header({ content }: HeaderProps) {
         {/* CTA Button */}
         <Link
           href={content.ctaButton.href}
-          className="px-5 py-2 bg-transparent text-primary font-semibold rounded-full hover:bg-secondary/10 transition-colors border-2 border-secondary text-sm"
+          className="px-6 py-2 bg-secondary/10 text-secondary font-semibold rounded-full hover:bg-secondary/20 transition-all duration-200 border border-secondary/30 text-sm hover:border-secondary/50"
         >
           {content.ctaButton.label}
         </Link>
