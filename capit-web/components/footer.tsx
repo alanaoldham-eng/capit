@@ -1,122 +1,178 @@
-import Link from "next/link"
-import { Twitter, Facebook, MessageCircle, Mail } from "lucide-react"
-import type { FooterContent, SiteContent, SocialLink } from "@/lib/types"
+"use client";
+
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { Mail, MessageCircle } from "lucide-react";
+import type { FooterContent, SiteContent, SocialLink } from "@/lib/types";
+import { useInjectedWallet } from "@/lib/wallet/useInjectedWallet";
 
 interface FooterProps {
-  content: FooterContent
-  site: SiteContent
+  site: SiteContent;
+  content: FooterContent;
 }
 
-const socialIcons: Record<SocialLink["platform"], React.ComponentType<{ className?: string }>> = {
-  twitter: Twitter,
-  facebook: Facebook,
-  discord: MessageCircle,
-  email: Mail,
+function isX(link: SocialLink) {
+  return link.platform === "twitter";
 }
 
-export function Footer({ content, site }: FooterProps) {
+function isLinkedIn(link: SocialLink) {
+  const value = `${link.href} ${link.ariaLabel}`.toLowerCase();
+  return value.includes("linkedin");
+}
+
+function shouldShowSocial(link: SocialLink) {
+  return isX(link) || isLinkedIn(link);
+}
+
+function SocialIcon({ link }: { link: SocialLink }) {
+  if (isLinkedIn(link)) {
+    return (
+      <span
+        className="inline-flex h-4 w-4 items-center justify-center text-[9px] font-bold leading-none"
+        aria-hidden="true"
+      >
+        in
+      </span>
+    );
+  }
+
+  if (isX(link)) {
+    return (
+      <span
+        className="inline-flex h-4 w-4 items-center justify-center text-[11px] font-bold leading-none"
+        aria-hidden="true"
+      >
+        X
+      </span>
+    );
+  }
+
+  if (link.platform === "email") {
+    return <Mail className="h-4 w-4" aria-hidden="true" />;
+  }
+
+  return <MessageCircle className="h-4 w-4" aria-hidden="true" />;
+}
+
+function socialLabel(link: SocialLink) {
+  if (isX(link)) return "X";
+  if (isLinkedIn(link)) return "LinkedIn";
+  return link.ariaLabel || link.platform;
+}
+
+function isExternal(href: string) {
+  return href.startsWith("http://") || href.startsWith("https://");
+}
+
+export default function Footer({ site, content }: FooterProps) {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const socialLinks = (content.socialLinks ?? []).filter(shouldShowSocial);
+
+  const {
+    addressLabel,
+    error,
+    hasInjectedWallet,
+    isConnected,
+    isConnecting,
+    connectWallet,
+  } = useInjectedWallet();
+
+  const walletButtonLabel = !mounted
+    ? (content.walletButton?.label || "Connect Wallet")
+    : isConnected
+    ? addressLabel
+    : isConnecting
+    ? "Connecting..."
+    : (content.walletButton?.label || "Connect Wallet");
+
   return (
-    <footer className="w-full">
-      {/* Quote section - refined */}
-      <div className="py-12 lg:py-16 px-6 lg:px-12 xl:px-20 bg-gradient-to-br from-muted/50 to-muted/30">
-        <p className="text-center text-lg md:text-xl lg:text-2xl font-semibold max-w-4xl mx-auto text-foreground leading-relaxed">
-          {`"${content.quote}"`}
-        </p>
-      </div>
-
-      {/* Footer - better contrast and spacing */}
-      <div className="py-10 lg:py-12 px-6 lg:px-12 xl:px-20 bg-gradient-to-br from-primary via-primary to-[hsl(152,38%,20%)]">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            {/* Logo */}
-            <div className="flex items-center gap-2">
-              <div className="w-9 h-9 bg-secondary rounded-full flex items-center justify-center">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  className="w-5 h-5 text-primary"
-                  aria-hidden="true"
-                >
-                  <circle cx="12" cy="12" r="7" fill="currentColor" fillOpacity="0.2" stroke="currentColor" strokeWidth="1.5" />
-                  <path d="M12 6v12M8 10l4-4 4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
-              <span className="text-xl font-bold text-primary-foreground tracking-tight">{site.name}</span>
-            </div>
-
-            {/* Navigation */}
-            <nav aria-label="Footer navigation">
-              <ul className="flex items-center gap-6 lg:gap-8">
-                {content.navigation.map((item) => (
-                  <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      className="text-primary-foreground/90 hover:text-secondary transition-colors font-medium text-sm"
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-
-            {/* Social Icons */}
-            <div className="flex items-center gap-3">
-              {content.socialLinks.map((social) => {
-                const Icon = socialIcons[social.platform]
-                return (
-                  <Link
-                    key={social.platform}
-                    href={social.href}
-                    className="w-8 h-8 flex items-center justify-center text-primary-foreground/80 hover:text-secondary transition-colors"
-                    aria-label={social.ariaLabel}
-                  >
-                    <Icon className="w-5 h-5" />
-                  </Link>
-                )
-              })}
-            </div>
-
-            {/* Connect Wallet Button */}
-            <button
-              type="button"
-              className="px-6 py-2.5 bg-secondary text-primary font-semibold rounded-full hover:bg-secondary/90 transition-all duration-200 flex items-center gap-2 text-sm hover:shadow-lg"
-            >
-              {content.walletButton.label}
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
+    <footer className="border-t border-neutral-800 mt-16 bg-neutral-950 text-white">
+      <div className="mx-auto max-w-6xl px-6 py-10">
+        <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+          <div className="space-y-3 max-w-2xl">
+            <p className="text-sm font-semibold tracking-wide uppercase text-neutral-400">
+              {site.name}
+            </p>
+            <p className="text-sm text-neutral-300">{content.quote}</p>
           </div>
 
-          {/* Bottom Row */}
-          <div className="mt-6 pt-5 border-t border-primary-foreground/20 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-primary-foreground/60">
-            <p>{content.copyright}</p>
-            <div className="flex items-center gap-4 lg:gap-6">
-              {content.legalLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="hover:text-primary-foreground transition-colors"
-                >
-                  {link.label}
-                </Link>
-              ))}
+          <div className="flex flex-col items-start gap-4">
+            <button
+              type="button"
+              onClick={mounted ? connectWallet : undefined}
+              disabled={!mounted || isConnecting}
+              className="inline-flex items-center justify-center rounded-full bg-secondary px-5 py-3 text-sm font-semibold text-primary hover:bg-secondary/90 disabled:opacity-60 disabled:cursor-not-allowed shadow-sm min-w-[160px]"
+            >
+              {walletButtonLabel}
+            </button>
+
+            {mounted && !hasInjectedWallet ? (
+              <a
+                href="https://metamask.io/download/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-neutral-300 underline underline-offset-4 hover:text-white"
+              >
+                Install Wallet
+              </a>
+            ) : null}
+
+            {mounted && error ? (
+              <p className="text-xs text-red-300 max-w-xs" role="status" aria-live="polite">
+                {error}
+              </p>
+            ) : null}
+
+            <div className="flex flex-wrap items-center gap-3">
+              {socialLinks.map((link, index) => {
+                const href = link.href;
+                const external = isExternal(href);
+
+                return (
+                  <Link
+                    key={`${link.platform}-${href}-${index}`}
+                    href={href}
+                    target={external ? "_blank" : undefined}
+                    rel={external ? "noopener noreferrer" : undefined}
+                    aria-label={link.ariaLabel}
+                    className="inline-flex items-center gap-2 rounded-md border border-neutral-700 px-3 py-2 text-sm text-neutral-200 hover:border-neutral-500 hover:text-white"
+                  >
+                    <SocialIcon link={link} />
+                    <span>{socialLabel(link)}</span>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </div>
+
+        {content.navigation?.length ? (
+          <nav className="mt-6 flex flex-wrap gap-4 text-sm text-neutral-400">
+            {content.navigation.map((item) => (
+              <Link key={`${item.label}-${item.href}`} href={item.href} className="hover:text-white">
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+        ) : null}
+
+        {content.legalLinks?.length ? (
+          <div className="mt-6 flex flex-wrap gap-4 text-xs text-neutral-500">
+            {content.legalLinks.map((item) => (
+              <Link key={`${item.label}-${item.href}`} href={item.href} className="hover:text-neutral-300">
+                {item.label}
+              </Link>
+            ))}
+          </div>
+        ) : null}
+
+        <div className="mt-6 text-xs text-neutral-500">{content.copyright}</div>
       </div>
     </footer>
-  )
+  );
 }

@@ -16,23 +16,13 @@
   ],
   "socialLinks": [
     {
-      "platform": "twitter",
-      "href": "#twitter",
-      "ariaLabel": "Twitter"
-    },
-    {
-      "platform": "facebook",
-      "href": "#facebook",
-      "ariaLabel": "Facebook"
-    },
-    {
-      "platform": "discord",
-      "href": "#discord",
-      "ariaLabel": "Discord"
+    "platform": "twitter",
+    "href": "https://x.com/capittoken",
+    "ariaLabel": "CAPIT on X"
     },
     {
       "platform": "email",
-      "href": "mailto:info@capit.io",
+      "href": "mailto:shillmer@tellusdigital.io",
       "ariaLabel": "Email"
     }
   ],

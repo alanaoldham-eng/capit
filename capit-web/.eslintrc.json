@@ -1,0 +1,8 @@
+{
+  "extends": ["next/core-web-vitals"],
+  "ignorePatterns": [
+    "next-env.d.ts",
+    "tina/__generated__/**",
+    ".next/**"
+  ]
+}
