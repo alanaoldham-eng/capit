@@ -1,29 +1,29 @@
 {
-  "quote": "Not just the first meme token whose supply grows only when real U.S. wells are plugged. CAPIT Supply equals the number of oil and gas wells in the United States that have been plugged. We agregate plugged well data from all 50 States, and after a 30 day verification period to assure accuracy we mint one CAPIT token with the API unique identifier for the well that was capped. Each CAPIT token represents a single capped U.S. oil or gas well. ",
+  "quote": "The first meme token whose supply grows only when real U.S. wells are plugged.",
   "navigation": [
     {
       "label": "Dashboard",
-      "href": "#dashboard"
+      "href": "/dashboard"
     },
     {
       "label": "About",
-      "href": "#about"
+      "href": "/about"
     },
     {
       "label": "FAQs",
-      "href": "#faqs"
+      "href": "/faqs"
     }
   ],
   "socialLinks": [
     {
-    "platform": "twitter",
-    "href": "https://x.com/capittoken",
-    "ariaLabel": "CAPIT on X"
+      "platform": "twitter",
+      "href": "https://x.com/capittoken",
+      "ariaLabel": "CAPIT on X"
     },
     {
       "platform": "email",
       "href": "mailto:shillmer@tellusdigital.io",
-      "ariaLabel": "Email"
+      "ariaLabel": "Email CAPIT"
     }
   ],
   "walletButton": {
@@ -33,11 +33,11 @@
   "legalLinks": [
     {
       "label": "Privacy Policy",
-      "href": "#privacy"
+      "href": "/privacy-policy"
     },
     {
       "label": "Terms of Service",
-      "href": "#terms"
+      "href": "/terms-of-service"
     }
   ]
 }

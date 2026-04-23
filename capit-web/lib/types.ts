@@ -14,6 +14,7 @@ export interface SiteContent {
   name: string
   logo: {
     alt: string
+    src?: string
   }
   navigation: NavItem[]
   ctaButton: {

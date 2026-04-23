@@ -1,24 +1,24 @@
 {
   "hero": {
-    "headline": "Plug Wells. Mint Tokens. ",
-    "headlineHighlight": "Track Progress. ",
-    "description": "For every US onshore well plugged, one new CAPIT token is minted. Follow the real-time progress of well plugging efforts nationwide. ",
+    "headline": "Plug Wells. Mint Tokens.",
+    "headlineHighlight": "Track Progress.",
+    "description": "Where onshore well plugging meets cryptocurrency. For every US onshore well plugged, one new CAPIT token is minted. Follow the real-time progress of well plugging efforts nationwide.",
     "ctaButton": {
       "label": "VIEW DASHBOARD",
-      "href": "#dashboard"
+      "href": "/dashboard"
     },
     "image": {
       "src": "/images/Cappy-at-work.jpg",
-      "alt": "Oil well worker illustration"
+      "alt": "CAPIT worker standing in a well field"
     }
   },
   "educationalCards": [
     {
-      "title": "What is a Plugged Well? ",
+      "title": "What is a Plugged Well?",
       "description": "Our CAPIT tokens represent plugged, abandoned, capped wells, building a set of verifiable environmental data.",
       "imageSrc": "/images/plugged-well.jpg",
       "imageAlt": "Illustration of a plugged well",
-      "linkHref": "#learn-plugged-wells",
+      "linkHref": "/what-is-a-plugged-well",
       "linkLabel": "LEARN MORE"
     },
     {
@@ -26,15 +26,15 @@
       "description": "Plugging reduces methane and protects groundwater, contributing to environmental protection and public health.",
       "imageSrc": "/images/well-river.jpg",
       "imageAlt": "Illustration showing environmental benefits",
-      "linkHref": "#learn-why-plugging",
+      "linkHref": "/why-plugging-wells-matter",
       "linkLabel": "LEARN MORE"
     },
     {
       "title": "How Many Inactive Wells Remain?",
       "description": "Estimated 12,000 inactive wells at risk across the US. Approximately 97,000+ wells need to be plugged.",
       "imageSrc": "/images/Capping-Leaders.png",
-      "imageAlt": "Map showing inactive wells across US",
-      "linkHref": "#learn-inactive-wells",
+      "imageAlt": "Map showing inactive wells across the United States",
+      "linkHref": "/inactive-wells-remain",
       "linkLabel": "LEARN MORE"
     }
   ]

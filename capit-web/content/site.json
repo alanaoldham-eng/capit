@@ -1,24 +1,25 @@
 {
-  "name": "CAPIT Token",
+  "name": "CAPIT",
   "logo": {
-    "alt": "CAPIT Logo"
+    "alt": "CAPIT Logo",
+    "src": "/images/CAPIT-LOGO-SQUARE-TEXT-Transparent.png"
   },
   "navigation": [
     {
       "label": "Dashboard",
-      "href": "#dashboard"
+      "href": "/dashboard"
     },
     {
       "label": "About",
-      "href": "#about"
+      "href": "/about"
     },
     {
       "label": "FAQs",
-      "href": "#faqs"
+      "href": "/faqs"
     }
   ],
   "ctaButton": {
-  "label": "Buy CAPIT",
-  "href": "#buy"
+    "label": "Buy CAPIT",
+    "href": "https://app.uniswap.org/"
   }
 }
