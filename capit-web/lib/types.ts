@@ -1,4 +1,3 @@
-// Site-wide content types
 export interface NavItem {
   label: string
   href: string
@@ -13,8 +12,8 @@ export interface SocialLink {
 export interface SiteContent {
   name: string
   logo: {
-    alt: string
     src?: string
+    alt: string
   }
   navigation: NavItem[]
   ctaButton: {
@@ -23,15 +22,20 @@ export interface SiteContent {
   }
 }
 
-// Home page content types
+export interface CtaContent {
+  label: string
+  href: string
+}
+
 export interface HeroContent {
+  eyebrow?: string
   headline: string
   headlineHighlight: string
   description: string
-  ctaButton: {
-    label: string
-    href: string
-  }
+  ctaButton: CtaContent
+  secondaryCta?: CtaContent
+  tertiaryCta?: CtaContent
+  trustNote?: string
   image: {
     src: string
     alt: string
@@ -48,11 +52,24 @@ export interface EducationalCardContent {
 }
 
 export interface HomeContent {
+  seo?: {
+    title: string
+    description: string
+  }
   hero: HeroContent
+  snapshot?: {
+    heading: string
+    intro: string
+  }
   educationalCards: EducationalCardContent[]
+  methodologyStrip?: {
+    heading: string
+    body: string
+    href: string
+    label: string
+  }
 }
 
-// Dashboard content types
 export interface StatsCardContent {
   title: string
   value: string
@@ -96,10 +113,7 @@ export interface LeaderboardEntry {
 export interface StateLeaderboardContent {
   title: string
   entries: LeaderboardEntry[]
-  viewAllButton: {
-    label: string
-    href: string
-  }
+  viewAllButton: CtaContent
   dataSourceNote: string
 }
 
@@ -121,7 +135,6 @@ export interface DashboardContent {
   stateLeaderboard: StateLeaderboardContent
 }
 
-// Footer content types
 export interface LegalLink {
   label: string
   href: string
@@ -129,6 +142,7 @@ export interface LegalLink {
 
 export interface FooterContent {
   quote: string
+  disclaimer?: string
   navigation: NavItem[]
   socialLinks: SocialLink[]
   walletButton: {
@@ -136,4 +150,21 @@ export interface FooterContent {
   }
   copyright: string
   legalLinks: LegalLink[]
+}
+
+export interface ContentSection {
+  heading: string
+  body: string
+  bullets?: string[]
+}
+
+export interface PageContent {
+  title: string
+  description: string
+  eyebrow?: string
+  headline: string
+  body: string
+  primaryCta?: CtaContent
+  secondaryCta?: CtaContent
+  sections: ContentSection[]
 }

@@ -1,8 +1,11 @@
+import fs from "fs"
+import path from "path"
 import type {
   SiteContent,
   HomeContent,
   DashboardContent,
   FooterContent,
+  PageContent,
 } from "./types"
 
 import siteData from "@/content/site.json"
@@ -26,7 +29,6 @@ export function getFooterContent(): FooterContent {
   return footerData as FooterContent
 }
 
-// Combined loader for full page content
 export function getFullPageContent() {
   return {
     site: getSiteContent(),
@@ -34,4 +36,21 @@ export function getFullPageContent() {
     dashboard: getDashboardContent(),
     footer: getFooterContent(),
   }
+}
+
+const pagesDirectory = path.join(process.cwd(), "content", "pages")
+
+export function getPageSlugs() {
+  if (!fs.existsSync(pagesDirectory)) return []
+  return fs
+    .readdirSync(pagesDirectory)
+    .filter((file) => file.endsWith(".json"))
+    .map((file) => file.replace(/\.json$/, ""))
+}
+
+export function getPageContent(slug: string): PageContent | null {
+  const safeSlug = slug.replace(/[^a-z0-9-]/gi, "")
+  const filePath = path.join(pagesDirectory, `${safeSlug}.json`)
+  if (!fs.existsSync(filePath)) return null
+  return JSON.parse(fs.readFileSync(filePath, "utf8")) as PageContent
 }

@@ -1,27 +1,25 @@
-import { ContentPageTemplate } from "@/components/content-page-template"
+import Link from "next/link"
+import { Header } from "@/components/header"
+import Footer from "@/components/footer"
+import { getFullPageContent } from "@/lib/content"
 
-export default function WhatIsAPluggedWellPage() {
+export default function Page() {
+  const { site, footer } = getFullPageContent()
+
   return (
-    <ContentPageTemplate
-      eyebrow="Education"
-      title="What is a plugged well?"
-      intro="A plugged well is a well that has been properly sealed to reduce environmental risk, improve land safety, and prevent unwanted leakage."
-      sections={[
-        {
-          heading: "Why plugging matters",
-          body: [
-            "Plugging closes off pathways that can contribute to methane leakage, groundwater contamination, and long-term site hazards. It is one of the clearest real-world markers of remediation progress.",
-            "This page is a placeholder destination for a fuller educational article, diagrams, and supporting data sources."
-          ]
-        },
-        {
-          heading: "How CAPIT uses the concept",
-          body: [
-            "CAPIT uses plugged wells as the narrative anchor for the token and dashboard experience. That gives the project a tangible real-world reference point rather than abstract internet-only messaging.",
-            "Over time, this page can become a more robust explainer with charts, maps, and references."
-          ]
-        }
-      ]}
-    />
+    <main className="min-h-screen bg-[#fbfaf6]">
+      <Header content={site} />
+      <section className="px-6 py-20 lg:px-12 xl:px-20">
+        <div className="mx-auto max-w-4xl rounded-2xl border border-border/70 bg-white p-8 shadow-sm md:p-12">
+          <Link href="/" className="text-sm font-semibold text-primary hover:underline">← Back to home</Link>
+          <h1 className="mt-8 text-4xl font-extrabold tracking-[-0.04em] text-primary md:text-6xl">What Is a Plugged Well?</h1>
+          <div className="mt-8 space-y-6 text-base leading-8 text-[#31564e]">
+            <p>A plugged well is an oil or gas well that has been properly sealed and closed according to applicable regulatory requirements. This page will explain the concept in plain language.</p>
+            <p>This placeholder page is ready for Tina-managed content or a future richer page template. It exists so every homepage CTA and navigation item resolves to a real route during demo and system integration testing.</p>
+          </div>
+        </div>
+      </section>
+      <Footer site={site} content={footer} />
+    </main>
   )
 }

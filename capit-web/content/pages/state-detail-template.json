@@ -1,0 +1,14 @@
+{
+  "title": "[State Name] Well Plugging Tracker | CAPIT",
+  "description": "Review [State Name] well-plugging records, source definitions, recent activity, and CAPIT publication notes.",
+  "headline": "[State Name] Well Plugging Tracker",
+  "body": "Track published records, recent CAPIT verification activity, and the agency definitions that shape this state’s numbers.",
+  "primaryCta": { "label": "View Source Agency", "href": "#source-agency" },
+  "secondaryCta": { "label": "Compare States", "href": "/states" },
+  "sections": [
+    { "heading": "State Snapshot", "body": "This page summarizes the current published record count, recent additions, source freshness, and any known exclusions or coverage limits for [State Name].", "bullets": ["Verified Records", "Added in the Last 30 Days", "Latest Source Refresh", "Latest CAPIT Verification", "Regions Represented", "Coverage Note"] },
+    { "heading": "Recent Verified Records", "body": "Review the newest published records for this state with source IDs, dates, and provenance links. If revisions are part of the source history, CAPIT should show them." },
+    { "heading": "Source Agency and Definition", "body": "In [State Name], CAPIT follows the source agency’s published definition and status language for the records shown on this page. If CAPIT normalizes that language into a sitewide taxonomy, both the original source term and the CAPIT display term should remain visible.", "bullets": ["Source agency: [Agency Name]", "Source system: [Database, dashboard, CSV, GIS map, or API]", "Definition note: [State-specific status definition]", "Coverage note: [Known exclusions or limits]", "Last successful fetch: [Timestamp]", "Revision policy: [How source changes are handled]"] },
+    { "heading": "Caveat", "body": "State numbers are not always comparable one-to-one. Definitions, publication practices, and update cadences differ across agencies and jurisdictions." }
+  ]
+}

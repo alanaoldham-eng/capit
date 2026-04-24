@@ -1,0 +1,13 @@
+{
+  "title": "CAPIT States | Compare Well Plugging by State",
+  "description": "Explore CAPIT’s state-by-state pages for well-plugging records, source agencies, recent activity, and coverage notes.",
+  "headline": "Explore Well Plugging by State",
+  "body": "Browse the states CAPIT currently covers, compare high-level activity, and open detailed state pages for source definitions, recent records, and publication notes.",
+  "primaryCta": { "label": "Browse All States", "href": "#states" },
+  "secondaryCta": { "label": "Open Dashboard", "href": "/dashboard" },
+  "sections": [
+    { "heading": "Compare States with Context", "body": "A good state comparison view does more than rank totals. It should also show coverage scope, update cadence, and the agency behind the numbers." },
+    { "heading": "Search and Sort", "body": "Search by state name, sort by published records, recent activity, freshness, or alphabetical order, and switch between list and map views.", "bullets": ["Search placeholder: Search states", "Recent Activity", "Total Published Records", "Freshness", "Alphabetical"] },
+    { "heading": "State Card Labels", "body": "Each state card should clearly show source agency, last refresh, and a coverage note.", "bullets": ["Source Agency", "Last Refresh", "Coverage Note", "Open State Page"] }
+  ]
+}

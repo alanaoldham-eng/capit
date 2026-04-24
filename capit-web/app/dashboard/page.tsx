@@ -1,25 +1,25 @@
+import Link from "next/link"
 import { Header } from "@/components/header"
-import { StatsDashboard } from "@/components/stats-dashboard"
 import Footer from "@/components/footer"
 import { getFullPageContent } from "@/lib/content"
 
-export default function DashboardPage() {
-  const { site, dashboard, footer } = getFullPageContent()
+export default function Page() {
+  const { site, footer } = getFullPageContent()
 
   return (
-    <main className="min-h-screen bg-[#F8F7F2]">
+    <main className="min-h-screen bg-[#fbfaf6]">
       <Header content={site} />
-      <section className="px-6 py-12 lg:px-12 xl:px-16">
-        <div className="mx-auto max-w-[1440px] rounded-[28px] bg-white px-8 py-10 shadow-[0_24px_60px_rgba(15,56,41,0.06)]">
-          <p className="text-sm font-black uppercase tracking-[0.16em] text-secondary">Live Overview</p>
-          <h1 className="mt-3 text-4xl font-black tracking-[-0.04em] text-primary sm:text-5xl">CAPIT Dashboard</h1>
-          <p className="mt-4 max-w-3xl text-lg leading-8 text-foreground/78">
-            This sample dashboard page demonstrates how CAPIT can expand beyond the homepage into dedicated product pages for reporting, analytics, and investor-facing education.
-          </p>
+      <section className="px-6 py-20 lg:px-12 xl:px-20">
+        <div className="mx-auto max-w-4xl rounded-2xl border border-border/70 bg-white p-8 shadow-sm md:p-12">
+          <Link href="/" className="text-sm font-semibold text-primary hover:underline">← Back to home</Link>
+          <h1 className="mt-8 text-4xl font-extrabold tracking-[-0.04em] text-primary md:text-6xl">CAPIT Dashboard</h1>
+          <div className="mt-8 space-y-6 text-base leading-8 text-[#31564e]">
+            <p>This page will host the deeper CAPIT dashboard experience, including live well-plugging data, mint history, state leaderboards, and links to source records.</p>
+            <p>This placeholder page is ready for Tina-managed content or a future richer page template. It exists so every homepage CTA and navigation item resolves to a real route during demo and system integration testing.</p>
+          </div>
         </div>
       </section>
-      <StatsDashboard content={dashboard} />
-      <Footer content={footer} site={site} />
+      <Footer site={site} content={footer} />
     </main>
   )
 }

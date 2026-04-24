@@ -1,0 +1,21 @@
+{
+  "title": "CAPIT FAQs | Data, Token, and Wallet Answers",
+  "description": "Answers to common questions about CAPIT’s data, token mechanics, wallet flow, privacy, and claim boundaries.",
+  "headline": "Frequently Asked Questions",
+  "body": "Find answers about CAPIT’s data, methodology, token flow, wallet interactions, and policy boundaries.",
+  "sections": [
+    { "heading": "What is CAPIT?", "body": "CAPIT is a public-facing website and token project that organizes well-plugging records, explains their provenance, and shows CAPIT-linked protocol activity next to the underlying data." },
+    { "heading": "How does CAPIT define a plugged well?", "body": "CAPIT follows the source-agency definition for the record being shown. When CAPIT normalizes terms into a sitewide display taxonomy, it should show both the original source status and the CAPIT display status." },
+    { "heading": "Where does the data come from?", "body": "CAPIT should identify the source agency, source system, fetch date, verification date, and any caveats for every visible record set." },
+    { "heading": "Why can the numbers change?", "body": "Public records can be revised, corrected, reclassified, or expanded. CAPIT preserves a revision trail instead of pretending the data is static." },
+    { "heading": "Does each CAPIT token equal one well?", "body": "CAPIT should publish the exact minting rule on the Methodology and Buy CAPIT pages. If the rule is one record to one token, say so plainly. If the rule is different, publish the formula, effective date, and contract references." },
+    { "heading": "Does buying CAPIT fund plugging work?", "body": "Only say yes if CAPIT has a documented treasury, grant, donation, or revenue-allocation mechanism that is publicly described. Otherwise the answer should remain no." },
+    { "heading": "Is CAPIT a carbon credit or offset?", "body": "No. CAPIT should not describe the token as a carbon credit, offset, or equivalent environmental instrument unless a separate, verified, and legally documented framework exists." },
+    { "heading": "Do I need a wallet to use the dashboard?", "body": "No. The data experience should remain open to users who only want to read, search, and compare public records." },
+    { "heading": "What happens when I connect a wallet?", "body": "CAPIT may receive your public wallet address, network, and connection status. CAPIT should never ask for your secret recovery phrase, private keys, or wallet password." },
+    { "heading": "What network does CAPIT use?", "body": "CAPIT currently routes the buy experience through a supported network-specific token flow. The Buy page should clearly show the network and contract details before users proceed." },
+    { "heading": "Can CAPIT reverse a failed or rejected transaction?", "body": "No. CAPIT cannot reverse blockchain transactions. Users should review network, contract, approvals, fees, and wallet prompts before confirming." },
+    { "heading": "Where can I review the contract details?", "body": "The Buy CAPIT page should expose the token contract address, explorer link, source repository link if available, and the latest approved token disclosure text." },
+    { "heading": "Still need help?", "body": "Contact us." }
+  ]
+}

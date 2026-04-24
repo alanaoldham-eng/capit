@@ -1,27 +1,25 @@
-import { ContentPageTemplate } from "@/components/content-page-template"
+import Link from "next/link"
+import { Header } from "@/components/header"
+import Footer from "@/components/footer"
+import { getFullPageContent } from "@/lib/content"
 
-export default function WhyPluggingWellsMatterPage() {
+export default function Page() {
+  const { site, footer } = getFullPageContent()
+
   return (
-    <ContentPageTemplate
-      eyebrow="Education"
-      title="Why does plugging wells matter?"
-      intro="Plugging wells can reduce methane leakage, improve safety, and support long-term environmental restoration goals."
-      sections={[
-        {
-          heading: "Environmental impact",
-          body: [
-            "Improperly abandoned wells can create persistent environmental liabilities. Plugging them helps reduce those liabilities and turns invisible infrastructure into measurable remediation progress.",
-            "This placeholder page gives CAPIT a dedicated home for environmental storytelling instead of squeezing that detail into a card on the homepage."
-          ]
-        },
-        {
-          heading: "Why the story resonates",
-          body: [
-            "A launch story is stronger when users can quickly understand the why. This page is the place to show why plugging wells matters to communities, landowners, regulators, and environmental audiences.",
-            "For now, sample body copy keeps the route active and ready for final editorial polish."
-          ]
-        }
-      ]}
-    />
+    <main className="min-h-screen bg-[#fbfaf6]">
+      <Header content={site} />
+      <section className="px-6 py-20 lg:px-12 xl:px-20">
+        <div className="mx-auto max-w-4xl rounded-2xl border border-border/70 bg-white p-8 shadow-sm md:p-12">
+          <Link href="/" className="text-sm font-semibold text-primary hover:underline">← Back to home</Link>
+          <h1 className="mt-8 text-4xl font-extrabold tracking-[-0.04em] text-primary md:text-6xl">Why Plugging Wells Matter</h1>
+          <div className="mt-8 space-y-6 text-base leading-8 text-[#31564e]">
+            <p>Plugging inactive and orphaned wells can reduce methane emissions, lower environmental risks, and help protect groundwater and nearby communities.</p>
+            <p>This placeholder page is ready for Tina-managed content or a future richer page template. It exists so every homepage CTA and navigation item resolves to a real route during demo and system integration testing.</p>
+          </div>
+        </div>
+      </section>
+      <Footer site={site} content={footer} />
+    </main>
   )
 }

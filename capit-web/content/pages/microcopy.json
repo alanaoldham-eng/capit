@@ -1,0 +1,12 @@
+{
+  "title": "CAPIT Sitewide Microcopy",
+  "description": "Reusable labels and small interface copy for CAPIT.",
+  "headline": "Sitewide Microcopy",
+  "body": "Reusable content snippets for CAPIT’s local editing workflow.",
+  "sections": [
+    { "heading": "Labels", "body": "Header Button: Buy CAPIT. External Link Label: Opens external site. Provenance Badge: Source-linked. Freshness Badge: Verified on [Date]. Revision Badge: Revised. Partial Coverage Badge: Limited Coverage. Beta Badge: Beta. Copy Link Toast: Link copied." },
+    { "heading": "Banners", "body": "Cookie Banner: CAPIT uses necessary cookies and optional analytics tools. Manage your preferences below. Wallet Safety Banner: We will never ask for your secret recovery phrase or private keys." },
+    { "heading": "Homepage Tagline Options", "body": "Public records, clearly tracked. Well-plugging data with transparent token mechanics. Track the record. Review the method. Follow the protocol. Verified records. State-by-state context. Transparent reporting." },
+    { "heading": "Final Placeholder Checklist", "body": "Replace [Legal Entity Name], [privacy@yourdomain.com], [legal@yourdomain.com], [support@yourdomain.com], [Legal Mailing Address], [Network], [Full Contract Address], [Block Explorer URL], [Repository URL], [Disclosure Version], and [Response Time] before launch." }
+  ]
+}

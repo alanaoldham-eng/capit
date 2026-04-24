@@ -1,144 +1,46 @@
 {
   "statsCards": [
-    {
-      "title": "Wells Plugged",
-      "value": "1,327",
-      "subtitle": "Total Historically plugged"
-    },
-    {
-      "title": "Wells Plugged",
-      "value": "674",
-      "subtitle": "Wells plugged this month"
-    }
+    { "title": "Verified Plugged-Well Records", "value": "1,327", "subtitle": "Public records that have passed CAPIT publication and verification rules." },
+    { "title": "Added in the Last 30 Days", "value": "674", "subtitle": "Newly published records added during the selected period." }
   ],
-  "tokensCard": {
-    "title": "CAPIT Tokens Minted",
-    "value": "1,327,843",
-    "subtitle": "Total CAPIT minted"
-  },
+  "tokensCard": { "title": "CAPIT Mint Activity", "value": "1,327,843", "subtitle": "On-chain activity linked to CAPIT’s approved minting methodology." },
   "pluggingTrend": {
-    "sectionTitle": [
-      "Real-Time Well",
-      "Plugging Data"
-    ],
-    "chartTitle": "Historical Plugging Trend",
-    "chartSubtitle": "Last 30 Days",
-    "dataSource": "Source: U.S. Department of the Interior",
+    "sectionTitle": ["National", "Snapshot"],
+    "chartTitle": "Historical Publishing Trend",
+    "chartSubtitle": "Daily published-record totals for the selected period.",
+    "dataSource": "Source-linked public records. Data may be delayed, corrected, or revised.",
     "trendData": [
-      {
-        "day": 1,
-        "value": 15
-      },
-      {
-        "day": 5,
-        "value": 22
-      },
-      {
-        "day": 10,
-        "value": 28
-      },
-      {
-        "day": 15,
-        "value": 35
-      },
-      {
-        "day": 20,
-        "value": 42
-      },
-      {
-        "day": 25,
-        "value": 38
-      },
-      {
-        "day": 30,
-        "value": 45
-      }
+      { "day": 1, "value": 15 }, { "day": 5, "value": 22 }, { "day": 10, "value": 28 },
+      { "day": 15, "value": 35 }, { "day": 20, "value": 42 }, { "day": 25, "value": 38 }, { "day": 30, "value": 45 }
     ],
-    "mintLogTitle": "Daily Mint Log",
+    "mintLogTitle": "Recent Verified Records",
     "mintLogEntries": [
-      {
-        "date": "April 23, 2024",
-        "wells": 24,
-        "status": "success"
-      },
-      {
-        "date": "April 22, 2024",
-        "wells": 19,
-        "status": "success"
-      },
-      {
-        "date": "April 21, 2024",
-        "wells": 27,
-        "status": "success"
-      },
-      {
-        "date": "April 19, 2024",
-        "wells": 30,
-        "status": "success"
-      }
+      { "date": "April 23, 2024", "wells": 24, "status": "success" },
+      { "date": "April 22, 2024", "wells": 19, "status": "success" },
+      { "date": "April 21, 2024", "wells": 27, "status": "success" },
+      { "date": "April 19, 2024", "wells": 30, "status": "success" }
     ]
   },
   "dailyMintLog": {
-    "title": "Daily Mint Log",
+    "title": "Recent Verified Records",
     "currentDate": "April 23, 2024",
     "entries": [
-      {
-        "date": "April 23, 2024",
-        "wells": 24,
-        "status": "success"
-      },
-      {
-        "date": "April 22, 2024",
-        "wells": 19,
-        "status": "success"
-      },
-      {
-        "date": "April 21, 2024",
-        "wells": 27,
-        "status": "success"
-      },
-      {
-        "date": "April 20, 2024",
-        "wells": 30,
-        "status": "success"
-      },
-      {
-        "date": "April 19, 2024",
-        "wells": 31,
-        "status": "success"
-      }
+      { "date": "April 23, 2024", "wells": 24, "status": "success" },
+      { "date": "April 22, 2024", "wells": 19, "status": "success" },
+      { "date": "April 21, 2024", "wells": 27, "status": "success" },
+      { "date": "April 20, 2024", "wells": 30, "status": "success" },
+      { "date": "April 19, 2024", "wells": 31, "status": "success" }
     ],
-    "footer": {
-      "brandLabel": "CAPIT",
-      "recordsUrl": "https://capit.io/records"
-    }
+    "footer": { "brandLabel": "CAPIT", "recordsUrl": "https://capit.io/records" }
   },
   "stateLeaderboard": {
     "title": "State Leaderboard",
     "entries": [
-      {
-        "rank": 1,
-        "state": "Texas",
-        "flag": "TX",
-        "wells": 1342
-      },
-      {
-        "rank": 2,
-        "state": "Pennsylvania",
-        "flag": "PA",
-        "wells": 987
-      },
-      {
-        "rank": 3,
-        "state": "Oklahoma",
-        "flag": "OK",
-        "wells": 742
-      }
+      { "rank": 1, "state": "Texas", "flag": "TX", "wells": 1342 },
+      { "rank": 2, "state": "Pennsylvania", "flag": "PA", "wells": 987 },
+      { "rank": 3, "state": "Oklahoma", "flag": "OK", "wells": 742 }
     ],
-    "viewAllButton": {
-      "label": "View All States",
-      "href": "/states"
-    },
-    "dataSourceNote": "Data updates - daily - from data.gov"
+    "viewAllButton": { "label": "View All States", "href": "/states" },
+    "dataSourceNote": "Rankings reflect visible data scope and current filters."
   }
 }

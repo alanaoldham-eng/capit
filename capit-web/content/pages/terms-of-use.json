@@ -1,0 +1,19 @@
+{
+  "title": "CAPIT Terms of Use",
+  "description": "Review the terms that govern your use of the CAPIT website, its data views, and any wallet-enabled features.",
+  "headline": "Terms of Use",
+  "body": "Last updated: [Month DD, YYYY]. These Terms of Use govern your access to and use of CAPIT and any related websites, content, data views, applications, and wallet-enabled features provided by [Legal Entity Name]. By using CAPIT, you agree to these Terms.",
+  "sections": [
+    { "heading": "Using CAPIT", "body": "You may use CAPIT only in compliance with these Terms and applicable law. CAPIT may modify, suspend, or discontinue features at any time." },
+    { "heading": "Eligibility", "body": "You represent that you have the legal capacity to use CAPIT and, where required, are old enough to enter a binding agreement in your jurisdiction." },
+    { "heading": "No Advice", "body": "CAPIT provides informational content and software interfaces. Nothing on CAPIT constitutes financial, investment, legal, tax, environmental, engineering, or regulatory advice." },
+    { "heading": "Wallets and Blockchain Transactions", "body": "Wallet connections, approvals, token swaps, and other on-chain actions may involve third-party protocols, public networks, fees, delays, transaction failure, and irreversible outcomes. CAPIT does not control third-party wallets or blockchain networks and cannot reverse completed blockchain transactions." },
+    { "heading": "Data Availability", "body": "CAPIT relies on public records and third-party systems that may be delayed, incomplete, changed, or unavailable. CAPIT may display revisions, corrections, and partial coverage." },
+    { "heading": "No Warranty and No Guarantees", "body": "CAPIT is provided as is and as available, without warranties of any kind to the extent permitted by law. CAPIT does not guarantee uninterrupted availability, error-free content, profitability, environmental outcomes, or regulatory treatment of any token, feature, or transaction." },
+    { "heading": "Intellectual Property", "body": "Unless otherwise noted, CAPIT and its original content, design elements, and branding are owned by [Legal Entity Name] or its licensors. Public records remain subject to the terms and rights applicable to their source publishers." },
+    { "heading": "Prohibited Conduct", "body": "You may not misuse CAPIT, interfere with its operation, scrape it in violation of applicable law or terms, misrepresent CAPIT data, or attempt unauthorized access to systems or accounts." },
+    { "heading": "Limitation of Liability", "body": "To the fullest extent permitted by law, [Legal Entity Name] and its affiliates will not be liable for indirect, incidental, special, consequential, exemplary, or punitive damages, or for lost profits, loss of data, or trading losses related to your use of CAPIT." },
+    { "heading": "Governing Law", "body": "Insert governing law, venue, dispute-resolution, sanctions, export-control, and consumer-rights language here after legal review." },
+    { "heading": "Contact About These Terms", "body": "Questions about these Terms may be sent to [legal@yourdomain.com] or [Legal Mailing Address]." }
+  ]
+}

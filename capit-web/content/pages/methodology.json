@@ -1,0 +1,13 @@
+{
+  "title": "CAPIT Methodology | Sources, Verification, and Publication Rules",
+  "description": "Learn how CAPIT collects, normalizes, verifies, and publishes well-plugging records and related protocol activity.",
+  "headline": "CAPIT Methodology",
+  "body": "This page explains how CAPIT collects source records, applies publication rules, handles revisions, and links public data to protocol activity.",
+  "sections": [
+    { "heading": "Source Priorities", "body": "CAPIT prioritizes official source agencies, approved public datasets, and documented publication logic. Where definitions differ across jurisdictions, CAPIT preserves the source definition and makes normalization visible." },
+    { "heading": "Publication Rules", "body": "A record is published only after CAPIT’s source, formatting, and verification requirements are satisfied. Publication rules should be versioned and publicly dated." },
+    { "heading": "Revisions", "body": "Public records can change. CAPIT preserves a visible revision history where source agencies correct, reclassify, or expand underlying records." },
+    { "heading": "Minting Logic", "body": "CAPIT should publish the approved minting rule, version date, and relevant contract references here. If the rule changes, the page should preserve prior versions and effective dates." },
+    { "heading": "Important Boundaries", "body": "CAPIT’s methodology explains how records are published and how protocol activity is linked. It does not convert the token into a carbon credit, security, ownership claim, or direct remediation funding instrument unless separate legal documentation expressly says so." }
+  ]
+}

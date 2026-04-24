@@ -1,0 +1,17 @@
+{
+  "title": "CAPIT Privacy Policy",
+  "description": "Learn what information CAPIT collects, how it is used, and what happens when you browse, submit forms, or connect a wallet.",
+  "headline": "Privacy Policy",
+  "body": "Last updated: [Month DD, YYYY]. This Privacy Policy explains how [Legal Entity Name] collects, uses, shares, and retains information when you visit CAPIT, read content, submit a form, connect a wallet, or interact with embedded third-party services.",
+  "sections": [
+    { "heading": "Information We Collect", "body": "We may collect information you provide directly, such as your name, email address, company name, and message content when you contact us. We may also collect limited technical information about how you use the site, such as device, browser, approximate location, referring page, and page interactions, subject to the cookie and analytics settings described below." },
+    { "heading": "How We Use Information", "body": "We use information to operate the website, respond to inquiries, improve performance, diagnose issues, prevent misuse, comply with law, and maintain records appropriate to our business and legal obligations." },
+    { "heading": "Public Blockchain Data", "body": "If you connect a wallet or interact with blockchain-based features, CAPIT may see your public wallet address, network, and public transaction metadata related to that interaction. CAPIT does not receive your private keys, wallet password, or secret recovery phrase." },
+    { "heading": "Cookies and Analytics", "body": "CAPIT may use cookies, pixels, local storage, and similar technologies for site functionality, analytics, fraud prevention, and preference storage. Where required by law, CAPIT should provide consent controls that distinguish necessary tools from optional analytics or marketing technologies." },
+    { "heading": "Sharing Information", "body": "CAPIT may share information with hosting providers, analytics providers, customer-support tools, legal advisers, compliance providers, and other service providers that act on CAPIT’s instructions and are subject to appropriate contractual protections. CAPIT may also disclose information when required by law or to protect rights, safety, and security." },
+    { "heading": "Data Retention", "body": "CAPIT retains information only for as long as reasonably necessary for the purposes described in this Policy, unless a longer period is required or permitted by law." },
+    { "heading": "Your Rights", "body": "Depending on where you live, you may have rights to access, correct, delete, or limit the use of your personal information, or to request information about CAPIT’s privacy practices. Insert jurisdiction-specific language here after legal review." },
+    { "heading": "Changes to This Policy", "body": "CAPIT may update this Policy from time to time. When material changes are made, CAPIT should update the Last Updated date and provide any notice required by law." },
+    { "heading": "Contact for Privacy Questions", "body": "For privacy questions or requests, contact [privacy@yourdomain.com] or [Legal Mailing Address]." }
+  ]
+}

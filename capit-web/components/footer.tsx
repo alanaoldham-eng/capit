@@ -1,9 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Mail } from "lucide-react";
+import { Mail, MessageCircle } from "lucide-react";
 import type { FooterContent, SiteContent, SocialLink } from "@/lib/types";
 import { useInjectedWallet } from "@/lib/wallet/useInjectedWallet";
 
@@ -12,22 +11,57 @@ interface FooterProps {
   content: FooterContent;
 }
 
-function isExternal(href: string) {
-  return href.startsWith("http://") || href.startsWith("https://") || href.startsWith("mailto:");
+function isX(link: SocialLink) {
+  return link.platform === "twitter";
 }
 
-function socialLabel(link: SocialLink) {
-  if (link.platform === "twitter") return "X";
-  if (link.platform === "email") return "Email";
-  return link.ariaLabel || link.platform;
+function isLinkedIn(link: SocialLink) {
+  const value = `${link.href} ${link.ariaLabel}`.toLowerCase();
+  return value.includes("linkedin");
+}
+
+function shouldShowSocial(link: SocialLink) {
+  return isX(link) || isLinkedIn(link);
 }
 
 function SocialIcon({ link }: { link: SocialLink }) {
-  if (link.platform === "twitter") {
-    return <span className="text-sm font-black leading-none" aria-hidden="true">X</span>;
+  if (isLinkedIn(link)) {
+    return (
+      <span
+        className="inline-flex h-4 w-4 items-center justify-center text-[9px] font-bold leading-none"
+        aria-hidden="true"
+      >
+        in
+      </span>
+    );
   }
 
-  return <Mail className="h-4 w-4" aria-hidden="true" />;
+  if (isX(link)) {
+    return (
+      <span
+        className="inline-flex h-4 w-4 items-center justify-center text-[11px] font-bold leading-none"
+        aria-hidden="true"
+      >
+        X
+      </span>
+    );
+  }
+
+  if (link.platform === "email") {
+    return <Mail className="h-4 w-4" aria-hidden="true" />;
+  }
+
+  return <MessageCircle className="h-4 w-4" aria-hidden="true" />;
+}
+
+function socialLabel(link: SocialLink) {
+  if (isX(link)) return "X";
+  if (isLinkedIn(link)) return "LinkedIn";
+  return link.ariaLabel || link.platform;
+}
+
+function isExternal(href: string) {
+  return href.startsWith("http://") || href.startsWith("https://");
 }
 
 export default function Footer({ site, content }: FooterProps) {
@@ -37,104 +71,107 @@ export default function Footer({ site, content }: FooterProps) {
     setMounted(true);
   }, []);
 
-  const { addressLabel, error, hasInjectedWallet, isConnected, isConnecting, connectWallet } = useInjectedWallet();
+  const socialLinks = (content.socialLinks ?? []).filter(shouldShowSocial);
 
-  const walletLabel = !mounted
-    ? content.walletButton?.label || "Connect Wallet"
+  const {
+    addressLabel,
+    error,
+    hasInjectedWallet,
+    isConnected,
+    isConnecting,
+    connectWallet,
+  } = useInjectedWallet();
+
+  const walletButtonLabel = !mounted
+    ? (content.walletButton?.label || "Connect Wallet")
     : isConnected
-      ? addressLabel
-      : isConnecting
-        ? "Connecting..."
-        : content.walletButton?.label || "Connect Wallet";
-
-  const logoSrc = site.logo.src || "/images/CAPIT-LOGO-SQUARE-TEXT-Transparent.png";
+    ? addressLabel
+    : isConnecting
+    ? "Connecting..."
+    : (content.walletButton?.label || "Connect Wallet");
 
   return (
-    <footer className="mt-16 bg-[#0D4F43] text-white">
-      <div className="border-t border-white/10 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_34%),linear-gradient(135deg,#0E5A4B_0%,#0A3F36_100%)]">
-        <div className="mx-auto max-w-[1440px] px-6 py-8 text-center lg:px-12 xl:px-16">
-          <p className="text-2xl font-semibold tracking-[-0.02em] text-white/95 md:text-3xl">
-            “{content.quote}”
-          </p>
-        </div>
-      </div>
+    <footer className="border-t border-neutral-800 mt-16 bg-neutral-950 text-white">
+      <div className="mx-auto max-w-6xl px-6 py-10">
+        <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+          <div className="space-y-3 max-w-2xl">
+            <p className="text-sm font-semibold tracking-wide uppercase text-neutral-400">
+              {site.name}
+            </p>
+            <p className="text-base md:text-lg font-semibold text-white">{content.quote}</p>
+          </div>
 
-      <div className="mx-auto grid max-w-[1440px] gap-10 px-6 py-10 lg:grid-cols-[1.1fr_1fr_auto] lg:items-start lg:px-12 xl:px-16">
-        <div className="space-y-4">
-          <Image src={logoSrc} alt={site.logo.alt} width={182} height={60} className="h-auto w-[182px]" />
-          <p className="max-w-xl text-sm leading-7 text-white/82">
-            Not just the first meme token whose supply grows only when real U.S. wells are plugged. CAPIT supply equals the number of oil and gas wells in the United States that have been plugged.
-          </p>
+          <div className="flex flex-col items-start gap-4">
+            <button
+              type="button"
+              onClick={mounted ? connectWallet : undefined}
+              disabled={!mounted || isConnecting}
+              className="inline-flex items-center justify-center rounded-full bg-secondary px-5 py-3 text-sm font-semibold text-primary hover:bg-secondary/90 disabled:opacity-60 disabled:cursor-not-allowed shadow-sm min-w-[160px]"
+            >
+              {walletButtonLabel}
+            </button>
+
+            {mounted && !hasInjectedWallet ? (
+              <a
+                href="https://metamask.io/download/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-neutral-300 underline underline-offset-4 hover:text-white"
+              >
+                Install Wallet
+              </a>
+            ) : null}
+
+            {mounted && error ? (
+              <p className="text-xs text-red-300 max-w-xs" role="status" aria-live="polite">
+                {error}
+              </p>
+            ) : null}
+
+            <div className="flex flex-wrap items-center gap-3">
+              {socialLinks.map((link, index) => {
+                const href = link.href;
+                const external = isExternal(href);
+
+                return (
+                  <Link
+                    key={`${link.platform}-${href}-${index}`}
+                    href={href}
+                    target={external ? "_blank" : undefined}
+                    rel={external ? "noopener noreferrer" : undefined}
+                    aria-label={link.ariaLabel}
+                    className="inline-flex items-center gap-2 rounded-md border border-neutral-700 px-3 py-2 text-sm text-neutral-200 hover:border-neutral-500 hover:text-white"
+                  >
+                    <SocialIcon link={link} />
+                    <span>{socialLabel(link)}</span>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
         </div>
 
-        <div className="space-y-5 lg:pt-4">
-          <nav className="flex flex-wrap items-center gap-5 text-sm font-medium text-white/85">
+        {content.navigation?.length ? (
+          <nav className="mt-6 flex flex-wrap gap-4 text-sm text-neutral-400">
             {content.navigation.map((item) => (
-              <Link key={`${item.label}-${item.href}`} href={item.href} className="transition-colors hover:text-white">
+              <Link key={`${item.label}-${item.href}`} href={item.href} className="hover:text-white">
                 {item.label}
               </Link>
             ))}
           </nav>
+        ) : null}
 
-          <div className="flex flex-wrap items-center gap-3">
-            {content.socialLinks.map((link, index) => {
-              const external = isExternal(link.href);
-              return (
-                <Link
-                  key={`${link.platform}-${index}`}
-                  href={link.href}
-                  target={external ? "_blank" : undefined}
-                  rel={external ? "noopener noreferrer" : undefined}
-                  aria-label={link.ariaLabel}
-                  className="inline-flex h-10 items-center justify-center gap-2 rounded-full border border-white/18 px-4 text-sm text-white/90 transition-all hover:border-white/35 hover:bg-white/10 hover:text-white"
-                >
-                  <SocialIcon link={link} />
-                  <span>{socialLabel(link)}</span>
-                </Link>
-              );
-            })}
-          </div>
-
-          <div className="flex flex-wrap items-center gap-4 text-xs text-white/60">
+        {content.legalLinks?.length ? (
+          <div className="mt-6 flex flex-wrap gap-4 text-xs text-neutral-500">
             {content.legalLinks.map((item) => (
-              <Link key={`${item.label}-${item.href}`} href={item.href} className="transition-colors hover:text-white/85">
+              <Link key={`${item.label}-${item.href}`} href={item.href} className="hover:text-neutral-300">
                 {item.label}
               </Link>
             ))}
           </div>
-        </div>
+        ) : null}
 
-        <div className="flex flex-col items-start gap-3 lg:justify-self-end lg:pt-2">
-          <button
-            type="button"
-            onClick={mounted ? connectWallet : undefined}
-            disabled={!mounted || isConnecting}
-            className="inline-flex min-w-[180px] items-center justify-center rounded-2xl border border-[#D39E1F] bg-secondary px-5 py-3 text-sm font-black text-primary shadow-[0_10px_24px_rgba(210,167,39,0.24)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-secondary/95 hover:shadow-[0_14px_30px_rgba(210,167,39,0.3)] disabled:cursor-not-allowed disabled:opacity-60"
-          >
-            {walletLabel}
-          </button>
-
-          {mounted && !hasInjectedWallet ? (
-            <a
-              href="https://metamask.io/download/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs text-white/75 underline underline-offset-4 transition-colors hover:text-white"
-            >
-              Install Wallet
-            </a>
-          ) : null}
-
-          {mounted && error ? (
-            <p className="max-w-[240px] text-xs leading-5 text-red-200" role="status" aria-live="polite">
-              {error}
-            </p>
-          ) : null}
-        </div>
-      </div>
-
-      <div className="mx-auto max-w-[1440px] px-6 pb-8 text-xs text-white/55 lg:px-12 xl:px-16">
-        {content.copyright}
+        <div className="mt-6 text-xs text-neutral-500">{content.copyright}</div>
       </div>
     </footer>
   );

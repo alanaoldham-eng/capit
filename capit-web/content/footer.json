@@ -1,43 +1,22 @@
 {
-  "quote": "The first meme token whose supply grows only when real U.S. wells are plugged.",
+  "quote": "Public records first. Protocol transparency always.",
+  "disclaimer": "Data is provided for informational purposes and may be delayed, corrected, or revised.",
   "navigation": [
-    {
-      "label": "Dashboard",
-      "href": "/dashboard"
-    },
-    {
-      "label": "About",
-      "href": "/about"
-    },
-    {
-      "label": "FAQs",
-      "href": "/faqs"
-    }
+    { "label": "Dashboard", "href": "/dashboard" },
+    { "label": "States", "href": "/states" },
+    { "label": "About", "href": "/about" },
+    { "label": "FAQs", "href": "/faqs" },
+    { "label": "Buy CAPIT", "href": "/buy-capit" },
+    { "label": "Contact", "href": "/contact" }
   ],
   "socialLinks": [
-    {
-      "platform": "twitter",
-      "href": "https://x.com/capittoken",
-      "ariaLabel": "CAPIT on X"
-    },
-    {
-      "platform": "email",
-      "href": "mailto:shillmer@tellusdigital.io",
-      "ariaLabel": "Email CAPIT"
-    }
+    { "platform": "twitter", "href": "https://x.com/capittoken", "ariaLabel": "CAPIT on X" },
+    { "platform": "email", "href": "mailto:shillmer@tellusdigital.io", "ariaLabel": "Email" }
   ],
-  "walletButton": {
-    "label": "Connect Wallet"
-  },
+  "walletButton": { "label": "Connect Wallet" },
   "copyright": "© 2026 CAPIT. All rights reserved.",
   "legalLinks": [
-    {
-      "label": "Privacy Policy",
-      "href": "/privacy-policy"
-    },
-    {
-      "label": "Terms of Service",
-      "href": "/terms-of-service"
-    }
+    { "label": "Privacy Policy", "href": "/privacy-policy" },
+    { "label": "Terms of Use", "href": "/terms-of-use" }
   ]
 }

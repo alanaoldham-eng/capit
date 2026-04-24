@@ -1,0 +1,17 @@
+{
+  "title": "CAPIT Dashboard | National Well Plugging Tracker",
+  "description": "Filter verified plugged-well records, compare state activity, and review CAPIT source context, freshness, and revisions.",
+  "eyebrow": "Data-first view",
+  "headline": "National Well Plugging Dashboard",
+  "body": "Use the CAPIT dashboard to filter published well-plugging records by state, source, timeframe, and record status. Every panel should expose its scope, source, and freshness.",
+  "primaryCta": { "label": "Download Current View", "href": "#download" },
+  "secondaryCta": { "label": "Open Methodology", "href": "/methodology" },
+  "sections": [
+    { "heading": "Filter the Record Set", "body": "Explore the data by state, date range, source agency, publication status, and revision visibility. Filters should help users inspect the record set, not imply a broader completeness than the visible scope supports.", "bullets": ["State", "Date Range", "Source Agency", "Record Status", "Include Revisions"] },
+    { "heading": "Dashboard Cards", "body": "Verified Records: Count of published records currently included in the selected filters. Recent Additions: Records newly published during the selected timeframe. CAPIT Mint Events: Published protocol activity linked to approved minting logic. State Coverage: Number of states represented in the current filtered view. Last Source Refresh: Latest successful upstream data fetch. Last CAPIT Verification: Latest successful CAPIT validation run." },
+    { "heading": "Recent Verified Records", "body": "This table is the trust engine of the dashboard. Each row should show state, source agency, source record ID, source status, publication status, verification date, and a provenance link.", "bullets": ["View Provenance", "Open Source Record", "Download CSV", "Copy Share Link"] },
+    { "heading": "Geographic and State Comparison View", "body": "Use the map for pattern recognition and the leaderboard for rank-order comparison. If a state has no published records in the current filter, CAPIT should say so explicitly." },
+    { "heading": "Definitions and Caveats", "body": "State definitions differ. Some source systems publish orphan wells, some publish plugged wells, and some expose only partial subsets. CAPIT should show the scope of every panel in plain language." },
+    { "heading": "Empty States and Errors", "body": "No records match this filter. Clear one or more filters and try again. This source is temporarily unavailable. Showing the most recent verified snapshot. We could not load the dashboard. Please refresh or try again in a moment." }
+  ]
+}

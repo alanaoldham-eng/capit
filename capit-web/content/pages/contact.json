@@ -1,0 +1,15 @@
+{
+  "title": "Contact CAPIT | Data Corrections, Support, and Legal Notices",
+  "description": "Reach CAPIT for support, data corrections, media inquiries, privacy requests, and legal notices.",
+  "headline": "Contact CAPIT",
+  "body": "Use this page for product questions, data correction requests, media inquiries, privacy requests, and legal notices.",
+  "primaryCta": { "label": "Send a Message", "href": "mailto:shillmer@tellusdigital.io" },
+  "secondaryCta": { "label": "Report a Data Issue", "href": "mailto:shillmer@tellusdigital.io" },
+  "sections": [
+    { "heading": "How We Can Help", "body": "We can help with website questions, public-data corrections, broken links, content feedback, media requests, privacy requests, and legal notices sent to the appropriate contact." },
+    { "heading": "Contact Form", "body": "Use the form below and choose the category that best matches your request.", "bullets": ["Full Name", "Email Address", "Company or Organization", "Reason for Contact", "Message", "Related Page or URL"] },
+    { "heading": "Reason Options", "body": "General Question, Data Correction, Media Inquiry, Privacy Request, Legal Notice, Technical Issue." },
+    { "heading": "Consent Copy", "body": "By submitting this form, you agree to our Privacy Policy and acknowledge that CAPIT may use your information to respond to your request." },
+    { "heading": "What We Cannot Help With", "body": "CAPIT cannot recover wallets, reset exchange accounts, reverse blockchain transactions, reveal private keys, or provide trading, financial, legal, or tax advice. Do not include private keys, wallet passwords, or secret recovery phrases in your message." }
+  ]
+}

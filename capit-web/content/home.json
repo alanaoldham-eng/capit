@@ -1,41 +1,53 @@
 {
+  "seo": {
+    "title": "CAPIT | Plug Wells. Mint Tokens. Track Progress.",
+    "description": "Track verified U.S. well-plugging records, explore state-by-state progress, and review CAPIT mint activity with transparent methodology and source context."
+  },
   "hero": {
+    "eyebrow": "Public well-plugging data with transparent on-chain reporting",
     "headline": "Plug Wells. Mint Tokens.",
     "headlineHighlight": "Track Progress.",
-    "description": "Where onshore well plugging meets cryptocurrency. For every US onshore well plugged, one new CAPIT token is minted. Follow the real-time progress of well plugging efforts nationwide.",
-    "ctaButton": {
-      "label": "VIEW DASHBOARD",
-      "href": "/dashboard"
-    },
-    "image": {
-      "src": "/images/Cappy-at-work.jpg",
-      "alt": "CAPIT worker standing in a well field"
-    }
+    "description": "CAPIT brings together public well-plugging records, state-by-state reporting, and CAPIT protocol activity in one place. Explore the national snapshot, compare states, and review the methodology behind every published update.",
+    "ctaButton": { "label": "View Dashboard", "href": "/dashboard" },
+    "secondaryCta": { "label": "Explore States", "href": "/states" },
+    "tertiaryCta": { "label": "Read Methodology", "href": "/methodology" },
+    "trustNote": "CAPIT publishes informational content and protocol materials. Please review the methodology, disclosures, and contract details before interacting with any wallet or token feature.",
+    "image": { "src": "/images/hero-wide.png", "alt": "CAPIT worker and plugged well illustration" }
+  },
+  "snapshot": {
+    "heading": "National Snapshot",
+    "intro": "Start with the big picture. CAPIT highlights verified public records, recent publishing activity, state comparisons, and protocol-linked mint activity in a single view."
   },
   "educationalCards": [
     {
-      "title": "What is a Plugged Well?",
-      "description": "Our CAPIT tokens represent plugged, abandoned, capped wells, building a set of verifiable environmental data.",
+      "title": "What Is a Plugged Well?",
+      "description": "A plugged well is a well that a source agency records as plugged, sealed, abandoned and plugged, or an equivalent state-specific status. CAPIT should always show the exact source definition used in the current dataset view.",
       "imageSrc": "/images/plugged-well.jpg",
       "imageAlt": "Illustration of a plugged well",
       "linkHref": "/what-is-a-plugged-well",
-      "linkLabel": "LEARN MORE"
+      "linkLabel": "Learn What Counts"
     },
     {
       "title": "Why Does Plugging Wells Matter?",
-      "description": "Plugging reduces methane and protects groundwater, contributing to environmental protection and public health.",
+      "description": "Plugging can reduce leakage risk, limit fluid migration pathways, and support site restoration. CAPIT explains those benefits carefully and links them back to the source behind the claim.",
       "imageSrc": "/images/well-river.jpg",
       "imageAlt": "Illustration showing environmental benefits",
       "linkHref": "/why-plugging-wells-matter",
-      "linkLabel": "LEARN MORE"
+      "linkLabel": "Why It Matters"
     },
     {
-      "title": "How Many Inactive Wells Remain?",
-      "description": "Estimated 12,000 inactive wells at risk across the US. Approximately 97,000+ wells need to be plugged.",
+      "title": "How Many Wells Remain?",
+      "description": "Counts vary by source, definition, and publication date. CAPIT labels whether a figure refers to unplugged orphaned wells, broader inactive-well estimates, or a source-specific inventory.",
       "imageSrc": "/images/Capping-Leaders.png",
       "imageAlt": "Map showing inactive wells across the United States",
       "linkHref": "/inactive-wells-remain",
-      "linkLabel": "LEARN MORE"
+      "linkLabel": "See the Data Context"
     }
-  ]
+  ],
+  "methodologyStrip": {
+    "heading": "Source-linked. Time-stamped. Revision-aware.",
+    "body": "Every CAPIT summary should point back to source logic, verification status, and last-updated timestamps. Public records can change. CAPIT should make those changes visible.",
+    "href": "/methodology",
+    "label": "Read Methodology"
+  }
 }

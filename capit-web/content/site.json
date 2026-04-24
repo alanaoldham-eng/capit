@@ -1,25 +1,17 @@
 {
   "name": "CAPIT",
   "logo": {
-    "alt": "CAPIT Logo",
-    "src": "/images/CAPIT-LOGO-SQUARE-TEXT-Transparent.png"
+    "src": "/images/CAPIT-LOGO-SQUARE-TEXT-Transparent.png",
+    "alt": "CAPIT Logo"
   },
   "navigation": [
-    {
-      "label": "Dashboard",
-      "href": "/dashboard"
-    },
-    {
-      "label": "About",
-      "href": "/about"
-    },
-    {
-      "label": "FAQs",
-      "href": "/faqs"
-    }
+    { "label": "Dashboard", "href": "/dashboard" },
+    { "label": "States", "href": "/states" },
+    { "label": "About", "href": "/about" },
+    { "label": "FAQs", "href": "/faqs" }
   ],
   "ctaButton": {
     "label": "Buy CAPIT",
-    "href": "https://app.uniswap.org/"
+    "href": "/buy-capit"
   }
 }

@@ -1,27 +1,25 @@
-import { ContentPageTemplate } from "@/components/content-page-template"
+import Link from "next/link"
+import { Header } from "@/components/header"
+import Footer from "@/components/footer"
+import { getFullPageContent } from "@/lib/content"
 
-export default function FaqsPage() {
+export default function Page() {
+  const { site, footer } = getFullPageContent()
+
   return (
-    <ContentPageTemplate
-      eyebrow="FAQs"
-      title="Frequently asked questions"
-      intro="This placeholder FAQ page gives CAPIT a destination for launch-day questions, token education, and investor or community onboarding copy."
-      sections={[
-        {
-          heading: "How should this page be used?",
-          body: [
-            "Use this page for the questions your audience will actually ask on launch week: what CAPIT is, how the token concept works, where the data comes from, and what users should expect next.",
-            "For now, this sample content simply proves the page routing and content structure are ready for expansion."
-          ]
-        },
-        {
-          heading: "Can the content be edited later?",
-          body: [
-            "Yes. Because the site is already content-driven and Tina-ready for local editing, your team can continue expanding these pages without rebuilding the design system from scratch.",
-            "That keeps launch copy flexible while preserving engineering control over the application shell."
-          ]
-        }
-      ]}
-    />
+    <main className="min-h-screen bg-[#fbfaf6]">
+      <Header content={site} />
+      <section className="px-6 py-20 lg:px-12 xl:px-20">
+        <div className="mx-auto max-w-4xl rounded-2xl border border-border/70 bg-white p-8 shadow-sm md:p-12">
+          <Link href="/" className="text-sm font-semibold text-primary hover:underline">← Back to home</Link>
+          <h1 className="mt-8 text-4xl font-extrabold tracking-[-0.04em] text-primary md:text-6xl">FAQs</h1>
+          <div className="mt-8 space-y-6 text-base leading-8 text-[#31564e]">
+            <p>Frequently asked questions about CAPIT, plugged wells, token supply, verification timing, and how the community can follow progress.</p>
+            <p>This placeholder page is ready for Tina-managed content or a future richer page template. It exists so every homepage CTA and navigation item resolves to a real route during demo and system integration testing.</p>
+          </div>
+        </div>
+      </section>
+      <Footer site={site} content={footer} />
+    </main>
   )
 }

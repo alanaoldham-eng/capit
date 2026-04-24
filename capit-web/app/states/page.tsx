@@ -1,27 +1,25 @@
-import { ContentPageTemplate } from "@/components/content-page-template"
+import Link from "next/link"
+import { Header } from "@/components/header"
+import Footer from "@/components/footer"
+import { getFullPageContent } from "@/lib/content"
 
-export default function StatesPage() {
+export default function Page() {
+  const { site, footer } = getFullPageContent()
+
   return (
-    <ContentPageTemplate
-      eyebrow="State View"
-      title="State-by-state plugging progress"
-      intro="This placeholder page is reserved for future state leaderboard details, downloadable reports, and deeper analytics."
-      sections={[
-        {
-          heading: "Future expansion",
-          body: [
-            "A dedicated state page gives CAPIT room to show rankings, historical progress, downloadable data, and narrative context around the regions that are leading or lagging in plugged well activity.",
-            "For launch, the page acts as a clean destination so the homepage CTA does not dead-end."
-          ]
-        },
-        {
-          heading: "Potential data modules",
-          body: [
-            "This page can later support filters by state, month, well type, or source. It can also become the destination for interactive charts and educational explanations of the underlying reporting methodology.",
-            "The current placeholder text keeps the routing intact while those modules are still in progress."
-          ]
-        }
-      ]}
-    />
+    <main className="min-h-screen bg-[#fbfaf6]">
+      <Header content={site} />
+      <section className="px-6 py-20 lg:px-12 xl:px-20">
+        <div className="mx-auto max-w-4xl rounded-2xl border border-border/70 bg-white p-8 shadow-sm md:p-12">
+          <Link href="/" className="text-sm font-semibold text-primary hover:underline">← Back to home</Link>
+          <h1 className="mt-8 text-4xl font-extrabold tracking-[-0.04em] text-primary md:text-6xl">State Leaderboard</h1>
+          <div className="mt-8 space-y-6 text-base leading-8 text-[#31564e]">
+            <p>This page will provide a complete state-by-state view of plugging progress and CAPIT minting activity as verified data becomes available.</p>
+            <p>This placeholder page is ready for Tina-managed content or a future richer page template. It exists so every homepage CTA and navigation item resolves to a real route during demo and system integration testing.</p>
+          </div>
+        </div>
+      </section>
+      <Footer site={site} content={footer} />
+    </main>
   )
 }

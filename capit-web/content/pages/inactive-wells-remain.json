@@ -1,0 +1,10 @@
+{
+  "title": "How Many Wells Remain? | CAPIT",
+  "description": "Review the data context behind inactive, orphaned, unplugged, and plugged well estimates.",
+  "headline": "How Many Wells Remain?",
+  "body": "Counts vary by source, definition, and publication date. CAPIT labels whether a figure refers to unplugged orphaned wells, broader inactive-well estimates, or a source-specific inventory.",
+  "sections": [
+    { "heading": "Context Before Comparison", "body": "A good state comparison view does more than rank totals. It should show coverage scope, update cadence, and the agency behind the numbers." },
+    { "heading": "Partial Coverage", "body": "If a source exposes only partial subsets, CAPIT should say so plainly and avoid implying broader completeness than the visible data supports." }
+  ]
+}

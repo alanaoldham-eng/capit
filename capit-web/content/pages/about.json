@@ -1,0 +1,14 @@
+{
+  "title": "About CAPIT | Data, Methodology, and Mission",
+  "description": "Learn what CAPIT is, how the data works, what the token does, and where the project draws clear claim boundaries.",
+  "headline": "About CAPIT",
+  "body": "CAPIT is a data-first website and token project built around public well-plugging records. Our goal is to make the record trail clear, the methodology inspectable, and the public-facing claims narrower than the evidence.",
+  "primaryCta": { "label": "Read the Methodology", "href": "/methodology" },
+  "secondaryCta": { "label": "Open Dashboard", "href": "/dashboard" },
+  "sections": [
+    { "heading": "Why This Exists", "body": "Well-plugging information is fragmented across agency systems, state definitions, and update schedules. CAPIT brings that information into one public experience so users can understand what is being counted, where it came from, when it was last verified, and how the token layer relates to the record layer." },
+    { "heading": "How CAPIT Works", "body": "CAPIT follows a simple five-step model.", "bullets": ["Collect: CAPIT gathers public source records from published agency systems and approved datasets.", "Normalize: CAPIT organizes fields so users can compare records across jurisdictions.", "Verify: CAPIT applies publication rules, source checks, and revision logic before records appear publicly.", "Publish: CAPIT displays provenance, freshness, and caveats alongside visible data.", "Link: Where applicable, CAPIT links protocol activity to the approved minting methodology."] },
+    { "heading": "What CAPIT Is Not", "body": "CAPIT is not a government registry. CAPIT is not a substitute for reading the underlying source agency record. CAPIT is not a carbon credit or offset unless separate legal and methodological documentation explicitly says so. CAPIT tokens do not, by themselves, imply ownership of a well, ownership of environmental attributes, or rights to public remediation funds unless CAPIT’s legal documents expressly provide those rights." },
+    { "heading": "Governance and Roadmap", "body": "Governance details, treasury mechanics, protocol permissions, and future roadmap commitments should appear here once approved by legal and engineering review. Until then, CAPIT should avoid hinting at functions it has not yet documented publicly." }
+  ]
+}

@@ -1,27 +1,25 @@
-import { ContentPageTemplate } from "@/components/content-page-template"
+import Link from "next/link"
+import { Header } from "@/components/header"
+import Footer from "@/components/footer"
+import { getFullPageContent } from "@/lib/content"
 
-export default function TermsOfServicePage() {
+export default function Page() {
+  const { site, footer } = getFullPageContent()
+
   return (
-    <ContentPageTemplate
-      eyebrow="Terms of Service"
-      title="Sample terms of service"
-      intro="This is placeholder legal copy for the CAPIT website. Replace it with final attorney-reviewed terms before launch."
-      sections={[
-        {
-          heading: "Website use",
-          body: [
-            "Use this page for the site usage terms, disclaimers, risk language, external-link disclosures, and any future product or dashboard terms that CAPIT requires.",
-            "For the demo, this placeholder content shows the page flow and visual system are already established."
-          ]
-        },
-        {
-          heading: "No investment advice",
-          body: [
-            "If your legal counsel requires disclaimer language around token access, swaps, or educational content, this page is the correct home for it.",
-            "Keeping the page live now makes future launch polishing much easier."
-          ]
-        }
-      ]}
-    />
+    <main className="min-h-screen bg-[#fbfaf6]">
+      <Header content={site} />
+      <section className="px-6 py-20 lg:px-12 xl:px-20">
+        <div className="mx-auto max-w-4xl rounded-2xl border border-border/70 bg-white p-8 shadow-sm md:p-12">
+          <Link href="/" className="text-sm font-semibold text-primary hover:underline">← Back to home</Link>
+          <h1 className="mt-8 text-4xl font-extrabold tracking-[-0.04em] text-primary md:text-6xl">Terms of Service</h1>
+          <div className="mt-8 space-y-6 text-base leading-8 text-[#31564e]">
+            <p>This placeholder terms page will define website use, disclaimers, third-party links, wallet interactions, and other important site terms.</p>
+            <p>This placeholder page is ready for Tina-managed content or a future richer page template. It exists so every homepage CTA and navigation item resolves to a real route during demo and system integration testing.</p>
+          </div>
+        </div>
+      </section>
+      <Footer site={site} content={footer} />
+    </main>
   )
 }

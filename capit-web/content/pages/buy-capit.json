@@ -1,0 +1,15 @@
+{
+  "title": "Buy CAPIT | Connect Wallet and Review Contract Details",
+  "description": "Review wallet requirements, network details, contract information, fees, and transaction steps before you buy CAPIT.",
+  "headline": "Buy CAPIT",
+  "body": "CAPIT is accessed through a self-custody wallet flow. Review the network, contract details, expected fees, and risk disclosures before you proceed.",
+  "primaryCta": { "label": "Connect Wallet", "href": "#connect" },
+  "secondaryCta": { "label": "Open Buy Flow", "href": "https://app.uniswap.org/" },
+  "sections": [
+    { "heading": "Before You Connect", "body": "Make sure your wallet supports the required network, that you understand how token swaps work, and that you are ready to review the transaction in your wallet before signing. You do not need a wallet to browse CAPIT’s data. You only need one if you choose to connect or open the buy flow." },
+    { "heading": "Review the Contract Details", "body": "Before any handoff to a swap interface, CAPIT should display the following details in plain text.", "bullets": ["Network: [Insert Network]", "Token contract: [Insert Full Contract Address]", "Explorer: [Insert Block Explorer URL]", "Source repository: [Insert Repository URL or ‘Not yet published’]", "Disclosure version: [Insert Date or Version ID]"] },
+    { "heading": "Security Reminder", "body": "CAPIT will never ask for your secret recovery phrase, private keys, or wallet password. If any page, prompt, or support message asks for them, stop immediately." },
+    { "heading": "Transaction Flow", "body": "Connect your wallet, confirm the network, review approvals, review the swap, submit the transaction, wait for confirmation, then view success or failure details. CAPIT cannot recover wallets or reverse blockchain transactions.", "bullets": ["Connect Wallet", "Open Buy Flow", "Switch Network", "Copy Contract Address", "Open Block Explorer", "Wallet Connected", "Approval Required", "Transaction Pending", "Transaction Confirmed"] },
+    { "heading": "Error Messages", "body": "Wallet missing: Wallet not found. Unsupported network: Switch to [Network]. Insufficient balance: Insufficient balance for the selected amount and network cost. User rejected: Transaction rejected in your wallet. Swap failed: Review details and try again." }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "title": "What Is a Plugged Well? | CAPIT",
+  "description": "Learn how CAPIT explains plugged well records, source status language, and publication context.",
+  "headline": "What Is a Plugged Well?",
+  "body": "A plugged well is a well that a source agency records as plugged, sealed, abandoned and plugged, or an equivalent state-specific status. CAPIT should always show the exact source definition used in the current dataset view.",
+  "sections": [
+    { "heading": "Source Definitions Matter", "body": "Different states and agencies may use different terms for plugged, sealed, abandoned, orphaned, inactive, or remediated wells. CAPIT should preserve the source term and show how it maps into the sitewide display language." },
+    { "heading": "What CAPIT Publishes", "body": "CAPIT publishes records only after source, formatting, and verification requirements are satisfied. Every visible summary should expose provenance, freshness, and caveats." }
+  ]
+}
