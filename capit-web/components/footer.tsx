@@ -98,7 +98,7 @@ export default function Footer({ site, content }: FooterProps) {
             <p className="text-sm font-semibold tracking-wide uppercase text-neutral-400">
               {site.name}
             </p>
-            <p className="text-base md:text-lg font-semibold text-white">{content.quote}</p>
+            <p className="text-sm font-semibold leading-6 text-white/95 md:text-base">{content.quote}</p>
           </div>
 
           <div className="flex flex-col items-start gap-4">
