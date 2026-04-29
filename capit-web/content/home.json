@@ -8,11 +8,23 @@
     "headline": "Plug Wells. Mint Tokens.",
     "headlineHighlight": "Track Progress.",
     "description": "CAPIT brings together public well-plugging records, state-by-state reporting, and CAPIT protocol activity in one place. Explore the national snapshot, compare states, and review the methodology behind every published update.",
-    "ctaButton": { "label": "View Dashboard", "href": "/dashboard" },
-    "secondaryCta": { "label": "Explore States", "href": "/states" },
-    "tertiaryCta": { "label": "Read Methodology", "href": "/methodology" },
+    "ctaButton": {
+      "label": "View Dashboard",
+      "href": "/dashboard"
+    },
+    "secondaryCta": {
+      "label": "Explore States",
+      "href": "/states"
+    },
+    "tertiaryCta": {
+      "label": "Read Methodology",
+      "href": "/methodology"
+    },
     "trustNote": "CAPIT publishes informational content and protocol materials. Please review the methodology, disclosures, and contract details before interacting with any wallet or token feature.",
-    "image": { "src": "/images/hero-wide.png", "alt": "CAPIT worker and plugged well illustration" }
+    "image": {
+      "src": "/images/cappy and well.jpg",
+      "alt": "CAPIT worker and plugged well illustration"
+    }
   },
   "snapshot": {
     "heading": "National Snapshot",

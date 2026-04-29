@@ -19,7 +19,7 @@ export function Hero({ content }: HeroProps) {
             fill
             priority
             sizes="(max-width: 768px) 100vw, 1280px"
-            className="object-cover object-[58%_center] opacity-28 sm:opacity-45 lg:opacity-100"
+            className="object-contain bg-white opacity-28 sm:opacity-45 lg:opacity-100"
           />
 
           {/* Mobile-first readability veil; desktop preserves the broad mockup-style artwork sweep under the copy. */}
