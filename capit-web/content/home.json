@@ -50,7 +50,7 @@
     {
       "title": "How Many Wells Remain?",
       "description": "Counts vary by source, definition, and publication date. CAPIT labels whether a figure refers to unplugged orphaned wells, broader inactive-well estimates, or a source-specific inventory.",
-      "imageSrc": "/images/Capping-Leaders.png",
+      "imageSrc": "/images/plug-map.jpg",
       "imageAlt": "Map showing inactive wells across the United States",
       "linkHref": "/inactive-wells-remain",
       "linkLabel": "See the Data Context"
