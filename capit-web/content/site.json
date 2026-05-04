@@ -1,14 +1,26 @@
 {
   "name": "CAPIT",
   "logo": {
-    "src": "/images/CAPIT-LOGO-SQUARE-TEXT-Transparent.png",
+    "src": "/images/CAPIT-LOGO-large_3x.png",
     "alt": "CAPIT Logo"
   },
   "navigation": [
-    { "label": "Dashboard", "href": "/dashboard" },
-    { "label": "States", "href": "/states" },
-    { "label": "About", "href": "/about" },
-    { "label": "FAQs", "href": "/faqs" }
+    {
+      "label": "Dashboard",
+      "href": "/dashboard"
+    },
+    {
+      "label": "States",
+      "href": "/states"
+    },
+    {
+      "label": "About",
+      "href": "/about"
+    },
+    {
+      "label": "FAQs",
+      "href": "/faqs"
+    }
   ],
   "ctaButton": {
     "label": "Buy CAPIT",
