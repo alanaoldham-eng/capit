@@ -1,0 +1,4 @@
+api_number,state,county,operator,plug_date,source_url,latitude,longitude,plugging_cost_estimate_usd,methane_reduction_estimate_tons_co2e,depth_feet,is_offshore,is_launch_batch,notes
+4200331234,TX,Andrews,Permian Legacy Plugging LLC,2026-04-15,https://example.org/tx/4200331234,32.3182,-102.5457,62500,725,11200,false,true,Launch batch high methane candidate
+3501729988,OK,Canadian,Red Dirt Remediation Co,2026-04-21,https://example.org/ok/3501729988,35.5431,-97.9790,48000,180,7400,false,true,Standard registry receipt
+0300521001,AK,North Slope,Arctic Field Services,2026-04-27,https://example.org/ak/0300521001,70.2002,-148.4597,215000,990,15120,true,true,Offshore and extreme environment premium candidate

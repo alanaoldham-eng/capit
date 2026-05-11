@@ -1,0 +1,13 @@
+{
+  "name": "CAPIT Registry Receipt — TX-4200331234",
+  "description": "Public environmental receipt for one verified plugged/capped U.S. oil or gas well. CAPIT uses a strict invariant: one verified plugged well permits exactly one CAPIT token mint. This registry NFT is an audit/provenance layer, not a carbon credit.",
+  "image": "ipfs://bafyregistryexample",
+  "external_url": "https://capit.eco/registry/4200331234",
+  "attributes": [
+    { "trait_type": "NFT Tier", "value": "registry_only" },
+    { "trait_type": "State", "value": "TX" },
+    { "trait_type": "County", "value": "Andrews" },
+    { "trait_type": "Proof Hash", "value": "0xabc123" },
+    { "trait_type": "Methane Reduction Estimate tCO2e", "value": 725, "display_type": "number" }
+  ]
+}

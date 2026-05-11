@@ -1,0 +1,26 @@
+{
+  "name": "capit-nft-platform",
+  "version": "0.1.0",
+  "private": true,
+  "description": "CAPIT Hybrid NFT Architecture, admin minting platform, and public plugged-well registry explorer.",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit",
+    "export:ideogram": "tsx batch/export-ideogram-batch.ts sample-data/sample-well-batch.csv dist/ideogram",
+    "generate:metadata": "tsx batch/generate-metadata.ts sample-data/sample-well-batch.csv dist/metadata"
+  },
+  "dependencies": {
+    "nanoid": "^5.0.9",
+    "next": "^15.2.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.10",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
