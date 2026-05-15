@@ -4,3 +4,4 @@ capit-web/node_modules
 capit-web/.next
 .env
 .env.local
+tsconfig.tsbuildinfo

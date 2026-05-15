@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --background: #f7f9fd;
+  --foreground: #071a33;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: radial-gradient(circle at top left, rgba(36, 107, 254, 0.16), transparent 34rem), var(--background);
+  color: var(--foreground);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+a { color: inherit; text-decoration: none; }
+
+::selection { background: #246bfe; color: white; }
+
+@layer components {
+  .container-page { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+  .card { @apply rounded-3xl border border-slate-200 bg-white shadow-soft; }
+  .button-primary { @apply inline-flex items-center justify-center rounded-full bg-cardano-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition hover:bg-cardano-600 focus:outline-none focus:ring-4 focus:ring-blue-200; }
+  .button-secondary { @apply inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-navy-900 transition hover:border-cardano-500 hover:text-cardano-600 focus:outline-none focus:ring-4 focus:ring-blue-100; }
+  .input { @apply w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-cardano-500 focus:ring-4 focus:ring-blue-100; }
+  .label { @apply text-sm font-semibold text-slate-700; }
+}
