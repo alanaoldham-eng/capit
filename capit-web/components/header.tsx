@@ -9,11 +9,20 @@ interface HeaderProps {
 
 export function Header({ content }: HeaderProps) {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/92 px-4 py-3 backdrop-blur-md sm:px-6 lg:px-12 xl:px-20">
+    /* Removed py-3 to let the larger logo breathe naturally without forcing an artificially massive layout height */
+    <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/92 px-4 py-2 backdrop-blur-md sm:px-6 lg:px-12 xl:px-20">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 sm:gap-8">
         <Link href="/" className="flex items-center gap-3" aria-label="CAPIT homepage">
           {content.logo?.src ? (
-            <Image src={content.logo.src} alt={content.logo.alt} width={150} height={60} className="h-12 w-auto object-contain sm:h-14" priority />
+            <Image 
+              src={content.logo.src} 
+              alt={content.logo.alt} 
+              width={250} // Increased bounds so Next.js doesn't blur the resolution
+              height={120} 
+              /* Max visibility: h-20 (80px) on mobile scaled up to md:h-28 (112px) on desktop layout widths */
+              className="h-20 w-auto object-contain md:h-28 transition-all duration-200" 
+              priority 
+            />
           ) : (
             <span className="text-2xl font-black tracking-tight text-primary">{content.name}</span>
           )}
