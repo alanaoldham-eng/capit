@@ -28,7 +28,7 @@ export default function Page() {
         <div className="mx-auto max-w-4xl rounded-2xl border border-border/70 bg-white p-8 shadow-sm md:p-12">
           
           <Link href="/" className="text-sm font-semibold text-primary hover:underline">
-            ← Back to home
+            {"← Back to home"}
           </Link>
           
           {/* Main Headline */}
