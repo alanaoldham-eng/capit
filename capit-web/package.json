@@ -12,13 +12,21 @@
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.45.1",
     "@tinacms/cli": "^2.2.2",
+    "@web3modal/wagmi": "^5.0.11",
+    "fs-extra": "^11.2.0",
     "lucide-react": "^1.8.0",
     "next": "14.2.33",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "sharp": "^0.34.5",
-    "tinacms": "^3.7.2"
+    "slate": "^0.124.1",
+    "slate-dom": "^0.124.1",
+    "slate-react": "^0.124.2",
+    "tinacms": "^3.7.2",
+    "viem": "^2.13.10",
+    "wagmi": "^2.9.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.9.1",

@@ -4,174 +4,52 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Mail, MessageCircle } from "lucide-react";
 import type { FooterContent, SiteContent, SocialLink } from "@/lib/types";
-import { useInjectedWallet } from "@/lib/wallet/useInjectedWallet";
 
 interface FooterProps {
   site: SiteContent;
   content: FooterContent;
 }
 
-function isX(link: SocialLink) {
-  return link.platform === "twitter";
-}
-
-function isLinkedIn(link: SocialLink) {
-  const value = `${link.href} ${link.ariaLabel}`.toLowerCase();
-  return value.includes("linkedin");
-}
-
-function shouldShowSocial(link: SocialLink) {
-  return isX(link) || isLinkedIn(link);
-}
+function isX(link: SocialLink) { return link.platform === "twitter"; }
+var isLinkedIn = (link: SocialLink) => `${link.href} ${link.ariaLabel}`.toLowerCase().includes("linkedin");
+var shouldShowSocial = (link: SocialLink) => isX(link) || isLinkedIn(link);
 
 function SocialIcon({ link }: { link: SocialLink }) {
-  if (isLinkedIn(link)) {
-    return (
-      <span
-        className="inline-flex h-4 w-4 items-center justify-center text-[9px] font-bold leading-none"
-        aria-hidden="true"
-      >
-        in
-      </span>
-    );
-  }
-
-  if (isX(link)) {
-    return (
-      <span
-        className="inline-flex h-4 w-4 items-center justify-center text-[11px] font-bold leading-none"
-        aria-hidden="true"
-      >
-        X
-      </span>
-    );
-  }
-
-  if (link.platform === "email") {
-    return <Mail className="h-4 w-4" aria-hidden="true" />;
-  }
-
-  return <MessageCircle className="h-4 w-4" aria-hidden="true" />;
-}
-
-function socialLabel(link: SocialLink) {
-  if (isX(link)) return "X";
-  if (isLinkedIn(link)) return "LinkedIn";
-  return link.ariaLabel || link.platform;
-}
-
-function isExternal(href: string) {
-  return href.startsWith("http://") || href.startsWith("https://");
+  if (isLinkedIn(link)) return <span className="inline-flex h-4 w-4 items-center justify-center text-[9px] font-bold leading-none">in</span>;
+  if (isX(link)) return <span className="inline-flex h-4 w-4 items-center justify-center text-[11px] font-bold leading-none">X</span>;
+  return link.platform === "email" ? <Mail className="h-4 w-4" /> : <MessageCircle className="h-4 w-4" />;
 }
 
 export default function Footer({ site, content }: FooterProps) {
   const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
+  useEffect(() => { setMounted(true); }, []);
   const socialLinks = (content.socialLinks ?? []).filter(shouldShowSocial);
 
-  const {
-    addressLabel,
-    error,
-    hasInjectedWallet,
-    isConnected,
-    isConnecting,
-    connectWallet,
-  } = useInjectedWallet();
-
-  const walletButtonLabel = !mounted
-    ? (content.walletButton?.label || "Connect Wallet")
-    : isConnected
-    ? addressLabel
-    : isConnecting
-    ? "Connecting..."
-    : (content.walletButton?.label || "Connect Wallet");
-
   return (
-    <footer className="border-t border-neutral-800 mt-16 bg-neutral-950 text-white">
-      <div className="mx-auto max-w-6xl px-6 py-10">
+    <footer className="border-t border-slate-100 mt-16 bg-white text-slate-800">
+      <div className="mx-auto max-w-7xl px-6 py-12">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
           <div className="space-y-3 max-w-2xl">
-            <p className="text-sm font-semibold tracking-wide uppercase text-neutral-400">
-              {site.name}
-            </p>
-            <p className="text-sm font-semibold leading-6 text-white/95 md:text-base">{content.quote}</p>
+            <p className="text-xs font-black tracking-widest uppercase text-slate-400">{site.name}</p>
+            <p className="text-sm font-medium leading-relaxed text-slate-500">{content.quote}</p>
           </div>
 
-          <div className="flex flex-col items-start gap-4">
-            <button
-              type="button"
-              onClick={mounted ? connectWallet : undefined}
-              disabled={!mounted || isConnecting}
-              className="inline-flex items-center justify-center rounded-full bg-secondary px-5 py-3 text-sm font-semibold text-primary hover:bg-secondary/90 disabled:opacity-60 disabled:cursor-not-allowed shadow-sm min-w-[160px]"
-            >
-              {walletButtonLabel}
-            </button>
-
-            {mounted && !hasInjectedWallet ? (
-              <a
-                href="https://metamask.io/download/"
-                target="_blank"
+          <div className="flex flex-wrap items-center gap-3">
+            {mounted && socialLinks.map((link, idx) => (
+              <Link
+                key={`${link.platform}-${idx}`}
+                href={link.href}
+                target={link.href.startsWith("http") ? "_blank" : undefined}
                 rel="noopener noreferrer"
-                className="text-xs text-neutral-300 underline underline-offset-4 hover:text-white"
+                className="inline-flex items-center gap-2 rounded-xl border border-slate-100 bg-[#FBFBFA] px-4 py-2.5 text-xs font-bold text-slate-600 hover:text-slate-900 transition-colors"
               >
-                Install Wallet
-              </a>
-            ) : null}
-
-            {mounted && error ? (
-              <p className="text-xs text-red-300 max-w-xs" role="status" aria-live="polite">
-                {error}
-              </p>
-            ) : null}
-
-            <div className="flex flex-wrap items-center gap-3">
-              {socialLinks.map((link, index) => {
-                const href = link.href;
-                const external = isExternal(href);
-
-                return (
-                  <Link
-                    key={`${link.platform}-${href}-${index}`}
-                    href={href}
-                    target={external ? "_blank" : undefined}
-                    rel={external ? "noopener noreferrer" : undefined}
-                    aria-label={link.ariaLabel}
-                    className="inline-flex items-center gap-2 rounded-md border border-neutral-700 px-3 py-2 text-sm text-neutral-200 hover:border-neutral-500 hover:text-white"
-                  >
-                    <SocialIcon link={link} />
-                    <span>{socialLabel(link)}</span>
-                  </Link>
-                );
-              })}
-            </div>
+                <SocialIcon link={link} />
+                <span>{isX(link) ? "X" : isLinkedIn(link) ? "LinkedIn" : link.platform}</span>
+              </Link>
+            ))}
           </div>
         </div>
-
-        {content.navigation?.length ? (
-          <nav className="mt-6 flex flex-wrap gap-4 text-sm text-neutral-400">
-            {content.navigation.map((item) => (
-              <Link key={`${item.label}-${item.href}`} href={item.href} className="hover:text-white">
-                {item.label}
-              </Link>
-            ))}
-          </nav>
-        ) : null}
-
-        {content.legalLinks?.length ? (
-          <div className="mt-6 flex flex-wrap gap-4 text-xs text-neutral-500">
-            {content.legalLinks.map((item) => (
-              <Link key={`${item.label}-${item.href}`} href={item.href} className="hover:text-neutral-300">
-                {item.label}
-              </Link>
-            ))}
-          </div>
-        ) : null}
-
-        <div className="mt-6 text-xs text-neutral-500">{content.copyright}</div>
+        <div className="mt-8 pt-8 border-t border-slate-50 text-xs text-slate-400">{content.copyright}</div>
       </div>
     </footer>
   );

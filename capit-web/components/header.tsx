@@ -1,7 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
 import type { SiteContent } from "@/lib/types"
-import { getBuyCapitUrl } from "@/lib/config/cta"
 
 interface HeaderProps {
   content: SiteContent
@@ -9,36 +8,41 @@ interface HeaderProps {
 
 export function Header({ content }: HeaderProps) {
   return (
-    /* Removed py-3 to let the larger logo breathe naturally without forcing an artificially massive layout height */
-    <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/92 px-4 py-2 backdrop-blur-md sm:px-6 lg:px-12 xl:px-20">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 sm:gap-8">
-        <Link href="/" className="flex items-center gap-3" aria-label="CAPIT homepage">
+    <header className="sticky top-0 z-50 w-full border-b border-slate-100 bg-white/90 px-4 py-4 backdrop-blur-md sm:px-8 lg:px-16 xl:px-20">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4">
+        
+        {/* Logo Placement Area matching Charles' precise container constraints */}
+        <Link href="/" className="flex items-center gap-2 shrink-0" aria-label="CAPIT homepage">
           {content.logo?.src ? (
             <Image 
               src={content.logo.src} 
-              alt={content.logo.alt} 
-              width={250} // Increased bounds so Next.js doesn't blur the resolution
-              height={120} 
-              /* Max visibility: h-20 (80px) on mobile scaled up to md:h-28 (112px) on desktop layout widths */
-              className="h-20 w-auto object-contain md:h-28 transition-all duration-200" 
+              alt={content.logo.alt || "CAPIT Logo"} 
+              width={105} 
+              height={34} 
+              className="h-8.5 w-auto object-contain" 
               priority 
             />
           ) : (
-            <span className="text-2xl font-black tracking-tight text-primary">{content.name}</span>
+            <span className="text-lg font-black tracking-tight text-slate-900">{content.name}</span>
           )}
         </Link>
 
-        <nav className="hidden items-center gap-10 md:flex">
-          {content.navigation.map((item) => (
-            <Link key={item.href} href={item.href} className="text-sm font-semibold text-primary/80 transition-colors hover:text-primary">
+        {/* Dynamic Navigation Tracks */}
+        <nav className="hidden items-center gap-8 md:flex font-bold text-slate-500 text-sm">
+          {content.navigation?.map((item) => (
+            <Link key={item.href} href={item.href} className="transition-colors hover:text-slate-900">
               {item.label}
             </Link>
           ))}
         </nav>
 
-        <a href={getBuyCapitUrl()} target="_blank" rel="noopener noreferrer" className="rounded-xl bg-secondary px-4 py-2.5 text-xs font-black text-primary shadow-lg shadow-secondary/25 transition hover:-translate-y-0.5 hover:bg-secondary/90 sm:px-6 sm:py-3 sm:text-sm">
+        {/* Bounded internal hash anchor swap selection node */}
+        <Link 
+          href="#swap-section" 
+          className="rounded-xl bg-[#FABE3C] hover:bg-[#E5AF30] px-5 py-2.5 text-xs font-black text-slate-900 shadow-sm transition-all duration-150 active:scale-95"
+        >
           {content.ctaButton?.label || "Buy CAPIT"}
-        </a>
+        </Link>
       </div>
     </header>
   )
