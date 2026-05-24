@@ -14,7 +14,7 @@ createWeb3Modal({
   wagmiConfig,
   projectId,
   enableAnalytics: false,
-  enableOnRamp: false, // Safely strips out Coinbase fiat dependencies
+  enableOnramp: false, // Safely strips out Coinbase fiat dependencies
   themeMode: 'light',   // Flipped to match your clean light-mode mockup palette
   themeVariables: {
     '--w3m-accent': '#FABE3C', // Synchronized with our target amber highlight hex
