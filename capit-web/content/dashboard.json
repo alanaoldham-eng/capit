@@ -2,7 +2,7 @@
   "statsCards": [
     {
       "title": "Verified Plugged-Well Records",
-      "value": "1,890,000",
+      "value": "1,802,294",
       "subtitle": "Public records that have passed CAPIT publication and verification rules."
     },
     {
@@ -13,7 +13,7 @@
   ],
   "tokensCard": {
     "title": "CAPIT Mint Activity",
-    "value": "1,890,000",
+    "value": "1,802,294",
     "subtitle": "On-chain activity linked to CAPIT’s approved minting methodology."
   },
   "pluggingTrend": {
