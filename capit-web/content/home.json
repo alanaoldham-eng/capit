@@ -58,7 +58,7 @@
   ],
   "methodologyStrip": {
     "heading": "Source-linked. Time-stamped. Revision-aware.",
-    "body": "Every CAPIT summary should point back to source logic, verification status, and last-updated timestamps. Public records can change. CAPIT should make those changes visible.",
+    "body": "The CAPIT protocol enforces absolute cryptographic provenance for every tokenized environmental asset. By cross-referencing real-time public registries with our secure data processing pipeline, our architecture ensures immutable tracking of verification statuses, source logic, and time-stamped updates directly on-chain.",
     "href": "/methodology",
     "label": "Read Methodology"
   }
