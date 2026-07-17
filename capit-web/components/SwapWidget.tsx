@@ -150,7 +150,11 @@ export function SwapWidget() {
           <div className={`text-2xl font-bold truncate ${isQuoteLoading ? 'text-slate-300' : 'text-slate-900'}`}>
             {formatDisplayAmount(formattedCapitOutput)}
           </div>
-          <span className="text-sm font-black tracking-wide text-slate-400 bg-white border border-slate-200 px-2.5 py-1 rounded-lg shadow-sm shrink-0">CAPIT</span>
+          <span className="flex items-center gap-2 text-sm font-black tracking-wide text-slate-400 bg-white border border-slate-200 px-2.5 py-1 rounded-lg shadow-sm shrink-0">
+            {/* CAPPY LOGO INJECTED HERE */}
+            <img src="/cappy-logo.png" alt="Cappy Logo" className="w-5 h-5 rounded-full object-contain" />
+            CAPIT
+          </span>
         </div>
       </div>
 
@@ -172,6 +176,16 @@ export function SwapWidget() {
       >
         {getButtonText()}
       </button>
+
+      {/* Hardware Wallet Explainer - Only visible when not connected */}
+      {!isConnected && (
+        <div className="mt-4 p-4 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-600 text-center shadow-sm">
+          <span className="block font-bold text-slate-900 mb-1">
+            Using a Ledger or Trezor?
+          </span>
+          Connect your hardware wallet directly through the MetaMask or Coinbase Wallet browser extensions to access the CAPIT ecosystem safely via USB.
+        </div>
+      )}
 
       {isConnected && (
         <div className="mt-4 text-center text-[11px] font-medium text-slate-400">
