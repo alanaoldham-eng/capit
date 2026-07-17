@@ -38,7 +38,7 @@ export function Header({ content }: HeaderProps) {
 
         {/* Bounded internal hash anchor swap selection node */}
         <Link 
-          href="#swap-section" 
+          href="/#swap-section" 
           className="rounded-xl bg-[#FABE3C] hover:bg-[#E5AF30] px-5 py-2.5 text-xs font-black text-slate-900 shadow-sm transition-all duration-150 active:scale-95"
         >
           {content.ctaButton?.label || "Buy CAPIT"}

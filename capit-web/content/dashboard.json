@@ -2,18 +2,18 @@
   "statsCards": [
     {
       "title": "Verified Plugged-Well Records",
-      "value": "1,890,000",
+      "value": "1,851,542",
       "subtitle": "Public records that have passed CAPIT publication and verification rules."
     },
     {
-      "title": "Added in the Last 30 Days",
-      "value": "674",
-      "subtitle": "Newly published records added during the selected period."
+      "title": "Added this Year",
+      "value": "2,508",
+      "subtitle": "Newly published records added during 2026"
     }
   ],
   "tokensCard": {
     "title": "CAPIT Mint Activity",
-    "value": "1,890,000",
+    "value": "1,851,542",
     "subtitle": "On-chain activity linked to CAPIT’s approved minting methodology."
   },
   "pluggingTrend": {
@@ -80,31 +80,41 @@
   },
   "dailyMintLog": {
     "title": "Recent Verified Records",
-    "currentDate": "April 23, 2024",
+    "currentDate": "July 10, 2026",
     "entries": [
       {
-        "date": "April 23, 2024",
+        "date": "July 2026 (to date)",
         "wells": 24,
         "status": "success"
       },
       {
-        "date": "April 22, 2024",
-        "wells": 19,
+        "date": "June 2026",
+        "wells": 135,
         "status": "success"
       },
       {
-        "date": "April 21, 2024",
-        "wells": 27,
+        "date": "May 2026",
+        "wells": 221,
         "status": "success"
       },
       {
-        "date": "April 20, 2024",
-        "wells": 30,
+        "date": "April 2026",
+        "wells": 410,
         "status": "success"
       },
       {
-        "date": "April 19, 2024",
-        "wells": 31,
+        "date": "March 2026",
+        "wells": 524,
+        "status": "success"
+      },
+      {
+        "date": "February 2026",
+        "wells": 628,
+        "status": "success"
+      },
+      {
+        "date": "January 2026",
+        "wells": 566,
         "status": "success"
       }
     ],
@@ -114,31 +124,49 @@
     }
   },
   "stateLeaderboard": {
-    "title": "State Leaderboard",
+    "title": "State Leaderboard - 2026",
     "entries": [
       {
         "rank": 1,
         "state": "Texas",
         "flag": "TX",
-        "wells": 1342
+        "wells": 724
       },
       {
         "rank": 2,
-        "state": "Pennsylvania",
-        "flag": "PA",
-        "wells": 987
+        "state": "Kansas",
+        "flag": "KS",
+        "wells": 628
       },
       {
         "rank": 3,
+        "state": "New Mexico",
+        "flag": "NM",
+        "wells": 298
+      },
+      {
+        "rank": 4,
+        "state": "Pennsylvania",
+        "flag": "PA",
+        "wells": 230
+      },
+      {
+        "rank": 5,
+        "state": "Kentucky",
+        "flag": "KY",
+        "wells": 132
+      },
+      {
+        "rank": 6,
         "state": "Oklahoma",
         "flag": "OK",
-        "wells": 742
+        "wells": 125
       }
     ],
     "viewAllButton": {
       "label": "View All States",
       "href": "/states"
     },
-    "dataSourceNote": "Rankings reflect visible data scope and current filters."
+    "dataSourceNote": "Rankings are based on indexed public records and active dashboard criteria."
   }
 }

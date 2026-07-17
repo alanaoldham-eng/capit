@@ -4,8 +4,21 @@ import { StatsDashboard } from "@/components/stats-dashboard"
 import { EducationalSection } from "@/components/educational-section"
 import { MethodologyStrip } from "@/components/methodology-strip"
 import Footer from "@/components/footer"
-import { SwapWidget } from "../components/SwapWidget" // Your custom Web3 engine module
 import { getFullPageContent } from "@/lib/content"
+import dynamic from "next/dynamic"
+
+// Dynamically load the Web3 widget ONLY on the client side to bypass the Node/indexedDB backend crash
+const SwapWidget = dynamic(
+  () => import("../components/SwapWidget").then((mod) => mod.SwapWidget),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="h-[300px] flex flex-col items-center justify-center text-sm font-medium text-slate-400 animate-pulse">
+        <span>Initializing Web3 Provider...</span>
+      </div>
+    ),
+  }
+)
 
 export default function Home() {
   const { site, home, dashboard, footer } = getFullPageContent()
@@ -20,7 +33,7 @@ export default function Home() {
       
       <EducationalSection cards={home.educationalCards} />
       
-      {/* --- SURGICAL WEb3 INSERTION: Keep styles untouched --- */}
+      {/* --- SURGICAL Web3 INSERTION: Keep styles untouched --- */}
       <section 
         id="swap-section" 
         className="w-full py-20 px-4 bg-white border-y border-slate-100 flex flex-col justify-center items-center scroll-mt-24"
