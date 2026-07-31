@@ -1,13 +1,15 @@
 {
-  "title": "What Is a Plugged Well? | CAPIT",
-  "description": "Learn how CAPIT explains plugged well records, source status language, and physical engineering publication context.",
+  "title": "What Is a Plugged Well? | CAPIT Data Context",
+  "description": "Learn what constitutes an officially plugged well under state regulatory guidelines and how CAPIT verifies record status.",
+  "eyebrow": "DATA DEFINITIONS",
   "headline": "What Is a Plugged Well?",
-  "body": "A plugged well is a well that a source agency records as permanently sealed. CAPIT explains the physical decommissioning process and shows the exact source definition used in the current dataset view.",
+  "heroImage": "/images/plugged-well.jpg",
+  "body": "A plugged well is an inactive oil or gas well that a state regulatory agency confirms has been permanently sealed downhole with cement and restored at the surface to prevent environmental fluid migration and groundwater contamination.",
   "sections": [
-    { "heading": "The Lifecycle of an Oil and Gas Well", "body": "When a well reaches the end of its productive life, it must undergo a formal, legally regulated decommissioning process known as Plug and Abandonment (P&A) to restore the geologic barriers that were pierced during original drilling." },
-    { "heading": "Subsurface Cement Isolation", "body": "Specialized crews place engineered cement barriers within the wellbore to isolate distinct subsurface formations. Crucially, continuous cement barriers are placed across the base of underground sources of drinking water to permanently protect freshwater zones." },
-    { "heading": "Surface Decommissioning & Site Remediation", "body": "Above ground, obsolete infrastructure—including wellheads, tanks, and flowlines—is completely removed. Contaminated soil is remediated, the site is re-contoured, and native vegetation is planted to restore the original ecosystem." },
-    { "heading": "State Regulatory Definitions", "body": "Different states and agencies use varying terms (e.g., P&A, PA-Approved, Dry & Plugged). CAPIT preserves the source term and transparently maps it into our verified display language." },
-    { "heading": "CAPIT Verification: An Immutable Digital Receipt", "body": "CAPIT ingests official public state registry records and verifies that a well has reached confirmed, permanent P&A status. Upon verification, CAPIT records it 1:1 on the Base network, creating an unalterable receipt of physical environmental progress." }
+    {
+      "heading": "State Status Language",
+      "image": "",
+      "body": "State agencies use specific terminology to represent completed plugging operations (e.g., 'Plugged & Abandoned', 'P&A Completed', or 'Approved Plugging Report'). CAPIT retains the original state status alongside normalized display labels."
+    }
   ]
 }

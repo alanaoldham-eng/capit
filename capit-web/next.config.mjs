@@ -1,31 +1,15 @@
-/** @type {import('next').NextConfig} */
+/** @type {import('next').NextType} */
 const nextConfig = {
   reactStrictMode: true,
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        crypto: false,
-        fs: false,
-        path: false,
-        os: false,
-        net: false,
-        stream: false,
-        tls: false,
-        fsevents: false
-      };
-    }
-
-    // FIX: Unconditional externals push for SSR compatibility
+  webpack: (config) => {
     config.externals.push(
-      'pino-pretty', 
-      '@react-native-async-storage/async-storage', 
-      'lokijs', 
+      'pino-pretty',
+      '@react-native-async-storage/async-storage',
+      'lokijs',
       'encoding'
-    );
+    )
+    return config
+  },
+}
 
-    return config;
-  }
-};
-
-export default nextConfig;
+export default nextConfig

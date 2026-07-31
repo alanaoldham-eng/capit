@@ -5,8 +5,26 @@ import { Header } from "@/components/header"
 import Footer from "@/components/footer"
 import { getFullPageContent } from "@/lib/content"
 
-// 1. Import the Tina CMS JSON payload
-import pageData from "@/content/pages/terms-of-use.json"
+// 1. Import raw JSON payload
+import rawPageData from "@/content/pages/terms-of-use.json"
+
+// 2. Define TypeScript interface with optional CMS fields
+interface SubPageData {
+  title?: string
+  description?: string
+  eyebrow?: string
+  headline?: string
+  heroImage?: string
+  body?: string
+  sections?: Array<{
+    heading?: string
+    image?: string
+    body?: string
+    bullets?: string[]
+  }>
+}
+
+const pageData = rawPageData as SubPageData
 
 export default function Page() {
   const { site, footer } = getFullPageContent()
@@ -36,7 +54,7 @@ export default function Page() {
             <div className="my-8">
               <Image 
                 src={pageData.heroImage} 
-                alt={pageData.headline || "Hero Image"} 
+                alt={pageData.headline || pageData.title || "Hero Image"} 
                 width={800} 
                 height={400} 
                 className="w-full rounded-xl border border-slate-100 object-cover shadow-sm"

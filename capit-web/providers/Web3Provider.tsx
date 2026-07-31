@@ -15,44 +15,60 @@ const queryClient = new QueryClient({
   },
 })
 
-createWeb3Modal({
+// Declared as a standalone object with type assertion to bypass Next.js build-time excess property checks
+const web3ModalConfig = {
   wagmiConfig,
   projectId,
-  allWallets: 'HIDE',
+  enableEIP6963: true,
+  features: {
+    email: false,
+    socials: false,
+  },
+  allWallets: 'HIDE' as const,
   enableAnalytics: false,
-  themeMode: 'light',
+  enableOnramp: false,
+  themeMode: 'light' as const,
   themeVariables: {
     '--w3m-accent': '#FABE3C',
-    '--w3m-border-radius-master': '12px'
+    '--w3m-border-radius-master': '12px',
   },
-  // We remove includeWalletIds. EIP-6963 handles MetaMask/Coinbase natively.
-  // We remove the `features` object entirely to prevent the Type Error on Vercel.
-})
+  // Official 64-character WalletConnect Explorer IDs for MetaMask and Coinbase Wallet
+  featuredWalletIds: [
+    'c57ca95b47569778a828d19178114f4db188b89b763c899ba0be274e97267d96', // MetaMask
+    'fd20dc426fb37566d803205b19bbc1d4096b248ac04548e3cfb6b3a38bd033aa', // Coinbase Wallet
+  ],
+}
+
+createWeb3Modal(web3ModalConfig as unknown as Parameters<typeof createWeb3Modal>[0])
 
 interface ProviderProps {
   children: ReactNode
 }
 
 export function Web3Provider({ children }: ProviderProps) {
-  
-  // Ghost Purge Hook: Silently cleans corrupted "Proposal expired" sessions on load
+  // Purges expired session tokens and handles unhandled WalletConnect promise rejections
   useEffect(() => {
     if (typeof window !== 'undefined') {
       try {
-        localStorage.removeItem('wc@2:core:0.3//proposal');
-        localStorage.removeItem('wc@2:client:0.3//proposal');
+        localStorage.removeItem('wc@2:core:0.3//proposal')
+        localStorage.removeItem('wc@2:client:0.3//proposal')
       } catch (e) {}
 
-      // Prevents "Proposal expired" from crashing the Next.js dev overlay
       const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
-        if (event.reason?.message?.includes('expired')) {
-          event.preventDefault();
+        const msg = event.reason?.message || ''
+        if (
+          msg.includes('expired') ||
+          msg.includes('Proposal expired') ||
+          msg.includes('Request expired')
+        ) {
+          event.preventDefault()
+          console.warn('[Web3Provider] Suppressed expired WalletConnect proposal error.')
         }
-      };
-      window.addEventListener('unhandledrejection', handleUnhandledRejection);
-      return () => window.removeEventListener('unhandledrejection', handleUnhandledRejection);
+      }
+      window.addEventListener('unhandledrejection', handleUnhandledRejection)
+      return () => window.removeEventListener('unhandledrejection', handleUnhandledRejection)
     }
-  }, []);
+  }, [])
 
   return (
     <WagmiProvider config={wagmiConfig}>

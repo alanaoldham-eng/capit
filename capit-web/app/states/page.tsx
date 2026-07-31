@@ -5,7 +5,28 @@ import { Header } from "@/components/header"
 import Footer from "@/components/footer"
 import { getFullPageContent } from "@/lib/content"
 
-import pageData from "@/content/pages/states.json"
+// 1. Import raw JSON payload
+import rawPageData from "@/content/pages/states.json"
+
+// 2. Define TypeScript interface with optional CMS fields
+interface StatesPageData {
+  title?: string
+  description?: string
+  eyebrow?: string
+  headline?: string
+  heroImage?: string
+  body?: string
+  primaryCta?: { label: string; href: string }
+  secondaryCta?: { label: string; href: string }
+  sections?: Array<{
+    heading?: string
+    image?: string
+    body?: string
+    bullets?: string[]
+  }>
+}
+
+const pageData = rawPageData as StatesPageData
 
 const trackedStates = [
   { name: "Texas", agency: "Railroad Commission of Texas (RRC)", slug: "texas", flag: "TX" },
@@ -45,7 +66,7 @@ export default function Page() {
             <div className="my-8">
               <Image 
                 src={pageData.heroImage} 
-                alt={pageData.headline || "Hero Image"} 
+                alt={pageData.headline || pageData.title || "Hero Image"} 
                 width={800} 
                 height={400} 
                 className="w-full rounded-xl border border-slate-100 object-cover shadow-sm"
