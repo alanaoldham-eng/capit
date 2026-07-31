@@ -1,16 +1,26 @@
 {
-  "title": "CAPIT FAQs | Data, Token, and Wallet Answers",
-  "description": "Answers to common questions about CAPIT’s data, token mechanics, wallet flow, and claim boundaries.",
-  "headline": "Frequently Asked Questions",
-  "heroImage": "",
-  "body": "Find clear, factual answers about CAPIT’s data ingestion, methodology, token flow, wallet interactions, and strict policy boundaries.",
+  "title": "How Many Inactive Wells Remain? | CAPIT Data Context",
+  "description": "Understanding inactive, orphaned, and idle well counts across state and federal inventories.",
+  "eyebrow": "DATA CONTEXT & DEFINITIONS",
+  "headline": "How Many Inactive Wells Remain?",
+  "heroImage": "/images/plug-map.jpg",
+  "body": "Counts vary widely depending on the source agency, regulatory definitions, and publication dates. CAPIT provides full transparency into whether a figure refers to unplugged orphaned wells, broader inactive-well estimates, or state-specific inventories.",
   "sections": [
-    { "heading": "What is CAPIT?", "image": "", "body": "CAPIT is a public-facing environmental registry and utility token project built on the Base network. It organizes U.S. well-plugging records, explains their provenance, and mathematically links protocol activity next to the underlying data." },
-    { "heading": "How does CAPIT verify that a well has been physically plugged?", "image": "", "body": "CAPIT relies entirely on public, state-level well registry data. A well is indexed only after the state agency officially confirms that downhole cement isolation and surface restoration are complete, assigning the well a formal status such as 'Plugged & Abandoned'." },
-    { "heading": "What is the minting ratio for the CAPIT token?", "image": "", "body": "CAPIT operates under an absolute, non-inflationary 1:1 minting rule. Exactly one CAPIT token is minted for every unique, verified plugged-well record identified in official state filings." },
-    { "heading": "Why is CAPIT built on the Base network?", "image": "", "body": "Base is a secure, low-cost Layer-2 blockchain network. It provides the high throughput and cryptographic security required to record high-volume environmental infrastructure records permanently on-chain." },
-    { "heading": "Is CAPIT a carbon credit or emissions offset?", "image": "", "body": "No. CAPIT is strictly an environmental infrastructure receipt representing physical remediation work completed above and below ground. Tokens do not represent carbon credits, offsets, or speculative financial claims." },
-    { "heading": "Do I need a crypto wallet to use the dashboard?", "image": "", "body": "No. The CAPIT National Well Plugging Dashboard is completely public and open to anyone. A self-custody wallet is only required if you choose to interact with protocol features." },
-    { "heading": "How does CAPIT handle data corrections or state revisions?", "image": "", "body": "Public state registries are occasionally updated. CAPIT maintains an append-only, visible revision trail. If an agency modifies a record status, CAPIT logs the update transparently without altering the historical ledger." }
+    {
+      "heading": "Orphaned vs. Inactive Wells",
+      "image": "",
+      "body": "An orphaned well is a well with no solvent operator legally responsible for its plugging and site restoration. An inactive or idle well is simply a well that is not currently producing, but may still have a solvent operator on record.",
+      "bullets": [
+        "Orphaned Wells: High priority for state and federal plugging programs (e.g., IIJA grants).",
+        "Inactive / Idle Wells: Tracked by state regulatory commissions with varying compliance deadlines.",
+        "Plugged Wells: Officially sealed and verified in state public registries."
+      ]
+    },
+    {
+      "heading": "State and Federal Inventories",
+      "image": "",
+      "body": "Different agencies report counts on different schedules. CAPIT continuously normalizes data from sources like the Railroad Commission of Texas (RRC), Pennsylvania DEP, and Oklahoma Corporation Commission (OCC) to maintain an accurate national snapshot.",
+      "bullets": []
+    }
   ]
 }

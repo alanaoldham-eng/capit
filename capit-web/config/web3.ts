@@ -1,5 +1,4 @@
 ﻿import { defaultWagmiConfig } from '@web3modal/wagmi/react/config'
-import { cookieStorage, createStorage } from 'wagmi'
 import { baseSepolia, mainnet } from 'wagmi/chains'
 
 export const projectId = process.env.NEXT_PUBLIC_PROJECT_ID || ''
@@ -17,13 +16,9 @@ export const wagmiConfig = defaultWagmiConfig({
   chains,
   projectId,
   metadata,
-  ssr: true,
-  storage: createStorage({
-    storage: cookieStorage
-  }),
+  ssr: false, // <-- FIX: Disables build-time storage access to prevent the getItem crash
   enableWalletConnect: true,
   enableInjected: true, 
   enableEIP6963: true,
   enableCoinbase: true
-  // enableEmail has been removed to satisfy strict ConfigOptions typing
 })
