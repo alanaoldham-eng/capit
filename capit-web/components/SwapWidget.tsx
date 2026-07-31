@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { useAccount, useDisconnect } from 'wagmi'
 import { useCapitBalances } from '../hooks/useCapitBalances'
 import { useCapitQuote } from '../hooks/useCapitQuote'
@@ -103,7 +104,6 @@ export function SwapWidget() {
         </span>
       </div>
 
-      {/* Testing & QA Account Management Chip */}
       {isConnected && (
         <div className="flex items-center gap-2 mb-4 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs animate-in fade-in duration-200">
           <div className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse shrink-0" />
@@ -121,7 +121,6 @@ export function SwapWidget() {
         </div>
       )}
 
-      {/* Input Token Panel */}
       <div className="p-4 mb-2.5 bg-slate-50 border border-slate-200 rounded-xl">
         <div className="flex justify-between text-xs text-slate-500 mb-1.5 font-medium">
           <span>Spend allocation</span>
@@ -140,7 +139,6 @@ export function SwapWidget() {
         </div>
       </div>
 
-      {/* Output Token Panel */}
       <div className="p-4 mb-4 bg-slate-50 border border-slate-200 rounded-xl">
         <div className="flex justify-between text-xs text-slate-500 mb-1.5 font-medium">
           <span>Acquire allocation</span>
@@ -151,14 +149,12 @@ export function SwapWidget() {
             {formatDisplayAmount(formattedCapitOutput)}
           </div>
           <span className="flex items-center gap-2 text-sm font-black tracking-wide text-slate-400 bg-white border border-slate-200 px-2.5 py-1 rounded-lg shadow-sm shrink-0">
-            {/* CAPPY LOGO INJECTED HERE */}
-            <Image alt="Cappy Logo" className="rounded-full object-contain" height="{20}" src="/cappy-logo.png" width="{20}"/>
+            <Image src="/cappy-logo.png" alt="Cappy Logo" width={20} height={20} className="rounded-full object-contain" />
             CAPIT
           </span>
         </div>
       </div>
 
-      {/* Dynamic Error Status Banner */}
       {errorState && (
         <div className="mb-4 p-3 bg-red-50 border border-red-200 text-red-600 text-xs rounded-xl font-medium overflow-hidden break-words">
           <span className="font-bold block mb-0.5">Execution Error:</span>
@@ -177,7 +173,6 @@ export function SwapWidget() {
         {getButtonText()}
       </button>
 
-      {/* Hardware Wallet Explainer - Only visible when not connected */}
       {!isConnected && (
         <div className="mt-4 p-4 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-600 text-center shadow-sm">
           <span className="block font-bold text-slate-900 mb-1">
