@@ -11,10 +11,16 @@ type EthereumProvider = {
   removeListener?: (eventName: string, listener: (...args: unknown[]) => void) => void;
 };
 
-declare global {
-  interface Window {
-    ethereum?: EthereumProvider;
-  }
+// FIX: removed the `declare global { interface Window { ethereum?: EthereumProvider } } }`
+// block. A dependency (one of the MetaMask/wallet SDK packages pulled in via the wagmi
+// connectors) already globally declares `Window.ethereum` as `any`. TypeScript merges
+// all global interface declarations across the whole program and requires every
+// declaration of the same property to have an identical type — our stricter type was
+// colliding with theirs. Reading window.ethereum through a locally-scoped cast avoids
+// touching the global type at all, so there's nothing to conflict with.
+function getWindowEthereum(): EthereumProvider | undefined {
+  if (typeof window === "undefined") return undefined;
+  return (window as typeof window & { ethereum?: EthereumProvider }).ethereum;
 }
 
 function truncateAddress(address: string) {
@@ -22,9 +28,7 @@ function truncateAddress(address: string) {
 }
 
 function getInjectedProvider(): EthereumProvider | undefined {
-  if (typeof window === "undefined") return undefined;
-
-  const ethereum = window.ethereum;
+  const ethereum = getWindowEthereum();
   if (!ethereum) return undefined;
 
   if (Array.isArray(ethereum.providers) && ethereum.providers.length > 0) {
