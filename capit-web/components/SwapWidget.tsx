@@ -152,7 +152,7 @@ export function SwapWidget() {
           </div>
           <span className="flex items-center gap-2 text-sm font-black tracking-wide text-slate-400 bg-white border border-slate-200 px-2.5 py-1 rounded-lg shadow-sm shrink-0">
             {/* CAPPY LOGO INJECTED HERE */}
-            <img src="/cappy-logo.png" alt="Cappy Logo" className="w-5 h-5 rounded-full object-contain" />
+            <Image alt="Cappy Logo" className="rounded-full object-contain" height="{20}" src="/cappy-logo.png" width="{20}"/>
             CAPIT
           </span>
         </div>
