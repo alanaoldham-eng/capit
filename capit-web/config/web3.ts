@@ -23,7 +23,7 @@ export const wagmiConfig = defaultWagmiConfig({
   }),
   enableWalletConnect: true,
   enableInjected: true, 
-  enableEIP6963: true, // This automatically discovers MetaMask and Coinbase without duplicates
-  enableCoinbase: true,
-  enableEmail: false // Strictly disables Reown's email login
+  enableEIP6963: true,
+  enableCoinbase: true
+  // enableEmail has been removed to satisfy strict ConfigOptions typing
 })

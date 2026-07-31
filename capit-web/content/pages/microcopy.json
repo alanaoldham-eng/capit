@@ -1,13 +1,14 @@
 {
-  "title": "CAPIT Sitewide Microcopy",
-  "description": "Reusable labels and small interface copy for CAPIT.",
-  "headline": "Sitewide Microcopy",
+  "title": "CAPIT Methodology | Sources, Verification, and Publication Rules",
+  "description": "Learn how CAPIT collects, normalizes, verifies, and publishes well-plugging records and related protocol activity on the Base network.",
+  "headline": "CAPIT Methodology",
   "heroImage": "",
-  "body": "Reusable content snippets for CAPIT’s local editing workflow.",
+  "body": "This page explains how CAPIT collects state-level source records, applies strict publication rules, handles revisions, and links public infrastructure data to permanent protocol activity.",
   "sections": [
-    { "heading": "Labels", "image": "", "body": "Header Button: Buy CAPIT. External Link Label: Opens external site. Provenance Badge: Source-linked. Freshness Badge: Verified on [Date]. Revision Badge: Revised. Partial Coverage Badge: Limited Coverage. Beta Badge: Beta. Copy Link Toast: Link copied." },
-    { "heading": "Banners", "image": "", "body": "Cookie Banner: CAPIT uses necessary cookies and optional analytics tools. Manage your preferences below. Wallet Safety Banner: We will never ask for your secret recovery phrase or private keys." },
-    { "heading": "Homepage Tagline Options", "image": "", "body": "Public records, clearly tracked. Well-plugging data with transparent token mechanics. Track the record. Review the method. Follow the protocol. Verified records. State-by-state context. Transparent reporting." },
-    { "heading": "Final Placeholder Checklist", "image": "", "body": "Replace [Legal Entity Name], [privacy@yourdomain.com], [legal@yourdomain.com], [support@yourdomain.com], [Legal Mailing Address], [Network], [Full Contract Address], [Block Explorer URL], [Repository URL], [Disclosure Version], and [Response Time] before launch." }
+    { "heading": "Core Verification Architecture", "image": "", "body": "The system enforces strict claim boundaries to ensure that every tokenized asset reflects verifiable physical reality. The flow executes in a highly structured pipeline spanning collection, normalization, verification, publication, and deterministic Base network minting." },
+    { "heading": "Data Collection & Source Hierarchy", "image": "", "body": "CAPIT prioritizes primary regulatory sources. We ingest public records from official state oil and gas conservation commissions, utilizing direct database feeds, GIS REST servers, and headless scraper fallbacks for legacy systems (e.g., AK, KS, CA, KY, LA, MO, MT, NM, NV, SD, TN, UT, WY)." },
+    { "heading": "Data Normalization & Deduplication", "image": "", "body": "State data fields vary widely across jurisdictions. CAPIT standardizes incoming records into a unified schema, ensuring API identifier matching, spatial deduplication, and strict taxonomy alignment." },
+    { "heading": "1:1 Minting Logic", "image": "", "body": "CAPIT enforces a deterministic, non-inflationary minting formula on the Base network. Exactly one token is minted for every unique, verified plugged-well record. Tokens cannot be minted arbitrarily or without an accompanying, publicly verifiable state regulatory record." },
+    { "heading": "Immutable Revision Handling", "image": "", "body": "When a state agency updates a well filing, CAPIT employs append-only logging. Historical records are preserved to ensure absolute transparency and prevent silent overwriting of critical environmental infrastructure data." }
   ]
 }

@@ -2,12 +2,12 @@
   "title": "CAPIT States | Compare Well Plugging by State",
   "description": "Explore CAPIT’s state-by-state pages for well-plugging records, source agencies, recent activity, and coverage notes.",
   "headline": "Explore Well Plugging by State",
-  "body": "Browse the states CAPIT currently covers, compare high-level activity, and open detailed state pages for source definitions, recent records, and publication notes.",
+  "body": "Browse the states CAPIT currently covers, compare high-level activity, and open detailed state pages for source definitions, recent records, and strict publication notes.",
   "primaryCta": { "label": "Browse All States", "href": "#states" },
   "secondaryCta": { "label": "Open Dashboard", "href": "/dashboard" },
   "sections": [
-    { "heading": "Compare States with Context", "body": "A good state comparison view does more than rank totals. It should also show coverage scope, update cadence, and the agency behind the numbers." },
-    { "heading": "Search and Sort", "body": "Search by state name, sort by published records, recent activity, freshness, or alphabetical order, and switch between list and map views.", "bullets": ["Search placeholder: Search states", "Recent Activity", "Total Published Records", "Freshness", "Alphabetical"] },
-    { "heading": "State Card Labels", "body": "Each state card should clearly show source agency, last refresh, and a coverage note.", "bullets": ["Source Agency", "Last Refresh", "Coverage Note", "Open State Page"] }
+    { "heading": "Tracking Regional Infrastructure", "body": "A good state comparison view does more than rank totals. It must provide context by showing coverage scope, update cadence, and the specific regulatory agency behind the numbers." },
+    { "heading": "Primary Tracked States", "body": "CAPIT tracks P&A filings across major energy-producing states, including:\n* Texas: Overseen by the Railroad Commission of Texas.\n* Pennsylvania: Overseen by the PA Dept. of Environmental Protection.\n* Oklahoma: Administered by the OK Corporation Commission.\n* California: Verified deserted and plugged wells tracked by CalGEM.\n* Kansas & New Mexico: Extensive historic well records ingested from KCC and OCD direct feeds." },
+    { "heading": "Data Normalization & Ingestion", "body": "CAPIT utilizes comprehensive scraping fallbacks and API gateways to extract CSV/XLSX bundles directly from state hosts (including AK, KS, CA, KY, LA, MO, MT, NM, NV, SD, TN, UT, WY) ensuring the highest fidelity in tracking physical environmental restoration." }
   ]
 }

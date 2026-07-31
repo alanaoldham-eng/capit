@@ -3,18 +3,18 @@
     {
       "title": "Verified Plugged-Well Records",
       "value": "1,851,542",
-      "subtitle": "Public records that have passed CAPIT publication and verification rules."
+      "subtitle": "Physical infrastructure records that have passed CAPIT's strict publication and verification rules."
     },
     {
       "title": "Added this Year",
       "value": "2,508",
-      "subtitle": "Newly published records added during 2026"
+      "subtitle": "Newly published records successfully tracked and aggregated during 2026."
     }
   ],
   "tokensCard": {
     "title": "CAPIT Mint Activity",
     "value": "1,851,542",
-    "subtitle": "On-chain activity linked to CAPIT’s approved minting methodology."
+    "subtitle": "Permanent, non-inflationary on-chain activity linked 1:1 to verified physical closures on the Base network."
   },
   "pluggingTrend": {
     "sectionTitle": [
@@ -22,146 +22,51 @@
       "Snapshot"
     ],
     "chartTitle": "Historical Publishing Trend",
-    "chartSubtitle": "Daily published-record totals for the selected period.",
-    "dataSource": "Source-linked public records. Data may be delayed, corrected, or revised.",
+    "chartSubtitle": "Daily verified-record totals across tracked U.S. jurisdictions.",
+    "dataSource": "Source-linked public records aggregated via direct flat-file and scraper fallbacks. Data may be delayed, corrected, or revised.",
     "trendData": [
-      {
-        "day": 1,
-        "value": 15
-      },
-      {
-        "day": 5,
-        "value": 22
-      },
-      {
-        "day": 10,
-        "value": 28
-      },
-      {
-        "day": 15,
-        "value": 35
-      },
-      {
-        "day": 20,
-        "value": 42
-      },
-      {
-        "day": 25,
-        "value": 38
-      },
-      {
-        "day": 30,
-        "value": 45
-      }
+      { "day": 1, "value": 15 },
+      { "day": 5, "value": 22 },
+      { "day": 10, "value": 28 },
+      { "day": 15, "value": 35 },
+      { "day": 20, "value": 42 },
+      { "day": 25, "value": 38 },
+      { "day": 30, "value": 45 }
     ],
     "mintLogTitle": "Recent Verified Records",
     "mintLogEntries": [
-      {
-        "date": "April 23, 2024",
-        "wells": 24,
-        "status": "success"
-      },
-      {
-        "date": "April 22, 2024",
-        "wells": 19,
-        "status": "success"
-      },
-      {
-        "date": "April 21, 2024",
-        "wells": 27,
-        "status": "success"
-      },
-      {
-        "date": "April 19, 2024",
-        "wells": 30,
-        "status": "success"
-      }
+      { "date": "April 23, 2026", "wells": 24, "status": "success" },
+      { "date": "April 22, 2026", "wells": 19, "status": "success" },
+      { "date": "April 21, 2026", "wells": 27, "status": "success" },
+      { "date": "April 19, 2026", "wells": 30, "status": "success" }
     ]
   },
   "dailyMintLog": {
     "title": "Recent Verified Records",
     "currentDate": "July 10, 2026",
     "entries": [
-      {
-        "date": "July 2026 (to date)",
-        "wells": 24,
-        "status": "success"
-      },
-      {
-        "date": "June 2026",
-        "wells": 135,
-        "status": "success"
-      },
-      {
-        "date": "May 2026",
-        "wells": 221,
-        "status": "success"
-      },
-      {
-        "date": "April 2026",
-        "wells": 410,
-        "status": "success"
-      },
-      {
-        "date": "March 2026",
-        "wells": 524,
-        "status": "success"
-      },
-      {
-        "date": "February 2026",
-        "wells": 628,
-        "status": "success"
-      },
-      {
-        "date": "January 2026",
-        "wells": 566,
-        "status": "success"
-      }
+      { "date": "July 2026 (to date)", "wells": 24, "status": "success" },
+      { "date": "June 2026", "wells": 135, "status": "success" },
+      { "date": "May 2026", "wells": 221, "status": "success" },
+      { "date": "April 2026", "wells": 410, "status": "success" },
+      { "date": "March 2026", "wells": 524, "status": "success" },
+      { "date": "February 2026", "wells": 628, "status": "success" },
+      { "date": "January 2026", "wells": 566, "status": "success" }
     ],
     "footer": {
       "brandLabel": "CAPIT",
-      "recordsUrl": "https://capit.io/records"
+      "recordsUrl": "https://capittoken.com/records"
     }
   },
   "stateLeaderboard": {
     "title": "State Leaderboard - 2026",
     "entries": [
-      {
-        "rank": 1,
-        "state": "Texas",
-        "flag": "TX",
-        "wells": 724
-      },
-      {
-        "rank": 2,
-        "state": "Kansas",
-        "flag": "KS",
-        "wells": 628
-      },
-      {
-        "rank": 3,
-        "state": "New Mexico",
-        "flag": "NM",
-        "wells": 298
-      },
-      {
-        "rank": 4,
-        "state": "Pennsylvania",
-        "flag": "PA",
-        "wells": 230
-      },
-      {
-        "rank": 5,
-        "state": "Kentucky",
-        "flag": "KY",
-        "wells": 132
-      },
-      {
-        "rank": 6,
-        "state": "Oklahoma",
-        "flag": "OK",
-        "wells": 125
-      }
+      { "rank": 1, "state": "Texas", "flag": "TX", "wells": 724 },
+      { "rank": 2, "state": "Kansas", "flag": "KS", "wells": 628 },
+      { "rank": 3, "state": "New Mexico", "flag": "NM", "wells": 298 },
+      { "rank": 4, "state": "Pennsylvania", "flag": "PA", "wells": 230 },
+      { "rank": 5, "state": "Kentucky", "flag": "KY", "wells": 132 },
+      { "rank": 6, "state": "Oklahoma", "flag": "OK", "wells": 125 }
     ],
     "viewAllButton": {
       "label": "View All States",

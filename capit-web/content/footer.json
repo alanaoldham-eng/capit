@@ -1,6 +1,6 @@
 {
   "quote": "Public records first. Protocol transparency always.",
-  "disclaimer": "Data is provided for informational purposes and may be delayed, corrected, or revised.",
+  "disclaimer": "CAPIT provides informational data aggregation of environmental infrastructure records. Data is provided for informational purposes and may be delayed, corrected, or revised by source agencies.",
   "navigation": [
     { "label": "Dashboard", "href": "/dashboard" },
     { "label": "States", "href": "/states" },

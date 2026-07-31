@@ -1,25 +1,16 @@
 {
   "seo": {
     "title": "CAPIT | Plug Wells. Mint Tokens. Track Progress.",
-    "description": "Track verified U.S. well-plugging records, explore state-by-state progress, and review CAPIT mint activity with transparent methodology and source context."
+    "description": "Track verified U.S. well-plugging records, explore state-by-state progress, and review CAPIT's non-inflationary mint activity with transparent methodology."
   },
   "hero": {
     "eyebrow": "Public well-plugging data with transparent on-chain reporting",
     "headline": "Plug Wells. Mint Tokens.",
     "headlineHighlight": "Track Progress.",
-    "description": "CAPIT brings together public well-plugging records, state-by-state reporting, and CAPIT protocol activity in one place. Explore the national snapshot, compare states, and review the methodology behind every published update.",
-    "ctaButton": {
-      "label": "View Dashboard",
-      "href": "/dashboard"
-    },
-    "secondaryCta": {
-      "label": "Explore States",
-      "href": "/states"
-    },
-    "tertiaryCta": {
-      "label": "Read Methodology",
-      "href": "/methodology"
-    },
+    "description": "CAPIT brings together public well-plugging records, state-by-state reporting, and permanent protocol activity on the Base network. Explore the national snapshot, compare states, and review the methodology behind our strict 1:1 environmental infrastructure tracking.",
+    "ctaButton": { "label": "View Dashboard", "href": "/dashboard" },
+    "secondaryCta": { "label": "Explore States", "href": "/states" },
+    "tertiaryCta": { "label": "Read Methodology", "href": "/methodology" },
     "trustNote": "CAPIT publishes informational content and protocol materials. Please review the methodology, disclosures, and contract details before interacting with any wallet or token feature.",
     "image": {
       "src": "/images/cappy and well.jpg",
@@ -33,7 +24,7 @@
   "educationalCards": [
     {
       "title": "What Is a Plugged Well?",
-      "description": "A plugged well is a well that a source agency records as plugged, sealed, abandoned and plugged, or an equivalent state-specific status. CAPIT should always show the exact source definition used in the current dataset view.",
+      "description": "A plugged well is a well that a source agency records as permanently sealed to protect groundwater. CAPIT ensures both the original source status and the CAPIT display status remain visible.",
       "imageSrc": "/images/plugged-well.jpg",
       "imageAlt": "Illustration of a plugged well",
       "linkHref": "/what-is-a-plugged-well",
@@ -41,7 +32,7 @@
     },
     {
       "title": "Why Does Plugging Wells Matter?",
-      "description": "Plugging can reduce leakage risk, limit fluid migration pathways, and support site restoration. CAPIT explains those benefits carefully and links them back to the source behind the claim.",
+      "description": "Every properly plugged well is a permanent investment in the land, communities, and future of the United States[cite: 25]. One Well. One Token. One Permanent Record of Progress[cite: 25].",
       "imageSrc": "/images/well-river.jpg",
       "imageAlt": "Illustration showing environmental benefits",
       "linkHref": "/why-plugging-wells-matter",
@@ -49,7 +40,7 @@
     },
     {
       "title": "How Many Wells Remain?",
-      "description": "Counts vary by source, definition, and publication date. CAPIT labels whether a figure refers to unplugged orphaned wells, broader inactive-well estimates, or a source-specific inventory.",
+      "description": "Counts vary by source, definition, and publication date. CAPIT labels whether a figure refers to unplugged orphaned wells, broader inactive-well estimates, or a source-specific state inventory.",
       "imageSrc": "/images/plug-map.jpg",
       "imageAlt": "Map showing inactive wells across the United States",
       "linkHref": "/inactive-wells-remain",
@@ -58,7 +49,7 @@
   ],
   "methodologyStrip": {
     "heading": "Source-linked. Time-stamped. Revision-aware.",
-    "body": "The CAPIT protocol enforces absolute cryptographic provenance for every tokenized environmental asset. By cross-referencing real-time public registries with our secure data processing pipeline, our architecture ensures immutable tracking of verification statuses, source logic, and time-stamped updates directly on-chain.",
+    "body": "The CAPIT protocol enforces absolute cryptographic provenance for every tokenized environmental asset. By cross-referencing real-time public registries via direct flat-file and scraper pipelines, our architecture ensures immutable tracking of verification statuses, source logic, and time-stamped updates directly on the Base network.",
     "href": "/methodology",
     "label": "Read Methodology"
   }

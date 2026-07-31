@@ -1,11 +1,16 @@
 {
-  "title": "How Many Wells Remain? | CAPIT",
-  "description": "Review the data context behind inactive, orphaned, unplugged, and plugged well estimates.",
-  "headline": "How Many Wells Remain?",
+  "title": "CAPIT FAQs | Data, Token, and Wallet Answers",
+  "description": "Answers to common questions about CAPIT’s data, token mechanics, wallet flow, and claim boundaries.",
+  "headline": "Frequently Asked Questions",
   "heroImage": "",
-  "body": "Counts vary by source, definition, and publication date. CAPIT labels whether a figure refers to unplugged orphaned wells, broader inactive-well estimates, or a source-specific inventory.",
+  "body": "Find clear, factual answers about CAPIT’s data ingestion, methodology, token flow, wallet interactions, and strict policy boundaries.",
   "sections": [
-    { "heading": "Context Before Comparison", "image": "", "body": "A good state comparison view does more than rank totals. It should show coverage scope, update cadence, and the agency behind the numbers." },
-    { "heading": "Partial Coverage", "image": "", "body": "If a source exposes only partial subsets, CAPIT should say so plainly and avoid implying broader completeness than the visible data supports." }
+    { "heading": "What is CAPIT?", "image": "", "body": "CAPIT is a public-facing environmental registry and utility token project built on the Base network. It organizes U.S. well-plugging records, explains their provenance, and mathematically links protocol activity next to the underlying data." },
+    { "heading": "How does CAPIT verify that a well has been physically plugged?", "image": "", "body": "CAPIT relies entirely on public, state-level well registry data. A well is indexed only after the state agency officially confirms that downhole cement isolation and surface restoration are complete, assigning the well a formal status such as 'Plugged & Abandoned'." },
+    { "heading": "What is the minting ratio for the CAPIT token?", "image": "", "body": "CAPIT operates under an absolute, non-inflationary 1:1 minting rule. Exactly one CAPIT token is minted for every unique, verified plugged-well record identified in official state filings." },
+    { "heading": "Why is CAPIT built on the Base network?", "image": "", "body": "Base is a secure, low-cost Layer-2 blockchain network. It provides the high throughput and cryptographic security required to record high-volume environmental infrastructure records permanently on-chain." },
+    { "heading": "Is CAPIT a carbon credit or emissions offset?", "image": "", "body": "No. CAPIT is strictly an environmental infrastructure receipt representing physical remediation work completed above and below ground. Tokens do not represent carbon credits, offsets, or speculative financial claims." },
+    { "heading": "Do I need a crypto wallet to use the dashboard?", "image": "", "body": "No. The CAPIT National Well Plugging Dashboard is completely public and open to anyone. A self-custody wallet is only required if you choose to interact with protocol features." },
+    { "heading": "How does CAPIT handle data corrections or state revisions?", "image": "", "body": "Public state registries are occasionally updated. CAPIT maintains an append-only, visible revision trail. If an agency modifies a record status, CAPIT logs the update transparently without altering the historical ledger." }
   ]
 }
