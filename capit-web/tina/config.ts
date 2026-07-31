@@ -1,6 +1,54 @@
 import { defineConfig } from "tinacms";
 
-// We define the fields once to keep the config DRY (Don't Repeat Yourself)
+// 1. Stripped-Down Schema for Core Configs (Root content/ folder)
+const coreConfigurationFields = [
+  {
+    type: "string",
+    name: "title",
+    label: "Internal Title / Name",
+    isTitle: true,
+    required: true,
+  },
+  {
+    type: "string",
+    name: "description",
+    label: "Description",
+    ui: { component: "textarea" },
+  },
+  {
+    type: "string",
+    name: "headline",
+    label: "Headline (if applicable)",
+  },
+  {
+    type: "string",
+    name: "body",
+    label: "Body Text",
+    ui: { component: "textarea" },
+  },
+  {
+    type: "image",
+    name: "logo",
+    label: "Site Logo / Main Graphic (if applicable)",
+  },
+  {
+    type: "object",
+    name: "links",
+    label: "Quick Links / Navigation",
+    list: true,
+    ui: {
+      itemProps: (item) => {
+        return { label: item?.label || "New Link" };
+      },
+    },
+    fields: [
+      { type: "string", name: "label", label: "Label" },
+      { type: "string", name: "href", label: "URL" },
+    ],
+  },
+];
+
+// 2. Full Content Schema for Pages (content/pages/ folder)
 const standardPageFields = [
   {
     type: "string",
@@ -65,28 +113,10 @@ const standardPageFields = [
       },
     },
     fields: [
-      {
-        type: "string",
-        name: "heading",
-        label: "Section Heading",
-      },
-      {
-        type: "image",
-        name: "image",
-        label: "Section Image",
-      },
-      {
-        type: "string",
-        name: "body",
-        label: "Section Body Text",
-        ui: { component: "textarea" },
-      },
-      {
-        type: "string",
-        name: "bullets",
-        label: "Bullet Points",
-        list: true,
-      },
+      { type: "string", name: "heading", label: "Section Heading" },
+      { type: "image", name: "image", label: "Section Image" },
+      { type: "string", name: "body", label: "Section Body Text", ui: { component: "textarea" } },
+      { type: "string", name: "bullets", label: "Bullet Points", list: true },
     ],
   },
 ];
@@ -110,15 +140,14 @@ export default defineConfig({
     collections: [
       {
         name: "core",
-        label: "Core Content",
+        label: "Core Config",
         path: "content",
         match: {
-          // This ensures Tina only reads JSON files in the root, ignoring the 'pages' subfolder
-          include: "*.json",
+          include: "*.json", // Specifically ignores the subdirectories
         },
         format: "json",
-        // @ts-ignore - Ignoring strict type checking for the shared array
-        fields: standardPageFields,
+        // @ts-ignore
+        fields: coreConfigurationFields,
       },
       {
         name: "pages",
