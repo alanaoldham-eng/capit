@@ -1,19 +1,81 @@
 {
-  "title": "Why Plugging Wells Matters | CAPIT Environmental Impact",
-  "description": "Discover why permanently retiring inactive oil and gas wells protects groundwater, eliminates methane leaks, and restores local ecosystems.",
-  "eyebrow": "ENVIRONMENTAL STEWARDSHIP",
+  "title": "Why Plugging Wells Matters | CAPIT",
+  "description": "Public safety, local prosperity, restored land, healthier ecosystems, environmental responsibility, and the completion of America's energy legacy.",
   "headline": "Why Plugging Wells Matters",
-  "heroImage": "/images/well-river.jpg",
-  "body": "Every properly plugged well is a permanent investment in the land, communities, and future of the United States. One Well. One Token. One Permanent Record of Progress.",
+  "heroImage": "/images/ChatGPT Image Jul 18, 2026, 09_19_06 AM (1).png",
+  "body": "Every properly plugged well is a permanent investment in the land, communities, and future of the United States. One Well. One Token. One Permanent Record of Progress. \n\n![CAPIT Well Plugging Cycle](/images/ChatGPT Image Jul 18, 2026, 09_18_51 AM (1).png)",
   "sections": [
     {
-      "heading": "Public Safety & Land Restoration",
+      "heading": "Public Safety",
       "image": "",
-      "body": "Inactive wellsites can leave aging equipment, open pits, and physical hazards. Proper plugging removes these risks and prepares the surface location for ecological recovery."
+      "body": "**Removing hazards and restoring confidence for landowners, workers, and communities.**\n\nInactive wellsites can leave aging equipment, open pits, deteriorated structures, and other physical hazards. Proper plugging and site cleanup close the well and make the location safer and easier to manage.\n\n> A properly retired wellsite replaces uncertainty with a clear, permanent safety outcome.",
+      "bullets": [
+        "Removes obsolete equipment and visible wellsite hazards.",
+        "Reduces the risk of unauthorized access, falls, collisions, and contact with deteriorated infrastructure.",
+        "Improves safety for landowners, field personnel, emergency responders, and site visitors.",
+        "Creates a documented endpoint for a well that has reached the end of its useful life.",
+        "Restores confidence that the property has been responsibly managed."
+      ]
     },
     {
-      "heading": "Groundwater & Air Protection",
-      "body": "Unsealed wellbores can serve as pathways for saline water or residual hydrocarbons to migrate into freshwater aquifers. Cementing the wellbore permanently seals downhole zones."
+      "heading": "Economic Benefits",
+      "image": "",
+      "body": "**Investing in skilled work, local contractors, and the long-term strength of energy communities.**\n\nWell plugging is technically demanding work that supports local employment and purchases throughout the oilfield supply chain. It also reduces the chance that a manageable obligation becomes a larger future cost.\n\n> Every plugging project puts people and equipment to work while reducing tomorrow's financial burden.",
+      "bullets": [
+        "Creates work for plugging crews, engineers, cementers, truckers, equipment operators, and inspectors.",
+        "Generates local spending for fuel, lodging, food, rentals, materials, and support services.",
+        "Preserves specialized oilfield skills that are difficult to replace or outsource.",
+        "Reduces long-term plugging exposure and the risk of more expensive future remediation.",
+        "Converts an unfunded legacy obligation into completed, verifiable work."
+      ]
+    },
+    {
+      "heading": "Land Restoration",
+      "image": "",
+      "body": "**Returning industrial footprints to productive use.**\n\nPlugging is the first step toward giving a wellsite back to the landowner and the landscape. Removal of equipment, grading, cleanup, and revegetation can transform a disturbed location into useful acreage again.\n\n> Land restoration turns a closed industrial site into acreage that can serve the next generation.",
+      "bullets": [
+        "Removes wellheads, tanks, lines, debris, and other obsolete surface infrastructure.",
+        "Supports grading, soil repair, drainage improvement, and erosion control.",
+        "Allows land to return to agriculture, grazing, forestry, recreation, habitat, or future development.",
+        "Improves the appearance and practical usability of farms, ranches, and rural property.",
+        "Reduces the footprint of historical energy development on the surface."
+      ]
+    },
+    {
+      "heading": "Ecological Benefits",
+      "image": "",
+      "body": "**Helping soils, vegetation, wildlife, and natural systems recover.**\n\nOnce obsolete infrastructure is removed and the surface is reclaimed, natural processes can begin to reestablish themselves. The ecological benefit grows over time as vegetation, soils, and habitat recover.\n\n> Ecological recovery begins when the wellsite stops functioning as an industrial disturbance.",
+      "bullets": [
+        "Encourages the return of native or locally appropriate vegetation.",
+        "Improves soil stability and reduces erosion on disturbed ground.",
+        "Reconnects fragmented habitat and reduces barriers to wildlife movement.",
+        "Supports healthier drainage patterns and long-term landscape recovery.",
+        "Reduces continuing surface disturbance from an abandoned industrial footprint."
+      ]
+    },
+    {
+      "heading": "Environmental Stewardship",
+      "image": "",
+      "body": "**Completing the well's life responsibly above and below ground.**\n\nProper plugging places engineered barriers in the wellbore, isolates subsurface intervals, removes obsolete infrastructure, and documents permanent closure. It is the responsible final step in the life of an oil or gas well.\n\n> Environmental stewardship means completing the obligation correctly, permanently, and transparently.",
+      "bullets": [
+        "Isolates subsurface formations through an engineered plugging program.",
+        "Closes the wellbore permanently and establishes a documented final disposition.",
+        "Removes equipment and infrastructure that no longer serves a productive purpose.",
+        "Reduces long-term environmental exposure associated with an unmanaged wellsite.",
+        "Demonstrates accountable resource management without overstating unmeasured air-quality benefits."
+      ]
+    },
+    {
+      "heading": "America's Energy Legacy",
+      "image": "",
+      "body": "**Honoring the communities and infrastructure that powered national growth.**\n\nFor generations, oil and gas wells supplied the energy that built American industry, transportation, agriculture, and modern life. Plugging closes that chapter responsibly and leaves a permanent record of progress.\n\n> One well plugged is one obligation completed - and one lasting contribution to America's future.",
+      "bullets": [
+        "Recognizes the contribution of producing regions, landowners, workers, and operators.",
+        "Completes the full life cycle of energy development rather than leaving the final obligation unresolved.",
+        "Protects future generations from inheriting unmanaged industrial sites.",
+        "Shows that energy production and responsible retirement belong to the same stewardship commitment.",
+        "CAPIT records each verified plugged U.S. well as one permanent unit of national progress."
+      ]
     }
   ]
 }

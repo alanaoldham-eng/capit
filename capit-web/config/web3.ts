@@ -20,15 +20,15 @@ export const wagmiConfig = createConfig({
     [base.id]: http(),
   },
   connectors: [
-    // 1. Generic injected fallback (EIP-6963 auto-detects installed extensions like MetaMask/Coinbase)
+    // 1. Injected extension auto-discovery (EIP-6963)
     injected(),
-    // 2. Coinbase Wallet connector using object syntax for options
+    // 2. Coinbase Wallet connector (supports Extension + Mobile QR fallback)
     coinbaseWallet({
       appName: metadata.name,
       appLogoUrl: metadata.icons[0],
-      preference: { options: 'all' },
+      preference: 'all',
     }),
-    // 3. WalletConnect connector guarded for SSR / Node environment
+    // 3. WalletConnect connector guarded for SSR / compilation
     ...(typeof window !== 'undefined'
       ? [
           walletConnect({

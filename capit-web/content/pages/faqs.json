@@ -5,18 +5,40 @@
   "heroImage": "",
   "body": "Find clear, factual answers about CAPIT’s data ingestion, methodology, token flow, wallet interactions, and policy boundaries.",
   "sections": [
-    { "heading": "What is CAPIT?", "image": "", "body": "CAPIT is a public-facing environmental registry and utility token project built on the Base network. It organizes U.S. well-plugging records, explains their provenance, and shows CAPIT-linked protocol activity directly next to the underlying data." },
-    { "heading": "How does CAPIT define a plugged well?", "image": "", "body": "CAPIT strictly follows the source-agency definition for the physical record being shown. When CAPIT normalizes terms into a sitewide display taxonomy, we ensure both the original source status and the CAPIT display status remain visible." },
-    { "heading": "Where does the data come from?", "image": "", "body": "We rely on public, state-level well registry data. CAPIT identifies the source agency, source system, fetch date, verification date, and any caveats for every visible record set on the platform." },
-    { "heading": "Why can the numbers change?", "image": "", "body": "Public records can be revised, corrected, reclassified, or expanded by state agencies. CAPIT preserves a visible, immutable revision trail instead of pretending the data is static." },
-    { "heading": "Does each CAPIT token equal one well?", "image": "", "body": "Yes. CAPIT enforces a strict 1:1 ratio. Exactly one CAPIT token is minted for every unique, verified plugged-well record. This rule creates a permanent, non-inflationary record of environmental progress." },
-    { "heading": "Does buying CAPIT fund plugging work?", "image": "", "body": "No. CAPIT is a transparency and tracking ledger. It does not directly fund physical remediation efforts unless a specific, publicly documented grant or revenue-allocation mechanism is officially described." },
-    { "heading": "Is CAPIT a carbon credit or offset?", "image": "", "body": "No. CAPIT serves solely as a strict, source-linked environmental infrastructure receipt representing physical remediation. It is not a carbon credit, emissions offset, or speculative financial asset." },
-    { "heading": "Do I need a wallet to use the dashboard?", "image": "", "body": "No. The data experience remains completely open and free to users who only want to read, search, and compare public environmental records." },
-    { "heading": "What happens when I connect a wallet?", "image": "", "body": "CAPIT may receive your public wallet address, network, and connection status. CAPIT will never ask for your secret recovery phrase, private keys, or wallet password." },
-    { "heading": "What network does CAPIT use?", "image": "", "body": "CAPIT is built securely on the Base network. The Buy page clearly shows the network and contract details before users proceed with any interaction." },
-    { "heading": "Can CAPIT reverse a failed or rejected transaction?", "image": "", "body": "No. CAPIT cannot reverse blockchain transactions. Users should carefully review network, contract, approvals, gas fees, and wallet prompts before confirming any transaction." },
-    { "heading": "Where can I review the contract details?", "image": "", "body": "The Buy CAPIT page exposes the token contract address, Base block explorer link, source repository link, and the latest approved token disclosure text." },
-    { "heading": "Still need help?", "image": "", "body": "Contact us." }
+    {
+      "heading": "What is CAPIT?",
+      "image": "",
+      "body": "CAPIT is a public-facing environmental registry and utility token project built on the Base network. It organizes U.S. well-plugging records, explains their provenance, and shows CAPIT-linked protocol activity directly next to the underlying data."
+    },
+    {
+      "heading": "How does CAPIT define a plugged well?",
+      "image": "",
+      "body": "CAPIT strictly follows the source-agency definition for the physical record being shown. When CAPIT normalizes terms into a sitewide display taxonomy, we ensure both the original source status and the CAPIT display status remain visible."
+    },
+    {
+      "heading": "Where does the data come from?",
+      "image": "",
+      "body": "We rely on public, state-level well registry data. CAPIT identifies the source agency, source system, fetch date, verification date, and any caveats for every visible record set on the platform."
+    },
+    {
+      "heading": "Does each CAPIT token equal one well?",
+      "image": "",
+      "body": "Yes. CAPIT enforces a strict 1:1 ratio. Exactly one CAPIT token is minted for every unique, verified plugged-well record. This rule creates a permanent, non-inflationary record of environmental progress."
+    },
+    {
+      "heading": "Is CAPIT a carbon credit?",
+      "image": "",
+      "body": "No. CAPIT serves solely as a strict, source-linked environmental infrastructure receipt representing physical remediation. It is not a carbon credit, emissions offset, or speculative financial asset."
+    },
+    {
+      "heading": "What network does CAPIT use?",
+      "image": "",
+      "body": "CAPIT is built securely on the Base network. The Buy page clearly shows the network and contract details before users proceed with any interaction."
+    },
+    {
+      "heading": "Do I need a wallet to use the dashboard?",
+      "image": "",
+      "body": "No. The data experience remains completely open and free to users who only want to read, search, and compare public environmental records."
+    }
   ]
 }

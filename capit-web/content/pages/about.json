@@ -7,9 +7,32 @@
   "primaryCta": { "label": "Read the Methodology", "href": "/methodology" },
   "secondaryCta": { "label": "Open Dashboard", "href": "/dashboard" },
   "sections": [
-    { "heading": "Why This Exists", "image": "", "body": "Well-plugging information is highly fragmented across varying agency systems, state definitions, and update schedules. CAPIT aggregates this information into one transparent public experience so users can understand what is being counted, where it came from, and when it was last verified." },
-    { "heading": "How CAPIT Works", "image": "", "body": "CAPIT follows a simple five-step deterministic model.", "bullets": ["Collect: CAPIT gathers public source records from published state-level agency systems and approved datasets.", "Normalize: CAPIT organizes fields so users can compare infrastructure records across varying jurisdictions.", "Verify: CAPIT applies strict publication rules, source checks, and revision logic before physical remediation records appear publicly.", "Publish: CAPIT displays provenance, freshness, and caveats alongside visible data.", "Link: CAPIT links protocol activity strictly to the approved 1:1 minting methodology on the Base network."] },
-    { "heading": "What CAPIT Is Not", "image": "", "body": "CAPIT is not a government registry, nor is it a substitute for reading the underlying source agency record. CAPIT serves as a strict environmental infrastructure receipt representing physical remediation. It is explicitly not a carbon credit, offset, or speculative instrument. Tokens do not imply ownership of a well, environmental attributes, or rights to public remediation funds." },
-    { "heading": "Governance and Roadmap", "image": "", "body": "Governance details, protocol permissions, and future roadmap commitments will appear here once approved by legal and engineering review. Until then, CAPIT limits all functionality to publicly documented, verification-based tracking." }
+    {
+      "heading": "Why This Exists",
+      "image": "",
+      "body": "Managing the millions of abandoned or idle wells across the United States is a massive environmental challenge. Well-plugging information is highly fragmented across varying agency systems, state definitions, and update schedules. CAPIT aggregates this information into one transparent public experience so users can understand what is being counted, where it came from, and when it was last verified. By transitioning scattered records onto an immutable ledger, we aim to build a community dedicated to verifiable environmental accountability."
+    },
+    {
+      "heading": "How CAPIT Works",
+      "image": "",
+      "body": "CAPIT follows a simple five-step deterministic model:",
+      "bullets": [
+        "**Collect:** We gather public source records from published state-level agency systems and approved datasets.",
+        "**Normalize:** We organize fields so users can accurately compare infrastructure records across varying jurisdictions.",
+        "**Verify:** CAPIT applies strict publication rules, source checks, and revision logic before physical remediation records appear publicly.",
+        "**Publish:** The platform displays provenance, freshness, and necessary caveats alongside all visible data.",
+        "**Link:** Finally, CAPIT links protocol activity strictly to the approved 1:1 minting methodology on the Base network."
+      ]
+    },
+    {
+      "heading": "What CAPIT Is Not",
+      "image": "",
+      "body": "CAPIT is not a government registry, nor is it a substitute for reading the underlying source agency record. CAPIT serves as a strict environmental infrastructure receipt representing physical remediation. It is explicitly not a carbon credit, offset, or speculative instrument. Tokens do not imply ownership of a well, environmental attributes, or rights to public remediation funds."
+    },
+    {
+      "heading": "Governance and Roadmap",
+      "image": "",
+      "body": "Governance details, protocol permissions, and future roadmap commitments will appear here once approved by legal and engineering review. Until then, CAPIT limits all functionality to publicly documented, verification-based tracking."
+    }
   ]
 }

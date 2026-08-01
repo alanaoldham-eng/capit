@@ -4,23 +4,21 @@
   "eyebrow": "DATA CONTEXT & DEFINITIONS",
   "headline": "How Many Inactive Wells Remain?",
   "heroImage": "/images/plug-map.jpg",
-  "body": "Counts vary widely depending on the source agency, regulatory definitions, and publication dates. CAPIT provides full transparency into whether a figure refers to unplugged orphaned wells, broader inactive-well estimates, or state-specific inventories.",
+  "body": "The scale of legacy oil and gas infrastructure in the United States is vast. Current estimates point to a highly fragmented landscape of over 3.5 million abandoned, idle, or orphan wells requiring attention. Understanding these figures requires careful navigation of varying state definitions, update schedules, and agency reporting standards.",
   "sections": [
     {
-      "heading": "Orphaned vs. Inactive Wells",
+      "heading": "Orphaned vs. Inactive Infrastructure",
       "image": "",
-      "body": "An orphaned well is a well with no solvent operator legally responsible for its plugging and site restoration. An inactive or idle well is simply a well that is not currently producing, but may still have a solvent operator on record.",
+      "body": "To grasp the scale of the challenge, it is important to understand the regulatory distinctions:",
       "bullets": [
-        "Orphaned Wells: High priority for state and federal plugging programs (e.g., IIJA grants).",
-        "Inactive / Idle Wells: Tracked by state regulatory commissions with varying compliance deadlines.",
-        "Plugged Wells: Officially sealed and verified in state public registries."
+        "**Orphaned Wells:** High-priority wells with no solvent operator legally responsible for their plugging and site restoration. These are the primary targets for state and federal remediation grants.",
+        "**Inactive / Idle Wells:** Wells that are not currently producing but may still have a solvent operator on record. These are tracked by state regulatory commissions and are subject to varying compliance deadlines."
       ]
     },
     {
-      "heading": "State and Federal Inventories",
+      "heading": "The Necessity of Transparent Tracking",
       "image": "",
-      "body": "Different agencies report counts on different schedules. CAPIT continuously normalizes data from sources like the Railroad Commission of Texas (RRC), Pennsylvania DEP, and Oklahoma Corporation Commission (OCC) to maintain an accurate national snapshot.",
-      "bullets": []
+      "body": "Currently, information regarding these wells is deeply fragmented across individual state agencies, private sector efforts, and federal initiatives. A single state may expose only partial subsets of its inventory, making it exceedingly difficult to gauge the true national picture. Transparent tracking is essential to effectively target remediation efforts and measure national progress. CAPIT continuously normalizes data from disparate state and federal inventories into a single, cohesive public experience. By bringing this information out of fragmented databases and onto a transparent ledger, CAPIT helps the public, landowners, and policymakers understand exactly what is being counted, where it is located, and how much work remains to secure America's energy legacy."
     }
   ]
 }

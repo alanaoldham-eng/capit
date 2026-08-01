@@ -15,16 +15,19 @@ const queryClient = new QueryClient({
   },
 })
 
-// Declared as a standalone object with type assertion to bypass Next.js build-time excess property checks
-const web3ModalConfig = {
+// Verified 64-character WalletConnect Explorer IDs
+const METAMASK_ID = 'c57ca95b47569778a828d19178114f4db188b89b763c899ba0be274e97267d96'
+const COINBASE_ID = 'fd20dc426fb37566d803205b19bbc1d4096b248ac04548e3cfb6b3a38bd033aa'
+
+const modalConfig = {
   wagmiConfig,
   projectId,
   enableEIP6963: true,
   features: {
     email: false,
-    socials: false,
+    socials: [], // Empty array explicitly disables Google, X, Discord, GitHub
   },
-  allWallets: 'HIDE' as const,
+  allWallets: 'HIDE' as const, // Suppresses general search catalog
   enableAnalytics: false,
   enableOnramp: false,
   themeMode: 'light' as const,
@@ -32,21 +35,17 @@ const web3ModalConfig = {
     '--w3m-accent': '#FABE3C',
     '--w3m-border-radius-master': '12px',
   },
-  // Official 64-character WalletConnect Explorer IDs for MetaMask and Coinbase Wallet
-  featuredWalletIds: [
-    'c57ca95b47569778a828d19178114f4db188b89b763c899ba0be274e97267d96', // MetaMask
-    'fd20dc426fb37566d803205b19bbc1d4096b248ac04548e3cfb6b3a38bd033aa', // Coinbase Wallet
-  ],
+  // Featured wallet IDs pin QR/mobile triggers without blocking local EIP-6963 extension detectors
+  featuredWalletIds: [METAMASK_ID, COINBASE_ID],
 }
 
-createWeb3Modal(web3ModalConfig as unknown as Parameters<typeof createWeb3Modal>[0])
+createWeb3Modal(modalConfig as unknown as Parameters<typeof createWeb3Modal>[0])
 
 interface ProviderProps {
   children: ReactNode
 }
 
 export function Web3Provider({ children }: ProviderProps) {
-  // Purges expired session tokens and handles unhandled WalletConnect promise rejections
   useEffect(() => {
     if (typeof window !== 'undefined') {
       try {

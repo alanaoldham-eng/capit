@@ -3,12 +3,32 @@
   "description": "Learn how CAPIT collects, normalizes, verifies, and publishes well-plugging records and related protocol activity on the Base network.",
   "headline": "CAPIT Methodology",
   "heroImage": "",
-  "body": "This page explains how CAPIT collects state-level source records, applies strict publication rules, handles revisions, and links public infrastructure data to permanent protocol activity.",
+  "body": "This page explains how CAPIT collects state-level source records, applies strict publication rules, handles revisions, and links public infrastructure data to permanent protocol activity on the Base network.",
   "sections": [
-    { "heading": "Core Verification Architecture", "image": "", "body": "The system enforces strict claim boundaries to ensure that every tokenized asset reflects verifiable physical reality. The flow executes in a highly structured pipeline spanning collection, normalization, verification, publication, and deterministic Base network minting." },
-    { "heading": "Data Collection & Source Hierarchy", "image": "", "body": "CAPIT prioritizes primary regulatory sources. We ingest public records from official state oil and gas conservation commissions, utilizing direct database feeds, GIS REST servers, and headless scraper fallbacks for legacy systems (e.g., AK, KS, CA, KY, LA, MO, MT, NM, NV, SD, TN, UT, WY)." },
-    { "heading": "Data Normalization & Deduplication", "image": "", "body": "State data fields vary widely across jurisdictions. CAPIT standardizes incoming records into a unified schema, ensuring API identifier matching, spatial deduplication, and strict taxonomy alignment." },
-    { "heading": "1:1 Minting Logic", "image": "", "body": "CAPIT enforces a deterministic, non-inflationary minting formula on the Base network. Exactly one token is minted for every unique, verified plugged-well record. Tokens cannot be minted arbitrarily or without an accompanying, publicly verifiable state regulatory record." },
-    { "heading": "Immutable Revision Handling", "image": "", "body": "When a state agency updates a well filing, CAPIT employs append-only logging. Historical records are preserved to ensure absolute transparency and prevent silent overwriting of critical environmental infrastructure data." }
+    {
+      "heading": "Core Verification Architecture",
+      "image": "",
+      "body": "The CAPIT system enforces strict claim boundaries to ensure that every tokenized asset reflects verifiable physical reality. The flow executes in a highly structured pipeline spanning collection, normalization, verification, publication, and deterministic Base network minting."
+    },
+    {
+      "heading": "Data Collection & Source Hierarchy",
+      "image": "",
+      "body": "We prioritize primary regulatory sources, ingesting public records directly from official state oil and gas conservation commissions via direct database feeds, GIS REST servers, and headless scraper fallbacks for legacy systems."
+    },
+    {
+      "heading": "Data Normalization & Deduplication",
+      "image": "",
+      "body": "Because state data fields vary widely across jurisdictions, CAPIT standardizes incoming records into a unified schema to ensure strict taxonomy alignment and spatial deduplication."
+    },
+    {
+      "heading": "Deterministic 1:1 Minting Logic",
+      "image": "",
+      "body": "CAPIT enforces a non-inflationary minting formula on the Base network. Supply growth is tied exclusively to physical reality: exactly one (1) CAPIT token is minted for each newly verified plugged well. There is no administrative body with the discretion to override or batch-issue tokens without an accompanying, publicly verifiable state regulatory record."
+    },
+    {
+      "heading": "Immutable Revision Handling",
+      "image": "",
+      "body": "When a state agency updates a well filing, CAPIT employs append-only logging. Historical records are preserved to ensure absolute transparency and prevent silent overwriting of critical environmental infrastructure data."
+    }
   ]
 }
