@@ -13,7 +13,7 @@ export function getSiteContent(): SiteContent {
     return {
       name: "CAPIT Ecosystem",
       title: "CAPIT Protocol",
-      logoUrl: "/images/CAPIT-LOGO-large_3x.png",
+      logoUrl: "/images/capit-logo.png",
       navigation: [
         { label: "Dashboard", href: "/dashboard" },
         { label: "States", href: "/states" },

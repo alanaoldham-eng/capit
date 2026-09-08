@@ -109,7 +109,7 @@ export function SwapWidget() {
               {/* Enlarged Badge Mark per Bug 3 */}
               <div className="flex items-center space-x-2 bg-[#FABE3C]/20 dark:bg-[#FABE3C]/10 px-3.5 py-2 rounded-lg border border-[#FABE3C]">
                 <Image
-                  src="/images/CAPIT-LOGO-large_3x.png"
+                  src="/images/capit-logo.png"
                   alt="CAPIT"
                   width={32}
                   height={32}
@@ -130,7 +130,7 @@ export function SwapWidget() {
         </div>
 
         <div className="mt-4 flex items-center justify-center space-x-2 text-xs text-neutral-500">
-          <Image src="/images/CAPIT-LOGO-large_3x.png" alt="CAPIT" width={16} height={16} className="w-4 h-4 rounded-full object-contain" />
+          <Image src="/images/capit-logo.png" alt="CAPIT" width={16} height={16} className="w-4 h-4 rounded-full object-contain" />
           <span>Interact directly with live Uniswap V3 liquidity pool</span>
         </div>
       </div>

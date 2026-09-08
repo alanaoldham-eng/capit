@@ -20,7 +20,7 @@ const FALLBACK_NAV = [
 
 export function Header({ content, site }: HeaderProps) {
   const siteData = content || site
-  const logoSrc = siteData?.logo?.src || siteData?.logoUrl || '/images/CAPIT-LOGO-large_3x.png'
+  const logoSrc = siteData?.logo?.src || siteData?.logoUrl || '/images/capit-logo.png'
   const logoAlt = siteData?.logo?.alt || siteData?.title || siteData?.name || 'CAPIT Ecosystem'
 
   // Navigation comes from content/site.json so it stays editable in Tina.

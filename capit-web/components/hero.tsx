@@ -84,8 +84,8 @@ export function Hero({ content }: HeroProps) {
                 priority
                 onError={() => {
                   console.warn(`[Hero] Missing image asset at ${imgSrc}. Loading fallback asset.`)
-                  if (imgSrc !== '/images/CAPIT-LOGO-large_3x.png') {
-                    setImgSrc('/images/CAPIT-LOGO-large_3x.png')
+                  if (imgSrc !== '/images/capit-logo.png') {
+                    setImgSrc('/images/capit-logo.png')
                   } else {
                     setHasError(true)
                   }

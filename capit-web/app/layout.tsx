@@ -10,9 +10,9 @@ export const metadata: Metadata = {
   description:
     'CAPIT tracks public well-plugging records with 1:1 on-chain verification on Base network.',
   icons: {
-    icon: '/images/CAPIT-LOGO-large_3x.png',
-    shortcut: '/images/CAPIT-LOGO-large_3x.png',
-    apple: '/images/CAPIT-LOGO-large_3x.png',
+    icon: '/images/capit-logo.png',
+    shortcut: '/images/capit-logo.png',
+    apple: '/images/capit-logo.png',
   },
 }
 

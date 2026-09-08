@@ -56,7 +56,7 @@ const metadata = {
   name: 'CAPIT Ecosystem',
   description: 'CAPIT Public Well-Plugging Registry & Swap',
   url: typeof window !== 'undefined' ? window.location.origin : 'https://capittoken.com',
-  icons: ['/images/CAPIT-LOGO-large_3x.png'],
+  icons: ['/images/capit-logo.png'],
 }
 
 export const wagmiConfig = defaultWagmiConfig({
