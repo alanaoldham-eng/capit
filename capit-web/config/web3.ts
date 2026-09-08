@@ -1,6 +1,5 @@
-﻿import { createConfig, http } from 'wagmi'
+﻿import { defaultWagmiConfig } from '@web3modal/wagmi/react'
 import { base, baseSepolia } from 'wagmi/chains'
-import { coinbaseWallet, injected, walletConnect } from 'wagmi/connectors'
 
 export const projectId =
   process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID ||
@@ -8,35 +7,19 @@ export const projectId =
 
 const metadata = {
   name: 'CAPIT Ecosystem',
-  description: 'CAPIT Protocol Swap Engine',
-  url: 'https://capittoken.com',
-  icons: ['https://capittoken.com/cappy-logo.png'],
+  description: 'CAPIT Public Well-Plugging Registry & Swap',
+  url: typeof window !== 'undefined' ? window.location.origin : 'https://capittoken.com',
+  icons: ['/images/CAPIT-LOGO-large_3x.png'],
 }
 
-export const wagmiConfig = createConfig({
-  chains: [baseSepolia, base],
-  transports: {
-    [baseSepolia.id]: http(),
-    [base.id]: http(),
-  },
-  connectors: [
-    // 1. Injected extension auto-discovery (EIP-6963)
-    injected(),
-    // 2. Coinbase Wallet connector (supports Extension + Mobile QR fallback)
-    coinbaseWallet({
-      appName: metadata.name,
-      appLogoUrl: metadata.icons[0],
-      preference: 'all',
-    }),
-    // 3. WalletConnect connector guarded for SSR / compilation
-    ...(typeof window !== 'undefined'
-      ? [
-          walletConnect({
-            projectId,
-            metadata,
-            showQrModal: false,
-          }),
-        ]
-      : []),
-  ],
+export const chains = [baseSepolia, base] as const
+
+export const wagmiConfig = defaultWagmiConfig({
+  chains,
+  projectId,
+  metadata,
+  enableWalletConnect: true,
+  enableInjected: true,
+  enableEIP6963: true,
+  enableCoinbase: true, // Correct placement for Wagmi config
 })

@@ -1,49 +1,71 @@
-import Image from "next/image"
-import Link from "next/link"
-import type { SiteContent } from "@/lib/types"
+'use client'
+
+import React from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
+import type { SiteContent } from '@/lib/types'
 
 interface HeaderProps {
-  content: SiteContent
+  content?: SiteContent
+  site?: SiteContent
 }
 
-export function Header({ content }: HeaderProps) {
+export function Header({ content, site }: HeaderProps) {
+  const siteData = content || site
+  const logoSrc = siteData?.logo?.src || siteData?.logoUrl || '/images/CAPIT-LOGO-large_3x.png'
+  const logoAlt = siteData?.logo?.alt || siteData?.title || siteData?.name || 'CAPIT Ecosystem'
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-slate-100 bg-white/90 px-4 py-4 backdrop-blur-md sm:px-8 lg:px-16 xl:px-20">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4">
-        
-        {/* Logo Placement Area matching Charles' precise container constraints */}
-        <Link href="/" className="flex items-center gap-2 shrink-0" aria-label="CAPIT homepage">
-          {content.logo?.src ? (
-            <Image 
-              src={content.logo.src} 
-              alt={content.logo.alt || "CAPIT Logo"} 
-              width={105} 
-              height={34} 
-              className="h-8.5 w-auto object-contain" 
-              priority 
-            />
+    <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="mx-auto flex h-28 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-12 xl:px-20">
+        {/* Prominent Scaled Logo */}
+        <Link href="/" className="flex items-center shrink-0 py-2" aria-label="CAPIT homepage">
+          {logoSrc ? (
+            <div className="relative h-20 w-64 sm:h-24 sm:w-72">
+              <Image
+                src={logoSrc}
+                alt={logoAlt}
+                fill
+                sizes="288px"
+                className="object-contain object-left"
+                priority
+              />
+            </div>
           ) : (
-            <span className="text-lg font-black tracking-tight text-slate-900">{content.name}</span>
+            <span className="text-3xl font-black tracking-tight text-[#24544A]">
+              {siteData?.name || siteData?.title || 'CAPIT'}
+            </span>
           )}
         </Link>
 
-        {/* Dynamic Navigation Tracks */}
-        <nav className="hidden items-center gap-8 md:flex font-bold text-slate-500 text-sm">
-          {content.navigation?.map((item) => (
-            <Link key={item.href} href={item.href} className="transition-colors hover:text-slate-900">
-              {item.label}
-            </Link>
-          ))}
+        {/* Navigation Bar */}
+        <nav className="hidden md:flex items-center gap-8 text-sm font-bold text-muted-foreground">
+          <Link href="/#dashboard" className="hover:text-foreground transition-colors">
+            Dashboard
+          </Link>
+          <Link href="/states" className="hover:text-foreground transition-colors">
+            States
+          </Link>
+          <Link href="/about" className="hover:text-foreground transition-colors">
+            About
+          </Link>
+          <Link href="/faqs" className="hover:text-foreground transition-colors">
+            FAQs
+          </Link>
         </nav>
 
-        {/* Bounded internal hash anchor swap selection node */}
-        <Link 
-          href="/#swap-section" 
-          className="rounded-xl bg-[#FABE3C] hover:bg-[#E5AF30] px-5 py-2.5 text-xs font-black text-slate-900 shadow-sm transition-all duration-150 active:scale-95"
-        >
-          {content.ctaButton?.label || "Buy CAPIT"}
-        </Link>
+        {/* Primary CTA - Anchor to Homepage Swap Widget */}
+        <div className="flex items-center gap-3">
+          <Link
+            href="/#swap"
+            className="inline-flex items-center justify-center rounded-xl bg-[#FABE3C] px-6 py-3 text-xs font-black text-neutral-900 transition-all hover:bg-[#e5aa2b] active:scale-95 shadow-sm"
+          >
+            Buy CAPIT
+          </Link>
+        </div>
       </div>
     </header>
   )
 }
+
+export default Header

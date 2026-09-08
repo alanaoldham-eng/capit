@@ -1,79 +1,137 @@
-import Image from "next/image"
-import Link from "next/link"
-import type { HeroContent } from "@/lib/types"
+'use client'
+
+import React, { useState } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import type { HeroContent } from '@/lib/types'
 
 interface HeroProps {
-  content: HeroContent
+  content?: HeroContent
 }
 
 export function Hero({ content }: HeroProps) {
+  const eyebrow =
+    content?.eyebrow || 'PUBLIC WELL-PLUGGING DATA WITH TRANSPARENT ON-CHAIN REPORTING'
+
+  const headline =
+    content?.headline ||
+    content?.title ||
+    'Plug Wells. Mint Tokens.\nTrack Progress.'
+
+  const description =
+    content?.description ||
+    content?.subtitle ||
+    'CAPIT brings together public well-plugging records, state-by-state reporting, and permanent protocol activity on the Base network. Explore the national snapshot, compare states, and review the methodology behind our strict 1:1 environmental infrastructure tracking.'
+
+  const primaryCtaText =
+    content?.ctaButton?.label ||
+    content?.primaryCtaText ||
+    content?.primaryCta?.text ||
+    'VIEW DASHBOARD'
+
+  const primaryCtaLink =
+    content?.ctaButton?.href ||
+    content?.primaryCtaLink ||
+    content?.primaryCta?.href ||
+    '/#dashboard'
+
+  const secondaryCtaText =
+    content?.secondaryCta?.label ||
+    content?.secondaryCtaText ||
+    content?.secondaryCta?.text ||
+    'EXPLORE STATES'
+
+  const secondaryCtaLink =
+    content?.secondaryCta?.href ||
+    content?.secondaryCtaLink ||
+    content?.secondaryCta?.href ||
+    '/states'
+
+  const trustNote =
+    content?.trustNote ||
+    'CAPIT publishes informational content and protocol materials. Please review the methodology, disclosures, and contract details before interacting with any wallet or token feature.'
+
+  const rawImage = content?.image?.src || content?.heroImage?.src || content?.imageSrc
+
+  const initialImageSrc =
+    typeof rawImage === 'string' && rawImage.trim().length > 0
+      ? rawImage.replace(/^\/public/, '')
+      : '/images/cappy-and-well.jpg'
+
+  const [imgSrc, setImgSrc] = useState<string>(initialImageSrc)
+  const [hasError, setHasError] = useState<boolean>(false)
+
+  const imageAlt =
+    content?.image?.alt ||
+    content?.heroImage?.alt ||
+    content?.imageAlt ||
+    'CAPIT Verified Plugged Well Inspector'
+
   return (
-    <section className="relative isolate overflow-hidden bg-background px-4 py-8 sm:px-6 sm:py-12 lg:px-12 lg:py-16 xl:px-20">
-      <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-muted/50" aria-hidden="true" />
+    <section className="relative w-full bg-[#FAF8F5] py-8 px-4 sm:px-6 lg:px-12 lg:py-12 xl:px-20 border-b border-border/40">
+      <div className="mx-auto max-w-7xl">
+        <div className="relative overflow-hidden rounded-3xl border border-border/60 bg-white p-6 sm:p-10 lg:p-12 shadow-sm min-h-[460px] lg:min-h-[500px] flex items-center">
+          
+          <div className="absolute inset-y-0 right-0 w-full lg:w-[62%] pointer-events-none z-0">
+            {!hasError ? (
+              <Image
+                src={imgSrc}
+                alt={imageAlt}
+                fill
+                sizes="(max-width: 1024px) 100vw, 62vw"
+                className="object-cover object-right-bottom sm:object-right"
+                priority
+                onError={() => {
+                  console.warn(`[Hero] Missing image asset at ${imgSrc}. Loading fallback asset.`)
+                  if (imgSrc !== '/images/CAPIT-LOGO-large_3x.png') {
+                    setImgSrc('/images/CAPIT-LOGO-large_3x.png')
+                  } else {
+                    setHasError(true)
+                  }
+                }}
+              />
+            ) : (
+              <div className="w-full h-full bg-gradient-to-r from-transparent via-[#24544A]/10 to-[#24544A]/20" />
+            )}
+          </div>
 
-      <div className="relative mx-auto max-w-7xl">
-        <div className="relative overflow-hidden rounded-[1.75rem] border border-border/70 bg-white shadow-2xl shadow-primary/10 lg:min-h-[520px]">
-          <Image
-            src={content.image.src}
-            alt={content.image.alt}
-            fill
-            priority
-            sizes="(max-width: 768px) 100vw, 1280px"
-            className="object-contain opacity-28 sm:opacity-45 lg:opacity-100 [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)] [-webkit-mask-image:linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)]"
-          />
-
-          {/* Mobile-first readability veil; desktop preserves the broad mockup-style artwork sweep under the copy. */}
-          <div
-            className="absolute inset-0 bg-gradient-to-b from-white via-white/95 via-[58%] to-white/72 sm:bg-gradient-to-r sm:from-white sm:via-white/92 sm:via-[48%] sm:to-white/12 lg:to-transparent"
-            aria-hidden="true"
-          />
-          <div
-            className="absolute inset-y-0 left-0 w-full bg-[radial-gradient(circle_at_18%_84%,rgba(234,181,62,0.18),transparent_34%)] sm:w-2/3"
-            aria-hidden="true"
-          />
-
-          <div className="relative z-10 flex flex-col px-7 py-10 sm:px-10 sm:py-12 md:px-12 lg:min-h-[520px] lg:max-w-[590px] lg:justify-center lg:px-16 lg:py-14 xl:max-w-[640px]">
-            {content.eyebrow ? (
-              <p className="mb-4 max-w-[32rem] text-[0.68rem] font-black uppercase leading-5 tracking-[0.22em] text-secondary sm:text-xs">
-                {content.eyebrow}
-              </p>
-            ) : null}
-
-            <h1 className="max-w-[12.5ch] text-[3.25rem] font-black leading-[0.98] tracking-tight text-primary sm:text-6xl md:text-7xl lg:text-7xl">
-              {content.headline}
-              <br />
-              {content.headlineHighlight}
-            </h1>
-
-            <p className="mt-5 max-w-[31rem] text-[1.08rem] leading-8 text-primary/82 sm:text-[1.05rem] lg:text-base lg:leading-7">
-              {content.description}
-            </p>
-
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <Link
-                href={content.ctaButton.href}
-                className="inline-flex justify-center rounded-xl bg-secondary px-7 py-3.5 text-sm font-black uppercase tracking-wide text-primary shadow-lg shadow-secondary/25 transition hover:-translate-y-0.5 hover:bg-secondary/90"
-              >
-                {content.ctaButton.label}
-              </Link>
-              {content.secondaryCta ? (
-                <Link
-                  href={content.secondaryCta.href}
-                  className="inline-flex justify-center rounded-xl border border-primary/15 bg-white/90 px-7 py-3.5 text-sm font-black uppercase tracking-wide text-primary shadow-sm transition hover:bg-white"
-                >
-                  {content.secondaryCta.label}
-                </Link>
-              ) : null}
+          <div className="relative z-10 max-w-full lg:max-w-[52%] space-y-6">
+            <div className="inline-flex items-center gap-2 text-[#C0AA4F] text-xs font-black uppercase tracking-wider">
+              <span>🛡️</span> {eyebrow}
             </div>
 
-            {content.trustNote ? (
-              <p className="mt-6 max-w-[33rem] rounded-2xl bg-white/70 p-4 text-sm leading-7 text-muted-foreground shadow-sm backdrop-blur-sm sm:bg-transparent sm:p-0 sm:text-xs sm:leading-6 sm:shadow-none">
-                {content.trustNote}
-              </p>
-            ) : null}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#24544A] leading-[1.08] whitespace-pre-line">
+              {headline}
+            </h1>
+
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-xl">
+              {description}
+            </p>
+
+            <div className="flex flex-wrap gap-4 pt-2 pointer-events-auto">
+              <Link
+                href={primaryCtaLink}
+                className="inline-flex items-center justify-center rounded-xl bg-[#FABE3C] px-6 py-3.5 text-xs font-black text-neutral-900 tracking-wider uppercase transition-all hover:bg-[#e5aa2b] active:scale-95 shadow-sm"
+              >
+                {primaryCtaText}
+              </Link>
+              <Link
+                href={secondaryCtaLink}
+                className="inline-flex items-center justify-center rounded-xl border border-neutral-300 bg-white/90 backdrop-blur-sm px-6 py-3.5 text-xs font-black text-neutral-900 tracking-wider uppercase transition-all hover:bg-white active:scale-95 shadow-sm"
+              >
+                {secondaryCtaText}
+              </Link>
+            </div>
+
+            <p className="text-[11px] text-muted-foreground/80 leading-normal pt-2 max-w-lg">
+              {trustNote}
+            </p>
           </div>
+
         </div>
       </div>
     </section>
   )
 }
+
+export default Hero
