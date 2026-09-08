@@ -4,17 +4,25 @@
     "description": "Track verified U.S. well-plugging records, explore state-by-state progress, and review CAPIT's non-inflationary mint activity with transparent methodology."
   },
   "hero": {
-    "eyebrow": "Public well-plugging data with transparent on-chain reporting",
-    "headline": "Plug Wells. Mint Tokens.",
-    "headlineHighlight": "Track Progress.",
+    "eyebrow": "PUBLIC WELL-PLUGGING DATA WITH TRANSPARENT ON-CHAIN REPORTING",
+    "headline": "Plug Wells.\nMint Tokens.\nTrack Progress.",
     "description": "CAPIT brings together public well-plugging records, state-by-state reporting, and permanent protocol activity on the Base network. Explore the national snapshot, compare states, and review the methodology behind our strict 1:1 environmental infrastructure tracking.",
-    "ctaButton": { "label": "View Dashboard", "href": "/dashboard" },
-    "secondaryCta": { "label": "Explore States", "href": "/states" },
-    "tertiaryCta": { "label": "Read Methodology", "href": "/methodology" },
+    "ctaButton": {
+      "label": "VIEW DASHBOARD",
+      "href": "/dashboard"
+    },
+    "secondaryCta": {
+      "label": "EXPLORE STATES",
+      "href": "/states"
+    },
+    "tertiaryCta": {
+      "label": "READ METHODOLOGY",
+      "href": "/methodology"
+    },
     "trustNote": "CAPIT publishes informational content and protocol materials. Please review the methodology, disclosures, and contract details before interacting with any wallet or token feature.",
     "image": {
-      "src": "/images/cappy and well.jpg",
-      "alt": "CAPIT worker and plugged well illustration"
+      "src": "/images/cappy-and-well.jpg",
+      "alt": "CAPIT Verified Plugged Well Inspector"
     }
   },
   "snapshot": {
@@ -32,7 +40,7 @@
     },
     {
       "title": "Why Does Plugging Wells Matter?",
-      "description": "Every properly plugged well is a permanent investment in the land, communities, and future of the United States[cite: 25]. One Well. One Token. One Permanent Record of Progress[cite: 25].",
+      "description": "Every properly plugged well is a permanent investment in the land, communities, and future of the United States. One Well. One Token. One Permanent Record of Progress.",
       "imageSrc": "/images/well-river.jpg",
       "imageAlt": "Illustration showing environmental benefits",
       "linkHref": "/why-plugging-wells-matter",

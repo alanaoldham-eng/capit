@@ -2,8 +2,8 @@
   "title": "CAPIT Methodology | Sources, Verification, and Publication Rules",
   "description": "Learn how CAPIT collects, normalizes, verifies, and publishes well-plugging records and related protocol activity on the Base network.",
   "headline": "CAPIT Methodology",
-  "heroImage": "",
-  "body": "This page explains how CAPIT collects state-level source records, applies strict publication rules, handles revisions, and links public infrastructure data to permanent protocol activity on the Base network.",
+  "heroImage": "/images/CAPIT-Roadmap_Infographic.png",
+  "body": "This page explains the current state and future state roadmap of CAPIT collects state-level source records, applies strict publication rules, handles revisions, and links public infrastructure data to permanent protocol activity on the Base network.",
   "sections": [
     {
       "heading": "Core Verification Architecture",

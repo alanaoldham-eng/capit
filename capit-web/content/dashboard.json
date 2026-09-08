@@ -25,33 +25,98 @@
     "chartSubtitle": "Daily verified-record totals across tracked U.S. jurisdictions.",
     "dataSource": "Source-linked public records aggregated via direct flat-file and scraper fallbacks. Data may be delayed, corrected, or revised.",
     "trendData": [
-      { "day": 1, "value": 15 },
-      { "day": 5, "value": 22 },
-      { "day": 10, "value": 28 },
-      { "day": 15, "value": 35 },
-      { "day": 20, "value": 42 },
-      { "day": 25, "value": 38 },
-      { "day": 30, "value": 45 }
+      {
+        "day": 1,
+        "value": 15
+      },
+      {
+        "day": 5,
+        "value": 22
+      },
+      {
+        "day": 10,
+        "value": 28
+      },
+      {
+        "day": 15,
+        "value": 35
+      },
+      {
+        "day": 20,
+        "value": 42
+      },
+      {
+        "day": 25,
+        "value": 38
+      },
+      {
+        "day": 30,
+        "value": 45
+      }
     ],
     "mintLogTitle": "Recent Verified Records",
     "mintLogEntries": [
-      { "date": "April 23, 2026", "wells": 24, "status": "success" },
-      { "date": "April 22, 2026", "wells": 19, "status": "success" },
-      { "date": "April 21, 2026", "wells": 27, "status": "success" },
-      { "date": "April 19, 2026", "wells": 30, "status": "success" }
+      {
+        "date": "April 23, 2026",
+        "wells": 24,
+        "status": "success"
+      },
+      {
+        "date": "April 22, 2026",
+        "wells": 19,
+        "status": "success"
+      },
+      {
+        "date": "April 21, 2026",
+        "wells": 27,
+        "status": "success"
+      },
+      {
+        "date": "April 19, 2026",
+        "wells": 30,
+        "status": "success"
+      }
     ]
   },
   "dailyMintLog": {
     "title": "Recent Verified Records",
     "currentDate": "July 10, 2026",
     "entries": [
-      { "date": "July 2026 (to date)", "wells": 24, "status": "success" },
-      { "date": "June 2026", "wells": 135, "status": "success" },
-      { "date": "May 2026", "wells": 221, "status": "success" },
-      { "date": "April 2026", "wells": 410, "status": "success" },
-      { "date": "March 2026", "wells": 524, "status": "success" },
-      { "date": "February 2026", "wells": 628, "status": "success" },
-      { "date": "January 2026", "wells": 566, "status": "success" }
+      {
+        "date": "July 2026 (to date)",
+        "wells": 24,
+        "status": "success"
+      },
+      {
+        "date": "June 2026",
+        "wells": 135,
+        "status": "success"
+      },
+      {
+        "date": "May 2026",
+        "wells": 221,
+        "status": "success"
+      },
+      {
+        "date": "April 2026",
+        "wells": 410,
+        "status": "success"
+      },
+      {
+        "date": "March 2026",
+        "wells": 524,
+        "status": "success"
+      },
+      {
+        "date": "February 2026",
+        "wells": 628,
+        "status": "success"
+      },
+      {
+        "date": "January 2026",
+        "wells": 566,
+        "status": "success"
+      }
     ],
     "footer": {
       "brandLabel": "CAPIT",
@@ -61,17 +126,124 @@
   "stateLeaderboard": {
     "title": "State Leaderboard - 2026",
     "entries": [
-      { "rank": 1, "state": "Texas", "flag": "TX", "wells": 724 },
-      { "rank": 2, "state": "Kansas", "flag": "KS", "wells": 628 },
-      { "rank": 3, "state": "New Mexico", "flag": "NM", "wells": 298 },
-      { "rank": 4, "state": "Pennsylvania", "flag": "PA", "wells": 230 },
-      { "rank": 5, "state": "Kentucky", "flag": "KY", "wells": 132 },
-      { "rank": 6, "state": "Oklahoma", "flag": "OK", "wells": 125 }
+      {
+        "rank": 1,
+        "state": "Texas",
+        "flag": "TX",
+        "wells": 724
+      },
+      {
+        "rank": 2,
+        "state": "Kansas",
+        "flag": "KS",
+        "wells": 628
+      },
+      {
+        "rank": 3,
+        "state": "New Mexico",
+        "flag": "NM",
+        "wells": 298
+      },
+      {
+        "rank": 4,
+        "state": "Pennsylvania",
+        "flag": "PA",
+        "wells": 230
+      },
+      {
+        "rank": 5,
+        "state": "Kentucky",
+        "flag": "KY",
+        "wells": 132
+      },
+      {
+        "rank": 6,
+        "state": "Oklahoma",
+        "flag": "OK",
+        "wells": 125
+      }
     ],
     "viewAllButton": {
       "label": "View All States",
       "href": "/states"
     },
     "dataSourceNote": "Rankings are based on indexed public records and active dashboard criteria."
+  },
+  "ctaCard": {
+    "title": "Add a Call to Action for:",
+    "bullets": [
+      "Sponsorships",
+      "Partners",
+      "Clients"
+    ],
+    "linkLabel": "Get Involved",
+    "href": "/sponsorships"
+  },
+  "tokenResourcesCard": {
+    "title": "On-Chain Verification",
+    "subtitle": "Official contract references & protocol documentation",
+    "contractAddress": "0x4eA9f88c71f2c4E760ff68256B45a23ee8efa358",
+    "links": [
+      {
+        "title": "TOKEN CONTRACT ADDRESS",
+        "subtitle": "",
+        "url": "",
+        "badge": "Copy"
+      },
+      {
+        "title": "CONTRACT ON BASESCAN",
+        "subtitle": "Verified Code",
+        "url": "",
+        "badge": ""
+      },
+      {
+        "title": "UNISWAP V3 POOL TRACKER",
+        "subtitle": "Live Pair",
+        "url": "https://app.uniswap.org",
+        "badge": ""
+      },
+      {
+        "title": "TECHNICAL WHITEPAPER",
+        "subtitle": "Methodology",
+        "url": "/methodology",
+        "badge": ""
+      }
+    ]
+  },
+  "recentVerifiedRecords": {
+    "title": "Recent Verified Records",
+    "currentDateLabel": "July 10, 2026",
+    "entries": [
+      {
+        "period": "July 2026 (to date)",
+        "wells": "24 wells"
+      },
+      {
+        "period": "June 2026",
+        "wells": "135 wells"
+      },
+      {
+        "period": "May 2026",
+        "wells": "221 wells"
+      },
+      {
+        "period": "April 2026",
+        "wells": "410 wells"
+      },
+      {
+        "period": "March 2026",
+        "wells": "524 wells"
+      },
+      {
+        "period": "February 2026",
+        "wells": "628 wells"
+      },
+      {
+        "period": "January 2026",
+        "wells": "566 wells"
+      }
+    ],
+    "footerLinkText": "capittoken.com/records",
+    "footerLinkUrl": "https://capittoken.com/records"
   }
 }

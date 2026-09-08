@@ -5,8 +5,10 @@
   "headline": "National Well Plugging Dashboard",
   "heroImage": "",
   "body": "Use the CAPIT dashboard to filter published well-plugging records by state, source, timeframe, and record status. Every panel clearly exposes its specific scope, data source, and freshness, ensuring you have the exact context behind the numbers.",
-  "primaryCta": { "label": "Download Current View", "href": "#download" },
-  "secondaryCta": { "label": "Open Methodology", "href": "/methodology" },
+  "secondaryCta": {
+    "label": "Open Methodology",
+    "href": "/methodology"
+  },
   "sections": [
     {
       "heading": "The Trust Engine",

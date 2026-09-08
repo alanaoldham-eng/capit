@@ -244,6 +244,66 @@ const coreConfigurationFields = [
   },
   {
     type: "object",
+    name: "ctaCard",
+    label: "Dashboard CTA Card (yellow block)",
+    fields: [
+      { type: "string", name: "title", label: "Title" },
+      { type: "string", name: "bullets", label: "Bullet Points", list: true },
+      { type: "string", name: "linkLabel", label: "Link Label" },
+      { type: "string", name: "href", label: "URL / Path" },
+    ],
+  },
+  {
+    type: "object",
+    name: "tokenResourcesCard",
+    label: "On-Chain Verification Card",
+    fields: [
+      { type: "string", name: "title", label: "Title" },
+      { type: "string", name: "subtitle", label: "Subtitle" },
+      { type: "string", name: "contractAddress", label: "Token Contract Address" },
+      {
+        type: "object",
+        name: "links",
+        label: "Resource Links",
+        list: true,
+        ui: {
+          itemProps: (item) => ({ label: item?.title || "New Link" }),
+        },
+        fields: [
+          { type: "string", name: "title", label: "Label" },
+          { type: "string", name: "subtitle", label: "Sub-label (leave blank to auto-fill)" },
+          { type: "string", name: "url", label: "URL (leave blank to derive from contract + chain)" },
+          { type: "string", name: "badge", label: "Badge (use \"Copy\" for the copy button)" },
+        ],
+      },
+    ],
+  },
+  {
+    type: "object",
+    name: "recentVerifiedRecords",
+    label: "Recent Verified Records Card",
+    fields: [
+      { type: "string", name: "title", label: "Title" },
+      { type: "string", name: "currentDateLabel", label: "Current Date Label" },
+      {
+        type: "object",
+        name: "entries",
+        label: "Record Entries",
+        list: true,
+        ui: {
+          itemProps: (item) => ({ label: item?.period || "New Entry" }),
+        },
+        fields: [
+          { type: "string", name: "period", label: "Period" },
+          { type: "string", name: "wells", label: "Wells (e.g. \"135 wells\")" },
+        ],
+      },
+      { type: "string", name: "footerLinkText", label: "Footer Link Text" },
+      { type: "string", name: "footerLinkUrl", label: "Footer Link URL" },
+    ],
+  },
+  {
+    type: "object",
     name: "stateLeaderboard",
     label: "State Leaderboard Section",
     fields: [
@@ -309,6 +369,24 @@ const standardPageFields = [
     name: "body",
     label: "Main Body Text",
     ui: { component: "textarea" },
+  },
+  {
+    type: "object",
+    name: "primaryCta",
+    label: "Primary Button",
+    fields: [
+      { type: "string", name: "label", label: "Label" },
+      { type: "string", name: "href", label: "URL / Path" },
+    ],
+  },
+  {
+    type: "object",
+    name: "secondaryCta",
+    label: "Secondary Button",
+    fields: [
+      { type: "string", name: "label", label: "Label" },
+      { type: "string", name: "href", label: "URL / Path" },
+    ],
   },
   {
     type: "object",

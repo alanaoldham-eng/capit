@@ -1,7 +1,7 @@
 {
   "name": "CAPIT",
   "logo": {
-    "src": "/images/CAPIT-LOGO-large_3x.png",
+    "src": "/images/capit-logo.png",
     "alt": "CAPIT Logo"
   },
   "navigation": [
@@ -12,6 +12,6 @@
   ],
   "ctaButton": {
     "label": "Buy CAPIT",
-    "href": "/buy-capit"
+    "href": "/#swap"
   }
 }

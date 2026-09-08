@@ -1,19 +1,29 @@
 "use client"
 
+import React from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-import type { DailyMintLogContent } from "@/lib/types"
+import type { DailyMintLogContent, MintLogEntry } from "@/lib/types"
 
 interface DailyMintLogProps {
-  content: DailyMintLogContent
+  content?: DailyMintLogContent
 }
 
 export function DailyMintLog({ content }: DailyMintLogProps) {
+  const title = content?.title || "Daily Mint Log"
+  const entries: MintLogEntry[] = content?.entries || []
+  const brandLabel = content?.footer?.brandLabel || "CAPIT"
+  const recordsUrl = content?.footer?.recordsUrl || "https://capittoken.com/records"
+
   return (
     <div className="bg-card rounded-xl p-5 lg:p-6 shadow-sm border border-border h-full flex flex-col">
       <div className="flex items-center justify-between mb-5">
-        <h3 className="font-bold text-foreground">{content.title}</h3>
+        <h3 className="font-bold text-foreground">{title}</h3>
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
-          <span className="text-xs font-medium">{content.currentDate}</span>
+          {content?.currentDate && (
+            <span className="text-xs font-medium">
+              {typeof content.currentDate === "string" ? content.currentDate : ""}
+            </span>
+          )}
           <div className="flex items-center gap-0.5">
             <button
               type="button"
@@ -34,7 +44,7 @@ export function DailyMintLog({ content }: DailyMintLogProps) {
       </div>
 
       <div className="flex-grow space-y-0">
-        {content.entries.map((entry, index) => (
+        {entries.map((entry: MintLogEntry, index: number) => (
           <div
             key={index}
             className="flex items-center justify-between py-3.5 border-b border-border/60 last:border-0"
@@ -56,11 +66,13 @@ export function DailyMintLog({ content }: DailyMintLogProps) {
             <span className="w-5 h-5 bg-secondary rounded flex items-center justify-center text-primary font-bold text-[10px]">
               C
             </span>
-            <span className="font-semibold text-foreground">{content.footer.brandLabel}</span>
+            <span className="font-semibold text-foreground">{brandLabel}</span>
           </div>
-          <span className="text-muted-foreground/70">{content.footer.recordsUrl}</span>
+          <span className="text-muted-foreground/70">{recordsUrl}</span>
         </div>
       </div>
     </div>
   )
 }
+
+export default DailyMintLog

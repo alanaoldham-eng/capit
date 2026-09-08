@@ -1,28 +1,30 @@
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
-// 1. Surgically re-import your untracked Web3 initialization layer
-import { Web3Provider } from "@/providers/Web3Provider"
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+import { Web3Provider } from '@/providers/Web3Provider'
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "CAPIT Ecosystem Registry",
-  description: "Environmental Registry & Token Swap Interface",
+  title: 'CAPIT Ecosystem | Public Well-Plugging Registry',
+  description:
+    'CAPIT tracks public well-plugging records with 1:1 on-chain verification on Base network.',
+  icons: {
+    icon: '/images/capit-logo.png',
+    shortcut: '/images/capit-logo.png',
+    apple: '/images/capit-logo.png',
+  },
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
     <html lang="en" className="scroll-smooth">
       <body className={inter.className}>
-        {/* 2. Wrap page hierarchy inside your context container */}
-        <Web3Provider>
-          {children}
-        </Web3Provider>
+        <Web3Provider>{children}</Web3Provider>
       </body>
     </html>
   )

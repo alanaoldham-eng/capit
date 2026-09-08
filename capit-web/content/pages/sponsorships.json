@@ -1,0 +1,47 @@
+{
+  "title": "Sponsorships & Partnerships | CAPIT",
+  "description": "Sponsor CAPIT's public well-plugging registry, partner on verified environmental data, or bring your organisation onto the Base network alongside us.",
+  "eyebrow": "Get Involved",
+  "headline": "Sponsorships & Partnerships",
+  "heroImage": "",
+  "body": "CAPIT publishes source-linked, time-stamped well-plugging records and mirrors verified physical closures 1:1 on the Base network. If your organisation funds plugging work, supplies public records, or wants its name attached to transparent environmental infrastructure reporting, there is a place for you here.",
+  "primaryCta": { "label": "Start a Conversation", "href": "mailto:shillmer@tellusdigital.io" },
+  "secondaryCta": { "label": "Read the Methodology", "href": "/methodology" },
+  "sections": [
+    {
+      "heading": "Sponsorships",
+      "image": "",
+      "body": "Sponsors support the ongoing cost of aggregating, verifying, and publishing public well-plugging records. Sponsorship placements appear alongside the national snapshot and state leaderboards.",
+      "bullets": [
+        "Recognition on the public dashboard",
+        "Named attribution on state-level reporting",
+        "Quarterly summary of records published during your sponsorship period"
+      ]
+    },
+    {
+      "heading": "Partners",
+      "image": "",
+      "body": "Partners contribute data, tooling, or verification capacity. If you operate a state registry feed, a plugging service, or a measurement provider, we want to talk about wiring your records into the pipeline.",
+      "bullets": [
+        "Direct flat-file or API record submission",
+        "Source attribution on every record you supply",
+        "Joint review of verification and publication rules"
+      ]
+    },
+    {
+      "heading": "Clients",
+      "image": "",
+      "body": "Organisations that need auditable, source-linked evidence of well-plugging activity can build on the same registry that powers this site.",
+      "bullets": [
+        "Exportable, time-stamped record sets",
+        "Revision history for corrected or withdrawn source records",
+        "On-chain references for third-party verification"
+      ]
+    },
+    {
+      "heading": "What We Do Not Offer",
+      "image": "",
+      "body": "CAPIT publishes informational content and protocol materials. Nothing on this page is an offer to sell securities, an investment solicitation, or a guarantee of token value. Please review the methodology, disclosures, and contract details before interacting with any wallet or token feature."
+    }
+  ]
+}
