@@ -4,3 +4,4 @@ node_modules
 .env.local
 tina/__generated__
 tsconfig.tsbuildinfo
+.claude/
