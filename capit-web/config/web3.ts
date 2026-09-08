@@ -63,8 +63,18 @@ export const wagmiConfig = defaultWagmiConfig({
   chains,
   projectId,
   metadata,
+  // WalletConnect stays on so mobile wallets can pair by QR code.
   enableWalletConnect: hasWalletConnect,
   enableInjected: true,
   enableEIP6963: true,
   enableCoinbase: true,
+  /**
+   * Drops the email / social login row from the modal.
+   *
+   * These come from the auth connector, which defaultConfig adds unless BOTH
+   * email is false and socials is empty - at which point the connector is never
+   * pushed at all. The `features: { email, socials }` block this replaces was
+   * not a real v5 option and silently did nothing.
+   */
+  auth: { email: false, socials: [] },
 })

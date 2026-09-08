@@ -25,7 +25,7 @@ export function Footer({ site, content }: FooterProps) {
     'Public records first. Protocol transparency always.'
 
   const defaultLinks = [
-    { label: 'Dashboard', href: '/#dashboard' },
+    { label: 'Dashboard', href: '/dashboard' },
     { label: 'States', href: '/states' },
     { label: 'About', href: '/about' },
     { label: 'Methodology', href: '/methodology' },

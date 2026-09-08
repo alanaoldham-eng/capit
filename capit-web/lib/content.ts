@@ -15,7 +15,7 @@ export function getSiteContent(): SiteContent {
       title: "CAPIT Protocol",
       logoUrl: "/images/CAPIT-LOGO-large_3x.png",
       navigation: [
-        { label: "Dashboard", href: "/#dashboard" },
+        { label: "Dashboard", href: "/dashboard" },
         { label: "States", href: "/states" },
         { label: "About", href: "/about" },
         { label: "Methodology", href: "/methodology" },
@@ -35,7 +35,7 @@ export function getHomeContent(): HomeContent {
         eyebrow: "PUBLIC WELL-PLUGGING DATA WITH TRANSPARENT ON-CHAIN REPORTING",
         headline: "Plug Wells.\nMint Tokens.\nTrack Progress.",
         description: "CAPIT brings together public well-plugging records, state-by-state reporting, and permanent protocol activity on the Base network. Explore the national snapshot, compare states, and review the methodology behind our strict 1:1 environmental infrastructure tracking.",
-        ctaButton: { label: "VIEW DASHBOARD", href: "/#dashboard" },
+        ctaButton: { label: "VIEW DASHBOARD", href: "/dashboard" },
         secondaryCta: { label: "EXPLORE STATES", href: "/states" },
         image: { src: "/images/cappy-and-well.jpg", alt: "CAPIT Verified Plugged Well Inspector" },
       },
@@ -143,6 +143,7 @@ export function getFooterContent(): FooterContent {
 export function getPageSlugs(): string[] {
   return [
     "about",
+    "dashboard",
     "faqs",
     "privacy-policy",
     "terms-of-service",

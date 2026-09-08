@@ -12,7 +12,7 @@ interface HeaderProps {
 }
 
 const FALLBACK_NAV = [
-  { label: 'Dashboard', href: '/#dashboard' },
+  { label: 'Dashboard', href: '/dashboard' },
   { label: 'States', href: '/states' },
   { label: 'About', href: '/about' },
   { label: 'FAQs', href: '/faqs' },

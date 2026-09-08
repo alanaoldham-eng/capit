@@ -23,15 +23,15 @@ const modalConfig = {
   wagmiConfig,
   projectId,
   enableEIP6963: true,
+  // 'HIDE' removes the "All Wallets" button; includeWalletIds then restricts the
+  // list to MetaMask and Coinbase only. Email/socials are switched off at the
+  // connector level in config/web3.ts - there is no `features` option in v5.
   allWallets: 'HIDE',
   featuredWalletIds: [METAMASK_ID, COINBASE_ID],
   includeWalletIds: [METAMASK_ID, COINBASE_ID],
   enableAnalytics: false,
   enableOnramp: false,
-  features: {
-    email: false,
-    socials: [],
-  },
+  enableSwaps: false,
   themeMode: 'light',
   themeVariables: {
     '--w3m-accent': '#FABE3C',
@@ -61,23 +61,41 @@ export function Web3Provider({ children }: ProviderProps) {
         })
       } catch (e) {}
 
+      const isWalletConnectNoise = (msg: string) =>
+        msg.includes('expired') ||
+        msg.includes('Proposal expired') ||
+        msg.includes('Request expired') ||
+        msg.includes('Connection interrupted') ||
+        msg.includes('WebSocket') ||
+        msg.includes('socket') ||
+        msg.includes('Project not found')
+
       const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
         const msg = event.reason?.message || event.reason?.toString() || ''
-        if (
-          msg.includes('expired') ||
-          msg.includes('Proposal expired') ||
-          msg.includes('Request expired') ||
-          msg.includes('Connection interrupted') ||
-          msg.includes('WebSocket') ||
-          msg.includes('socket')
-        ) {
+        if (isWalletConnectNoise(msg)) {
           event.preventDefault()
           console.warn('[Web3Provider] Suppressed transient WalletConnect socket rejection.')
         }
       }
 
+      // The relay also emits synchronous errors ("Connection interrupted while
+      // trying to subscribe") from an EventEmitter, which surface as uncaught
+      // errors rather than rejections and trip the Next dev overlay.
+      const handleError = (event: ErrorEvent) => {
+        const msg = event.error?.message || event.message || ''
+        if (isWalletConnectNoise(msg)) {
+          event.preventDefault()
+          event.stopImmediatePropagation()
+          console.warn('[Web3Provider] Suppressed transient WalletConnect socket error.')
+        }
+      }
+
       window.addEventListener('unhandledrejection', handleUnhandledRejection)
-      return () => window.removeEventListener('unhandledrejection', handleUnhandledRejection)
+      window.addEventListener('error', handleError, true)
+      return () => {
+        window.removeEventListener('unhandledrejection', handleUnhandledRejection)
+        window.removeEventListener('error', handleError, true)
+      }
     }
   }, [])
 

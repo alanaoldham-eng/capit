@@ -9,7 +9,7 @@
     "description": "CAPIT brings together public well-plugging records, state-by-state reporting, and permanent protocol activity on the Base network. Explore the national snapshot, compare states, and review the methodology behind our strict 1:1 environmental infrastructure tracking.",
     "ctaButton": {
       "label": "VIEW DASHBOARD",
-      "href": "/#dashboard"
+      "href": "/dashboard"
     },
     "secondaryCta": {
       "label": "EXPLORE STATES",

@@ -9,6 +9,22 @@ interface ContentPageProps {
   page?: PageContent
 }
 
+/**
+ * Content authored in Tina uses **bold** inline. Rendering the raw string put
+ * literal asterisks on the page, so translate just that one construct.
+ */
+function renderInline(text: string): React.ReactNode {
+  return text.split(/(\*\*[^*]+\*\*)/g).map((part, i) =>
+    part.startsWith('**') && part.endsWith('**') ? (
+      <strong key={i} className="font-bold text-foreground">
+        {part.slice(2, -2)}
+      </strong>
+    ) : (
+      <React.Fragment key={i}>{part}</React.Fragment>
+    )
+  )
+}
+
 export function ContentPage({ page }: ContentPageProps) {
   if (!page) return null
 
@@ -29,7 +45,7 @@ export function ContentPage({ page }: ContentPageProps) {
   const secondaryLabel = page.secondaryCta?.label || page.secondaryCta?.text || "View Details"
 
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground">
       <section className="px-6 py-12 lg:px-12 xl:px-20 border-b border-border/40 bg-muted/20">
         <div className="mx-auto max-w-5xl space-y-8">
           {page.eyebrow ? (
@@ -107,13 +123,13 @@ export function ContentPage({ page }: ContentPageProps) {
                   </div>
                 )}
                 {section.body && (
-                  <p className="leading-8 text-muted-foreground">{section.body}</p>
+                  <p className="leading-8 text-muted-foreground">{renderInline(section.body)}</p>
                 )}
                 {section.bullets && section.bullets.length > 0 && (
                   <ul className="mt-5 grid gap-2 text-sm text-foreground md:grid-cols-2">
                     {section.bullets.map((bullet, bIdx) => (
                       <li key={bIdx} className="rounded-xl bg-muted/60 px-4 py-3">
-                        {bullet}
+                        {renderInline(bullet)}
                       </li>
                     ))}
                   </ul>
@@ -123,7 +139,7 @@ export function ContentPage({ page }: ContentPageProps) {
           </div>
         </section>
       )}
-    </main>
+    </div>
   )
 }
 

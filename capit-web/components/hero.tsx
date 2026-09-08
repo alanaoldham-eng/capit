@@ -33,7 +33,7 @@ export function Hero({ content }: HeroProps) {
     content?.ctaButton?.href ||
     content?.primaryCtaLink ||
     content?.primaryCta?.href ||
-    '/#dashboard'
+    '/dashboard'
 
   const secondaryCtaText =
     content?.secondaryCta?.label ||

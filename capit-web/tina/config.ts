@@ -372,6 +372,24 @@ const standardPageFields = [
   },
   {
     type: "object",
+    name: "primaryCta",
+    label: "Primary Button",
+    fields: [
+      { type: "string", name: "label", label: "Label" },
+      { type: "string", name: "href", label: "URL / Path" },
+    ],
+  },
+  {
+    type: "object",
+    name: "secondaryCta",
+    label: "Secondary Button",
+    fields: [
+      { type: "string", name: "label", label: "Label" },
+      { type: "string", name: "href", label: "URL / Path" },
+    ],
+  },
+  {
+    type: "object",
     name: "sections",
     label: "Content Sections",
     list: true,
