@@ -72,14 +72,15 @@ export function Hero({ content }: HeroProps) {
       <div className="mx-auto max-w-7xl">
         <div className="relative overflow-hidden rounded-3xl border border-border/60 bg-white p-6 sm:p-10 lg:p-12 shadow-sm min-h-[460px] lg:min-h-[500px] flex items-center">
           
-          <div className="absolute inset-y-0 right-0 w-full lg:w-[62%] pointer-events-none z-0">
+          {/* Full-bleed hero artwork: spans the whole card and sits behind the copy. */}
+          <div className="absolute inset-0 pointer-events-none z-0">
             {!hasError ? (
               <Image
                 src={imgSrc}
                 alt={imageAlt}
                 fill
-                sizes="(max-width: 1024px) 100vw, 62vw"
-                className="object-cover object-right-bottom sm:object-right"
+                sizes="(max-width: 1024px) 100vw, 1280px"
+                className="object-contain object-bottom opacity-30 sm:object-center sm:opacity-50 lg:object-cover lg:object-center lg:opacity-100 [mask-image:linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)] [-webkit-mask-image:linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)]"
                 priority
                 onError={() => {
                   console.warn(`[Hero] Missing image asset at ${imgSrc}. Loading fallback asset.`)
@@ -93,9 +94,19 @@ export function Hero({ content }: HeroProps) {
             ) : (
               <div className="w-full h-full bg-gradient-to-r from-transparent via-[#24544A]/10 to-[#24544A]/20" />
             )}
+
+            {/* Readability veil: solid white behind the copy, fading to clear artwork on the right. */}
+            <div
+              className="absolute inset-0 bg-gradient-to-b from-white via-white/95 via-[58%] to-white/75 sm:bg-gradient-to-r sm:from-white sm:via-white/90 sm:via-[46%] sm:to-white/10 lg:to-transparent"
+              aria-hidden="true"
+            />
+            <div
+              className="absolute inset-y-0 left-0 w-full sm:w-2/3 bg-[radial-gradient(circle_at_18%_84%,rgba(250,190,60,0.16),transparent_38%)]"
+              aria-hidden="true"
+            />
           </div>
 
-          <div className="relative z-10 max-w-full lg:max-w-[52%] space-y-6">
+          <div className="relative z-10 max-w-full lg:max-w-[560px] xl:max-w-[620px] space-y-6">
             <div className="inline-flex items-center gap-2 text-[#C0AA4F] text-xs font-black uppercase tracking-wider">
               <span>🛡️</span> {eyebrow}
             </div>

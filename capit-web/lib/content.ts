@@ -28,11 +28,7 @@ export function getSiteContent(): SiteContent {
 
 export function getHomeContent(): HomeContent {
   try {
-    const data = require("../content/home.json")
-    if (data.methodologyStrip) {
-      data.methodologyStrip.href = "/methodology"
-    }
-    return data
+    return require("../content/home.json")
   } catch (e) {
     return {
       hero: {
