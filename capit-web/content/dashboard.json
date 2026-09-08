@@ -123,54 +123,8 @@
       "recordsUrl": "https://capittoken.com/records"
     }
   },
-  "stateLeaderboard": {
-    "title": "State Leaderboard - 2026",
-    "entries": [
-      {
-        "rank": 1,
-        "state": "Texas",
-        "flag": "TX",
-        "wells": 724
-      },
-      {
-        "rank": 2,
-        "state": "Kansas",
-        "flag": "KS",
-        "wells": 628
-      },
-      {
-        "rank": 3,
-        "state": "New Mexico",
-        "flag": "NM",
-        "wells": 298
-      },
-      {
-        "rank": 4,
-        "state": "Pennsylvania",
-        "flag": "PA",
-        "wells": 230
-      },
-      {
-        "rank": 5,
-        "state": "Kentucky",
-        "flag": "KY",
-        "wells": 132
-      },
-      {
-        "rank": 6,
-        "state": "Oklahoma",
-        "flag": "OK",
-        "wells": 125
-      }
-    ],
-    "viewAllButton": {
-      "label": "View All States",
-      "href": "/states"
-    },
-    "dataSourceNote": "Rankings are based on indexed public records and active dashboard criteria."
-  },
   "ctaCard": {
-    "title": "Add a Call to Action for:",
+    "title": "Work with us!",
     "bullets": [
       "Sponsorships",
       "Partners",
@@ -245,5 +199,51 @@
     ],
     "footerLinkText": "capittoken.com/records",
     "footerLinkUrl": "https://capittoken.com/records"
+  },
+  "stateLeaderboard": {
+    "title": "State Leaderboard - 2026",
+    "entries": [
+      {
+        "rank": 1,
+        "state": "Texas",
+        "flag": "TX",
+        "wells": 724
+      },
+      {
+        "rank": 2,
+        "state": "Kansas",
+        "flag": "KS",
+        "wells": 628
+      },
+      {
+        "rank": 3,
+        "state": "New Mexico",
+        "flag": "NM",
+        "wells": 298
+      },
+      {
+        "rank": 4,
+        "state": "Pennsylvania",
+        "flag": "PA",
+        "wells": 230
+      },
+      {
+        "rank": 5,
+        "state": "Kentucky",
+        "flag": "KY",
+        "wells": 132
+      },
+      {
+        "rank": 6,
+        "state": "Oklahoma",
+        "flag": "OK",
+        "wells": 125
+      }
+    ],
+    "viewAllButton": {
+      "label": "View All States",
+      "href": "/states"
+    },
+    "dataSourceNote": "Rankings are based on indexed public records and active dashboard criteria."
   }
 }
