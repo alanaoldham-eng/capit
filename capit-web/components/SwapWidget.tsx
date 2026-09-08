@@ -2,18 +2,48 @@
 
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { useAccount, useChainId, useSwitchChain } from 'wagmi'
+import { useAccount, useChainId, useSwitchChain, useConnect } from 'wagmi'
 import { useWeb3Modal } from '@web3modal/wagmi/react'
-import { baseSepolia } from 'wagmi/chains'
+import { defaultChain, hasWalletConnect } from '@/config/web3'
+
+const ACTION_BUTTON_CLASS =
+  'w-full py-4 mt-2 bg-[#FABE3C] hover:bg-[#e5aa2b] text-neutral-900 font-bold rounded-xl transition-all shadow-md active:scale-[0.99]'
+
+/**
+ * useWeb3Modal throws unless createWeb3Modal ran, and createWeb3Modal only runs
+ * when a WalletConnect project id is configured. Keeping the hook inside a
+ * component that is mounted conditionally keeps hook order stable in both cases.
+ */
+function ConnectViaModal() {
+  const { open } = useWeb3Modal()
+  return (
+    <button type="button" onClick={() => open()} className={ACTION_BUTTON_CLASS}>
+      Connect Wallet
+    </button>
+  )
+}
+
+/** Fallback when WalletConnect is unavailable: connect the browser wallet directly. */
+function ConnectViaInjected() {
+  const { connect, connectors } = useConnect()
+  const handleConnect = () => {
+    const injected = connectors.find((c) => c.type === 'injected') ?? connectors[0]
+    if (injected) connect({ connector: injected })
+  }
+  return (
+    <button type="button" onClick={handleConnect} className={ACTION_BUTTON_CLASS}>
+      Connect Wallet
+    </button>
+  )
+}
 
 export function SwapWidget() {
   const { isConnected } = useAccount()
   const chainId = useChainId()
   const { switchChain } = useSwitchChain()
-  const { open } = useWeb3Modal()
   const [usdcAmount, setUsdcAmount] = useState('')
 
-  const isWrongNetwork = isConnected && chainId !== baseSepolia.id
+  const isWrongNetwork = isConnected && chainId !== defaultChain.id
 
   const capitOutput =
     usdcAmount && !isNaN(Number(usdcAmount))
@@ -21,10 +51,8 @@ export function SwapWidget() {
       : '0.00'
 
   const handleAction = () => {
-    if (!isConnected) {
-      open()
-    } else if (isWrongNetwork) {
-      switchChain({ chainId: baseSepolia.id })
+    if (isWrongNetwork) {
+      switchChain({ chainId: defaultChain.id })
     } else {
       console.log('Initiating swap of', usdcAmount, 'USDC for CAPIT')
     }
@@ -36,7 +64,7 @@ export function SwapWidget() {
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-xl font-bold text-neutral-900 dark:text-white">Protocol Swap Engine</h3>
           <span className="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-semibold uppercase">
-            {chainId === baseSepolia.id ? 'Base Sepolia' : 'Network Check'}
+            {chainId === defaultChain.id ? defaultChain.name : 'Network Check'}
           </span>
         </div>
 
@@ -92,16 +120,13 @@ export function SwapWidget() {
             </div>
           </div>
 
-          <button
-            onClick={handleAction}
-            className="w-full py-4 mt-2 bg-[#FABE3C] hover:bg-[#e5aa2b] text-neutral-900 font-bold rounded-xl transition-all shadow-md active:scale-[0.99]"
-          >
-            {!isConnected
-              ? 'Connect Wallet'
-              : isWrongNetwork
-              ? 'Switch to Base Sepolia'
-              : 'Swap for CAPIT'}
-          </button>
+          {!isConnected ? (
+            hasWalletConnect ? <ConnectViaModal /> : <ConnectViaInjected />
+          ) : (
+            <button type="button" onClick={handleAction} className={ACTION_BUTTON_CLASS}>
+              {isWrongNetwork ? `Switch to ${defaultChain.name}` : 'Swap for CAPIT'}
+            </button>
+          )}
         </div>
 
         <div className="mt-4 flex items-center justify-center space-x-2 text-xs text-neutral-500">

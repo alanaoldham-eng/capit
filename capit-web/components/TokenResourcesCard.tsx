@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react'
 import type { TokenResourcesCardContent, ResourceLink } from '@/lib/types'
+import { defaultChain } from '@/config/web3'
 
 interface TokenResourcesCardProps {
   content?: TokenResourcesCardContent
@@ -24,14 +25,27 @@ export function TokenResourcesCard({ content }: TokenResourcesCardProps) {
     }
   }
 
+  // Explorer host follows the configured chain, so a testnet preview and a
+  // mainnet deploy both link somewhere real without editing content.
+  const explorer = defaultChain.blockExplorers?.default.url ?? 'https://basescan.org'
+  const shortAddress = `${contractAddress.slice(0, 10)}...${contractAddress.slice(-6)}`
+
   const defaultLinks: ResourceLink[] = [
-    { title: 'TOKEN CONTRACT ADDRESS', subtitle: `${contractAddress.slice(0, 10)}...${contractAddress.slice(-6)}`, url: `https://sepolia.basescan.org/token/${contractAddress}`, badge: 'Copy' },
-    { title: 'CONTRACT ON BASESCAN', subtitle: 'Verified Code', url: `https://sepolia.basescan.org/address/${contractAddress}` },
+    { title: 'TOKEN CONTRACT ADDRESS', subtitle: shortAddress, url: `${explorer}/token/${contractAddress}`, badge: 'Copy' },
+    { title: 'CONTRACT ON BASESCAN', subtitle: 'Verified Code', url: `${explorer}/address/${contractAddress}` },
     { title: 'UNISWAP V3 POOL TRACKER', subtitle: 'Live Pair', url: 'https://app.uniswap.org' },
-    { title: 'TECHNICAL WHITEPAPER', subtitle: 'PDF Document', url: '/methodology' },
+    { title: 'TECHNICAL WHITEPAPER', subtitle: 'Methodology', url: '/methodology' },
   ]
 
-  const links: ResourceLink[] = content?.links?.length ? content.links : defaultLinks
+  // CMS rows win, but blank url/subtitle fall back to the derived value so an
+  // editor never has to paste a chain-specific explorer URL by hand.
+  const links: ResourceLink[] = content?.links?.length
+    ? content.links.map((link, idx) => ({
+        ...link,
+        subtitle: link.subtitle || defaultLinks[idx]?.subtitle || '',
+        url: link.url || defaultLinks[idx]?.url || '#',
+      }))
+    : defaultLinks
 
   return (
     <div className="space-y-4">

@@ -1,7 +1,7 @@
-﻿'use client'
+'use client'
 
 import React, { ReactNode, useEffect } from 'react'
-import { wagmiConfig, projectId } from '../config/web3'
+import { wagmiConfig, projectId, hasWalletConnect } from '../config/web3'
 import { createWeb3Modal } from '@web3modal/wagmi/react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { WagmiProvider } from 'wagmi'
@@ -15,6 +15,7 @@ const queryClient = new QueryClient({
   },
 })
 
+// WalletConnect explorer *wallet* ids (not project ids - see config/web3.ts).
 const METAMASK_ID = 'c57ca95b47569778a828d19178114f4db188b89b763c899ba0be274e97267d96'
 const COINBASE_ID = 'fd20dc426fb37566d803205b19bbc1d4096b248ac04548e3cfb6b3a38bd033aa'
 
@@ -38,7 +39,12 @@ const modalConfig = {
   },
 }
 
-createWeb3Modal(modalConfig as unknown as Parameters<typeof createWeb3Modal>[0])
+// createWeb3Modal calls the WalletConnect explorer API, which 403s without a
+// valid project id. Skip it entirely so the console stays clean; injected and
+// Coinbase connectors are still wired up by wagmi.
+if (hasWalletConnect) {
+  createWeb3Modal(modalConfig as unknown as Parameters<typeof createWeb3Modal>[0])
+}
 
 interface ProviderProps {
   children: ReactNode

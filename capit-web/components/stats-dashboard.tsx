@@ -33,6 +33,7 @@ export function StatsDashboard({ content }: StatsDashboardProps) {
   const ctaTitle = ctaCard?.title || 'Add a Call to Action for:'
   const ctaBullets = ctaCard?.bullets || ['Sponsorships', 'Partners', 'Clients']
   const ctaHref = ctaCard?.href || '/sponsorships'
+  const ctaLinkLabel = ctaCard?.linkLabel || 'Get Involved'
 
   return (
     <section id="dashboard" className="w-full bg-background py-12 px-4 sm:px-6 lg:px-12 xl:px-20 scroll-mt-24">
@@ -61,7 +62,7 @@ export function StatsDashboard({ content }: StatsDashboardProps) {
               </ul>
             </div>
             <div className="pt-4 flex items-center justify-between text-xs font-black text-neutral-900 uppercase tracking-wider">
-              <span>Get Involved</span>
+              <span>{ctaLinkLabel}</span>
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </div>
           </Link>

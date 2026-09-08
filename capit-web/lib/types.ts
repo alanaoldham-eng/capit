@@ -227,6 +227,7 @@ export interface StateLeaderboardContent {
 export interface CtaCardContent {
   title?: string
   bullets?: string[]
+  linkLabel?: string
   href?: string
   [key: string]: unknown
 }
