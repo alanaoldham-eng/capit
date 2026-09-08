@@ -4,11 +4,12 @@ import type { Chain } from 'wagmi/chains'
 
 /**
  * WalletConnect Cloud project ID. Create one at https://cloud.walletconnect.com
- * and set NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID in the environment.
+ * and set NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID.
  *
- * There is deliberately no fallback: the previous hard-coded value was MetaMask's
- * *wallet* id from the WalletConnect explorer, not a *project* id, which is why
- * api.web3modal.org/getWallets returned 403 on every page load.
+ * There is deliberately no fallback. The previous hard-coded default was the
+ * same hex as METAMASK_ID in Web3Provider - that is MetaMask's *wallet* id from
+ * the WalletConnect explorer, not a *project* id, so any environment missing the
+ * variable silently fell back to a value that can only ever return 403.
  */
 export const projectId = process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID ?? ''
 
@@ -17,23 +18,39 @@ export const hasWalletConnect = projectId.length > 0
 if (!hasWalletConnect && typeof window !== 'undefined') {
   console.error(
     '[web3] NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID is not set. ' +
-      'WalletConnect is disabled; injected and Coinbase wallets still work. ' +
-      'Set it before deploying to production.'
+      'WalletConnect is disabled; injected and Coinbase wallets still work.'
   )
 }
 
 /**
- * Production runs on Base mainnet. Set NEXT_PUBLIC_ENABLE_TESTNET=true in a
- * preview environment to additionally offer Base Sepolia.
+ * Which Base network to run against, via the project's existing
+ * NEXT_PUBLIC_BASE_NETWORK convention ("sepolia" | "mainnet").
+ *
+ * Defaults to sepolia: the CAPIT token and Uniswap LP are not deployed to Base
+ * mainnet yet, so pointing the UI at mainnet would render an explorer link to a
+ * contract that does not exist. Flip this to "mainnet" as part of the mainnet
+ * deploy, together with NEXT_PUBLIC_CAPIT_TOKEN_ADDRESS and
+ * NEXT_PUBLIC_EXPLORER_URL.
  */
-export const enableTestnet = process.env.NEXT_PUBLIC_ENABLE_TESTNET === 'true'
+const network = (process.env.NEXT_PUBLIC_BASE_NETWORK ?? 'sepolia').trim().toLowerCase()
 
-export const chains = (
-  enableTestnet ? [base, baseSepolia] : [base]
-) as unknown as readonly [Chain, ...Chain[]]
+export const isMainnet = network === 'mainnet' || network === 'base'
 
-/** The chain the swap widget targets. Always the first entry above. */
-export const defaultChain: Chain = chains[0]
+export const defaultChain: Chain = isMainnet ? base : baseSepolia
+
+export const chains = [defaultChain] as unknown as readonly [Chain, ...Chain[]]
+
+/** Block explorer for the active chain; env wins so it can be overridden per deploy. */
+export const explorerUrl =
+  process.env.NEXT_PUBLIC_EXPLORER_URL?.replace(/\/+$/, '') ||
+  defaultChain.blockExplorers?.default.url ||
+  'https://basescan.org'
+
+/**
+ * CAPIT token address for the active chain. Env wins over CMS content because
+ * the address is network-specific and must not drift when the chain is switched.
+ */
+export const tokenAddress = process.env.NEXT_PUBLIC_CAPIT_TOKEN_ADDRESS ?? ''
 
 const metadata = {
   name: 'CAPIT Ecosystem',

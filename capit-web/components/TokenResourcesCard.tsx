@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import type { TokenResourcesCardContent, ResourceLink } from '@/lib/types'
-import { defaultChain } from '@/config/web3'
+import { explorerUrl, tokenAddress as envTokenAddress } from '@/config/web3'
 
 interface TokenResourcesCardProps {
   content?: TokenResourcesCardContent
@@ -11,7 +11,9 @@ interface TokenResourcesCardProps {
 export function TokenResourcesCard({ content }: TokenResourcesCardProps) {
   const title = content?.title || 'On-Chain Verification'
   const subtitle = content?.subtitle || 'Official contract references & protocol documentation'
-  const contractAddress = content?.contractAddress || '0x4eA9f88c71f2c4E760ff68256B45a23ee8efa358'
+  // Env wins: the address is network-specific, so it must not be edited to a
+  // value that disagrees with the chain the app is actually pointed at.
+  const contractAddress = envTokenAddress || content?.contractAddress || ''
 
   const [copied, setCopied] = useState(false)
 
@@ -27,8 +29,10 @@ export function TokenResourcesCard({ content }: TokenResourcesCardProps) {
 
   // Explorer host follows the configured chain, so a testnet preview and a
   // mainnet deploy both link somewhere real without editing content.
-  const explorer = defaultChain.blockExplorers?.default.url ?? 'https://basescan.org'
-  const shortAddress = `${contractAddress.slice(0, 10)}...${contractAddress.slice(-6)}`
+  const explorer = explorerUrl
+  const shortAddress = contractAddress
+    ? `${contractAddress.slice(0, 10)}...${contractAddress.slice(-6)}`
+    : 'Not deployed'
 
   const defaultLinks: ResourceLink[] = [
     { title: 'TOKEN CONTRACT ADDRESS', subtitle: shortAddress, url: `${explorer}/token/${contractAddress}`, badge: 'Copy' },
