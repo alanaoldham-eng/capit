@@ -1,11 +1,18 @@
 {
   "title": "About CAPIT | Data, Methodology, and Mission",
   "description": "Learn what CAPIT is, how the data works, what the token does, and where the project draws clear claim boundaries.",
+  "eyebrow": "eyebrow here",
   "headline": "About CAPIT",
-  "heroImage": "",
+  "heroImage": "/images/About_page.png",
   "body": "CAPIT is a data-first website and non-inflationary token project built securely on the Base network. Our mission is to bring public-record transparency to environmental cleanup through blockchain technology.",
-  "primaryCta": { "label": "Read the Methodology", "href": "/methodology" },
-  "secondaryCta": { "label": "Open Dashboard", "href": "/dashboard" },
+  "primaryCta": {
+    "label": "Read the Methodology",
+    "href": "/methodology"
+  },
+  "secondaryCta": {
+    "label": "Open Dashboard",
+    "href": "/dashboard"
+  },
   "sections": [
     {
       "heading": "Why This Exists",

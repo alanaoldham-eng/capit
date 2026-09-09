@@ -3,7 +3,7 @@
   "description": "Explore CAPIT’s state-by-state pages for well-plugging records, source agencies, recent activity, and coverage notes.",
   "eyebrow": "STATE COMPARISON & REGISTRIES",
   "headline": "Explore Well Plugging by State",
-  "heroImage": "",
+  "heroImage": "/images/States_page.png",
   "body": "Browse the states CAPIT currently covers, compare high-level activity, and open detailed state pages for source definitions, recent records, and publication notes.",
   "sections": [
     {

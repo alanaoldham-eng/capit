@@ -1,4 +1,15 @@
 {
+  "hero": {
+    "eyebrow": "eyebrow here",
+    "headline": "headline here",
+    "headlineHighlight": "headline highlight here",
+    "description": "Description here",
+    "trustNote": "Trust Note here",
+    "image": {
+      "src": "/images/Dashboard_Page.png",
+      "alt": "CAPIT: The National Standard for Well-Plugging Transparency"
+    }
+  },
   "statsCards": [
     {
       "title": "Verified Plugged-Well Records",

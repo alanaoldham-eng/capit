@@ -1,8 +1,9 @@
 {
   "title": "CAPIT FAQs | Data, Token, and Wallet Answers",
   "description": "Answers to common questions about CAPIT’s data, token mechanics, wallet flow, privacy, and strict claim boundaries.",
+  "eyebrow": "eyebrow here",
   "headline": "Frequently Asked Questions",
-  "heroImage": "",
+  "heroImage": "/images/FAQ_page.png",
   "body": "Find clear, factual answers about CAPIT’s data ingestion, methodology, token flow, wallet interactions, and policy boundaries.",
   "sections": [
     {
