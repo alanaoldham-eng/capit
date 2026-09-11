@@ -1,12 +1,12 @@
 {
   "seo": {
-    "title": "CAPIT | Plug Wells. Mint Tokens. Track Progress.",
-    "description": "Track verified U.S. well-plugging records, explore state-by-state progress, and review CAPIT's non-inflationary mint activity with transparent methodology."
+    "title": "CAPIT | One Well. One Token. One Permanent Record.",
+    "description": "Explore source-linked U.S. well-plugging records from state regulators, compare states, and see how CAPIT mints one token per verified plugged-well record on Base."
   },
   "hero": {
-    "eyebrow": "PUBLIC WELL-PLUGGING DATA WITH TRANSPARENT ON-CHAIN REPORTING",
-    "headline": "Plug Wells.\nMint Tokens.\nTrack Progress.",
-    "description": "CAPIT brings together public well-plugging records, state-by-state reporting, and permanent protocol activity on the Base network. Explore the national snapshot, compare states, and review the methodology behind our strict 1:1 environmental infrastructure tracking.",
+    "eyebrow": "PUBLIC WELL-PLUGGING RECORDS, LINKED ON-CHAIN",
+    "headline": "One Well.\nOne Token.\nOne Permanent Record.",
+    "description": "CAPIT collects plugged-well records published by state oil and gas regulators, shows where each record came from and when it was last checked, and mints one token on the Base network for each unique record that passes our source checks. Explore the national snapshot, compare states, and see exactly how records are counted.",
     "ctaButton": {
       "label": "VIEW DASHBOARD",
       "href": "/dashboard"
@@ -19,20 +19,20 @@
       "label": "READ METHODOLOGY",
       "href": "/methodology"
     },
-    "trustNote": "CAPIT publishes informational content and protocol materials. Please review the methodology, disclosures, and contract details before interacting with any wallet or token feature.",
+    "trustNote": "CAPIT is an independent project operated by Tellus Digital, LLC. It is not a government registry and does not itself plug wells. Review the methodology, risk disclosures, and contract details before using any wallet or token feature.",
     "image": {
       "src": "/images/cappy-and-well.jpg",
-      "alt": "CAPIT Verified Plugged Well Inspector"
+      "alt": "Cappy, the CAPIT mascot, standing beside a capped wellhead"
     }
   },
   "snapshot": {
     "heading": "National Snapshot",
-    "intro": "Start with the big picture. CAPIT highlights verified public records, recent publishing activity, state comparisons, and protocol-linked mint activity in a single view."
+    "intro": "Start with the big picture: how many plugged-well records CAPIT has published, what was added recently, how states compare, and how many tokens have been minted against those records."
   },
   "educationalCards": [
     {
       "title": "What Is a Plugged Well?",
-      "description": "A plugged well is a well that a source agency records as permanently sealed to protect groundwater. CAPIT ensures both the original source status and the CAPIT display status remain visible.",
+      "description": "A well sealed with cement plugs to isolate oil, gas, and groundwater zones, cut off below ground, and recorded as plugged by the state regulator. CAPIT shows the state's original status term next to its own display label.",
       "imageSrc": "/images/plugged-well.jpg",
       "imageAlt": "Illustration of a plugged well",
       "linkHref": "/what-is-a-plugged-well",
@@ -40,15 +40,15 @@
     },
     {
       "title": "Why Does Plugging Wells Matter?",
-      "description": "Every properly plugged well is a permanent investment in the land, communities, and future of the United States. One Well. One Token. One Permanent Record of Progress.",
+      "description": "Plugging closes out a well's working life. It reduces the risk of gas and fluid leaks, removes surface hazards, puts skilled crews to work, and helps return land to productive use.",
       "imageSrc": "/images/well-river.jpg",
       "imageAlt": "Illustration showing environmental benefits",
       "linkHref": "/why-plugging-wells-matter",
       "linkLabel": "Why It Matters"
     },
     {
-      "title": "How Many Wells Remain?",
-      "description": "Counts vary by source, definition, and publication date. CAPIT labels whether a figure refers to unplugged orphaned wells, broader inactive-well estimates, or a source-specific state inventory.",
+      "title": "How Many Unplugged Wells Remain?",
+      "description": "Estimates run from about 142,000 documented orphan wells to more than 2 million unplugged abandoned wells, depending on what is counted. See what each number measures.",
       "imageSrc": "/images/plug-map.jpg",
       "imageAlt": "Map showing inactive wells across the United States",
       "linkHref": "/inactive-wells-remain",
@@ -57,7 +57,7 @@
   ],
   "methodologyStrip": {
     "heading": "Source-linked. Time-stamped. Revision-aware.",
-    "body": "The CAPIT protocol enforces absolute cryptographic provenance for every tokenized environmental asset. By cross-referencing real-time public registries via direct flat-file and scraper pipelines, our architecture ensures immutable tracking of verification statuses, source logic, and time-stamped updates directly on the Base network.",
+    "body": "Every published record carries its source agency, source record ID, retrieval date, and revision history. When a state corrects or reclassifies a record, CAPIT adds a new revision instead of overwriting the old one, and each minted token points back to the record it represents.",
     "href": "/methodology",
     "label": "Read Methodology"
   }

@@ -1,9 +1,9 @@
 {
   "title": "Why Plugging Wells Matters | CAPIT",
-  "description": "Public safety, local prosperity, restored land, healthier ecosystems, environmental responsibility, and the completion of America's energy legacy.",
+  "description": "Why plugging old oil and gas wells matters: public safety, air and groundwater, local jobs, restored land, healthier ecosystems, and completing America's energy legacy.",
   "headline": "Why Plugging Wells Matters",
   "heroImage": "/images/well-plugging-cycle.png",
-  "body": "Every properly plugged well is a permanent investment in the land, communities, and future of the United States. One Well. One Token. One Permanent Record of Progress. \n\n",
+  "body": "Every properly plugged well closes out an obligation that would otherwise pass to landowners, communities, and taxpayers. One Well. One Token. One Permanent Record of Progress.",
   "sections": [
     {
       "heading": "Public Safety",
@@ -18,6 +18,18 @@
       ]
     },
     {
+      "heading": "Air and Groundwater",
+      "image": "",
+      "body": "**Reducing the risk of leaks above and below ground.**\n\nAn unplugged well can give gas and fluids a path between underground formations, groundwater, and the surface. Plugging puts engineered cement barriers in that path.\n\n> Leak rates vary widely from well to well, but plugging cuts them sharply on average.",
+      "bullets": [
+        "EPA estimates an unplugged abandoned well outside Appalachia emits about 10 grams of methane per hour on average, compared with about 0.002 grams per hour once plugged.",
+        "Emissions are concentrated: in one large study, the highest-emitting 10% of abandoned wells produced about 91% of measured methane.",
+        "USGS found that more than half of the roughly 118,000 documented orphan wells it mapped sit within a principal aquifer.",
+        "About 4.6 million Americans live within one kilometer of a documented orphan well.",
+        "Plugging does not remove every risk, which is why researchers recommend monitoring after plugging."
+      ]
+    },
+    {
       "heading": "Economic Benefits",
       "image": "",
       "body": "**Investing in skilled work, local contractors, and the long-term strength of energy communities.**\n\nWell plugging is technically demanding work that supports local employment and purchases throughout the oilfield supply chain. It also reduces the chance that a manageable obligation becomes a larger future cost.\n\n> Every plugging project puts people and equipment to work while reducing tomorrow's financial burden.",
@@ -26,6 +38,8 @@
         "Generates local spending for fuel, lodging, food, rentals, materials, and support services.",
         "Preserves specialized oilfield skills that are difficult to replace or outsource.",
         "Reduces long-term plugging exposure and the risk of more expensive future remediation.",
+        "The Interior Department reports that federal orphan well program spending supported 5,217 jobs in fiscal year 2025.",
+        "States spent an average of about $37,000 per orphan well in 2021 to 2023, and some wells cost more than $200,000.",
         "Converts an unfunded legacy obligation into completed, verifiable work."
       ]
     },
@@ -62,7 +76,7 @@
         "Closes the wellbore permanently and establishes a documented final disposition.",
         "Removes equipment and infrastructure that no longer serves a productive purpose.",
         "Reduces long-term environmental exposure associated with an unmanaged wellsite.",
-        "Demonstrates accountable resource management without overstating unmeasured air-quality benefits."
+        "Shows accountable resource management, backed by a documented public record."
       ]
     },
     {
@@ -74,7 +88,20 @@
         "Completes the full life cycle of energy development rather than leaving the final obligation unresolved.",
         "Protects future generations from inheriting unmanaged industrial sites.",
         "Shows that energy production and responsible retirement belong to the same stewardship commitment.",
-        "CAPIT records each verified plugged U.S. well as one permanent unit of national progress."
+        "CAPIT records each published plugged-well record as one permanent unit of national progress."
+      ]
+    },
+    {
+      "heading": "Sources",
+      "image": "",
+      "body": "Figures on this page come from:",
+      "bullets": [
+        "[EPA, Abandoned Wells emissions memo (April 2018)](https://www.epa.gov/sites/default/files/2018-04/documents/ghgemissions_abandoned_wells.pdf)",
+        "[Williams et al., Environmental Science & Technology (2021)](https://pubs.acs.org/doi/10.1021/acs.est.0c04265)",
+        "[USGS, Woda et al. (2025), orphaned wells and principal aquifers](https://pubs.usgs.gov/publication/70265625)",
+        "[Kang et al., Environmental Research Letters (2023)](https://iopscience.iop.org/article/10.1088/1748-9326/acdae7)",
+        "[U.S. Department of the Interior, FY2025 Orphaned Wells Program report to Congress (November 2025)](https://www.doi.gov/sites/default/files/documents/2025-11/fy-2025-orphaned-wells-congressional-report.pdf)",
+        "[IOGCC, Idle and Orphan Oil and Gas Wells report (revised September 2024)](https://oklahoma.gov/content/dam/ok/en/iogcc/documents/publications/Orphan%20Wells%20Revised.pdf)"
       ]
     }
   ]

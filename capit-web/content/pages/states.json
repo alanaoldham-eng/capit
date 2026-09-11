@@ -1,15 +1,34 @@
 {
   "title": "CAPIT States | Compare Well Plugging by State",
-  "description": "Explore CAPIT’s state-by-state pages for well-plugging records, source agencies, recent activity, and coverage notes.",
+  "description": "Explore CAPIT's state pages for plugged-well records, source agencies, recent activity, and coverage notes.",
   "eyebrow": "STATE COMPARISON & REGISTRIES",
   "headline": "Explore Well Plugging by State",
   "heroImage": "/images/States_page.png",
-  "body": "Browse the states CAPIT currently covers, compare high-level activity, and open detailed state pages for source definitions, recent records, and publication notes.",
+  "body": "Browse the states CAPIT currently covers, compare high-level activity, and open each state page for its source agency, definitions, recent records, and coverage notes.",
   "sections": [
     {
       "heading": "Tracking Regional Infrastructure",
       "image": "",
-      "body": "A good state comparison view does more than rank totals. It must provide context by showing coverage scope, update cadence, and the specific regulatory agency behind the numbers."
+      "body": "A useful state comparison does more than rank totals. Each state page shows its coverage, update schedule, and the regulatory agency behind the numbers."
+    },
+    {
+      "heading": "How to Read State Comparisons",
+      "image": "",
+      "body": "Before comparing states, keep these points in mind:",
+      "bullets": [
+        "Counts show records CAPIT has published for each state, not necessarily every well the state has plugged.",
+        "Large producing states plug far more wells than any single panel suggests. Texas Railroad Commission statistics show more than 8,000 wells plugged in each of 2024 and 2025.",
+        "States refresh their data on different schedules. Each state page shows its latest refresh date.",
+        "Status definitions differ, so compare trends within a state before comparing totals across states."
+      ]
+    },
+    {
+      "heading": "Sources",
+      "image": "",
+      "body": "Context figures on this page come from:",
+      "bullets": [
+        "[Texas Railroad Commission, monthly well plugging statistics (December 2025)](https://www.rrc.texas.gov/media/c02mui0q/december-2025.pdf)"
+      ]
     }
   ]
 }

@@ -1,22 +1,56 @@
 {
   "quote": "Public records first. Protocol transparency always.",
-  "disclaimer": "CAPIT provides informational data aggregation of environmental infrastructure records. Data is provided for informational purposes and may be delayed, corrected, or revised by source agencies.",
+  "disclaimer": "CAPIT aggregates public well records for informational purposes and is not affiliated with any government agency. Data may lag source agencies and may be corrected or revised. Nothing on this site is investment, legal, or tax advice.",
   "navigation": [
-    { "label": "Dashboard", "href": "/dashboard" },
-    { "label": "States", "href": "/states" },
-    { "label": "About", "href": "/about" },
-    { "label": "FAQs", "href": "/faqs" },
-    { "label": "Buy CAPIT", "href": "/buy-capit" },
-    { "label": "Contact", "href": "/contact" }
+    {
+      "label": "Dashboard",
+      "href": "/dashboard"
+    },
+    {
+      "label": "States",
+      "href": "/states"
+    },
+    {
+      "label": "About",
+      "href": "/about"
+    },
+    {
+      "label": "FAQs",
+      "href": "/faqs"
+    },
+    {
+      "label": "Buy CAPIT",
+      "href": "/buy-capit"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact"
+    }
   ],
   "socialLinks": [
-    { "platform": "twitter", "href": "https://x.com/capittoken", "ariaLabel": "CAPIT on X" },
-    { "platform": "email", "href": "mailto:shillmer@tellusdigital.io", "ariaLabel": "Email" }
+    {
+      "platform": "twitter",
+      "href": "https://x.com/capittoken",
+      "ariaLabel": "CAPIT on X"
+    },
+    {
+      "platform": "email",
+      "href": "mailto:shillmer@tellusdigital.io",
+      "ariaLabel": "Email CAPIT"
+    }
   ],
-  "walletButton": { "label": "Connect Wallet" },
-  "copyright": "© 2026 CAPIT. All rights reserved.",
+  "walletButton": {
+    "label": "Connect Wallet"
+  },
+  "copyright": "© 2026 Tellus Digital, LLC. All rights reserved.",
   "legalLinks": [
-    { "label": "Privacy Policy", "href": "/privacy-policy" },
-    { "label": "Terms of Use", "href": "/terms-of-use" }
+    {
+      "label": "Privacy Policy",
+      "href": "/privacy-policy"
+    },
+    {
+      "label": "Terms of Use",
+      "href": "/terms-of-use"
+    }
   ]
 }

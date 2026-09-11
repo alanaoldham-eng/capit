@@ -1,34 +1,50 @@
 {
   "title": "CAPIT Methodology | Sources, Verification, and Publication Rules",
-  "description": "Learn how CAPIT collects, normalizes, verifies, and publishes well-plugging records and related protocol activity on the Base network.",
+  "description": "How CAPIT collects, normalizes, verifies, and publishes state well-plugging records, how tokens are minted on Base, and the limits of what CAPIT verifies.",
   "headline": "CAPIT Methodology",
   "heroImage": "/images/CAPIT-Roadmap_Infographic.png",
-  "body": "This page explains the current state and future state roadmap of CAPIT collects state-level source records, applies strict publication rules, handles revisions, and links public infrastructure data to permanent protocol activity on the Base network.",
+  "body": "This page explains how CAPIT collects state source records, decides which records to publish, handles revisions, and links each published record to token activity on the Base network. It also sets out the limits of what CAPIT verifies.",
   "sections": [
     {
-      "heading": "Core Verification Architecture",
+      "heading": "How the Pipeline Works",
       "image": "",
-      "body": "The CAPIT system enforces strict claim boundaries to ensure that every tokenized asset reflects verifiable physical reality. The flow executes in a highly structured pipeline spanning collection, normalization, verification, publication, and deterministic Base network minting."
+      "body": "Every record moves through the same five stages: collection, normalization, verification, publication, and minting. A token is minted only for a record that has passed every earlier stage."
     },
     {
       "heading": "Data Collection & Source Hierarchy",
       "image": "",
-      "body": "We prioritize primary regulatory sources, ingesting public records directly from official state oil and gas conservation commissions via direct database feeds, GIS REST servers, and headless scraper fallbacks for legacy systems."
+      "body": "CAPIT prioritizes primary regulatory sources: state oil and gas agencies and state geological surveys. Records are retrieved from published data files, database exports, and GIS map services. Where a state offers none of these, CAPIT retrieves records from the agency's public web portal. Each record keeps its source agency, source system, and retrieval date."
     },
     {
-      "heading": "Data Normalization & Deduplication",
+      "heading": "Normalization & Deduplication",
       "image": "",
-      "body": "Because state data fields vary widely across jurisdictions, CAPIT standardizes incoming records into a unified schema to ensure strict taxonomy alignment and spatial deduplication."
+      "body": "State data fields vary widely. CAPIT maps incoming records into one schema, matches wells by API number (the standard U.S. well identifier), and uses location data to catch duplicates. Each state's original status term is kept alongside CAPIT's display label."
     },
     {
-      "heading": "Deterministic 1:1 Minting Logic",
+      "heading": "What CAPIT Verifies, and What It Doesn't",
       "image": "",
-      "body": "CAPIT enforces a non-inflationary minting formula on the Base network. Supply growth is tied exclusively to physical reality: exactly one (1) CAPIT token is minted for each newly verified plugged well. There is no administrative body with the discretion to override or batch-issue tokens without an accompanying, publicly verifiable state regulatory record."
+      "body": "CAPIT verifies that a plugged-status record exists at the source agency, that it is unique, and that it meets CAPIT's publication rules. CAPIT does not inspect wells in the field, measure emissions, or confirm surface restoration. Those remain the responsibility of operators and state regulators."
     },
     {
-      "heading": "Immutable Revision Handling",
+      "heading": "1:1 Minting Logic",
       "image": "",
-      "body": "When a state agency updates a well filing, CAPIT employs append-only logging. Historical records are preserved to ensure absolute transparency and prevent silent overwriting of critical environmental infrastructure data."
+      "body": "Exactly one CAPIT token is minted on Base for each unique plugged-well record CAPIT publishes. Tokens are never minted without a matching published record, so supply grows only as records are added. The contract's minting roles and permissions are visible on the verified contract on BaseScan."
+    },
+    {
+      "heading": "Revision Handling",
+      "image": "",
+      "body": "When a state agency updates, corrects, or reclassifies a well record, CAPIT adds a new revision instead of overwriting the old one. The full history stays visible on the record, so no change happens silently."
+    },
+    {
+      "heading": "Known Limitations",
+      "image": "",
+      "body": "Keep these in mind when reading CAPIT figures:",
+      "bullets": [
+        "Records can lag the source agency by days to months, depending on each state's update schedule.",
+        "CAPIT counts records it has published, not every well plugged nationally. Coverage differs by state.",
+        "Some older plugged wells have no plugging date in state databases.",
+        "Status definitions differ by state, so state totals are not always directly comparable."
+      ]
     }
   ]
 }

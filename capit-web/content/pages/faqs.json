@@ -1,45 +1,75 @@
 {
   "title": "CAPIT FAQs | Data, Token, and Wallet Answers",
-  "description": "Answers to common questions about CAPIT’s data, token mechanics, wallet flow, privacy, and strict claim boundaries.",
-  "eyebrow": "eyebrow here",
+  "description": "Answers to common questions about CAPIT's well-plugging data, how tokens are minted, wallets, and what CAPIT does and doesn't claim.",
+  "eyebrow": "QUESTIONS & ANSWERS",
   "headline": "Frequently Asked Questions",
   "heroImage": "/images/FAQ_page.png",
-  "body": "Find clear, factual answers about CAPIT’s data ingestion, methodology, token flow, wallet interactions, and policy boundaries.",
+  "body": "Clear answers about where CAPIT's data comes from, how records are counted, how the token works, and what CAPIT can and can't do.",
   "sections": [
     {
       "heading": "What is CAPIT?",
       "image": "",
-      "body": "CAPIT is a public-facing environmental registry and utility token project built on the Base network. It organizes U.S. well-plugging records, explains their provenance, and shows CAPIT-linked protocol activity directly next to the underlying data."
+      "body": "CAPIT is a public, source-linked registry of U.S. plugged oil and gas well records, paired with a token on the Base network. It organizes records published by state regulators, shows where each one came from, and displays token mint activity next to the underlying data. CAPIT is operated by Tellus Digital, LLC."
+    },
+    {
+      "heading": "Does CAPIT plug wells or pay for plugging?",
+      "image": "",
+      "body": "No. Wells are plugged by operators, state agencies, and their contractors. CAPIT tracks the public records of that work. Buying or holding CAPIT does not pay for plugging a well."
     },
     {
       "heading": "How does CAPIT define a plugged well?",
       "image": "",
-      "body": "CAPIT strictly follows the source-agency definition for the physical record being shown. When CAPIT normalizes terms into a sitewide display taxonomy, we ensure both the original source status and the CAPIT display status remain visible."
+      "body": "CAPIT follows the source agency's definition. A well counts when the state regulator's record shows a completed plugging status, such as Plugged & Abandoned. Status terms differ by state, so CAPIT shows the original source term next to its own display label. See [What Is a Plugged Well?](/what-is-a-plugged-well) for examples."
     },
     {
       "heading": "Where does the data come from?",
       "image": "",
-      "body": "We rely on public, state-level well registry data. CAPIT identifies the source agency, source system, fetch date, verification date, and any caveats for every visible record set on the platform."
+      "body": "From public databases, data files, and map services published by state oil and gas regulators and state geological surveys. For every record set, CAPIT shows the source agency, source system, retrieval date, verification date, and any known caveats."
+    },
+    {
+      "heading": "Why doesn't CAPIT's count match a state's own report?",
+      "image": "",
+      "body": "States update on different schedules, CAPIT publishes a record only after it passes source checks, duplicates are removed, and some states report plugging paperwork processed rather than wells plugged. Each state page lists its coverage notes and latest refresh date."
     },
     {
       "heading": "Does each CAPIT token equal one well?",
       "image": "",
-      "body": "Yes. CAPIT enforces a strict 1:1 ratio. Exactly one CAPIT token is minted for every unique, verified plugged-well record. This rule creates a permanent, non-inflationary record of environmental progress."
+      "body": "Each token corresponds to one unique plugged-well record that CAPIT has published. New tokens are minted only when a new record passes CAPIT's checks, so supply grows only as records are added. A token does not give ownership of, or any rights in, the well itself."
+    },
+    {
+      "heading": "What happens if a state corrects a record?",
+      "image": "",
+      "body": "CAPIT adds a new revision rather than overwriting the old one, so the full history stays visible and the record shows its current source status. The [Methodology](/methodology) explains how revisions are handled."
     },
     {
       "heading": "Is CAPIT a carbon credit?",
       "image": "",
-      "body": "No. CAPIT serves solely as a strict, source-linked environmental infrastructure receipt representing physical remediation. It is not a carbon credit, emissions offset, or speculative financial asset."
+      "body": "No. CAPIT does not measure or certify emissions reductions, and a CAPIT token cannot be used as a carbon credit or emissions offset."
+    },
+    {
+      "heading": "Is CAPIT an investment?",
+      "image": "",
+      "body": "Nothing on this site is investment advice or an offer of securities. Token prices can fall, and you can lose the full amount you spend. Read the [Terms of Use](/terms-of-use) and the risk disclosures on the [Buy CAPIT](/buy-capit) page before buying."
+    },
+    {
+      "heading": "Is CAPIT affiliated with a government agency?",
+      "image": "",
+      "body": "No. CAPIT is independent. It uses records that state agencies publish, but it is not endorsed by or affiliated with any state agency or the U.S. Department of the Interior."
     },
     {
       "heading": "What network does CAPIT use?",
       "image": "",
-      "body": "CAPIT is built securely on the Base network. The Buy page clearly shows the network and contract details before users proceed with any interaction."
+      "body": "Base, an Ethereum layer-2 network. The [Buy CAPIT](/buy-capit) page lists the network, the full contract address, and a block-explorer link so you can confirm them before you connect a wallet."
     },
     {
       "heading": "Do I need a wallet to use the dashboard?",
       "image": "",
-      "body": "No. The data experience remains completely open and free to users who only want to read, search, and compare public environmental records."
+      "body": "No. Anyone can read, search, and compare records for free. You only need a wallet to buy or hold the token."
+    },
+    {
+      "heading": "How do I report a data error?",
+      "image": "",
+      "body": "Use the [Contact](/contact) page and choose Data Correction. Include the state, the well's API number or source record ID, and a link to the source record if you have one."
     }
   ]
 }

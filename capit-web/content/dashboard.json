@@ -1,40 +1,40 @@
 {
   "hero": {
-    "eyebrow": "eyebrow here",
-    "headline": "headline here",
-    "headlineHighlight": "headline highlight here",
-    "description": "Description here",
-    "trustNote": "Trust Note here",
+    "eyebrow": "NATIONAL SNAPSHOT",
+    "headline": "U.S. Well-Plugging",
+    "headlineHighlight": "Records",
+    "description": "Plugged-well records from state regulators, the tokens minted against them, and how states compare. Every figure shows its scope and source.",
+    "trustNote": "Figures count records CAPIT has published, not every well plugged nationwide. Data may lag, or be corrected by, source agencies.",
     "image": {
       "src": "/images/Dashboard_Page.png",
-      "alt": "CAPIT: The National Standard for Well-Plugging Transparency"
+      "alt": "CAPIT national well-plugging dashboard"
     }
   },
   "statsCards": [
     {
-      "title": "Verified Plugged-Well Records",
+      "title": "Published Plugged-Well Records",
       "value": "1,851,542",
-      "subtitle": "Physical infrastructure records that have passed CAPIT's strict publication and verification rules."
+      "subtitle": "Plugged-status well records from state regulatory sources that have passed CAPIT's source checks and publication rules."
     },
     {
-      "title": "Added this Year",
+      "title": "Added to CAPIT in 2026",
       "value": "2,508",
-      "subtitle": "Newly published records successfully tracked and aggregated during 2026."
+      "subtitle": "Records first published by CAPIT this year. This is not a count of every well plugged nationally in 2026."
     }
   ],
   "tokensCard": {
     "title": "CAPIT Mint Activity",
     "value": "1,851,542",
-    "subtitle": "Permanent, non-inflationary on-chain activity linked 1:1 to verified physical closures on the Base network."
+    "subtitle": "Tokens minted on Base under CAPIT's 1:1 rule: one token for each unique plugged-well record CAPIT has published."
   },
   "pluggingTrend": {
     "sectionTitle": [
       "National",
       "Snapshot"
     ],
-    "chartTitle": "Historical Publishing Trend",
-    "chartSubtitle": "Daily verified-record totals across tracked U.S. jurisdictions.",
-    "dataSource": "Source-linked public records aggregated via direct flat-file and scraper fallbacks. Data may be delayed, corrected, or revised.",
+    "chartTitle": "Records Published per Day",
+    "chartSubtitle": "Plugged-well records published by CAPIT each day over the last 30 days, across tracked states.",
+    "dataSource": "Public records retrieved from state oil and gas agency data files, map services, and web portals. Figures may lag source agencies and may be corrected or revised.",
     "trendData": [
       {
         "day": 1,
@@ -90,7 +90,7 @@
     ]
   },
   "dailyMintLog": {
-    "title": "Recent Verified Records",
+    "title": "Records Published by Month",
     "currentDate": "July 10, 2026",
     "entries": [
       {
@@ -168,15 +168,15 @@
         "badge": ""
       },
       {
-        "title": "TECHNICAL WHITEPAPER",
-        "subtitle": "Methodology",
+        "title": "METHODOLOGY",
+        "subtitle": "Sources & verification rules",
         "url": "/methodology",
         "badge": ""
       }
     ]
   },
   "recentVerifiedRecords": {
-    "title": "Recent Verified Records",
+    "title": "Records Published by Month",
     "currentDateLabel": "July 10, 2026",
     "entries": [
       {
@@ -212,7 +212,7 @@
     "footerLinkUrl": "https://capittoken.com/records"
   },
   "stateLeaderboard": {
-    "title": "State Leaderboard - 2026",
+    "title": "Records Added by State, 2026",
     "entries": [
       {
         "rank": 1,
@@ -255,6 +255,6 @@
       "label": "View All States",
       "href": "/states"
     },
-    "dataSourceNote": "Rankings are based on indexed public records and active dashboard criteria."
+    "dataSourceNote": "Counts reflect records added to CAPIT in 2026, not total wells plugged in each state. Coverage, status definitions, and update schedules differ by state."
   }
 }

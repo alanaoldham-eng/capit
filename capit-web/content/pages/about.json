@@ -1,10 +1,10 @@
 {
   "title": "About CAPIT | Data, Methodology, and Mission",
-  "description": "Learn what CAPIT is, how the data works, what the token does, and where the project draws clear claim boundaries.",
-  "eyebrow": "eyebrow here",
+  "description": "What CAPIT is, who runs it, how its well-plugging data works, what the token represents, and what CAPIT does not claim.",
+  "eyebrow": "ABOUT THE PROJECT",
   "headline": "About CAPIT",
   "heroImage": "/images/About_page.png",
-  "body": "CAPIT is a data-first website and non-inflationary token project built securely on the Base network. Our mission is to bring public-record transparency to environmental cleanup through blockchain technology.",
+  "body": "CAPIT is a public data site and token project on the Base network, operated by Tellus Digital, LLC. Our mission is to make U.S. well-plugging progress easy to see and check: state records in one place, each with its source attached, and each linked to a token on-chain.",
   "primaryCta": {
     "label": "Read the Methodology",
     "href": "/methodology"
@@ -17,29 +17,29 @@
     {
       "heading": "Why This Exists",
       "image": "",
-      "body": "Managing the millions of abandoned or idle wells across the United States is a massive environmental challenge. Well-plugging information is highly fragmented across varying agency systems, state definitions, and update schedules. CAPIT aggregates this information into one transparent public experience so users can understand what is being counted, where it came from, and when it was last verified. By transitioning scattered records onto an immutable ledger, we aim to build a community dedicated to verifiable environmental accountability."
+      "body": "The United States has millions of abandoned oil and gas wells. EPA's greenhouse gas inventory estimates about 3.7 million, more than half of them unplugged. State inventories list roughly 142,000 documented orphan wells with no responsible operator, and hundreds of thousands more may be undocumented. The records that show progress are scattered across dozens of state systems, each with its own definitions and update schedule. CAPIT brings those records into one public view so anyone can see what is being counted, where it came from, and when it was last checked."
     },
     {
       "heading": "How CAPIT Works",
       "image": "",
-      "body": "CAPIT follows a simple five-step deterministic model:",
+      "body": "Every record moves through the same five steps, in order:",
       "bullets": [
-        "**Collect:** We gather public source records from published state-level agency systems and approved datasets.",
-        "**Normalize:** We organize fields so users can accurately compare infrastructure records across varying jurisdictions.",
-        "**Verify:** CAPIT applies strict publication rules, source checks, and revision logic before physical remediation records appear publicly.",
-        "**Publish:** The platform displays provenance, freshness, and necessary caveats alongside all visible data.",
-        "**Link:** Finally, CAPIT links protocol activity strictly to the approved 1:1 minting methodology on the Base network."
+        "**Collect:** We gather public records from state oil and gas regulators and other approved public datasets.",
+        "**Normalize:** We map each state's fields into one schema and remove duplicates, so records can be compared across states.",
+        "**Verify:** We confirm each record exists at its source, shows a plugged status, and meets our publication rules. We do not inspect wells in the field.",
+        "**Publish:** Each record appears with its source, retrieval date, and any caveats.",
+        "**Link:** Each unique published record is linked to one CAPIT token minted on Base."
       ]
     },
     {
       "heading": "What CAPIT Is Not",
       "image": "",
-      "body": "CAPIT is not a government registry, nor is it a substitute for reading the underlying source agency record. CAPIT serves as a strict environmental infrastructure receipt representing physical remediation. It is explicitly not a carbon credit, offset, or speculative instrument. Tokens do not imply ownership of a well, environmental attributes, or rights to public remediation funds."
+      "body": "CAPIT is not a government registry and does not replace the official agency record. It does not plug wells or inspect plugging work. A CAPIT token is a digital record linked to a published plugged-well record. It is not a carbon credit or emissions offset, and it does not represent ownership of a well, any environmental attribute, or any right to public remediation funds."
     },
     {
       "heading": "Governance and Roadmap",
       "image": "",
-      "body": "Governance details, protocol permissions, and future roadmap commitments will appear here once approved by legal and engineering review. Until then, CAPIT limits all functionality to publicly documented, verification-based tracking."
+      "body": "Tellus Digital, LLC currently operates the CAPIT website, data pipeline, and minting process. The token contract's roles and permissions, including which addresses can mint, are visible on the verified contract on BaseScan. Roadmap updates will be posted here as they are approved."
     }
   ]
 }

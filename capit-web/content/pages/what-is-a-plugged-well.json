@@ -1,15 +1,57 @@
 {
   "title": "What Is a Plugged Well? | CAPIT Data Context",
-  "description": "Learn what constitutes an officially plugged well under state regulatory guidelines and how CAPIT verifies record status.",
+  "description": "What it means when a state regulator records a well as plugged, how plugging differs from site restoration, and how CAPIT handles state status terms.",
   "eyebrow": "DATA DEFINITIONS",
   "headline": "What Is a Plugged Well?",
   "heroImage": "/images/plugged-well.jpg",
-  "body": "A plugged well is an inactive oil or gas well that a state regulatory agency confirms has been permanently sealed downhole with cement and restored at the surface to prevent environmental fluid migration and groundwater contamination.",
+  "body": "A plugged well is an oil or gas well, or a dry hole, that has been permanently sealed with cement plugs to isolate oil, gas, and water-bearing zones, and whose plugging has been recorded by the state regulator. Plugging greatly reduces the risk that gas or fluids travel up the wellbore into groundwater or the air.",
   "sections": [
+    {
+      "heading": "What Plugging Involves",
+      "image": "",
+      "body": "Requirements vary by state, but a typical plugging job follows this sequence:",
+      "bullets": [
+        "Pull tubing and downhole equipment and check the condition of the wellbore.",
+        "Set cement plugs across each oil- or gas-bearing zone.",
+        "Set cement plugs that protect usable groundwater zones.",
+        "Set a surface plug and cut the casing off below ground. Texas requires the cut 3 feet below the surface.",
+        "File a plugging report with the regulator (Form W-3 in Texas) recording the plugging date and details."
+      ]
+    },
+    {
+      "heading": "Plugging Is Not the Same as Site Restoration",
+      "image": "",
+      "body": "In most states, surface cleanup is a separate step with its own deadline after plugging. Texas requires equipment removal and pit and cellar cleanup within 120 days. Pennsylvania allows nine months to restore the site, and New Mexico allows one year. A CAPIT plugged-well record shows that the plugging was recorded. On its own, it does not confirm that surface restoration is complete."
+    },
     {
       "heading": "State Status Language",
       "image": "",
-      "body": "State agencies use specific terminology to represent completed plugging operations (e.g., 'Plugged & Abandoned', 'P&A Completed', or 'Approved Plugging Report'). CAPIT retains the original state status alongside normalized display labels."
+      "body": "Every regulator uses its own status codes, and the same word can mean different things. CAPIT keeps the original source status next to its normalized display label, so you can always see the state's own term.",
+      "bullets": [
+        "**Kansas Geological Survey:** OIL-P&A, GAS-P&A, and D&A (dry and abandoned).",
+        "**Pennsylvania DEP:** Plugged OG Well (plugged by the operator), DEP Plugged (plugged by the state), and Plugged Unverified (appears plugged, but no plugging certificate is on file).",
+        "**Colorado ECMC:** PA (plugged and abandoned) and DA (dry and abandoned). AL means abandoned location, a permitted site rather than a plugged well.",
+        "**\"Abandoned\" on its own is ambiguous:** some New Mexico reports use it to mean properly plugged, while Pennsylvania and Kansas use it for wells that are unused but not plugged."
+      ]
+    },
+    {
+      "heading": "Plugged Doesn't Mean Risk-Free",
+      "image": "",
+      "body": "Plugging is the established way to reduce a well's risks, but it isn't a guarantee. The National Academies of Sciences, Engineering, and Medicine calls plugging an effective practice to mitigate risk and recommends monitoring afterward, because poorly plugged wells can still leak."
+    },
+    {
+      "heading": "Sources",
+      "image": "",
+      "body": "Definitions and requirements summarized from:",
+      "bullets": [
+        "[16 Tex. Admin. Code 3.14, Texas plugging rule](https://law.cornell.edu/regulations/texas/16-Tex-Admin-Code-SS-3-14)",
+        "[58 Pa.C.S. 3216, Pennsylvania well site restoration](https://law.onecle.com/pennsylvania/title-58/3216.html)",
+        "[19.15.25 NMAC, New Mexico plugging and abandonment](https://www.srca.nm.gov/parts/title19/19.015.0025.html)",
+        "[Pennsylvania DEP Oil and Gas Reports data dictionary](https://files.dep.state.pa.us/OilGas/BOGM/BOGMPortalFiles/OilGasReports/HelpDocs/SSRS_Report_Data_Dictionary/DEP_Oil_and_GAS_Reports_Data_Dictionary.pdf)",
+        "[Kansas Geological Survey, oil and gas well statistics](https://www.kgs.ku.edu/PRS/wellStats.html)",
+        "[Colorado ECMC status codes](https://ecmc.state.co.us/COGIS_Help/Status_Codes.htm)",
+        "[National Academies, orphan well plugging best practices (June 2026)](https://www.nationalacademies.org/news/best-practices-opportunities-for-plugging-orphan-wells-identified-in-new-report)"
+      ]
     }
   ]
 }

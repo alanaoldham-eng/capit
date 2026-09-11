@@ -1,21 +1,74 @@
 {
   "title": "CAPIT Privacy Policy",
-  "description": "Learn what information CAPIT collects, how it is used, and what happens when you browse or connect a wallet.",
+  "description": "What information CAPIT collects, how it is used and shared, and what happens when you browse, contact us, or connect a wallet.",
   "eyebrow": "LEGAL & PRIVACY",
   "headline": "Privacy Policy",
   "heroImage": "",
-  "body": "This Privacy Policy explains how CAPIT collects, uses, shares, and retains information when you visit the registry, read content, submit a form, connect a wallet, or interact with embedded third-party services.",
+  "body": "Last updated: September 2026.\n\nThis Privacy Policy explains how Tellus Digital, LLC (\"we\" or \"us\"), which operates CAPIT, collects, uses, shares, and retains information when you visit the site, contact us, connect a wallet, or use embedded third-party services.",
   "sections": [
     {
-      "heading": "Information We Collect",
+      "heading": "Information You Give Us",
       "image": "",
-      "body": "We may collect information you provide directly, such as your contact information when submitting an inquiry. Technical usage data (e.g., browser type, approximate location, referring URLs) may also be collected to maintain system stability.",
+      "body": "When you contact us, we collect what you choose to send, such as your name, email address, organization, and message.",
       "bullets": []
     },
     {
-      "heading": "Public Blockchain Data",
+      "heading": "Information Collected Automatically",
       "image": "",
-      "body": "Connecting a wallet surfaces your public wallet address and network metadata to facilitate protocol interactions. CAPIT never asks for or stores private keys, seed phrases, or wallet passwords.",
+      "body": "Our hosting and analytics providers may automatically collect technical data such as browser type, device type, approximate location based on IP address, pages visited, and referring URLs. We use this to keep the site secure, fix problems, and understand how the site is used.",
+      "bullets": []
+    },
+    {
+      "heading": "Wallet and Blockchain Data",
+      "image": "",
+      "body": "If you connect a wallet, the site receives your public wallet address and network details so it can display balances and prepare transactions. Blockchain transactions are public and permanent; we cannot change or delete information recorded on a blockchain. CAPIT never asks for or stores private keys, recovery phrases, or wallet passwords.",
+      "bullets": []
+    },
+    {
+      "heading": "How We Use Information",
+      "image": "",
+      "body": "We use information to:",
+      "bullets": [
+        "Operate, secure, and improve the site",
+        "Respond to your questions, correction requests, and legal notices",
+        "Detect and prevent fraud, abuse, and security incidents",
+        "Comply with legal obligations"
+      ]
+    },
+    {
+      "heading": "How We Share Information",
+      "image": "",
+      "body": "We do not sell your personal information. We share information only with service providers that help us run the site (such as hosting, analytics, and wallet-connection services), when required by law, to protect rights and safety, or as part of a business transfer such as a merger or acquisition.",
+      "bullets": []
+    },
+    {
+      "heading": "Third-Party Services",
+      "image": "",
+      "body": "Wallet apps, wallet-connection services, decentralized exchanges, and block explorers linked from CAPIT are run by third parties under their own privacy policies. We are not responsible for how they handle your information.",
+      "bullets": []
+    },
+    {
+      "heading": "Retention",
+      "image": "",
+      "body": "We keep contact messages and technical data only as long as needed for the purposes above or as required by law.",
+      "bullets": []
+    },
+    {
+      "heading": "Your Choices",
+      "image": "",
+      "body": "Depending on where you live, you may have the right to request access to, correction of, or deletion of personal information we hold about you. Send requests through the [Contact](/contact) page and choose Privacy Request.",
+      "bullets": []
+    },
+    {
+      "heading": "Children",
+      "image": "",
+      "body": "CAPIT is not directed to anyone under 18, and we do not knowingly collect information from children.",
+      "bullets": []
+    },
+    {
+      "heading": "Changes to This Policy",
+      "image": "",
+      "body": "We may update this policy from time to time. The date at the top of the page shows when it last changed.",
       "bullets": []
     }
   ]

@@ -3,13 +3,51 @@
   "description": "Review [State Name] well-plugging records, source definitions, recent activity, and CAPIT publication notes.",
   "headline": "[State Name] Well Plugging Tracker",
   "heroImage": "",
-  "body": "Track verified published records, recent CAPIT on-chain verification activity, and the specific agency definitions that shape this state’s infrastructure numbers.",
-  "primaryCta": { "label": "View Source Agency", "href": "#source-agency" },
-  "secondaryCta": { "label": "Compare States", "href": "/states" },
+  "body": "Track published plugged-well records, recent CAPIT mint activity, and the agency definitions that shape this state's numbers.",
+  "primaryCta": {
+    "label": "View Source Agency",
+    "href": "#source-agency"
+  },
+  "secondaryCta": {
+    "label": "Compare States",
+    "href": "/states"
+  },
   "sections": [
-    { "heading": "State Snapshot", "image": "", "body": "This page summarizes the current published record count, recent physical additions, source data freshness, and any known exclusions or coverage limits for [State Name].", "bullets": ["Verified Records", "Added in the Last 30 Days", "Latest Source Refresh", "Latest CAPIT Verification", "Regions Represented", "Coverage Note"] },
-    { "heading": "Recent Verified Records", "image": "", "body": "Review the newest published records for this state with source IDs, dates, and clear provenance links. If revisions are part of the source history, CAPIT preserves and shows them." },
-    { "heading": "Source Agency and Definition", "image": "", "body": "In [State Name], CAPIT strictly follows the source agency’s published definition and status language for the records shown on this page. If CAPIT normalizes that language into a sitewide taxonomy, both the original source term and the CAPIT display term remain visible.", "bullets": ["Source agency: [Agency Name]", "Source system: [Database, dashboard, CSV, GIS map, or API]", "Definition note: [State-specific status definition]", "Coverage note: [Known exclusions or limits]", "Last successful fetch: [Timestamp]", "Revision policy: [How source changes are handled by the ledger]"] },
-    { "heading": "Caveat", "image": "", "body": "State numbers are not always directly comparable one-to-one. Definitions, publication practices, and update cadences differ across agencies and jurisdictions." }
+    {
+      "heading": "State Snapshot",
+      "image": "",
+      "body": "This page summarizes the current published record count, records added recently, source data freshness, and any known exclusions or coverage limits for [State Name].",
+      "bullets": [
+        "Published Plugged-Well Records",
+        "Added in the Last 30 Days",
+        "Latest Source Refresh",
+        "Latest CAPIT Verification",
+        "Regions Represented",
+        "Coverage Note"
+      ]
+    },
+    {
+      "heading": "Recent Verified Records",
+      "image": "",
+      "body": "Review the newest published records for this state, with API numbers or source IDs, plugging dates, and links to the source record. If the source has revised a record, CAPIT keeps and shows each revision."
+    },
+    {
+      "heading": "Source Agency and Definition",
+      "image": "",
+      "body": "In [State Name], CAPIT follows the source agency's published definition and status language for the records on this page. Where CAPIT maps that language to a sitewide label, both the original source term and the CAPIT label stay visible.",
+      "bullets": [
+        "Source agency: [Agency Name]",
+        "Source system: [Database, dashboard, CSV, GIS map, or API]",
+        "Definition note: [State-specific status definition]",
+        "Coverage note: [Known exclusions or limits]",
+        "Last successful fetch: [Timestamp]",
+        "Revision policy: [How source changes are recorded]"
+      ]
+    },
+    {
+      "heading": "Caveat",
+      "image": "",
+      "body": "State numbers are not always directly comparable. Definitions, publication practices, and update schedules differ across agencies. A plugged-well record confirms that plugging was recorded; it does not by itself confirm that surface restoration is complete."
+    }
   ]
 }

@@ -1,34 +1,34 @@
 {
   "title": "CAPIT Dashboard | National Well Plugging Tracker",
-  "description": "Filter verified plugged-well records, compare state activity, and review CAPIT source context, freshness, and immutable revisions.",
+  "description": "Explore plugged-well records published by CAPIT, compare state activity, and check each record's source, freshness, and revision history.",
   "eyebrow": "Data-first view",
   "headline": "National Well Plugging Dashboard",
   "heroImage": "",
-  "body": "Use the CAPIT dashboard to filter published well-plugging records by state, source, timeframe, and record status. Every panel clearly exposes its specific scope, data source, and freshness, ensuring you have the exact context behind the numbers.",
+  "body": "Filter published well-plugging records by state, source, timeframe, and record status. Every panel states its scope, data source, and freshness, so you always know what a number counts.",
   "secondaryCta": {
     "label": "Open Methodology",
     "href": "/methodology"
   },
   "sections": [
     {
-      "heading": "The Trust Engine",
+      "heading": "What the Dashboard Shows",
       "image": "",
-      "body": "The CAPIT dashboard aggregates fragmented public well-plugging records into a single, verified snapshot. Users can monitor:",
+      "body": "The dashboard brings public well-plugging records from many state systems into one view:",
       "bullets": [
-        "**Verified Plugged-Well Records:** The total count of public records that have passed CAPIT's strict publication and verification rules.",
-        "**CAPIT Mint Activity:** On-chain protocol activity strictly linked to our 1:1 minting logic (one token = one verified well).",
-        "**State Coverage & Comparison:** Visual map data and leaderboards to compare remediation efforts across different states."
+        "**Published Plugged-Well Records:** plugged-status records from state sources that have passed CAPIT's checks and been published.",
+        "**CAPIT Mint Activity:** tokens minted under the 1:1 rule, one for each published record.",
+        "**State Comparison:** maps and rankings of records added by state, with coverage notes."
       ]
     },
     {
-      "heading": "Unalterable Provenance",
+      "heading": "Revision History and Provenance",
       "image": "",
-      "body": "Public records can frequently be revised, corrected, or reclassified by state agencies. Instead of pretending the data is static, CAPIT’s dashboard preserves a visible, immutable revision trail directly on the Base network. Every verified record displayed in the Recent Verified Records table includes its source agency, verification date, and a transparent provenance link to the underlying state registry."
+      "body": "State agencies often revise, correct, or reclassify records. CAPIT keeps an append-only revision history instead of overwriting old data. Each published record shows its source agency, verification date, and a link to the underlying state record."
     },
     {
       "heading": "Definitions and Caveats",
       "image": "",
-      "body": "State definitions differ. Some source systems publish orphan wells, some publish plugged wells, and some expose only partial subsets. CAPIT shows the exact scope of every panel in plain language to maintain data integrity."
+      "body": "State definitions differ. Some sources publish only orphan wells, some publish all plugged wells, and some publish partial subsets. Each panel states its scope in plain language. Dashboard figures count records CAPIT has published, which can differ from a state's own count of wells plugged."
     }
   ]
 }

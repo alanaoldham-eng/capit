@@ -1,20 +1,88 @@
 {
   "title": "CAPIT Terms of Use",
-  "description": "Review the terms that govern your use of the CAPIT website, its data views, and any wallet-enabled features.",
+  "description": "The terms that govern your use of the CAPIT website, its well-record data, and any wallet-enabled features.",
   "eyebrow": "LEGAL & TERMS",
   "headline": "Terms of Use",
   "heroImage": "",
-  "body": "These Terms of Use govern your access to and use of CAPIT and any related websites, content, data views, applications, and wallet-enabled features provided by Tellus Digital, LLC. By using CAPIT, you agree to these Terms.",
+  "body": "Last updated: September 2026.\n\nThese Terms of Use govern your access to and use of CAPIT and any related websites, content, data views, applications, and wallet-enabled features provided by Tellus Digital, LLC (\"we\" or \"us\"). By using CAPIT, you agree to these Terms. If you do not agree, do not use CAPIT.",
   "sections": [
     {
       "heading": "Using CAPIT",
       "image": "",
-      "body": "You may use CAPIT only in compliance with these Terms and applicable law. CAPIT may modify, suspend, or discontinue features at any time."
+      "body": "You may use CAPIT only in compliance with these Terms and applicable law. We may change, suspend, or discontinue any feature at any time."
+    },
+    {
+      "heading": "Eligibility",
+      "image": "",
+      "body": "You must be at least 18 years old to use wallet or token features. You may not use them where doing so is prohibited by law, or if you are subject to sanctions."
+    },
+    {
+      "heading": "Data Is Informational Only",
+      "image": "",
+      "body": "CAPIT compiles records published by government agencies and other public sources. Those records may be incomplete, delayed, or revised, and CAPIT may make errors in collecting or displaying them. CAPIT is not a government registry. For any decision that depends on a well's status, check the official agency record."
     },
     {
       "heading": "No Financial Advice",
       "image": "",
-      "body": "CAPIT provides informational content and software interfaces. Nothing on CAPIT constitutes financial, investment, legal, tax, environmental, engineering, or regulatory advice."
+      "body": "CAPIT provides informational content and software interfaces. Nothing on CAPIT is financial, investment, legal, tax, environmental, engineering, or regulatory advice."
+    },
+    {
+      "heading": "Token and Blockchain Risks",
+      "image": "",
+      "body": "Digital tokens involve significant risk. By using token features, you acknowledge that:",
+      "bullets": [
+        "Token prices can fall, and you can lose the full amount you spend.",
+        "Liquidity may be limited or unavailable.",
+        "Blockchain transactions are irreversible, and smart contracts can contain errors.",
+        "Laws and regulations that apply to digital tokens may change.",
+        "Holding CAPIT gives no ownership of any well, share of revenue, or right to public funds."
+      ]
+    },
+    {
+      "heading": "Your Wallet, Your Responsibility",
+      "image": "",
+      "body": "You are solely responsible for your wallet, private keys, and recovery phrase, and for every transaction you sign. We cannot access, recover, or reverse anything in your wallet."
+    },
+    {
+      "heading": "Third-Party Services",
+      "image": "",
+      "body": "CAPIT links to and integrates third-party services such as wallets, decentralized exchanges, and block explorers. We do not control them and are not responsible for their availability, security, or terms."
+    },
+    {
+      "heading": "Prohibited Conduct",
+      "image": "",
+      "body": "You agree not to:",
+      "bullets": [
+        "Interfere with or attempt to disrupt the site or its infrastructure",
+        "Attempt to gain unauthorized access to any system or data",
+        "Misrepresent CAPIT data or imply that CAPIT or any agency endorses you",
+        "Use CAPIT for fraud, market manipulation, or any unlawful purpose"
+      ]
+    },
+    {
+      "heading": "Intellectual Property",
+      "image": "",
+      "body": "The CAPIT name, logo, mascot, site design, and original content belong to Tellus Digital, LLC. Underlying public records remain subject to the terms of their source agencies."
+    },
+    {
+      "heading": "Disclaimer of Warranties",
+      "image": "",
+      "body": "CAPIT is provided \"as is\" and \"as available,\" without warranties of any kind, express or implied, including warranties of accuracy, merchantability, fitness for a particular purpose, and non-infringement."
+    },
+    {
+      "heading": "Limitation of Liability",
+      "image": "",
+      "body": "To the fullest extent permitted by law, Tellus Digital, LLC will not be liable for any indirect, incidental, special, consequential, or punitive damages, or for any loss of funds, tokens, profits, or data, arising from your use of CAPIT."
+    },
+    {
+      "heading": "Changes to These Terms",
+      "image": "",
+      "body": "We may update these Terms from time to time. Continuing to use CAPIT after an update means you accept the revised Terms."
+    },
+    {
+      "heading": "Contact",
+      "image": "",
+      "body": "Questions about these Terms? Reach us through the [Contact](/contact) page."
     }
   ]
 }

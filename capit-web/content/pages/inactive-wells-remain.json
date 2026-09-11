@@ -1,24 +1,56 @@
 {
-  "title": "How Many Inactive Wells Remain? | CAPIT Data Context",
-  "description": "Understanding inactive, orphaned, and idle well counts across state and federal inventories.",
+  "title": "How Many Unplugged Wells Remain? | CAPIT Data Context",
+  "description": "What national counts of abandoned, orphaned, and idle oil and gas wells actually measure, with the latest estimates and their sources.",
   "eyebrow": "DATA CONTEXT & DEFINITIONS",
-  "headline": "How Many Inactive Wells Remain?",
+  "headline": "How Many Unplugged Wells Remain?",
   "heroImage": "/images/plug-map.jpg",
-  "body": "The scale of legacy oil and gas infrastructure in the United States is vast. Current estimates point to a highly fragmented landscape of over 3.5 million abandoned, idle, or orphan wells requiring attention. Understanding these figures requires careful navigation of varying state definitions, update schedules, and agency reporting standards.",
+  "body": "It depends on what you count. National figures range from about 142,000 documented orphan wells to more than 2 million unplugged abandoned wells, and each number measures something different. The most-quoted figure, roughly 3.7 million \"abandoned wells,\" includes wells that have already been plugged.",
   "sections": [
     {
-      "heading": "Orphaned vs. Inactive Infrastructure",
+      "heading": "The Numbers, and What Each One Counts",
       "image": "",
-      "body": "To grasp the scale of the challenge, it is important to understand the regulatory distinctions:",
+      "body": "The four figures you'll see most often:",
       "bullets": [
-        "**Orphaned Wells:** High-priority wells with no solvent operator legally responsible for their plugging and site restoration. These are the primary targets for state and federal remediation grants.",
-        "**Inactive / Idle Wells:** Wells that are not currently producing but may still have a solvent operator on record. These are tracked by state regulatory commissions and are subject to varying compliance deadlines."
+        "**About 3.7 million abandoned wells** (EPA greenhouse gas inventory, 2021 data): every non-producing oil and gas well EPA estimates exists, plugged or not. EPA estimated about 58%, roughly 2.1 million, were unplugged. EPA lacks records for many pre-1975 wells and assumes those are unplugged.",
+        "**141,959 documented orphan wells** (Interstate Oil and Gas Compact Commission, as of December 31, 2023): wells in 29 state inventories with no responsible operator, up 54% since 2020.",
+        "**250,000 to 740,000 undocumented orphan wells** (IOGCC estimate): wells believed to exist but missing from state records or lacking precise locations.",
+        "**More than 11,400 orphan wells plugged with federal infrastructure funds** (U.S. Department of the Interior, through January 31, 2026): progress under the $4.7 billion orphan well program created by the 2021 Bipartisan Infrastructure Law."
       ]
     },
     {
-      "heading": "The Necessity of Transparent Tracking",
+      "heading": "Idle and Inactive Wells",
       "image": "",
-      "body": "Currently, information regarding these wells is deeply fragmented across individual state agencies, private sector efforts, and federal initiatives. A single state may expose only partial subsets of its inventory, making it exceedingly difficult to gauge the true national picture. Transparent tracking is essential to effectively target remediation efforts and measure national progress. CAPIT continuously normalizes data from disparate state and federal inventories into a single, cohesive public experience. By bringing this information out of fragmented databases and onto a transparent ledger, CAPIT helps the public, landowners, and policymakers understand exactly what is being counted, where it is located, and how much work remains to secure America's energy legacy."
+      "body": "There is no reliable national count of idle or inactive wells. States define idle status differently: Texas applies its inactive-well rules after 12 months without activity, California defines an idle well at 24 months, and federal law uses 4 years."
+    },
+    {
+      "heading": "Key Terms",
+      "image": "",
+      "body": "These words are used differently from agency to agency:",
+      "bullets": [
+        "**Orphan (or orphaned) well:** a well with no operator who can be found or who is able to plug it. For wells on state and private land, federal law defers to each state's definition.",
+        "**Idle or inactive well:** a well that isn't producing but usually still has an operator responsible for it.",
+        "**Temporarily abandoned or shut-in well:** a non-producing well the operator has permission to keep for possible future use, usually with periodic testing.",
+        "**Abandoned well:** used inconsistently. EPA counts plugged and unplugged wells; some states use the term only for unplugged wells, others only for plugged ones.",
+        "**Documented vs. undocumented:** a documented well has a regulatory record establishing that it exists, including its precise location. An undocumented well is unknown to regulators or still needs its location verified."
+      ]
+    },
+    {
+      "heading": "Why Transparent Tracking Matters",
+      "image": "",
+      "body": "Well information is spread across dozens of state agencies, federal programs, and private efforts, and a single state may publish only part of its inventory. That makes national progress hard to measure. CAPIT brings plugged-well records from state sources into one public view, labels what each figure counts, and keeps each record's source and revision history visible, so the public, landowners, and policymakers can see what has been done and how much work remains."
+    },
+    {
+      "heading": "Sources",
+      "image": "",
+      "body": "Figures and definitions on this page come from:",
+      "bullets": [
+        "[EPA greenhouse gas inventory figures, as cited in DOI Orphaned Wells Methane Measurement Guidelines (July 2023)](https://www.doi.gov/sites/default/files/orphaned-wells-methane-measurement-guidelines-july-2023-version.pdf)",
+        "[IOGCC, Idle and Orphan Oil and Gas Wells report (revised September 2024)](https://oklahoma.gov/content/dam/ok/en/iogcc/documents/publications/Orphan%20Wells%20Revised.pdf)",
+        "[U.S. Department of the Interior, United States Plugged Orphaned Oil and Gas Well Dataset (data.gov)](https://catalog.data.gov/dataset/united-states-plugged-orphaned-oil-and-gas-well-dataset)",
+        "[42 U.S.C. 15907, orphaned well site plugging, remediation, and restoration](https://www.law.cornell.edu/uscode/text/42/15907)",
+        "[DOI revised State Formula Grant guidance (July 2025)](https://www.doi.gov/sites/default/files/documents/2025-07/revised-state-formula-grant-guidance508.pdf)",
+        "[California Public Resources Code 3008, idle well definitions](https://codes.findlaw.com/ca/public-resources-code/prc-sect-3008.html)"
+      ]
     }
   ]
 }

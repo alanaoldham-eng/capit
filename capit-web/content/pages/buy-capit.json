@@ -1,16 +1,79 @@
 {
-  "title": "Buy CAPIT | Connect Wallet and Review Contract Details",
-  "description": "Review wallet requirements, network details, contract information, fees, and transaction steps before you interact with the CAPIT protocol.",
+  "title": "Buy CAPIT | Contract Details, Risks, and How to Buy",
+  "description": "Confirm the CAPIT contract address and network, understand the risks and fees, and follow the steps to buy CAPIT with a self-custody wallet on Base.",
   "headline": "Buy CAPIT",
   "heroImage": "",
-  "body": "CAPIT is accessed through a self-custody wallet flow exclusively on the Base network. Review the network, contract details, expected fees, and strict risk disclosures before you proceed.",
-  "primaryCta": { "label": "Connect Wallet", "href": "#connect" },
-  "secondaryCta": { "label": "Open Buy Flow", "href": "https://app.uniswap.org/" },
+  "body": "CAPIT is bought with a self-custody wallet on the Base network, through a third-party decentralized exchange. Before you continue, confirm the network and full contract address below, understand the fees, and read the risks.",
+  "primaryCta": {
+    "label": "Connect Wallet",
+    "href": "#connect"
+  },
+  "secondaryCta": {
+    "label": "Open Buy Flow",
+    "href": "https://app.uniswap.org/"
+  },
   "sections": [
-    { "heading": "Before You Connect", "image": "", "body": "Make sure your wallet supports the Base network, that you understand how token swaps work, and that you are ready to review the transaction in your wallet before signing. You do not need a wallet to browse CAPIT’s environmental data dashboard. You only need one if you choose to connect or interact with the protocol." },
-    { "heading": "Review the Contract Details", "image": "", "body": "Before any handoff to a swap interface, CAPIT displays the following details in plain text for total transparency.", "bullets": ["Network: Base", "Token contract: [Insert Full Contract Address]", "Explorer: [Insert Base Block Explorer URL]", "Source repository: [Insert Repository URL or ‘Not yet published’]", "Disclosure version: [Insert Date or Version ID]"] },
-    { "heading": "Security Reminder", "image": "", "body": "CAPIT will never ask for your secret recovery phrase, private keys, or wallet password. If any page, prompt, or support message asks for them, stop immediately." },
-    { "heading": "Transaction Flow", "image": "", "body": "Connect your wallet, confirm the Base network, review approvals, review the swap, submit the transaction, wait for confirmation, then view success or failure details. CAPIT cannot recover wallets or reverse blockchain transactions.", "bullets": ["Connect Wallet", "Open Buy Flow", "Switch Network to Base", "Copy Contract Address", "Open Block Explorer", "Wallet Connected", "Approval Required", "Transaction Pending", "Transaction Confirmed"] },
-    { "heading": "Error Messages", "image": "", "body": "Wallet missing: Wallet not found. Unsupported network: Switch to Base. Insufficient balance: Insufficient balance for the selected amount and network cost. User rejected: Transaction rejected in your wallet. Swap failed: Review details and try again." }
+    {
+      "heading": "Before You Connect",
+      "image": "",
+      "body": "Make sure your wallet supports the Base network, that you understand how token swaps work, and that you are ready to review each transaction in your wallet before signing. You don't need a wallet to browse CAPIT's data. You only need one to buy or hold the token."
+    },
+    {
+      "heading": "Confirm the Contract Details",
+      "image": "",
+      "body": "Copycat tokens often reuse a project's name. Before you swap, check that the contract address in your wallet or the exchange matches the address below exactly.",
+      "bullets": [
+        "Network: Base",
+        "Token contract: [Insert Full Contract Address]",
+        "Explorer: [Insert Base Block Explorer URL]",
+        "Source repository: [Insert Repository URL or 'Not yet published']",
+        "Disclosure version: [Insert Date or Version ID]"
+      ]
+    },
+    {
+      "heading": "Understand the Risks",
+      "image": "",
+      "body": "Read these before you buy. Nothing on this page is investment advice.",
+      "bullets": [
+        "Token prices can fall, and you can lose the full amount you spend.",
+        "Trading volume may be low, so you may not be able to sell when you want or at the price you expect.",
+        "Blockchain transactions are final. CAPIT cannot reverse, cancel, or refund them.",
+        "Swaps take place on a third-party exchange that CAPIT does not control.",
+        "Smart contracts can contain undiscovered errors.",
+        "Holding CAPIT gives no ownership of any well, no share of any revenue, and no right to public funds."
+      ]
+    },
+    {
+      "heading": "Security Reminder",
+      "image": "",
+      "body": "CAPIT will never ask for your secret recovery phrase, private keys, or wallet password. If any page, prompt, or support message asks for them, stop immediately."
+    },
+    {
+      "heading": "How to Buy",
+      "image": "",
+      "body": "Follow these steps in order. CAPIT cannot recover wallets or reverse transactions.",
+      "bullets": [
+        "Connect a self-custody wallet that supports Base.",
+        "Switch your wallet to the Base network.",
+        "Copy the CAPIT contract address from this page.",
+        "Open the buy flow and paste the address to select CAPIT.",
+        "Review the amount, price impact, and network fee.",
+        "Approve the token spend if your wallet asks you to.",
+        "Confirm the swap and wait for the transaction to confirm.",
+        "Check the finished transaction on the block explorer."
+      ]
+    },
+    {
+      "heading": "Troubleshooting",
+      "image": "",
+      "body": "Common messages and what to do:",
+      "bullets": [
+        "**Wallet not found:** install or unlock a wallet that supports Base, then reload the page.",
+        "**Wrong network:** switch your wallet to Base.",
+        "**Insufficient balance:** you need enough ETH on Base to cover the swap amount and the network fee.",
+        "**Transaction rejected:** the transaction was declined in your wallet. Start again when you're ready.",
+        "**Swap failed:** the price may have moved. Check your balance and slippage setting, then try again."
+      ]
+    }
   ]
 }
