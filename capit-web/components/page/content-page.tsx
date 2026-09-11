@@ -8,7 +8,7 @@ import type { PageContent } from "@/lib/types"
 
 interface ContentPageProps {
   page?: PageContent
-  /** Intrinsic image sizes keyed by src, measured on the server by [slug]/page.tsx. */
+  /** Intrinsic image sizes keyed by src, measured on the server by the page route. */
   imageSizes?: Record<string, ImageSize>
 }
 
@@ -41,6 +41,16 @@ export function ContentPage({ page, imageSizes = {} }: ContentPageProps) {
       ? page.image
       : null
 
+  const headlineHighlight =
+    typeof page.headlineHighlight === "string" && page.headlineHighlight.trim() ? page.headlineHighlight : null
+  const trustNote = typeof page.trustNote === "string" && page.trustNote.trim() ? page.trustNote : null
+  const heroImageAlt =
+    typeof page.heroImageAlt === "string" && page.heroImageAlt.trim()
+      ? page.heroImageAlt
+      : typeof page.headline === "string"
+      ? page.headline
+      : "Hero Banner"
+
   const primaryHref = page.primaryCta?.href || page.primaryCta?.link || "#"
   const primaryLabel = page.primaryCta?.label || page.primaryCta?.text || "Learn More"
 
@@ -60,6 +70,12 @@ export function ContentPage({ page, imageSizes = {} }: ContentPageProps) {
           {(page.headline || page.title) && (
             <h1 className="text-4xl font-black tracking-tight text-primary md:text-5xl lg:text-6xl">
               {typeof page.headline === 'string' ? page.headline : typeof page.title === 'string' ? page.title : ""}
+              {headlineHighlight ? (
+                <>
+                  <br />
+                  {headlineHighlight}
+                </>
+              ) : null}
             </h1>
           )}
 
@@ -68,7 +84,7 @@ export function ContentPage({ page, imageSizes = {} }: ContentPageProps) {
             <div className="overflow-hidden rounded-2xl border border-border/80 bg-muted shadow-md">
               <CmsImage
                 src={heroImageSrc}
-                alt={typeof page.headline === 'string' ? page.headline : 'Hero Banner'}
+                alt={heroImageAlt}
                 size={imageSizes[heroImageSrc]}
                 sizes="(max-width: 1100px) 100vw, 1024px"
                 priority
@@ -101,6 +117,10 @@ export function ContentPage({ page, imageSizes = {} }: ContentPageProps) {
                 </Link>
               ) : null}
             </div>
+          ) : null}
+
+          {trustNote ? (
+            <p className="max-w-3xl text-xs leading-6 text-muted-foreground">{trustNote}</p>
           ) : null}
         </div>
       </section>
