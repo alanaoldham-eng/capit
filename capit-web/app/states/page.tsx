@@ -1,6 +1,7 @@
 import React from "react"
 import Link from "next/link"
-import Image from "next/image"
+import { CmsImage } from "@/components/cms-image"
+import { getImageSizes } from "@/lib/image-size"
 import { Header } from "@/components/header"
 import Footer from "@/components/footer"
 import { getFullPageContent } from "@/lib/content"
@@ -38,8 +39,12 @@ const trackedStates = [
   { name: "Kentucky", agency: "KY Division of Oil and Gas", slug: "kentucky", flag: "KY" },
 ]
 
-export default function Page() {
+export default async function Page() {
   const { site, footer } = getFullPageContent()
+  const imageSizes = await getImageSizes([
+    pageData.heroImage,
+    ...(pageData.sections ?? []).map((section) => section.image),
+  ])
 
   return (
     <main className="min-h-screen bg-[#fbfaf6]">
@@ -63,13 +68,13 @@ export default function Page() {
           </h1>
 
           {pageData.heroImage && (
-            <div className="my-8">
-              <Image 
-                src={pageData.heroImage} 
-                alt={pageData.headline || pageData.title || "Hero Image"} 
-                width={800} 
-                height={400} 
-                className="w-full rounded-xl border border-slate-100 object-cover shadow-sm"
+            <div className="my-8 overflow-hidden rounded-xl border border-slate-100 shadow-sm">
+              <CmsImage
+                src={pageData.heroImage}
+                alt={pageData.headline || pageData.title || "Hero Image"}
+                size={imageSizes[pageData.heroImage]}
+                sizes="(max-width: 900px) 100vw, 800px"
+                priority
               />
             </div>
           )}
@@ -121,13 +126,12 @@ export default function Page() {
                   </h2>
                   
                   {section.image && (
-                    <div className="mb-6">
-                      <Image 
-                        src={section.image} 
-                        alt={section.heading || "Section Image"} 
-                        width={800} 
-                        height={400} 
-                        className="w-full rounded-xl border border-slate-100 object-cover shadow-sm"
+                    <div className="mb-6 overflow-hidden rounded-xl border border-slate-100 shadow-sm">
+                      <CmsImage
+                        src={section.image}
+                        alt={section.heading || "Section Image"}
+                        size={imageSizes[section.image]}
+                        sizes="(max-width: 900px) 100vw, 800px"
                       />
                     </div>
                   )}

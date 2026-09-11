@@ -114,6 +114,12 @@ export interface PageContent {
   headline?: ReactNode
   description?: string
   heroImage?: string
+  /** Alt text for heroImage; falls back to the headline. */
+  heroImageAlt?: string
+  /** Optional second headline line (Core Config hero "Headline Highlight"). */
+  headlineHighlight?: string
+  /** Small caveat shown under the hero buttons. */
+  trustNote?: string
   image?: string
   body?: string | Record<string, unknown>
   primaryCta?: CtaContent
@@ -233,6 +239,8 @@ export interface CtaCardContent {
 }
 
 export interface DashboardContent {
+  /** Hero for the /dashboard page, edited in Core Config -> dashboard.json -> Hero Section. */
+  hero?: HeroContent
   statsCards?: StatsCardContent[]
   tokensCard?: {
     title?: string

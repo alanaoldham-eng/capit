@@ -143,7 +143,6 @@ export function getFooterContent(): FooterContent {
 export function getPageSlugs(): string[] {
   return [
     "about",
-    "dashboard",
     "faqs",
     "privacy-policy",
     "terms-of-service",

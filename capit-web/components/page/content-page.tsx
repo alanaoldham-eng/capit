@@ -2,11 +2,14 @@
 
 import React from "react"
 import Link from "next/link"
-import Image from "next/image"
+import { CmsImage } from "@/components/cms-image"
+import type { ImageSize } from "@/lib/image-size"
 import type { PageContent } from "@/lib/types"
 
 interface ContentPageProps {
   page?: PageContent
+  /** Intrinsic image sizes keyed by src, measured on the server by the page route. */
+  imageSizes?: Record<string, ImageSize>
 }
 
 /**
@@ -25,7 +28,7 @@ function renderInline(text: string): React.ReactNode {
   )
 }
 
-export function ContentPage({ page }: ContentPageProps) {
+export function ContentPage({ page, imageSizes = {} }: ContentPageProps) {
   if (!page) return null
 
   const sections = page.sections || []
@@ -37,6 +40,16 @@ export function ContentPage({ page }: ContentPageProps) {
       : typeof page.image === "string" && page.image.trim().length > 0
       ? page.image
       : null
+
+  const headlineHighlight =
+    typeof page.headlineHighlight === "string" && page.headlineHighlight.trim() ? page.headlineHighlight : null
+  const trustNote = typeof page.trustNote === "string" && page.trustNote.trim() ? page.trustNote : null
+  const heroImageAlt =
+    typeof page.heroImageAlt === "string" && page.heroImageAlt.trim()
+      ? page.heroImageAlt
+      : typeof page.headline === "string"
+      ? page.headline
+      : "Hero Banner"
 
   const primaryHref = page.primaryCta?.href || page.primaryCta?.link || "#"
   const primaryLabel = page.primaryCta?.label || page.primaryCta?.text || "Learn More"
@@ -53,22 +66,27 @@ export function ContentPage({ page }: ContentPageProps) {
               {typeof page.eyebrow === 'string' ? page.eyebrow : JSON.stringify(page.eyebrow)}
             </p>
           ) : null}
-          
+
           {(page.headline || page.title) && (
             <h1 className="text-4xl font-black tracking-tight text-primary md:text-5xl lg:text-6xl">
               {typeof page.headline === 'string' ? page.headline : typeof page.title === 'string' ? page.title : ""}
+              {headlineHighlight ? (
+                <>
+                  <br />
+                  {headlineHighlight}
+                </>
+              ) : null}
             </h1>
           )}
 
-          {/* Subpage Banner Image from Tina CMS */}
+          {/* Subpage banner image from Tina CMS, shown whole at its own aspect ratio. */}
           {heroImageSrc && (
-            <div className="relative aspect-[21/9] w-full overflow-hidden rounded-2xl border border-border/80 shadow-md bg-muted">
-              <Image
+            <div className="overflow-hidden rounded-2xl border border-border/80 bg-muted shadow-md">
+              <CmsImage
                 src={heroImageSrc}
-                alt={typeof page.headline === 'string' ? page.headline : 'Hero Banner'}
-                fill
-                sizes="(max-width: 1200px) 100vw, 1024px"
-                className="object-cover"
+                alt={heroImageAlt}
+                size={imageSizes[heroImageSrc]}
+                sizes="(max-width: 1100px) 100vw, 1024px"
                 priority
               />
             </div>
@@ -83,22 +101,26 @@ export function ContentPage({ page }: ContentPageProps) {
           {(page.primaryCta || page.secondaryCta) ? (
             <div className="flex flex-wrap gap-3 pt-2">
               {page.primaryCta ? (
-                <Link 
-                  href={primaryHref} 
+                <Link
+                  href={primaryHref}
                   className="rounded-full bg-secondary px-6 py-3 text-sm font-bold text-primary shadow-md hover:bg-secondary/90 transition-colors"
                 >
                   {primaryLabel}
                 </Link>
               ) : null}
               {page.secondaryCta ? (
-                <Link 
-                  href={secondaryHref} 
+                <Link
+                  href={secondaryHref}
                   className="rounded-full border border-primary/20 bg-white px-6 py-3 text-sm font-bold text-primary hover:bg-primary/5 transition-colors"
                 >
                   {secondaryLabel}
                 </Link>
               ) : null}
             </div>
+          ) : null}
+
+          {trustNote ? (
+            <p className="max-w-3xl text-xs leading-6 text-muted-foreground">{trustNote}</p>
           ) : null}
         </div>
       </section>
@@ -112,13 +134,12 @@ export function ContentPage({ page }: ContentPageProps) {
                   <h2 className="text-2xl font-black tracking-tight text-primary">{section.heading}</h2>
                 )}
                 {section.image && (
-                  <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl bg-muted border border-border/60">
-                    <Image
+                  <div className="overflow-hidden rounded-xl border border-border/60 bg-muted">
+                    <CmsImage
                       src={section.image}
                       alt={section.heading || 'Section Image'}
-                      fill
-                      sizes="(max-width: 1200px) 100vw, 800px"
-                      className="object-cover"
+                      size={imageSizes[section.image]}
+                      sizes="(max-width: 1100px) 100vw, 960px"
                     />
                   </div>
                 )}
