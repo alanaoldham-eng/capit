@@ -1,5 +1,6 @@
 import React from "react"
 import Link from "next/link"
+import { renderInline } from "@/components/inline-markdown"
 import { CmsImage } from "@/components/cms-image"
 import { getImageSizes } from "@/lib/image-size"
 import { Header } from "@/components/header"
@@ -80,7 +81,7 @@ export default async function Page() {
           )}
 
           <div className="mt-8 whitespace-pre-wrap text-lg leading-8 text-[#31564e]">
-            {pageData.body}
+            {pageData.body ? renderInline(pageData.body) : null}
           </div>
 
           {/* Interactive State Cards Section */}
@@ -137,13 +138,13 @@ export default async function Page() {
                   )}
                   
                   <p className="mb-4 whitespace-pre-wrap text-base leading-relaxed text-[#31564e]">
-                    {section.body}
+                    {section.body ? renderInline(section.body) : null}
                   </p>
                   
                   {section.bullets && section.bullets.length > 0 && (
                     <ul className="mt-4 list-disc space-y-2 pl-5 text-[#31564e]">
                       {section.bullets.map((bullet, bIdx) => (
-                        <li key={bIdx}>{bullet}</li>
+                        <li key={bIdx}>{renderInline(bullet)}</li>
                       ))}
                     </ul>
                   )}
