@@ -427,7 +427,8 @@ export default defineConfig({
         label: "Core Config",
         path: "content",
         match: {
-          exclude: "pages/**", // Excludes subfolder content while matching root JSON files
+          // Root JSON files only: pages/ and records/ are their own collections.
+          exclude: "{pages,records}/**",
         },
         format: "json",
         // @ts-ignore
@@ -440,6 +441,51 @@ export default defineConfig({
         format: "json",
         // @ts-ignore
         fields: standardPageFields,
+      },
+      {
+        // One file per downloadable record, listed on /records.
+        name: "records",
+        label: "Records",
+        path: "content/records",
+        format: "json",
+        ui: {
+          filename: {
+            // New records get a readable file name from their title.
+            slugify: (values) =>
+              String(values?.title || "record")
+                .toLowerCase()
+                .replace(/[^a-z0-9]+/g, "-")
+                .replace(/(^-|-$)/g, ""),
+          },
+        },
+        fields: [
+          { type: "string", name: "title", label: "Link Title", isTitle: true, required: true },
+          {
+            type: "string",
+            name: "url",
+            label: "Link",
+            description:
+              "Web address of the PDF (https://...), or a site path such as /images/records/report.pdf. Leave blank if you upload a file below.",
+          },
+          {
+            type: "image",
+            name: "file",
+            label: "Or upload a PDF",
+            description: "Upload or choose a PDF from the media library. When set, it is used instead of Link.",
+          },
+          {
+            type: "string",
+            name: "description",
+            label: "Description (optional)",
+            ui: { component: "textarea" },
+          },
+          {
+            type: "datetime",
+            name: "date",
+            label: "Record date (optional)",
+            description: "Dated records are listed newest first; undated records follow, A-Z.",
+          },
+        ],
       },
     ],
   },
