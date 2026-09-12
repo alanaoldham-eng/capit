@@ -3,6 +3,7 @@
 import React from "react"
 import Link from "next/link"
 import { CmsImage } from "@/components/cms-image"
+import { renderInline } from "@/components/inline-markdown"
 import type { ImageSize } from "@/lib/image-size"
 import type { PageContent } from "@/lib/types"
 
@@ -10,22 +11,6 @@ interface ContentPageProps {
   page?: PageContent
   /** Intrinsic image sizes keyed by src, measured on the server by the page route. */
   imageSizes?: Record<string, ImageSize>
-}
-
-/**
- * Content authored in Tina uses **bold** inline. Rendering the raw string put
- * literal asterisks on the page, so translate just that one construct.
- */
-function renderInline(text: string): React.ReactNode {
-  return text.split(/(\*\*[^*]+\*\*)/g).map((part, i) =>
-    part.startsWith('**') && part.endsWith('**') ? (
-      <strong key={i} className="font-bold text-foreground">
-        {part.slice(2, -2)}
-      </strong>
-    ) : (
-      <React.Fragment key={i}>{part}</React.Fragment>
-    )
-  )
 }
 
 export function ContentPage({ page, imageSizes = {} }: ContentPageProps) {
@@ -94,7 +79,7 @@ export function ContentPage({ page, imageSizes = {} }: ContentPageProps) {
 
           {bodyText ? (
             <p className="max-w-3xl text-base leading-8 text-muted-foreground md:text-lg">
-              {bodyText}
+              {renderInline(bodyText)}
             </p>
           ) : null}
 
