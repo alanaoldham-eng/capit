@@ -284,11 +284,23 @@ const coreConfigurationFields = [
     label: "Recent Verified Records Card",
     fields: [
       { type: "string", name: "title", label: "Title" },
-      { type: "string", name: "currentDateLabel", label: "Current Date Label" },
+      {
+        type: "string",
+        name: "currentDateLabel",
+        label: "Data Updated Date",
+        description: 'Shown under the title as "Updated ...", e.g. July 10, 2026.',
+      },
+      {
+        type: "number",
+        name: "pageSize",
+        label: "Months per Page",
+        description: "How many months show at once; the < and > arrows page through the rest. Leave blank for 6.",
+      },
       {
         type: "object",
         name: "entries",
         label: "Record Entries",
+        description: 'List the newest month first, e.g. "July 2026 (to date)", then "June 2026".',
         list: true,
         ui: {
           itemProps: (item) => ({ label: item?.period || "New Entry" }),

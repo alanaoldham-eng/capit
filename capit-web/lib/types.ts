@@ -156,6 +156,8 @@ export interface RecentRecordEntry {
 export interface RecentVerifiedRecordsContent {
   title?: string
   currentDateLabel?: string
+  /** Months shown per page on the card; see lib/month-pages.ts. */
+  pageSize?: number
   entries?: RecentRecordEntry[]
   footerLinkText?: string
   footerLinkUrl?: string
