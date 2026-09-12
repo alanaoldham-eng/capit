@@ -11,9 +11,11 @@ interface ContentPageProps {
   page?: PageContent
   /** Intrinsic image sizes keyed by src, measured on the server by the page route. */
   imageSizes?: Record<string, ImageSize>
+  /** Page-specific content rendered directly under the intro, e.g. the /records list. */
+  children?: React.ReactNode
 }
 
-export function ContentPage({ page, imageSizes = {} }: ContentPageProps) {
+export function ContentPage({ page, imageSizes = {}, children }: ContentPageProps) {
   if (!page) return null
 
   const sections = page.sections || []
@@ -109,6 +111,12 @@ export function ContentPage({ page, imageSizes = {} }: ContentPageProps) {
           ) : null}
         </div>
       </section>
+
+      {children ? (
+        <section className="px-6 pt-12 lg:px-12 xl:px-20">
+          <div className="mx-auto max-w-5xl">{children}</div>
+        </section>
+      ) : null}
 
       {sections.length > 0 && (
         <section className="px-6 py-16 lg:px-12 xl:px-20">
