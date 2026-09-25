@@ -31,7 +31,10 @@ const hasLabel = (cta?: CtaContent): cta is CtaContent => Boolean(cta && (cta.la
 export default async function DashboardPage() {
   const site = getSiteContent()
   const footer = getFooterContent()
-  const page = getPageContent("dashboard")
+
+  // getPageContent returns null when the Sub Pages file is missing. /dashboard
+  // is a core route, so it still renders from Core Config rather than 404ing.
+  const page = getPageContent("dashboard") ?? ({ slug: "dashboard" } as PageContent)
   const hero = getDashboardContent().hero
 
   const merged: PageContent = {

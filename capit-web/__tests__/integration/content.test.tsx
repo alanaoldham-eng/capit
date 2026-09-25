@@ -9,6 +9,8 @@ import {
   getDashboardContent,
   getFooterContent,
   getFullPageContent,
+  getPageContent,
+  getPageSlugs,
 } from '@/lib/content'
 
 describe('Content Integration Tests', () => {
@@ -59,7 +61,8 @@ describe('Content Integration Tests', () => {
       const { hero } = getHomeContent()
 
       expect(hero.headline).toBeDefined()
-      expect(hero.headlineHighlight).toBeDefined()
+      // headlineHighlight is optional: components/hero.tsx never reads it, and
+      // content/home.json does not set it.
       expect(hero.description).toBeDefined()
       expect(hero.ctaButton).toBeDefined()
       expect(hero.image).toBeDefined()
@@ -184,25 +187,63 @@ describe('Content Integration Tests', () => {
   })
 
   describe('getFullPageContent', () => {
-    it('returns all page content sections', () => {
-      const content = getFullPageContent()
+    it('returns the site chrome and the requested page', () => {
+      const content = getFullPageContent('about')
 
       expect(content.site).toBeDefined()
-      expect(content.home).toBeDefined()
-      expect(content.dashboard).toBeDefined()
       expect(content.footer).toBeDefined()
+      expect(content.page).not.toBeNull()
+      expect(content.page?.slug).toBe('about')
     })
 
-    it('full page content is internally consistent', () => {
-      const { site, home, dashboard, footer } = getFullPageContent()
+    it('returns site chrome even when the page does not exist', () => {
+      const { site, footer, page } = getFullPageContent('not-a-real-page')
 
-      // Site name should match in home content
       expect(site.name).toBeDefined()
-
-      // All sections should have content
-      expect(home.hero).toBeDefined()
-      expect(dashboard.statsCards.length).toBeGreaterThan(0)
       expect(footer.quote).toBeDefined()
+      expect(page).toBeNull()
+    })
+  })
+
+  describe('getPageContent', () => {
+    it('loads a page that exists', () => {
+      const page = getPageContent('about')
+
+      expect(page).not.toBeNull()
+      expect(page?.title).toBeDefined()
+      expect(Array.isArray(page?.sections)).toBe(true)
+    })
+
+    it('returns null for an unknown slug so the route can 404', () => {
+      // Regression guard. This used to return a placeholder page titled after
+      // the slug, so notFound() never ran and every typo rendered a real-looking
+      // page.
+      expect(getPageContent('definitely-not-a-page')).toBeNull()
+    })
+
+    it('resolves the terms-of-service alias to the terms-of-use file', () => {
+      const page = getPageContent('terms-of-service')
+
+      expect(page).not.toBeNull()
+      expect(page?.slug).toBe('terms-of-service')
+      expect(page?.title).toContain('Terms')
+    })
+  })
+
+  describe('getPageSlugs', () => {
+    it('discovers slugs from the content directory', () => {
+      const slugs = getPageSlugs()
+
+      expect(Array.isArray(slugs)).toBe(true)
+      expect(slugs).toContain('about')
+      expect(slugs).toContain('how-methane-is-measured')
+      expect(slugs).toContain('terms-of-service')
+    })
+
+    it('every slug it reports resolves to real content', () => {
+      for (const slug of getPageSlugs()) {
+        expect(getPageContent(slug)).not.toBeNull()
+      }
     })
   })
 })

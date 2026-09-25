@@ -1,3 +1,6 @@
+import fs from "fs"
+import path from "path"
+
 import {
   SiteContent,
   FooterContent,
@@ -5,6 +8,31 @@ import {
   DashboardContent,
   PageContent,
 } from "./types"
+
+/**
+ * Slugs that are served by a different content file than their own name.
+ * Keys are URL slugs, values are the file in content/pages (without .json).
+ */
+const PAGE_SLUG_ALIASES: Record<string, string> = {
+  "terms-of-service": "terms-of-use",
+}
+
+/** Used only if the content directory cannot be read at build time. */
+const FALLBACK_PAGE_SLUGS = [
+  "about",
+  "faqs",
+  "privacy-policy",
+  "terms-of-use",
+  "what-is-a-plugged-well",
+  "why-plugging-wells-matter",
+  "how-methane-is-measured",
+  "inactive-wells-remain",
+  "methodology",
+  "buy-capit",
+  "contact",
+  "states",
+  "sponsorships",
+]
 
 export function getSiteContent(): SiteContent {
   try {
@@ -140,30 +168,43 @@ export function getFooterContent(): FooterContent {
   }
 }
 
+/**
+ * Every page slug the site serves, discovered from content/pages so that a new
+ * JSON file becomes a real route without editing this list. Runs at build time
+ * (generateStaticParams), where the filesystem is available.
+ */
 export function getPageSlugs(): string[] {
-  return [
-    "about",
-    "faqs",
-    "privacy-policy",
-    "terms-of-service",
-    "terms-of-use",
-    "what-is-a-plugged-well",
-    "why-plugging-wells-matter",
-    "inactive-wells-remain",
-    "methodology",
-    "buy-capit",
-    "contact",
-    "states",
-    "sponsorships",
-  ]
+  let slugs: string[] = []
+
+  try {
+    const dir = path.join(process.cwd(), "content", "pages")
+    slugs = fs
+      .readdirSync(dir)
+      .filter((file) => file.endsWith(".json"))
+      .map((file) => file.replace(/\.json$/, ""))
+  } catch (e) {
+    slugs = []
+  }
+
+  if (slugs.length === 0) {
+    slugs = [...FALLBACK_PAGE_SLUGS]
+  }
+
+  // Alias slugs have no file of their own but must still resolve.
+  for (const alias of Object.keys(PAGE_SLUG_ALIASES)) {
+    if (!slugs.includes(alias)) slugs.push(alias)
+  }
+
+  return slugs
 }
 
-export function getPageContent(slug: string = "home"): PageContent {
-  const fileSlugMap: Record<string, string> = {
-    "terms-of-service": "terms-of-use",
-    "terms-of-use": "terms-of-use",
-  }
-  const targetFile = fileSlugMap[slug] || slug
+/**
+ * Returns the page's content, or null when no content file exists for the slug.
+ * Returning null is what lets the route call notFound(): an unknown URL must be
+ * a 404, never a placeholder page named after the URL.
+ */
+export function getPageContent(slug: string = "home"): PageContent | null {
+  const targetFile = PAGE_SLUG_ALIASES[slug] || slug
 
   try {
     const pageData = require(`../content/pages/${targetFile}.json`)
@@ -172,27 +213,14 @@ export function getPageContent(slug: string = "home"): PageContent {
       slug,
     }
   } catch (e) {
-    const formattedTitle = slug.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())
-    return {
-      title: `${formattedTitle} | CAPIT Ecosystem`,
-      slug: slug,
-      headline: formattedTitle,
-      description: "Public well-plugging records with transparent on-chain reporting.",
-      body: "CAPIT aggregates fragmented public well-plugging records into a single, verified snapshot on the Base network.",
-      sections: [
-        {
-          heading: "Overview",
-          body: "CAPIT brings public-record transparency to environmental cleanup through immutable blockchain tracking.",
-        },
-      ],
-    }
+    return null
   }
 }
 
 export function getFullPageContent(slug: string = "home"): {
   site: SiteContent
   footer: FooterContent
-  page: PageContent
+  page: PageContent | null
 } {
   return {
     site: getSiteContent(),

@@ -5,3 +5,4 @@ node_modules
 tina/__generated__
 tsconfig.tsbuildinfo
 .claude/
+.vercel

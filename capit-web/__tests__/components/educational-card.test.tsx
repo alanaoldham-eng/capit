@@ -3,103 +3,67 @@ import { render, screen } from '@testing-library/react'
 import { EducationalCard } from '@/components/educational-card'
 import type { EducationalCardContent } from '@/lib/types'
 
-// Mock Next.js components
 jest.mock('next/link', () => {
-  return ({ children, href }: any) => (
-    <a href={href}>{children}</a>
-  )
+  return ({ children, href }: any) => <a href={href}>{children}</a>
 })
 
 jest.mock('next/image', () => ({
   __esModule: true,
-  default: ({ src, alt, fill, priority, ...props }: any) => (
+  default: ({ src, alt, fill, ...props }: any) => (
     // eslint-disable-next-line jsx-a11y/alt-text
     <img src={src} alt={alt} {...props} />
   ),
 }))
 
-// Mock lucide-react icons
-jest.mock('lucide-react', () => ({
-  ArrowRight: ({ className }: any) => <span className={className}>→</span>,
-}))
-
+/**
+ * A card exists to carry a title, an explanation, a picture and a link to the
+ * page behind it. Those are the things asserted here; styling is not.
+ */
 describe('EducationalCard Component', () => {
-  const mockContent: EducationalCardContent = {
-    title: 'Well Plugging Basics',
-    description: 'Learn the fundamentals of well plugging and environmental impact.',
-    imageSrc: '/edu-card.png',
-    imageAlt: 'Well illustration',
-    linkHref: '/learn/well-plugging',
-    linkLabel: 'Learn More',
+  const card: EducationalCardContent = {
+    title: 'What Is a Plugged Well?',
+    description: 'A well sealed with cement plugs and recorded as plugged by the state regulator.',
+    imageSrc: '/images/plugged-well.jpg',
+    imageAlt: 'Illustration of a plugged well',
+    linkHref: '/what-is-a-plugged-well',
+    linkLabel: 'Learn What Counts',
   }
 
-  it('renders card title', () => {
-    render(<EducationalCard {...mockContent} />)
-    
-    expect(screen.getByText('Well Plugging Basics')).toBeInTheDocument()
+  it('renders the title and description', () => {
+    render(<EducationalCard {...card} />)
+
+    expect(screen.getByRole('heading', { name: card.title })).toBeInTheDocument()
+    expect(screen.getByText(card.description!)).toBeInTheDocument()
   })
 
-  it('renders card description', () => {
-    render(<EducationalCard {...mockContent} />)
-    
-    expect(screen.getByText('Learn the fundamentals of well plugging and environmental impact.')).toBeInTheDocument()
+  it('links to the page it describes, using the configured label', () => {
+    render(<EducationalCard {...card} />)
+
+    expect(screen.getByRole('link', { name: /Learn What Counts/i })).toHaveAttribute(
+      'href',
+      '/what-is-a-plugged-well'
+    )
   })
 
-  it('renders card image with correct alt text', () => {
-    render(<EducationalCard {...mockContent} />)
-    
-    const image = screen.getByAltText('Well illustration')
-    expect(image).toBeInTheDocument()
-    expect(image).toHaveAttribute('src', '/edu-card.png')
+  it('renders the image with its alt text', () => {
+    render(<EducationalCard {...card} />)
+
+    expect(screen.getByAltText('Illustration of a plugged well')).toHaveAttribute(
+      'src',
+      '/images/plugged-well.jpg'
+    )
   })
 
-  it('renders CTA link with correct label', () => {
-    render(<EducationalCard {...mockContent} />)
-    
-    const link = screen.getByText('Learn More')
-    expect(link).toBeInTheDocument()
+  it('falls back to the title for alt text when none is given', () => {
+    // An editor leaving alt text blank should not produce an unlabelled image.
+    render(<EducationalCard {...card} imageAlt={undefined} />)
+
+    expect(screen.getByAltText(card.title!)).toBeInTheDocument()
   })
 
-  it('link has correct href', () => {
-    render(<EducationalCard {...mockContent} />)
-    
-    const link = screen.getByText('Learn More')
-    expect(link).toHaveAttribute('href', '/learn/well-plugging')
-  })
+  it('falls back to a default link label and href', () => {
+    render(<EducationalCard {...card} linkHref={undefined} linkLabel={undefined} />)
 
-  it('renders as article element', () => {
-    const { container } = render(<EducationalCard {...mockContent} />)
-    
-    const article = container.querySelector('article')
-    expect(article).toBeInTheDocument()
-  })
-
-  it('has card styling classes', () => {
-    const { container } = render(<EducationalCard {...mockContent} />)
-    
-    const article = container.querySelector('article')
-    expect(article).toHaveClass('bg-card', 'rounded-lg', 'border', 'border-border/50')
-  })
-
-  it('title has proper typography styling', () => {
-    const { container } = render(<EducationalCard {...mockContent} />)
-    
-    const title = screen.getByText('Well Plugging Basics')
-    expect(title).toHaveClass('text-xl', 'font-bold', 'leading-tight')
-  })
-
-  it('button renders with correct attributes', () => {
-    const { container } = render(<EducationalCard {...mockContent} />)
-    
-    const buttons = screen.getAllByText('Learn More')
-    expect(buttons.length).toBeGreaterThan(0)
-    expect(buttons[0]).toHaveAttribute('href', '/learn/well-plugging')
-  })
-
-  it('image has hover scale effect', () => {
-    const { container } = render(<EducationalCard {...mockContent} />)
-    
-    const image = screen.getByAltText('Well illustration')
-    expect(image).toHaveClass('hover:scale-105')
+    expect(screen.getByRole('link', { name: /Learn More/i })).toHaveAttribute('href', '#')
   })
 })

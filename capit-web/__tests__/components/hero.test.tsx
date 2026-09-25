@@ -2,13 +2,10 @@ import React from 'react'
 import { render, screen } from '@testing-library/react'
 import { Hero } from '@/components/hero'
 import type { HeroContent } from '@/lib/types'
-import Image from 'next/image'
 
 // Mock Next.js components
 jest.mock('next/link', () => {
-  return ({ children, href }: any) => (
-    <a href={href}>{children}</a>
-  )
+  return ({ children, href }: any) => <a href={href}>{children}</a>
 })
 
 jest.mock('next/image', () => ({
@@ -19,75 +16,93 @@ jest.mock('next/image', () => ({
   ),
 }))
 
+/**
+ * These tests cover what the hero does, not how it is styled. Class names are
+ * implementation detail: a restyle should not turn the suite red while the
+ * component still works.
+ */
 describe('Hero Component', () => {
   const mockContent: HeroContent = {
-    headline: 'Revolutionize',
-    headlineHighlight: 'Energy Production',
-    description: 'A blockchain-based platform for sustainable energy.',
-    ctaButton: {
-      label: 'Get Started',
-      href: '/start',
-    },
-    image: {
-      src: '/hero-image.png',
-      alt: 'Hero illustration',
-    },
+    eyebrow: 'PUBLIC WELL-PLUGGING RECORDS, LINKED ON-CHAIN',
+    headline: 'Every Plugged Well.\nOne Public Record.',
+    description: 'CAPIT collects plugged-well records published by state regulators.',
+    ctaButton: { label: 'VIEW DASHBOARD', href: '/dashboard' },
+    secondaryCta: { label: 'EXPLORE STATES', href: '/states' },
+    trustNote: 'CAPIT is an independent project of Tellus Digital, LLC.',
+    image: { src: '/images/cappy-and-well.jpg', alt: 'Cappy beside a capped wellhead' },
   }
 
-  it('renders headline and highlight', () => {
-    render(<Hero content={mockContent} />)
-    
-    expect(screen.getByText('Revolutionize')).toBeInTheDocument()
-    expect(screen.getByText('Energy Production')).toBeInTheDocument()
+  describe('with content', () => {
+    it('renders the headline as the top-level heading', () => {
+      render(<Hero content={mockContent} />)
+
+      const heading = screen.getByRole('heading', { level: 1 })
+      // The headline is one element with a line break in it, so assert on the
+      // whole string rather than on either line alone.
+      expect(heading).toHaveTextContent('Every Plugged Well.')
+      expect(heading).toHaveTextContent('One Public Record.')
+    })
+
+    it('renders the eyebrow, description and trust note', () => {
+      render(<Hero content={mockContent} />)
+
+      expect(
+        screen.getByText(/PUBLIC WELL-PLUGGING RECORDS, LINKED ON-CHAIN/i)
+      ).toBeInTheDocument()
+      expect(screen.getByText(mockContent.description!)).toBeInTheDocument()
+      expect(screen.getByText(mockContent.trustNote!)).toBeInTheDocument()
+    })
+
+    it('renders both calls to action as links to their targets', () => {
+      render(<Hero content={mockContent} />)
+
+      expect(screen.getByRole('link', { name: 'VIEW DASHBOARD' })).toHaveAttribute(
+        'href',
+        '/dashboard'
+      )
+      expect(screen.getByRole('link', { name: 'EXPLORE STATES' })).toHaveAttribute(
+        'href',
+        '/states'
+      )
+    })
+
+    it('renders the hero image with its alt text', () => {
+      render(<Hero content={mockContent} />)
+
+      const image = screen.getByAltText('Cappy beside a capped wellhead')
+      expect(image).toHaveAttribute('src', '/images/cappy-and-well.jpg')
+    })
   })
 
-  it('renders description text', () => {
-    render(<Hero content={mockContent} />)
-    
-    expect(screen.getByText('A blockchain-based platform for sustainable energy.')).toBeInTheDocument()
-  })
+  describe('without content', () => {
+    it('falls back to default copy and links', () => {
+      render(<Hero />)
 
-  it('renders CTA button with correct label', () => {
-    render(<Hero content={mockContent} />)
-    
-    const button = screen.getByText('Get Started')
-    expect(button).toBeInTheDocument()
-  })
+      expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Plug Wells.')
+      expect(screen.getByRole('link', { name: 'VIEW DASHBOARD' })).toHaveAttribute(
+        'href',
+        '/dashboard'
+      )
+      expect(screen.getByRole('link', { name: 'EXPLORE STATES' })).toHaveAttribute(
+        'href',
+        '/states'
+      )
+    })
 
-  it('renders hero image with correct alt text', () => {
-    render(<Hero content={mockContent} />)
-    
-    const image = screen.getByAltText('Hero illustration')
-    expect(image).toBeInTheDocument()
-    expect(image).toHaveAttribute('src', '/hero-image.png')
-  })
+    it('falls back when a CMS field is present but empty', () => {
+      // Editors clear fields in Tina; an empty string must not blank the hero.
+      render(<Hero content={{ ...mockContent, headline: '', description: '' }} />)
 
-  it('has section element with correct styling', () => {
-    const { container } = render(<Hero content={mockContent} />)
-    
-    const section = container.querySelector('section')
-    expect(section).toHaveClass('relative', 'w-full', 'overflow-hidden')
-  })
+      expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Plug Wells.')
+      expect(screen.getByText(/CAPIT brings together public well-plugging records/i)).toBeInTheDocument()
+    })
 
-  it('renders grid for desktop layout', () => {
-    const { container } = render(<Hero content={mockContent} />)
-    
-    const grid = container.querySelector('[class*="grid"]')
-    expect(grid).toHaveClass('lg:grid-cols-2')
-  })
+    it('shows the fallback image when no image is configured', () => {
+      render(<Hero content={{ ...mockContent, image: undefined }} />)
 
-  it('headline has proper sizing classes', () => {
-    const { container } = render(<Hero content={mockContent} />)
-    
-    const headline = screen.getByText('Revolutionize')
-    expect(headline).toHaveClass('text-5xl', 'md:text-6xl', 'lg:text-7xl', 'font-bold')
-  })
-
-  it('CTA button is clickable and links to correct href', () => {
-    const { container } = render(<Hero content={mockContent} />)
-    
-    const buttons = screen.getAllByText('Get Started')
-    expect(buttons.length).toBeGreaterThan(0)
-    expect(buttons[0]).toBeInTheDocument()
+      expect(
+        screen.getByAltText('CAPIT Verified Plugged Well Inspector')
+      ).toHaveAttribute('src', '/images/cappy-and-well.jpg')
+    })
   })
 })

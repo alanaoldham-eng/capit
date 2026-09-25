@@ -1,4 +1,5 @@
 import React from "react"
+import { notFound } from "next/navigation"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import ContentPage from "@/components/page/content-page"
@@ -13,11 +14,20 @@ import { getRecords } from "@/lib/records"
  * The intro (eyebrow, headline, body, optional hero image) is edited in Tina
  * under Sub Pages -> records. The list itself comes from the Records
  * collection: one JSON file per record in content/records/.
+ *
+ * If content/pages/records.json is absent, the route 404s rather than rendering
+ * a page with no intro. Deleting that file is therefore how you take /records
+ * offline without removing the feature.
  */
 export default async function RecordsPage() {
   const site = getSiteContent()
   const footer = getFooterContent()
   const page = getPageContent("records")
+
+  if (!page) {
+    notFound()
+  }
+
   const records = getRecords()
 
   const imageSizes = await getImageSizes([

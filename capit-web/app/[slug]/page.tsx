@@ -11,6 +11,12 @@ import {
 } from "@/lib/content"
 import { getImageSizes } from "@/lib/image-size"
 
+/**
+ * Slugs not listed by generateStaticParams are a 404 rather than an on-demand
+ * render. Keeps unpublished content (the state detail template) unreachable.
+ */
+export const dynamicParams = false
+
 export async function generateStaticParams() {
   const slugs = getPageSlugs()
   return slugs
