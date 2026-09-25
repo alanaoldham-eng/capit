@@ -131,7 +131,7 @@
     ],
     "footer": {
       "brandLabel": "CAPIT",
-      "recordsUrl": "https://capittoken.com/records"
+      "recordsUrl": ""
     }
   },
   "ctaCard": {
@@ -208,8 +208,8 @@
         "wells": "566 wells"
       }
     ],
-    "footerLinkText": "capittoken.com/records",
-    "footerLinkUrl": "https://capittoken.com/records"
+    "footerLinkText": "",
+    "footerLinkUrl": ""
   },
   "stateLeaderboard": {
     "title": "Records Added by State, 2026",

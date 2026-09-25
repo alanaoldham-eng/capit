@@ -46,8 +46,8 @@
       "image": "/images/steve-hillmer.jpg",
       "body": "CAPIT began as Steve's idea: that the record of America's well-plugging work exists, is public, and is almost impossible for an ordinary person to see. He leads partnerships and is the contact for sponsors, data providers, and state agencies.",
       "bullets": [
-        "LinkedIn: [paste Steve's profile URL before publishing]",
-        "Email: shillmer@tellusdigital.io"
+        "LinkedIn: [Steve Hillmer](https://www.linkedin.com/in/steve-hillmer-8ba98231/)",
+        "Email: [shillmer@tellusdigital.io](mailto:shillmer@tellusdigital.io)"
       ]
     },
     {
@@ -55,9 +55,9 @@
       "image": "/images/alana-oldham.jpg",
       "body": "Alana builds and runs the CAPIT platform: the data pipeline, the registry, the site, and the on-chain components. She is responsible for the publication rules and for keeping the registry open. The code is published for inspection at [github.com/alanaoldham-eng/capit](https://github.com/alanaoldham-eng/capit), so anyone can audit what the site and the pipeline actually do.",
       "bullets": [
+        "LinkedIn: [Alana Oldham](https://www.linkedin.com/in/alana/)",
         "GitHub: [alanaoldham-eng](https://github.com/alanaoldham-eng)",
-        "LinkedIn: [paste your profile URL before publishing]",
-        "Email: [paste contact address before publishing]"
+        "Email: [aoldham@tellusdigital.io](mailto:aoldham@tellusdigital.io)"
       ]
     },
     {
