@@ -4,7 +4,7 @@
     "headline": "U.S. Well-Plugging",
     "headlineHighlight": "Records",
     "description": "Plugged-well records from state regulators, the tokens minted against them, and how states compare. Every figure shows its scope and source.",
-    "trustNote": "Figures count records CAPIT has published, not every well plugged nationwide. Data may lag, or be corrected by, source agencies.",
+    "trustNote": "Figures count records CAPIT has published, not every well plugged nationwide. Data may lag, or be corrected by, source agencies. The registry is free to use; no wallet or token is required.",
     "image": {
       "src": "/images/Dashboard_Page.png",
       "alt": "CAPIT national well-plugging dashboard"
@@ -25,7 +25,7 @@
   "tokensCard": {
     "title": "CAPIT Mint Activity",
     "value": "1,851,542",
-    "subtitle": "Tokens minted on Base under CAPIT's 1:1 rule: one token for each unique plugged-well record CAPIT has published."
+    "subtitle": "Tokens minted on Base under the 1:1 supply rule: one token per published record. Tokens carry no claim on any well or environmental benefit."
   },
   "pluggingTrend": {
     "sectionTitle": [

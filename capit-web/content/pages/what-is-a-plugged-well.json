@@ -37,7 +37,7 @@
     {
       "heading": "Plugged Doesn't Mean Risk-Free",
       "image": "",
-      "body": "Plugging is the established way to reduce a well's risks, but it isn't a guarantee. The National Academies of Sciences, Engineering, and Medicine calls plugging an effective practice to mitigate risk and recommends monitoring afterward, because poorly plugged wells can still leak."
+      "body": "Plugging is the established way to reduce a well's risks, and the research finds it effective, but it is not a guarantee. Barriers can fail, and the National Academies reported in 2026 that there is not enough public data to say how often. It recommended that regulators require barrier verification during plugging and that states prioritize which wells to monitor afterward. [How Methane From Wells Is Measured](/how-methane-is-measured) explains what is known, and how."
     },
     {
       "heading": "Sources",
@@ -50,7 +50,7 @@
         "[Pennsylvania DEP Oil and Gas Reports data dictionary](https://files.dep.state.pa.us/OilGas/BOGM/BOGMPortalFiles/OilGasReports/HelpDocs/SSRS_Report_Data_Dictionary/DEP_Oil_and_GAS_Reports_Data_Dictionary.pdf)",
         "[Kansas Geological Survey, oil and gas well statistics](https://www.kgs.ku.edu/PRS/wellStats.html)",
         "[Colorado ECMC status codes](https://ecmc.state.co.us/COGIS_Help/Status_Codes.htm)",
-        "[National Academies, orphan well plugging best practices (June 2026)](https://www.nationalacademies.org/news/best-practices-opportunities-for-plugging-orphan-wells-identified-in-new-report)"
+        "[National Academies, Technologies and Practices for Plugging and Remediating Orphan Oil and Gas Wells (2026)](https://doi.org/10.17226/29343)"
       ]
     }
   ]

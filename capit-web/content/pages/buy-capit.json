@@ -1,9 +1,9 @@
 {
   "title": "Buy CAPIT | Contract Details, Risks, and How to Buy",
-  "description": "Confirm the CAPIT contract address and network, understand the risks and fees, and follow the steps to buy CAPIT with a self-custody wallet on Base.",
+  "description": "What the CAPIT token is and is not, the risks of buying it, how to confirm the contract address, and the steps to buy with a self-custody wallet on Base.",
   "headline": "Buy CAPIT",
   "heroImage": "",
-  "body": "CAPIT is bought with a self-custody wallet on the Base network, through a third-party decentralized exchange. Before you continue, confirm the network and full contract address below, understand the fees, and read the risks.",
+  "body": "CAPIT is a community token with meme characteristics on the Base network. Its price depends on attention and demand, not on the registry or on wells being plugged. You never need it to use CAPIT's data. If you choose to buy, read the risks below and confirm the contract address first.",
   "primaryCta": {
     "label": "Connect Wallet",
     "href": "#connect"
@@ -19,6 +19,18 @@
       "body": "Make sure your wallet supports the Base network, that you understand how token swaps work, and that you are ready to review each transaction in your wallet before signing. You don't need a wallet to browse CAPIT's data. You only need one to buy or hold the token."
     },
     {
+      "heading": "What This Token Is, and Is Not",
+      "image": "",
+      "body": "Before anything else, so there is no confusion about what you would be buying:",
+      "bullets": [
+        "**It is** a community token. Its value comes from attention and demand.",
+        "**It is not** a carbon credit, an emissions offset, or a share of anything.",
+        "**It does not** give you ownership of a well, any environmental attribute, or any right to public remediation funds.",
+        "**It is not needed** to read, search, download, or build on CAPIT's data, which is free to everyone.",
+        "**It does not, today, unlock anything.** See [What does holding CAPIT do?](/faqs)"
+      ]
+    },
+    {
       "heading": "Confirm the Contract Details",
       "image": "",
       "body": "Copycat tokens often reuse a project's name. Before you swap, check that the contract address in your wallet or the exchange matches the address below exactly.",
@@ -26,7 +38,7 @@
         "Network: Base",
         "Token contract: [Insert Full Contract Address]",
         "Explorer: [Insert Base Block Explorer URL]",
-        "Source repository: [Insert Repository URL or 'Not yet published']",
+        "Source repository (published for inspection): https://github.com/alanaoldham-eng/capit",
         "Disclosure version: [Insert Date or Version ID]"
       ]
     },
@@ -35,6 +47,7 @@
       "image": "",
       "body": "Read these before you buy. Nothing on this page is investment advice.",
       "bullets": [
+        "Tokens like this commonly lose most or all of their value. Never spend more than you can afford to lose.",
         "Token prices can fall, and you can lose the full amount you spend.",
         "Trading volume may be low, so you may not be able to sell when you want or at the price you expect.",
         "Blockchain transactions are final. CAPIT cannot reverse, cancel, or refund them.",

@@ -1,0 +1,143 @@
+{
+  "title": "How Methane From Wells Is Measured | CAPIT Data Context",
+  "description": "The four ways methane from oil and gas wells gets measured, what each can show, why the federal measurement requirement was dropped in 2025, and why CAPIT reports plugging records rather than emissions.",
+  "eyebrow": "DATA CONTEXT & DEFINITIONS",
+  "headline": "How Methane From Wells Is Measured",
+  "heroImage": "",
+  "body": "Methane is the reason most often given for plugging old wells, and it is also the most frequently overstated. How a measurement was taken decides what anyone can honestly say about it. This page explains the main methods, what each one can show, and where CAPIT's records fit. CAPIT does not measure methane. It publishes the plugging records that state regulators produce.",
+  "primaryCta": {
+    "label": "Why Plugging Matters",
+    "href": "/why-plugging-wells-matter"
+  },
+  "secondaryCta": {
+    "label": "Read the Methodology",
+    "href": "/methodology"
+  },
+  "sections": [
+    {
+      "heading": "Where Methane Numbers Come From",
+      "image": "",
+      "body": "Each method answers a different question, at a different scale.",
+      "bullets": [
+        "**At the wellhead.** A chamber or flux sensor placed over the wellhead measures one well, usually in grams per hour. This is the only method that can say what a particular well emits before and after plugging, and it is the basis for nearly all published research on abandoned wells.",
+        "**Ground and drone surveys.** Vehicle-mounted or drone-carried sensors sweep a field, locate leaks, and can help find undocumented wells. They show where to look, and are often paired with wellhead measurement to quantify what they find.",
+        "**Aircraft surveys.** Flights map plumes across a basin and quantify larger sources. Useful for finding the biggest emitters, too coarse for a typical abandoned well.",
+        "**Satellites.** Instruments such as TROPOMI, EMIT, GHGSat, and MethaneSAT detect plumes from space. The most sensitive commercial satellites detect point sources from roughly 100 kilograms per hour; MethaneSAT reports 500 kilograms per hour for point sources; wide-area sensors need larger sources still.",
+        "**Inventories and models.** National figures, such as EPA's greenhouse gas inventory, multiply an emission factor by an estimated number of wells. They produce national totals, not evidence about any individual well."
+      ]
+    },
+    {
+      "heading": "What the Measurements Show",
+      "image": "",
+      "body": "Taken together, the research points to one pattern: most abandoned wells leak very little, and a small number leak a great deal.",
+      "bullets": [
+        "EPA's inventory uses about 10 grams of methane per hour for an unplugged abandoned well outside Appalachia and about 0.002 grams per hour once plugged. In Appalachia the figures are about 30.6 and 0.36 grams per hour.",
+        "Plugged wells emit orders of magnitude less methane than unplugged wells, and reviews of the research consistently find plugging effective at reducing leaks and emissions.",
+        "Across 598 measurements in the U.S. and Canada, the average was about 6 grams per hour, and the highest-emitting 10% of wells accounted for about 91% of the total.",
+        "In a survey of 138 wells, most showed no measurable emissions, while about a quarter of unplugged wells emitted more than 5 grams per hour.",
+        "Of 1,446 orphan wells the federal program measured before plugging, about a quarter had detectable methane and roughly 85% were emitting less than 1 gram per hour.",
+        "EPA estimates all U.S. abandoned wells together emitted about 295,000 metric tons of methane in 2021.",
+        "For context on why this is tracked at all: methane has a global warming potential of about 30 times carbon dioxide over 100 years. Higher figures sometimes quoted, such as 80 or 86, are the 20-year value."
+      ]
+    },
+    {
+      "heading": "Why a Satellite Can't See a Plugged Well",
+      "image": "",
+      "body": "Global methane maps get quoted in well-plugging conversations, and the scales don't match. Those maps show about 97 million metric tons of methane a year from oil, gas, and coal operations worldwide, gridded at roughly 11 kilometers per cell, and they are dominated by active production and transport infrastructure. U.S. abandoned wells account for roughly 0.3 million metric tons in EPA's inventory, about 0.3% of the global figure. A typical unplugged well emits about 10 grams per hour, roughly ten thousand times less than the smallest plume a satellite can pick out. Satellite data is powerful for finding super-emitters. It cannot confirm that any one well was leaking, or that plugging it stopped a leak. The National Academies reached the same conclusion in 2026: the methane detection technologies built for producing wells, facilities, and pipelines, including airborne and space-based screening, are \"largely unsuitable and costly for the relatively low emissions rates from most leaking orphan wells.\""
+    },
+    {
+      "heading": "What Changed in July 2025",
+      "image": "",
+      "body": "Federal grants used to come with a measurement condition. They no longer do, which is why the coverage gap above is likely to widen rather than close.",
+      "bullets": [
+        "**What was required.** Under Interior's July 2023 methane measurement guidelines, states using federal orphan well grants had to take at least one measurement at each well before plugging, performed by a qualified specialist, with equipment able to detect 1 gram per hour or less and accuracy within 30%. Agencies also had to re-survey at least 5% of wells after plugging.",
+        "**What changed.** On July 17, 2025, Interior revised its guidance for the state formula and matching grant programs, eliminating the pre- and post-plugging measurement requirement along with the department's post-award environmental review.",
+        "**The stated reason.** Interior framed the revision as removing barriers so states could plug wells faster. In the department's words: \"States know their land and their needs best. By cutting unnecessary barriers, we're helping them clean up old wells faster, protect communities and support energy development.\" No cost or schedule figures were published alongside that claim.",
+        "**Why it could be dropped.** The 2021 infrastructure law makes measurement an allowable use of state grant money, not a duty: states \"may\" spend funds to measure and track methane. The law asks the Secretary only for an \"estimate\" of emissions reduced, and estimates can be modeled. Measurement was a grant condition, not a statutory mandate, so no act of Congress was needed to remove it.",
+        "**Measuring is still allowed.** Federal grant funds may still be spent on measurement. But as of May 2026, states that choose to measure are no longer asked to follow the 2023 protocol, only to note which standard they used. Voluntary measurements are therefore not necessarily comparable to each other, or to what came before.",
+        "**What it looks like in the reporting.** Interior's FY2024 report to Congress stated that 1,446 of the 9,002 wells plugged with federal funds through June 2024 were tested for methane before plugging, about 16%. The FY2025 report gives no measured-well count, while still reporting an estimated 5.9 billion grams of methane per year prevented."
+      ]
+    },
+    {
+      "heading": "Why Measurement Matters",
+      "image": "",
+      "body": "Measurement is what separates a plugging record from a verified environmental outcome. Four things depend on it.",
+      "bullets": [
+        "**Finding the wells that matter.** Emissions are extremely lopsided: roughly a quarter of the wells Interior tested had any detectable methane, and about 85% of those tested were under 1 gram per hour, while a small number of wells account for most of the total. Resources for the Future found that plugging a median emitter returns about $762 in methane benefit over 50 years, while high emitters pay back their plugging cost within a few years. Without measurement, there is no way to tell which well is which before spending the money.",
+        "**Confirming the plug worked.** A plugging record shows that work was reported, not that the leak stopped. Reviewing the evidence in 2026, the National Academies recommended that regulators require a barrier verification plan with defined acceptance criteria, specify the minimum inspection and testing methods, and have an agency representative on site to witness critical operations (Recommendation 3-1). It also recommended that states establish risk-based frameworks to decide which wells get monitored after plugging, and what kind (Recommendation 4-1). It did not call for monitoring every well: \"It is not feasible, nor is it necessary, to monitor every plugged well.\"",
+        "**Having a baseline to compare against.** The same report notes that measurements taken before plugging establish a baseline for well integrity and contaminants, which is what makes any later assessment meaningful. Once a well is plugged without a baseline, the chance to quantify what plugging changed at that well is gone.",
+        "**Getting the number right.** A study published in 2026, using more than 4,000 hours of continuous monitoring at 15 leaking orphan wells in Montana with the U.S. Geological Survey, found that emissions vary with wind and temperature, and that short snapshot measurements can understate what a well actually emits.",
+        "**Supporting anything that claims a reduction.** Carbon credit protocols require a measured baseline, post-plugging verification, and ongoing monitoring. Without measurement, a plugged well cannot support that kind of claim, from anyone.",
+        "**The other side of the argument.** Measurement costs money and adds a step, and Interior's position is that states are better placed to decide how to spend grant funds. Resources for the Future also notes that quantification tools are not yet widely available or cheap. It is worth noting, though, that measurement was happening at a small share of wells before the requirement was lifted, so it is hard to argue it was what held plugging back."
+      ]
+    },
+    {
+      "heading": "What Isn't Known: How Often Plugs Fail",
+      "image": "",
+      "body": "It is widely said that plugs can fail over time. What almost no one says is how often. The National Academies set out to answer that in 2026 and could not: data on older wells are missing, and data on current plugged well failures are collected unsystematically. The committee found \"not enough publicly available data (e.g., on well integrity, instances of failure, and actions to resolve failures)\" to assess the likelihood of failure at all.",
+      "bullets": [
+        "Monitoring after plugging is not generally required by regulation and is not carried out consistently from state to state.",
+        "In practice, state representatives told the committee that leaks from failed plugs are often discovered only after a landowner or neighbor complains.",
+        "The report recommends a reporting and corrective action system so that plugging records, approved procedures, and post-plugging reports are collected and analyzed in one place (Recommendation 3-3).",
+        "Anyone quoting a plug failure rate to you should be asked for the source. As of 2026, the National Academies could not produce one."
+      ]
+    },
+    {
+      "heading": "Where Measurement Is Still Required",
+      "image": "",
+      "body": "As of September 2026, we are not aware of any bill, rulemaking, or legal challenge specifically seeking to restore the federal measurement requirement. The change was made through grant guidance rather than a rule, so there was no public comment process attached to it. Measurement requirements do still exist elsewhere:",
+      "bullets": [
+        "Colorado's Methane Emissions Reduction Program, funded through the Department of Energy, requires methane measurement before and after plugging for every well it selects, following DOE and NETL measurement guidelines.",
+        "Those DOE and NETL guidelines for marginal conventional wells remain in force, so a federal measurement standard still exists even though it no longer applies to Interior's orphan well grants.",
+        "Carbon credit protocols for plugging orphaned wells require measurement and third-party verification.",
+        "Individual states, operators, and researchers continue to measure voluntarily, and federal grant funds may still be used for it.",
+        "In Congress, the bipartisan Abandoned Well Remediation Research and Development Act (S. 818) would direct the Department of Energy to run a research and development program on abandoned wells; its sponsors describe better measurement of emissions as part of the goal. It was introduced in March 2025, remains in committee, and has not become law."
+      ]
+    },
+    {
+      "heading": "What This Means for CAPIT's Records",
+      "image": "",
+      "body": "A CAPIT record shows that a state regulator recorded a well as plugged. It does not include a measured emissions reduction, and CAPIT does not claim one.",
+      "bullets": [
+        "CAPIT does not measure methane, model emissions reductions, or issue credits of any kind.",
+        "Most plugged wells in the United States have never been measured, before or after plugging.",
+        "In July 2025 the federal orphan well program dropped its measurement requirement, so many wells plugged since then have no measurement at all.",
+        "Where measurements do exist, they come from operators, agencies, or researchers, and CAPIT links to the source rather than restating it as its own finding."
+      ]
+    },
+    {
+      "heading": "If You Need Measured Reductions",
+      "image": "",
+      "body": "Some programs do quantify emissions reductions from plugging. Carbon credit protocols require pre- and post-plugging measurement, monitoring over time, and third-party verification before issuing credits. That is a different product with different obligations. CAPIT is not one of them, and a CAPIT token is not a credit. The National Academies, reviewing the evidence in June 2026, called plugging an effective way to mitigate risk and recommended monitoring wells after they are plugged."
+    },
+    {
+      "heading": "Sources",
+      "image": "",
+      "body": "Figures on this page come from:",
+      "bullets": [
+        "[EPA, Abandoned Wells emissions memo (April 2018)](https://www.epa.gov/sites/default/files/2018-04/documents/ghgemissions_abandoned_wells.pdf)",
+        "[Williams et al., Environmental Science & Technology (2021)](https://pubs.acs.org/doi/10.1021/acs.est.0c04265)",
+        "[Townsend-Small et al., Geophysical Research Letters (2016)](https://doi.org/10.1002/2015GL067623)",
+        "[Kang et al., PNAS (2014), direct measurements in Pennsylvania](https://www.pnas.org/doi/10.1073/pnas.1408315111)",
+        "[DOI FY2024 Orphaned Wells Program report to Congress](https://www.doi.gov/sites/default/files/documents/2024-11/fy-2024-owpo-annual-congressional-reportfinal-publishing.pdf)",
+        "[DOI Orphaned Wells Methane Measurement Guidelines (July 2023)](https://www.doi.gov/sites/default/files/orphaned-wells-methane-measurement-guidelines-july-2023-version.pdf)",
+        "[DOI, revised guidelines to speed plugging (July 17, 2025)](https://www.doi.gov/pressreleases/interior-department-revises-guidelines-speed-plugging-orphaned-oil-and-gas-wells)",
+        "[NASA Earthdata, Mapping Methane Emissions from Fossil Fuel Exploitation](https://www.earthdata.nasa.gov/learn/articles/methane-fossil-fuel-exploitation)",
+        "[Global Fuel Exploitation Inventory v3, Earth System Science Data (2025)](https://essd.copernicus.org/articles/17/7019/2025/)",
+        "[Satellite methane point-source monitoring review, ISPRS Journal (2025)](https://www.sciencedirect.com/science/article/pii/S0924271625001182)",
+        "[MethaneSAT capabilities summary (2024)](https://www.methanesat.org/sites/default/files/2024-08/MethaneSATCapabilities2024.pdf)",
+        "[Minimum detection limits of TROPOMI across North America, Science of the Total Environment (2023)](https://www.sciencedirect.com/science/article/pii/S0048969723008380)",
+        "[42 U.S.C. 15907, orphaned well provisions of the 2021 infrastructure law](https://www.law.cornell.edu/uscode/text/42/15907)",
+        "[DOI State Grant FAQ (May 2026)](https://www.doi.gov/sites/default/files/documents/2026-05/owpoupdated-state-grant-faqsmay-2026.pdf)",
+        "[DOI FY2025 Orphaned Wells Program report to Congress](https://www.doi.gov/sites/default/files/documents/2025-11/fy-2025-orphaned-wells-congressional-report.pdf)",
+        "[Resources for the Future, Working Paper 26-07 (April 2026)](https://media.rff.org/documents/WP_26-07.pdf)",
+        "[Colorado ECMC, Methane Emissions Reduction Program](https://ecmc.colorado.gov/regulation/marginal-wells/merp)",
+        "[DOE/NETL Methane Measurement Guidelines for Marginal Conventional Wells (April 2024)](https://netl.doe.gov/sites/default/files/2024-06/DOE-NETL%20Methane%20Measurement%20Guidelines%20for%20Marginal%20Conventional%20Wells%20April%202024.pdf)",
+        "[Continuous monitoring study of Montana orphan wells, with the U.S. Geological Survey (2026)](https://www.accessnewswire.com/newsroom/en/oil-gas-and-energy/field-data-from-well-done-foundation-powers-new-peer-reviewed-study-on-orphan-we-1147593)",
+        "[American Carbon Registry, methodology for plugging orphaned wells](https://acrcarbon.org/methodology/plugging-orphaned-oil-and-gas-wells-2/)",
+        "[National Academies, Technologies and Practices for Plugging and Remediating Orphan Oil and Gas Wells (2026)](https://doi.org/10.17226/29343)",
+        "[S. 818, Abandoned Well Remediation Research and Development Act (119th Congress)](https://www.congress.gov/bill/119th-congress/senate-bill/818)"
+      ]
+    }
+  ]
+}

@@ -1,12 +1,12 @@
 {
   "seo": {
-    "title": "CAPIT | One Well. One Token. One Permanent Record.",
-    "description": "Explore source-linked U.S. well-plugging records from state regulators, compare states, and see how CAPIT mints one token per verified plugged-well record on Base."
+    "title": "CAPIT | Every Plugged Well, One Public Record",
+    "description": "Explore source-linked U.S. well-plugging records from state regulators, compare states, and read exactly how records are counted. Free to use, no wallet required."
   },
   "hero": {
     "eyebrow": "PUBLIC WELL-PLUGGING RECORDS, LINKED ON-CHAIN",
-    "headline": "One Well.\nOne Token.\nOne Permanent Record.",
-    "description": "CAPIT collects plugged-well records published by state oil and gas regulators, shows where each record came from and when it was last checked, and mints one token on the Base network for each unique record that passes our source checks. Explore the national snapshot, compare states, and see exactly how records are counted.",
+    "headline": "Every Plugged Well.\nOne Public Record.",
+    "description": "CAPIT collects plugged-well records published by state oil and gas regulators and shows where each record came from and when it was last checked. The registry is free to use and open to everyone. Explore the national snapshot, compare states, and see exactly how records are counted.",
     "ctaButton": {
       "label": "VIEW DASHBOARD",
       "href": "/dashboard"
@@ -19,7 +19,7 @@
       "label": "READ METHODOLOGY",
       "href": "/methodology"
     },
-    "trustNote": "CAPIT is an independent project operated by Tellus Digital, LLC. It is not a government registry and does not itself plug wells. Review the methodology, risk disclosures, and contract details before using any wallet or token feature.",
+    "trustNote": "CAPIT is an independent project of Tellus Digital, LLC. It is not a government registry and does not itself plug wells. CAPIT also has a community token on the Base network; it is separate from the registry, and you never need it to use the data. Review the risk disclosures before using any wallet or token feature.",
     "image": {
       "src": "/images/cappy-and-well.jpg",
       "alt": "Cappy, the CAPIT mascot, standing beside a capped wellhead"
@@ -57,7 +57,7 @@
   ],
   "methodologyStrip": {
     "heading": "Source-linked. Time-stamped. Revision-aware.",
-    "body": "Every published record carries its source agency, source record ID, retrieval date, and revision history. When a state corrects or reclassifies a record, CAPIT adds a new revision instead of overwriting the old one, and each minted token points back to the record it represents.",
+    "body": "Every published record carries its source agency, source record ID, retrieval date, and revision history. When a state corrects or reclassifies a record, CAPIT adds a new revision instead of overwriting the old one.",
     "href": "/methodology",
     "label": "Read Methodology"
   }

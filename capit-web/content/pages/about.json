@@ -1,10 +1,10 @@
 {
   "title": "About CAPIT | Data, Methodology, and Mission",
-  "description": "What CAPIT is, who runs it, how its well-plugging data works, what the token represents, and what CAPIT does not claim.",
+  "description": "Who runs CAPIT, how the well-plugging data works, what the token represents, what CAPIT does not claim, and letters from both founders.",
   "eyebrow": "ABOUT THE PROJECT",
   "headline": "About CAPIT",
   "heroImage": "/images/About_page.png",
-  "body": "CAPIT is a public data site and token project on the Base network, operated by Tellus Digital, LLC. Our mission is to make U.S. well-plugging progress easy to see and check: state records in one place, each with its source attached, and each linked to a token on-chain.",
+  "body": "CAPIT is a public data site owned and operated by Tellus Digital, LLC. Our mission is to make U.S. well-plugging progress easy to see and check: state records in one place, each with its source attached, free for anyone to use.",
   "primaryCta": {
     "label": "Read the Methodology",
     "href": "/methodology"
@@ -28,18 +28,42 @@
         "**Normalize:** We map each state's fields into one schema and remove duplicates, so records can be compared across states.",
         "**Verify:** We confirm each record exists at its source, shows a plugged status, and meets our publication rules. We do not inspect wells in the field.",
         "**Publish:** Each record appears with its source, retrieval date, and any caveats.",
-        "**Link:** Each unique published record is linked to one CAPIT token minted on Base."
+        "**Link:** Each unique published record corresponds to one CAPIT token minted on Base. This is a rule about how token supply grows. It is not a claim on the well."
       ]
     },
     {
       "heading": "What CAPIT Is Not",
       "image": "",
-      "body": "CAPIT is not a government registry and does not replace the official agency record. It does not plug wells or inspect plugging work. A CAPIT token is a digital record linked to a published plugged-well record. It is not a carbon credit or emissions offset, and it does not represent ownership of a well, any environmental attribute, or any right to public remediation funds."
+      "body": "CAPIT is not a government registry and does not replace the official agency record. It does not plug wells or inspect plugging work. The registry and the token are separate things. The data is free to everyone, no wallet required, and holding CAPIT gives no claim on any well, any environmental benefit, or any public funds. The CAPIT token is a community token with meme characteristics: its price is driven by attention and demand, not by the wells in the registry. It is not a carbon credit, not an emissions offset, and not backed by any asset."
+    },
+    {
+      "heading": "The People Behind CAPIT",
+      "image": "",
+      "body": "CAPIT is a two-person project of Tellus Digital, LLC. We think you should know who is making the judgment calls behind a public data set, so both of us have written openly about why we are doing this. Both letters are on the [Open Letters](/open-letter) page."
+    },
+    {
+      "heading": "Steve Hillmer, Co-founder",
+      "image": "/images/steve-hillmer.jpg",
+      "body": "CAPIT began as Steve's idea: that the record of America's well-plugging work exists, is public, and is almost impossible for an ordinary person to see. He leads partnerships and is the contact for sponsors, data providers, and state agencies.\n\n[Read Steve's letter](/open-letter)",
+      "bullets": [
+        "LinkedIn: [paste Steve's profile URL before publishing]",
+        "Email: shillmer@tellusdigital.io"
+      ]
+    },
+    {
+      "heading": "Alana Oldham, Co-founder, CEO, and Developer",
+      "image": "/images/alana-oldham.jpg",
+      "body": "Alana builds and runs the CAPIT platform: the data pipeline, the registry, the site, and the on-chain components. She is responsible for the publication rules and for keeping the registry open. The code is published for inspection at [github.com/alanaoldham-eng/capit](https://github.com/alanaoldham-eng/capit), so anyone can audit what the site and the pipeline actually do.\n\n[Read Alana's letter](/open-letter)",
+      "bullets": [
+        "GitHub: [alanaoldham-eng](https://github.com/alanaoldham-eng)",
+        "LinkedIn: [paste your profile URL before publishing]",
+        "Email: [paste contact address before publishing]"
+      ]
     },
     {
       "heading": "Governance and Roadmap",
       "image": "",
-      "body": "Tellus Digital, LLC currently operates the CAPIT website, data pipeline, and minting process. The token contract's roles and permissions, including which addresses can mint, are visible on the verified contract on BaseScan. Roadmap updates will be posted here as they are approved."
+      "body": "Tellus Digital, LLC owns CAPIT and operates the website, data pipeline, and minting process. The token contract's roles and permissions, including which addresses can mint, are visible on the verified contract on BaseScan. Roadmap updates will be posted here as they are approved. Our founder's [open letter](/open-letter) sets out the principles behind the project, the commitments we expect to be held to, and why we are seeking grant funding rather than building a paywall."
     }
   ]
 }

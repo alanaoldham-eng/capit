@@ -9,7 +9,7 @@
     {
       "heading": "What is CAPIT?",
       "image": "",
-      "body": "CAPIT is a public, source-linked registry of U.S. plugged oil and gas well records, paired with a token on the Base network. It organizes records published by state regulators, shows where each one came from, and displays token mint activity next to the underlying data. CAPIT is operated by Tellus Digital, LLC."
+      "body": "CAPIT is a public, source-linked registry of U.S. plugged oil and gas well records, paired with a token on the Base network. It organizes records published by state regulators, shows where each one came from, and displays token mint activity next to the underlying data. CAPIT is owned and operated by Tellus Digital, LLC."
     },
     {
       "heading": "Does CAPIT plug wells or pay for plugging?",
@@ -34,7 +34,7 @@
     {
       "heading": "Does each CAPIT token equal one well?",
       "image": "",
-      "body": "Each token corresponds to one unique plugged-well record that CAPIT has published. New tokens are minted only when a new record passes CAPIT's checks, so supply grows only as records are added. A token does not give ownership of, or any rights in, the well itself."
+      "body": "One token is minted for each unique plugged-well record CAPIT publishes, so supply grows only as records are added. That is a rule about supply. It does not make a token a claim on a well, on any environmental benefit, or on anything else. The wells belong to their owners, the records belong to the public, and the token is separate from both."
     },
     {
       "heading": "What happens if a state corrects a record?",
@@ -44,12 +44,27 @@
     {
       "heading": "Is CAPIT a carbon credit?",
       "image": "",
-      "body": "No. CAPIT does not measure or certify emissions reductions, and a CAPIT token cannot be used as a carbon credit or emissions offset."
+      "body": "No. CAPIT does not measure or certify emissions reductions, and a CAPIT token cannot be used as a carbon credit or emissions offset. See [How Methane From Wells Is Measured](/how-methane-is-measured) for why we don't claim one."
     },
     {
-      "heading": "Is CAPIT an investment?",
+      "heading": "Does CAPIT measure methane?",
       "image": "",
-      "body": "Nothing on this site is investment advice or an offer of securities. Token prices can fall, and you can lose the full amount you spend. Read the [Terms of Use](/terms-of-use) and the risk disclosures on the [Buy CAPIT](/buy-capit) page before buying."
+      "body": "No. CAPIT reports plugging records, not emissions. Most U.S. wells are never measured before or after plugging, and in July 2025 the federal orphan well program dropped its requirement that states measure. [How Methane From Wells Is Measured](/how-methane-is-measured) explains the methods, what changed, and why measurement matters."
+    },
+    {
+      "heading": "Is the CAPIT token an investment?",
+      "image": "",
+      "body": "No, and please do not treat it as one. CAPIT is a community token with meme characteristics: its price depends on attention and demand, not on the registry or on wells being plugged. Tokens like this commonly lose most or all of their value. Never spend more than you can afford to lose. Nothing on this site is investment advice. Read the [Terms of Use](/terms-of-use) and the risks on the [Buy CAPIT](/buy-capit) page first."
+    },
+    {
+      "heading": "What does holding CAPIT do?",
+      "image": "",
+      "body": "Today, nothing functional. The registry is free for everyone, with or without a token, and we intend to keep it that way. Proceeds from the token go toward the cost of building and running the registry, and we will publish how they are used. We would like holders to have recognition and a voice in decisions that do not affect the data itself. None of that exists yet, and we will say so here when it does."
+    },
+    {
+      "heading": "Is CAPIT a meme token?",
+      "image": "",
+      "body": "Yes, in the sense that matters to anyone considering buying: its value comes from community and attention rather than from revenue or an underlying asset. We would rather say that plainly than dress it up. The registry and the token are separate things. The data is free to everyone, no wallet required, and holding CAPIT gives no claim on any well, any environmental benefit, or any public funds."
     },
     {
       "heading": "Is CAPIT affiliated with a government agency?",

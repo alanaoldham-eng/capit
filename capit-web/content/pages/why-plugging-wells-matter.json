@@ -3,11 +3,11 @@
   "description": "Why plugging old oil and gas wells matters: public safety, air and groundwater, local jobs, restored land, healthier ecosystems, and completing America's energy legacy.",
   "headline": "Why Plugging Wells Matters",
   "heroImage": "/images/well-plugging-cycle.png",
-  "body": "Every properly plugged well closes out an obligation that would otherwise pass to landowners, communities, and taxpayers. One Well. One Token. One Permanent Record of Progress.",
+  "body": "Every properly plugged well closes out an obligation that would otherwise pass to landowners, communities, and taxpayers. One well plugged. One permanent record of progress.",
   "sections": [
     {
       "heading": "Public Safety",
-      "image": "",
+      "image": "/images/cappy covered.jpg",
       "body": "**Removing hazards and restoring confidence for landowners, workers, and communities.**\n\nInactive well sites can leave aging equipment, open pits, deteriorated structures, and other physical hazards. Proper plugging and site cleanup close the well and make the location safer and easier to manage.\n\n> A properly retired wellsite replaces uncertainty with a clear, permanent safety outcome.",
       "bullets": [
         "Removes obsolete equipment and visible wellsite hazards.",
@@ -26,7 +26,8 @@
         "Emissions are concentrated: in one large study, the highest-emitting 10% of abandoned wells produced about 91% of measured methane.",
         "USGS found that more than half of the roughly 118,000 documented orphan wells it mapped sit within a principal aquifer.",
         "About 4.6 million Americans live within one kilometer of a documented orphan well.",
-        "Plugging does not remove every risk, which is why researchers recommend monitoring after plugging."
+        "Reviewing the research in 2026, the National Academies concluded that \"plugging orphan wells is effective for reducing leaks and emissions\" and recommended that states keep at it.",
+        "Plugging does not remove every risk, which is why researchers recommend monitoring after plugging. See [How Methane From Wells Is Measured](/how-methane-is-measured) for what these figures are based on."
       ]
     },
     {
@@ -88,7 +89,7 @@
         "Completes the full life cycle of energy development rather than leaving the final obligation unresolved.",
         "Protects future generations from inheriting unmanaged industrial sites.",
         "Shows that energy production and responsible retirement belong to the same stewardship commitment.",
-        "CAPIT records each published plugged-well record as one permanent unit of national progress."
+        "CAPIT publishes each plugged-well record as one permanent, public unit of national progress."
       ]
     },
     {
@@ -101,7 +102,8 @@
         "[USGS, Woda et al. (2025), orphaned wells and principal aquifers](https://pubs.usgs.gov/publication/70265625)",
         "[Kang et al., Environmental Research Letters (2023)](https://iopscience.iop.org/article/10.1088/1748-9326/acdae7)",
         "[U.S. Department of the Interior, FY2025 Orphaned Wells Program report to Congress (November 2025)](https://www.doi.gov/sites/default/files/documents/2025-11/fy-2025-orphaned-wells-congressional-report.pdf)",
-        "[IOGCC, Idle and Orphan Oil and Gas Wells report (revised September 2024)](https://oklahoma.gov/content/dam/ok/en/iogcc/documents/publications/Orphan%20Wells%20Revised.pdf)"
+        "[IOGCC, Idle and Orphan Oil and Gas Wells report (revised September 2024)](https://oklahoma.gov/content/dam/ok/en/iogcc/documents/publications/Orphan%20Wells%20Revised.pdf)",
+        "[National Academies, Technologies and Practices for Plugging and Remediating Orphan Oil and Gas Wells (2026)](https://doi.org/10.17226/29343)"
       ]
     }
   ]
