@@ -1,6 +1,6 @@
 {
-  "title": "About CAPIT | Data, Methodology, and Mission",
-  "description": "Who runs CAPIT, how the well-plugging data works, what the token represents, what CAPIT does not claim, and letters from both founders.",
+  "title": "About CAPIT | Who We Are and Why We Built This",
+  "description": "Who runs CAPIT, how the data works, what the token is and is not, and open letters from both founders on why the project exists and what it commits to.",
   "eyebrow": "ABOUT THE PROJECT",
   "headline": "About CAPIT",
   "heroImage": "/images/About_page.png",
@@ -39,12 +39,12 @@
     {
       "heading": "The People Behind CAPIT",
       "image": "",
-      "body": "CAPIT is a two-person project of Tellus Digital, LLC. We think you should know who is making the judgment calls behind a public data set, so both of us have written openly about why we are doing this. Both letters are on the [Open Letters](/open-letter) page."
+      "body": "CAPIT is a two-person project of Tellus Digital, LLC. We think you should know who is making the judgment calls behind a public data set, so both of us have written openly about why we are doing this. Our messages are further down this page."
     },
     {
       "heading": "Steve Hillmer, Co-founder",
       "image": "/images/steve-hillmer.jpg",
-      "body": "CAPIT began as Steve's idea: that the record of America's well-plugging work exists, is public, and is almost impossible for an ordinary person to see. He leads partnerships and is the contact for sponsors, data providers, and state agencies.\n\n[Read Steve's letter](/open-letter)",
+      "body": "CAPIT began as Steve's idea: that the record of America's well-plugging work exists, is public, and is almost impossible for an ordinary person to see. He leads partnerships and is the contact for sponsors, data providers, and state agencies.",
       "bullets": [
         "LinkedIn: [paste Steve's profile URL before publishing]",
         "Email: shillmer@tellusdigital.io"
@@ -53,7 +53,7 @@
     {
       "heading": "Alana Oldham, Co-founder, CEO, and Developer",
       "image": "/images/alana-oldham.jpg",
-      "body": "Alana builds and runs the CAPIT platform: the data pipeline, the registry, the site, and the on-chain components. She is responsible for the publication rules and for keeping the registry open. The code is published for inspection at [github.com/alanaoldham-eng/capit](https://github.com/alanaoldham-eng/capit), so anyone can audit what the site and the pipeline actually do.\n\n[Read Alana's letter](/open-letter)",
+      "body": "Alana builds and runs the CAPIT platform: the data pipeline, the registry, the site, and the on-chain components. She is responsible for the publication rules and for keeping the registry open. The code is published for inspection at [github.com/alanaoldham-eng/capit](https://github.com/alanaoldham-eng/capit), so anyone can audit what the site and the pipeline actually do.",
       "bullets": [
         "GitHub: [alanaoldham-eng](https://github.com/alanaoldham-eng)",
         "LinkedIn: [paste your profile URL before publishing]",
@@ -63,7 +63,107 @@
     {
       "heading": "Governance and Roadmap",
       "image": "",
-      "body": "Tellus Digital, LLC owns CAPIT and operates the website, data pipeline, and minting process. The token contract's roles and permissions, including which addresses can mint, are visible on the verified contract on BaseScan. Roadmap updates will be posted here as they are approved. Our founder's [open letter](/open-letter) sets out the principles behind the project, the commitments we expect to be held to, and why we are seeking grant funding rather than building a paywall."
+      "body": "Tellus Digital, LLC owns CAPIT and operates the website, data pipeline, and minting process. The token contract's roles and permissions, including which addresses can mint, are visible on the verified contract on BaseScan. Roadmap updates will be posted here as they are approved. The messages below set out the principles behind the project, the commitments we expect to be held to, and where we currently fall short of them."
+    },
+    {
+      "heading": "Message From The Developer and Co-Founder, Alana Oldham",
+      "image": "",
+      "body": "Every plugged well in this country is already a public record. Somebody drilled a hole, somebody eventually sealed it, and a state agency wrote it down. That record exists because the public required it to exist.\n\nAnd yet almost no one can see it. The records sit in dozens of separate systems, in different formats, under different words for the same thing, some of them digitized last year and some still effectively paper. A landowner who wants to know whether the well on their fence line was ever plugged has a hard afternoon ahead of them. A reporter who wants to know whether a state is keeping up has a hard month.\n\nCAPIT is my co-founder Steve Hillmer's idea. He saw that the gap was fixable before I did, and he is the reason this project exists at all. My part has been to build it, and to insist that what we build stays open. Steve tells his own story below. This is mine, and what I think should happen more broadly with knowledge that belongs to all of us."
+    },
+    {
+      "heading": "Whose Idea This Was",
+      "image": "",
+      "body": "I want to be clear about the order of events, because credit matters and because origin stories get tidied up over time.\n\nSteve Hillmer brought me this problem. He understood, before it was obvious to me, that the country had quietly built a huge environmental obligation and then scattered the evidence of what had been done about it across fifty separate filing systems. He saw that the work of plugging wells was real, skilled, and largely invisible, and that making it visible would matter to the people doing it and to the people living near it.\n\nI came to it as a builder. What I brought was the conviction that if we were going to assemble this record, it had to be assembled in the open, under terms anybody could check, with no version of it locked behind a payment. The two halves of that are why CAPIT looks the way it does: his idea, built to a standard we both have to live with."
+    },
+    {
+      "heading": "Two Things I Will Not Trade",
+      "image": "",
+      "body": "I would like this work to support the people who do it. I am not going to pretend otherwise, and I do not think wanting to be paid is shameful. But there are two things that come first, and if they ever conflict with the money, the money loses.\n\n**Care for the Earth.** An unplugged well is an open pipe between a hydrocarbon formation and the air, the soil, and often the groundwater someone drinks. Closing it properly is one of the few environmental problems where the fix is well understood, the benefit is permanent, and almost nobody argues about whether it should be done.\n\n**Care for people.** The people nearest these wells are usually the ones with the least say over them. Roughly 4.6 million Americans live within a kilometer of a documented orphan well. They did not choose it, most of them did not profit from it, and they are the ones who inherit whatever is left behind. Anything I build should make their lives easier to navigate, not harder."
+    },
+    {
+      "heading": "Who Owns These Records",
+      "image": "",
+      "body": "There is a well-worn business in this country: take public records that are scattered and hard to use, spend real money assembling them, and sell the result back to the public who produced them. It is legal, it is often the only way the work gets funded, and it ends with citizens paying rent on facts their own government collected.\n\nI do not want to build that. There is also a legal reason the enclosure model sits badly here. Under *Feist Publications v. Rural Telephone* (1991), facts are not copyrightable and effort alone creates no rights. A well number, a coordinate, a plugging date — none of those become ours because we went and fetched them.\n\nSo here is our actual position, stated plainly rather than dressed up. The registry is free to use: read it, search it, check it, cite it, no account and no payment. We do not today publish the compiled data set under an open license such as CC0 or CC BY, and I am not going to imply that we do. What we will not do is pretend the underlying records are ours. They are the state's, and through the state they are yours — which is why every record on this site names its source agency and links back to it, and why we publish a register of each agency's terms. If you need the data under terms we do not offer, the source is one click away, and we would rather point you there than hold the door shut."
+    },
+    {
+      "heading": "What Public Knowledge Requires",
+      "image": "",
+      "body": "If we are serious about treating environmental records as a commons, here is what I think that actually demands. None of this is my invention; it is drawn from people who have been doing this longer than I have.",
+      "bullets": [
+        "**Public records should stay reachable, and their terms should be stated.** Whoever holds a copy of a public record — an agency, a company, a project like ours — should make it possible to reach the original, and should say in plain words what they permit with their own version. Vagueness about terms is how public information quietly becomes somebody's product.",
+        "**Provenance on every single record.** Which agency, which record ID, which URL, retrieved when, transformed how. A number without a source is a rumor with better formatting.",
+        "**Findable by machines, not just by humans.** The FAIR principles (findable, accessible, interoperable, reusable) are the working standard: persistent identifiers, rich metadata, open formats, no login wall, and a license field a computer can read.",
+        "**Openness with judgment, not openness as a reflex.** The CARE principles for Indigenous data governance exist because \"it was already public\" is not a sufficient answer when publication affects a community that never consented to it. For well data that means a real process with Tribal governments, and a willingness to publish at reduced precision rather than pretend the question does not arise.",
+        "**Honesty about what is not known.** In 2026 the National Academies tried to determine how often well plugs fail and could not, because the data is collected unsystematically. The right response is to say so plainly, not to fill the hole with a confident number.",
+        "**Copies you do not control.** The LOCKSS preservation principles list organizational failure among the threats to guard against, which means guarding against yourself. Any public dataset should live in at least one archive its publisher cannot delete.",
+        "**Public data should not be one budget cycle from disappearing.** This is not hypothetical. EPA's EJScreen tool was removed in February 2025. NOAA retired its billion-dollar disasters product with no updates past 2024. Data that a democracy paid for should be mirrored by people who are not the ones who might want it gone.",
+        "**Fund public infrastructure publicly.** Roads, weather forecasts, and land records are not asked to turn a profit, and a national picture of environmental cleanup is the same kind of thing. If the only way to sustain it is to charge for access, we have decided something about who deserves to know.",
+        "**Say exactly what is open.** \"Open\" gets used loosely, and the loose use is how people end up with something they can look at but cannot legally reuse. Name the thing and name its terms: our data is meant for reuse, our source code is published for inspection."
+      ]
+    },
+    {
+      "heading": "What CAPIT Commits To",
+      "image": "",
+      "body": "Values are cheap. These are meant to be checkable, so that if we stop doing them you can tell. Some are in place now; others are commitments we are building toward, and this page will carry the status of each.",
+      "bullets": [
+        "**The registry stays free.** No paywall, no login, no wallet, and no tier of the underlying data that only paying users can see.",
+        "**The data is never shaped by the token.** No record is published, delayed, or worded because of what it might do to a price, and holding tokens buys no influence over the registry.",
+        "**Free to use, and honest about the terms.** The registry is free to read, search, and check, and every record names its source. We do not currently release the compiled data set under an open license, and we say so rather than using the word \"open\" loosely. If that changes, it changes here first.",
+        "**A public source-terms register.** One row per agency: the source, its published terms of use, the date we last checked, and our reading of what those terms permit. If a state's terms conflict with open redistribution, that will be visible on this site instead of buried.",
+        "**Code you can inspect.** The site and the data pipeline are published at [github.com/alanaoldham-eng/capit](https://github.com/alanaoldham-eng/capit) so that anyone can read them, check that they are safe, and see how a record becomes a published record. To be clear about what that is and isn't: the code is source-available for inspection, not open source. We keep the rights to it, and we would rather say so than let the word \"open\" do work it hasn't earned. The data is the part we are giving away.",
+        "**A data dictionary, a changelog, and published known gaps.** Including the states we do not yet cover and the records we cannot verify.",
+        "**Nothing silently overwritten.** When a source agency revises a record, the earlier version stays visible. When a record is withdrawn, the metadata and the reason stay up.",
+        "**A stated process for Tribal data.** A named contact, a published procedure for requesting coarser precision or removal, and a standing offer of joint governance over records on or adjacent to Tribal lands.",
+        "**Published funding.** Every grant, sponsor, and material source of revenue named on this site, including anyone whose work we also report on.",
+        "**Corrections in public.** An open log of errors found and fixed, ours and the ones we surface in source data."
+      ]
+    },
+    {
+      "heading": "Where We Don't Meet This Standard",
+      "image": "",
+      "body": "It would be easy to end a letter like this on the principles and let you assume we meet all of them. We don't, and here is the list, so that nobody has to catch us at it.\n\n**The compiled data set is not openly licensed.** Free to use, yes. Released under CC0 or CC BY for unrestricted reuse, no. That is a decision my partners and I make together and we have not made it.\n\n**The code is published for inspection, not for reuse.** You can audit what we do. You cannot take it and run your own copy.\n\n**There is no bulk download or open API today.** If you want the whole data set for research, write to us and we will work out what is possible.\n\nI would rather publish this list than publish a page of principles we quietly fall short of. If any of these change, they change on this page, with the date."
+    },
+    {
+      "heading": "How We Intend to Pay for This",
+      "image": "",
+      "body": "A registry that has to sell something eventually shapes itself around what sells. The temptation is never dramatic. You put the useful export behind a login, then the API, then the historical data, and one day the public record is a product.\n\nSo we are looking for public research funding, state partnerships, and philanthropy to carry the registry, and the registry itself stays free either way.\n\nI should be straight about the token, because it is the part people will reasonably question. CAPIT is a community token with meme characteristics. Its price comes from attention and demand, not from the wells in the registry, and I am not going to describe it as anything more respectable than that. What I can commit to is separation: the data is free to everyone with or without a token, holding one buys no influence over what we publish, and no record is ever shaped by what would be good for a price. Proceeds go toward building and running the registry, and we will publish how they are used. If that separation ever stops being true, this page is where you should come to hold me to it."
+    },
+    {
+      "heading": "What I Would Ask of Others",
+      "image": "",
+      "body": "None of this works if only one small project does it. If you are in a position to act, here is what would help most.",
+      "bullets": [
+        "**State agencies:** publish machine-readable well records with stable identifiers, plain-language status definitions, and a bulk download. Say what your terms of use permit. You have already done the hard part by collecting it.",
+        "**Federal agencies:** keep measuring. An estimate is not a measurement, and a program that stops collecting data has decided in advance what its own results will be.",
+        "**Funders:** treat data infrastructure as infrastructure. It is unglamorous, it does not photograph well, and everything else in this field rests on it.",
+        "**Operators and service companies:** publishing what you already know about wells you plugged costs you very little and is worth more to the public record than any campaign about it.",
+        "**Researchers:** keep publishing the measurements. Every honest number on this site traces back to someone who went and measured something.",
+        "**Anyone building on public records:** consider whether your business model requires the public to lose access to what it already owns. Usually it does not."
+      ]
+    },
+    {
+      "heading": "Hold Us To It",
+      "image": "",
+      "body": "I am one developer with a small company, not an institution, and this page is a statement of intent from someone who could still get it wrong. If you find an error in our data, tell us and we will publish the correction. If you find a gap between what this letter promises and what this site does, say so publicly and we will either fix it, or add it to the list above and explain why.\n\nThe wells are not going to plug themselves, and the record of the work is not going to assemble itself. But both are doable, and the knowledge of what has been done belongs to the people who live with the consequences.\n\n— Alana Oldham, Developer and Co-founder, CAPIT, a project of Tellus Digital, LLC"
+    },
+    {
+      "heading": "Sources for the Messages",
+      "image": "",
+      "body": "The principles and examples above come from:",
+      "bullets": [
+        "[The FAIR Guiding Principles for scientific data management and stewardship (Wilkinson et al., 2016)](https://www.nature.com/articles/sdata201618)",
+        "[CARE Principles for Indigenous Data Governance, Global Indigenous Data Alliance](https://www.gida-global.org/care)",
+        "[Creative Commons, recommended best practices for better sharing of climate data (January 2024)](https://creativecommons.org/2024/01/29/recommended-best-practices-for-better-sharing-of-climate-data/)",
+        "[The Open Definition](https://opendefinition.org/od/2.1/en/)",
+        "[Feist Publications, Inc. v. Rural Telephone Service Co., 499 U.S. 340 (1991)](https://supreme.justia.com/cases/federal/us/499/340/)",
+        "[LOCKSS preservation principles, Stanford University](https://www.lockss.org/about/preservation-principles)",
+        "[Environmental Data and Governance Initiative, Federal Environmental Web Tracker](https://envirodatagov.org/enviro-fed-web-tracker/)",
+        "[NOAA notice retiring the Billion-Dollar Weather and Climate Disasters product (2025)](https://www.nesdis.noaa.gov/about/documents-reports/notice-of-changes/2025-notice-of-changes/billion-dollar-weather-and-climate-disasters)",
+        "[Climate TRACE, an example of open methodology, bulk data, and archived releases](https://climatetrace.org/data)",
+        "[OpenAQ, per-source license metadata for aggregated government data](https://docs.openaq.org/resources/licenses)",
+        "[National Academies, Technologies and Practices for Plugging and Remediating Orphan Oil and Gas Wells (2026)](https://doi.org/10.17226/29343)",
+        "[Kang et al., Environmental Research Letters (2023), on people living near orphan wells](https://iopscience.iop.org/article/10.1088/1748-9326/acdae7)"
+      ]
     }
   ]
 }
