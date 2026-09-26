@@ -2,40 +2,12 @@
 
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { useAccount, useChainId, useSwitchChain, useConnect } from 'wagmi'
-import { useWeb3Modal } from '@web3modal/wagmi/react'
-import { defaultChain, hasWalletConnect } from '@/config/web3'
+import { useAccount, useChainId, useSwitchChain } from 'wagmi'
+import { defaultChain } from '@/config/web3'
+import { ConnectWalletButton } from '@/components/ConnectWalletButton'
 
 const ACTION_BUTTON_CLASS =
   'w-full py-4 mt-2 bg-[#FABE3C] hover:bg-[#e5aa2b] text-neutral-900 font-bold rounded-xl transition-all shadow-md active:scale-[0.99]'
-
-/**
- * useWeb3Modal throws unless createWeb3Modal ran, and createWeb3Modal only runs
- * when a WalletConnect project id is configured. Keeping the hook inside a
- * component that is mounted conditionally keeps hook order stable in both cases.
- */
-function ConnectViaModal() {
-  const { open } = useWeb3Modal()
-  return (
-    <button type="button" onClick={() => open()} className={ACTION_BUTTON_CLASS}>
-      Connect Wallet
-    </button>
-  )
-}
-
-/** Fallback when WalletConnect is unavailable: connect the browser wallet directly. */
-function ConnectViaInjected() {
-  const { connect, connectors } = useConnect()
-  const handleConnect = () => {
-    const injected = connectors.find((c) => c.type === 'injected') ?? connectors[0]
-    if (injected) connect({ connector: injected })
-  }
-  return (
-    <button type="button" onClick={handleConnect} className={ACTION_BUTTON_CLASS}>
-      Connect Wallet
-    </button>
-  )
-}
 
 export function SwapWidget() {
   const { isConnected } = useAccount()
@@ -121,7 +93,7 @@ export function SwapWidget() {
           </div>
 
           {!isConnected ? (
-            hasWalletConnect ? <ConnectViaModal /> : <ConnectViaInjected />
+            <ConnectWalletButton className={ACTION_BUTTON_CLASS} />
           ) : (
             <button type="button" onClick={handleAction} className={ACTION_BUTTON_CLASS}>
               {isWrongNetwork ? `Switch to ${defaultChain.name}` : 'Swap for CAPIT'}

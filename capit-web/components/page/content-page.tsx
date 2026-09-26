@@ -122,32 +122,44 @@ export function ContentPage({ page, imageSizes = {}, children }: ContentPageProp
         <section className="px-6 py-16 lg:px-12 xl:px-20">
           <div className="mx-auto grid max-w-5xl gap-8">
             {sections.map((section, idx) => (
-              <article key={idx} className="rounded-2xl border border-border/70 bg-card p-6 shadow-sm md:p-8 space-y-4">
-                {section.heading && (
-                  <h2 className="text-2xl font-black tracking-tight text-primary">{section.heading}</h2>
-                )}
+              <article
+                key={idx}
+                className={`rounded-2xl border border-border/70 bg-card p-6 shadow-sm md:p-8 ${
+                  section.image ? 'flex items-start gap-5 md:gap-8' : ''
+                }`}
+              >
+                {/*
+                  Section images sit beside the copy as a small thumbnail (used
+                  for the founder portraits on /about) rather than spanning the
+                  card above it.
+                */}
                 {section.image && (
-                  <div className="overflow-hidden rounded-xl border border-border/60 bg-muted">
+                  <div className="w-24 shrink-0 overflow-hidden rounded-xl border border-border/60 bg-muted sm:w-32 md:w-40">
                     <CmsImage
                       src={section.image}
                       alt={section.heading || 'Section Image'}
                       size={imageSizes[section.image]}
-                      sizes="(max-width: 1100px) 100vw, 960px"
+                      sizes="(max-width: 640px) 96px, (max-width: 768px) 128px, 160px"
                     />
                   </div>
                 )}
-                {section.body && (
-                  <p className="leading-8 text-muted-foreground">{renderInline(section.body)}</p>
-                )}
-                {section.bullets && section.bullets.length > 0 && (
-                  <ul className="mt-5 grid gap-2 text-sm text-foreground md:grid-cols-2">
-                    {section.bullets.map((bullet, bIdx) => (
-                      <li key={bIdx} className="rounded-xl bg-muted/60 px-4 py-3">
-                        {renderInline(bullet)}
-                      </li>
-                    ))}
-                  </ul>
-                )}
+                <div className="min-w-0 flex-1 space-y-4">
+                  {section.heading && (
+                    <h2 className="text-2xl font-black tracking-tight text-primary">{section.heading}</h2>
+                  )}
+                  {section.body && (
+                    <p className="leading-8 text-muted-foreground">{renderInline(section.body)}</p>
+                  )}
+                  {section.bullets && section.bullets.length > 0 && (
+                    <ul className="mt-5 grid gap-2 text-sm text-foreground md:grid-cols-2">
+                      {section.bullets.map((bullet, bIdx) => (
+                        <li key={bIdx} className="rounded-xl bg-muted/60 px-4 py-3">
+                          {renderInline(bullet)}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               </article>
             ))}
           </div>
