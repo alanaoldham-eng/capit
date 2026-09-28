@@ -20,41 +20,6 @@ const METAMASK_ID = 'c57ca95b47569778a828d19178114f4db188b89b763c899ba0be274e972
 const COINBASE_ID = 'fd20dc426fb37566d803205b19bbc1d4096b248ac04548e3cfb6b3a38bd033aa'
 
 /**
- * Named wallet rows, declared locally.
- *
- * featuredWalletIds/includeWalletIds only filter the list that ApiController
- * fetches from api.web3modal.org, so while that endpoint is unreachable the
- * modal renders no named wallets at all. customWallets is read straight from
- * OptionsController by w3m-connect-custom-widget with no network call, so these
- * two rows show up regardless.
- *
- * Clicking a row opens the branded WalletConnect QR / deep-link flow, which does
- * still need a working relay. A row whose rdns matches an installed extension is
- * dropped automatically, so there is no duplicate when MetaMask is announced
- * over EIP-6963.
- */
-const CUSTOM_WALLETS = [
-  {
-    id: METAMASK_ID,
-    name: 'MetaMask',
-    rdns: 'io.metamask',
-    homepage: 'https://metamask.io',
-    mobile_link: 'metamask://',
-    app_store: 'https://apps.apple.com/us/app/metamask/id1438144202',
-    play_store: 'https://play.google.com/store/apps/details?id=io.metamask',
-  },
-  {
-    id: COINBASE_ID,
-    name: 'Base Wallet',
-    rdns: 'com.coinbase.wallet',
-    homepage: 'https://www.base.org',
-    mobile_link: 'https://go.cb-w.com',
-    app_store: 'https://apps.apple.com/app/coinbase-wallet/id1278383455',
-    play_store: 'https://play.google.com/store/apps/details?id=org.toshi',
-  },
-]
-
-/**
  * w3m-connect-walletconnect-widget renders an unbranded "WalletConnect" row
  * whenever a WALLET_CONNECT connector exists, and v5 exposes no option to hide
  * it - the only supported off switch is enableWalletConnect: false, which would
@@ -103,7 +68,11 @@ const modalConfig = {
   allWallets: 'HIDE',
   featuredWalletIds: [METAMASK_ID, COINBASE_ID],
   includeWalletIds: [METAMASK_ID, COINBASE_ID],
-  customWallets: CUSTOM_WALLETS,
+  // No customWallets: the featured rows above already come from the wallet
+  // explorer, and Web3Modal only de-duplicates custom rows against installed
+  // extensions - so a custom Base row always doubled up with the featured
+  // "Base (formerly Coinbase Wallet)" row, and a custom MetaMask row doubled up
+  // for anyone without the MetaMask extension.
   enableAnalytics: false,
   enableOnramp: false,
   enableSwaps: false,
